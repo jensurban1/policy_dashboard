@@ -4,127 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>정책 자료 대시보드</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#f0f4fb; --bg2:#fff; --bg3:#e8eef8;
-  --border:#c8d5ea; --text:#1a2540; --text2:#4a5a7a;
-  --accent:#1a5ccc;
-}
-
-body { font-family:'Noto Sans KR'; background:var(--bg); margin:0; color:var(--text); }
-
-header {
-  background:var(--bg2); border-bottom:1px solid var(--border);
-  padding:12px 24px; display:flex; justify-content:space-between;
-}
-
-.controls { padding:12px 24px; background:#fff; border-bottom:1px solid var(--border); }
-.pill {
-  padding:4px 10px; border:1px solid var(--border);
-  border-radius:20px; cursor:pointer; font-size:12px;
-}
-.pill.active { background:var(--accent); color:#fff; }
-
-.search { margin-bottom:10px; padding:6px; width:200px; }
-
-main { padding:20px; }
-
-.cards {
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:12px;
-}
-
-.card {
-  background:#fff; border:1px solid var(--border);
-  border-radius:10px; padding:14px;
-}
-
-.card-org { font-weight:600; }
-.card-folder { font-size:11px; color:var(--text2); }
-
-.btn {
-  display:inline-block; margin-top:8px;
-  background:var(--accent); color:#fff;
-  padding:6px 10px; border-radius:6px;
-  text-decoration:none; font-size:12px;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans KR',sans-serif;background:#f0f4fb;color:#1a2540}
+header{background:#fff;border-bottom:1px solid #c8d5ea;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;gap:12px;align-items:center}
+.logo-mark{width:30px;height:30px;border-radius:7px;background:#1a5ccc;color:#fff;display:grid;place-items:center;font-size:12px}
+.controls{padding:12px 24px;background:#fff;border-bottom:1px solid #c8d5ea}
+.search-input{width:300px;padding:8px;border:1px solid #c8d5ea;border-radius:6px}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;padding:20px}
+.card{background:#fff;border:1px solid #c8d5ea;border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.card-org{font-weight:600}
+.title-chip{font-size:11px;background:#e8eef8;border:1px solid #c8d5ea;border-radius:4px;padding:2px 6px;margin:2px;display:inline-block}
+.card-folder{font-size:10px;background:#e8eef8;border:1px solid #c8d5ea;border-radius:4px;padding:3px 6px;margin:2px;display:inline-block}
+.link-btn{margin-top:auto;text-decoration:none;background:#1a5ccc;color:#fff;padding:6px 10px;border-radius:6px;font-size:12px}
 </style>
 </head>
-
 <body>
-
 <header>
-  <div>정책 자료 대시보드</div>
-  <div>표시 <b id="count">0</b></div>
-</header>
-
-<div class="controls">
-  <input class="search" id="search" placeholder="검색...">
-
-  <div id="cats"></div>
-  <div id="subs" style="margin-top:6px;"></div>
+<div class="logo">
+<div class="logo-mark">PD</div>
+<div>정책 자료 대시보드</div>
 </div>
-
-<main id="main"></main>
-
+</header>
+<div class="controls">
+<input class="search-input" id="searchInput" placeholder="검색...">
+</div>
+<main id="main" class="cards-grid"></main>
 <script>
 const DATA = [
-  { cat:"정책기본구상", sub:"국회", org:"국토교통위원회", title:"의안", folder:"법령", url:"https://ltc.na.go.kr" },
-  { cat:"정책기본구상", sub:"국회", org:"국회입법조사처", title:"보고서", folder:"법령", url:"https://nars.go.kr" },
-  { cat:"지자체정책구상", sub:"서울특별시", org:"서울시", title:"보도자료", folder:"정책", url:"https://seoul.go.kr" }
+{ cat:"정책기본구상", sub:"국회", org:"국토교통위원회", title:"국토교통위 소관 의안", folder:"★사업별 자료 - 법령/지침", url:"https://ltc.na.go.kr/cmmit/bill/cntsBill/list.do?menuNo=2000079" },
+{ cat:"정책기본구상", sub:"국회", org:"국토교통위원회", title:"심사보고서", folder:"★사업별 자료 - 법령/지침", url:"https://ltc.na.go.kr/cmmit/bill/cntsBill/list.do?menuNo=2000079" },
+{ cat:"정책기본구상", sub:"국회", org:"국토교통위원회", title:"검토보고서", folder:"★사업별 자료 - 법령/지침", url:"https://ltc.na.go.kr/cmmit/bill/cntsBill/list.do?menuNo=2000079" },
+{ cat:"정책기본구상", sub:"국회", org:"국회입법조사처", title:"국토해양팀 소관 연구보고서", folder:"★사업별 자료 - 법령/지침", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043" },
+{ cat:"정책기본구상", sub:"국회", org:"국회입법조사처", title:"국토해양팀 소관 정책연구용역", folder:"★사업별 자료 - 법령/지침", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010" },
+{ cat:"정책기본구상", sub:"국토연구원", org:"국토연구원", title:"국토정책 Brief", folder:"★사업별 자료 - 정책/연구", url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1" },
+{ cat:"정책기본구상", sub:"국토연구원", org:"국토연구원", title:"워킹페이퍼", folder:"★사업별 자료 - 정책/연구", url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP" },
+{ cat:"정책기본구상", sub:"국토연구원", org:"국토연구원", title:"월간국토 Article", folder:"★사업별 자료 - 정책/연구", url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1" },
+{ cat:"정책기본구상", sub:"국토교통부", org:"국토교통부", title:"정책발표용 홍보자료", folder:"★정책별 자료 / ★사업별 자료 - 정책/연구", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp" },
+{ cat:"정책기본구상", sub:"국토교통부", org:"국토교통부", title:"보도자료 (국토도시)", folder:"★사업별 자료 - 정책/연구", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp" },
+{ cat:"정책기본구상", sub:"국토교통부", org:"국토교통부", title:"정책정보 (국토도시)", folder:"★사업별 자료 - 정책/연구", url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp" },
+{ cat:"지자체정책구상", sub:"서울특별시", org:"서울특별시", title:"열람공고(안)", folder:"★사업별 자료 - 참고사례", url:"https://urban.seoul.go.kr/view/html/PMNU4010000001" },
+{ cat:"각종법령", sub:"각종법령", org:"국가법령정보센터", title:"법, 시행령, 시행규칙, 조례 등", folder:"★사업별 자료 - 법령/지침", url:"https://www.law.go.kr/main.html" }
 ];
 
-let cat="all", sub="all", q="";
-
-function buildFilters(){
-  const cats=["all",...new Set(DATA.map(d=>d.cat))];
-  document.getElementById("cats").innerHTML=
-    cats.map(c=>`<button class="pill ${c===cat?'active':''}" onclick="setCat('${c}')">${c}</button>`).join("");
-
-  const subs=["all",...new Set(DATA.filter(d=>cat==='all'||d.cat===cat).map(d=>d.sub))];
-  document.getElementById("subs").innerHTML=
-    subs.map(s=>`<button class="pill ${s===sub?'active':''}" onclick="setSub('${s}')">${s}</button>`).join("");
+function mergeItems(items){
+const map=new Map();
+items.forEach(d=>{
+const key=d.org+d.url;
+if(!map.has(key)){
+map.set(key,{...d,titles:[d.title],folders:[d.folder]});
+}else{
+const m=map.get(key);
+if(!m.titles.includes(d.title))m.titles.push(d.title);
+if(!m.folders.includes(d.folder))m.folders.push(d.folder);
+}
+});
+return [...map.values()];
 }
 
-function setCat(c){ cat=c; sub="all"; render(); }
-function setSub(s){ sub=s; render(); }
-
-function render(){
-  buildFilters();
-
-  const filtered = DATA.filter(d =>
-    (cat==="all"||d.cat===cat) &&
-    (sub==="all"||d.sub===sub) &&
-    (!q || d.title.includes(q) || d.org.includes(q))
-  );
-
-  document.getElementById("count").textContent = filtered.length;
-
-  document.getElementById("main").innerHTML = `
-    <div class="cards">
-      ${filtered.map(d=>`
-        <div class="card">
-          <div class="card-org">${d.org}</div>
-          <div>${d.title}</div>
-          <div class="card-folder">${d.folder}</div>
-          <a class="btn" href="${d.url}" target="_blank">바로가기</a>
-        </div>
-      `).join("")}
-    </div>
-  `;
+function render(q=""){
+const main=document.getElementById("main");
+main.innerHTML="";
+const filtered=DATA.filter(d=>d.title.includes(q)||d.org.includes(q));
+mergeItems(filtered).forEach(d=>{
+const card=document.createElement("div");
+card.className="card";
+card.innerHTML=`
+<div class="card-org">${d.org}</div>
+<div>${d.titles.map(t=>`<span class="title-chip">${t}</span>`).join("")}</div>
+<div>${d.folders.map(f=>`<span class="card-folder">${f}</span>`).join("")}</div>
+<a class="link-btn" href="${d.url}" target="_blank">바로가기</a>
+`;
+main.appendChild(card);
+});
 }
 
-document.getElementById("search").oninput = e => {
-  q = e.target.value;
-  render();
-};
-
+document.getElementById("searchInput").oninput=e=>render(e.target.value);
 render();
 </script>
-
 </body>
 </html>
