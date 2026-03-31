@@ -325,13 +325,23 @@ function buildPreview(url){
   return `<div class="preview-lbl">${p.label}</div><div class="preview-grid">${cards}</div>${p.note?`<div class="preview-note">${p.note}</div>`:''}`;
 }
 
+function match(str,q){return str.toLowerCase().indexOf(q)!==-1;}
+
 function render(){
   const content=document.getElementById("content");
   const q=searchQ.trim().toLowerCase();
-  const filtered=DATA.filter(d=>d.cat===activeCat&&(!q||d.org.includes(q)||d.titles.some(t=>t.includes(q))||d.sub.includes(q)));
+
+  const filtered=DATA.filter(d=>{
+    const catOk=q?true:d.cat===activeCat;
+    const qOk=!q||match(d.org,q)||d.titles.some(t=>match(t,q))||match(d.sub,q)||match(d.folder,q);
+    return catOk&&qOk;
+  });
 
   const bySub={};
-  filtered.forEach(d=>{(bySub[d.sub]=bySub[d.sub]||[]).push(d);});
+  filtered.forEach(d=>{
+    const key=q?`[${CAT_LABELS[d.cat]}] ${d.sub}`:d.sub;
+    (bySub[key]=bySub[key]||[]).push(d);
+  });
 
   content.innerHTML="";
   if(!filtered.length){content.innerHTML='<div class="empty">검색 결과가 없습니다.</div>';return;}
@@ -341,9 +351,10 @@ function render(){
     const block=document.createElement("div");
     block.className="sec-block";
 
+    const repCat=items[0].cat;
     const hd=document.createElement("div");
     hd.className="sec-hd";
-    hd.innerHTML=`<span class="sec-acc acc-${activeCat}"></span><span class="sec-name">${sub}</span><span class="sec-cnt">${items.length}건</span>`;
+    hd.innerHTML=`<span class="sec-acc acc-${repCat}"></span><span class="sec-name">${sub}</span><span class="sec-cnt">${items.length}건</span>`;
     block.appendChild(hd);
 
     const listWrap=document.createElement("div");
