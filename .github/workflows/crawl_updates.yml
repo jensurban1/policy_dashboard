@@ -1,0 +1,23 @@
+name: 정책자료 업데이트 크롤링
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests beautifulsoup4
+      - run: python scripts/crawl_updates.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/updates.json
+          git diff --staged --quiet || git commit -m "chore: 정책자료 업데이트 $(date +'%Y-%m-%d')"
+          git push
