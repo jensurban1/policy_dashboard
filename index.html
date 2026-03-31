@@ -9,7 +9,7 @@
 :root{
   --font:-apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
   --mono:"D2Coding","Consolas","Courier New",monospace;
-  --bg:#f7f8fa;--bg2:#fff;--bg3:#f2f4f7;
+  --bg:#f7f8fa;--bg2:#fff;--bg3:#f2f4f7;--bg4:#eaecf2;
   --bd:rgba(0,0,0,0.07);--bd2:rgba(0,0,0,0.13);
   --t:#111827;--t2:#4b5563;--t3:#9ca3af;
   --blue:#2563eb;--blue-lt:#eff6ff;--blue-bd:#bfdbfe;
@@ -18,6 +18,8 @@
 }
 html,body{height:100%;}
 body{font-family:var(--font);background:var(--bg);color:var(--t);display:flex;height:100vh;overflow:hidden;}
+
+/* SIDEBAR */
 aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction:column;height:100%;overflow-y:auto;}
 .brand{padding:20px 16px 16px;border-bottom:1px solid rgba(255,255,255,.07);}
 .brand-t{font-size:13px;font-weight:600;color:#f1f5f9;letter-spacing:-.2px;}
@@ -28,81 +30,133 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .nav-item:hover{background:rgba(255,255,255,.05);}
 .nav-item.active{background:rgba(255,255,255,.09);color:#f1f5f9;font-weight:500;}
 .nav-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.nav-icon{font-size:13px;line-height:1;}
 .nav-ext{display:flex;align-items:center;gap:7px;padding:6px 8px;border-radius:6px;font-size:11.5px;color:var(--sb-m);text-decoration:none;transition:color .12s,background .12s;}
 .nav-ext:hover{color:var(--sb-t);background:rgba(255,255,255,.05);}
 .nav-ext-arr{font-size:10px;margin-left:auto;}
+.nav-div{height:1px;background:rgba(255,255,255,.07);margin:8px 16px;}
+
+/* MAIN */
 .main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0;}
-.topbar{background:var(--bg2);border-bottom:1px solid var(--bd);padding:13px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;position:relative;z-index:10;}
+.topbar{background:var(--bg2);border-bottom:1px solid var(--bd);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;z-index:10;}
 .topbar-t{font-size:15px;font-weight:600;letter-spacing:-.3px;}
 .topbar-s{font-size:11px;color:var(--t3);margin-top:2px;}
-.topbar-right{display:flex;align-items:center;gap:10px;}
-.update-status{font-size:11px;color:var(--t3);font-family:var(--mono);white-space:nowrap;}
-.new-badge{display:inline-block;background:#ef4444;color:#fff;font-size:10px;border-radius:10px;padding:1px 7px;font-family:var(--mono);margin-left:5px;vertical-align:middle;}
+.topbar-r{display:flex;align-items:center;gap:8px;}
+.new-pill{background:#ef4444;color:#fff;font-size:10px;border-radius:10px;padding:2px 8px;font-family:var(--mono);display:none;}
+.new-pill.on{display:inline-block;}
+.upd-time{font-size:10px;color:var(--t3);font-family:var(--mono);}
 .srch{position:relative;}
 .srch svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);width:13px;height:13px;color:var(--t3);pointer-events:none;}
 .srch input{background:var(--bg3);border:1px solid var(--bd);border-radius:6px;padding:6px 10px 6px 28px;font-size:12px;font-family:var(--font);color:var(--t);outline:none;width:200px;transition:border-color .15s;}
 .srch input:focus{border-color:var(--blue);}
 .srch input::placeholder{color:var(--t3);}
-.content{flex:1;overflow-y:auto;padding:20px 24px 48px;position:relative;z-index:1;}
-.sec-block{margin-bottom:24px;}
+
+/* CONTENT */
+.content{flex:1;overflow-y:auto;padding:20px 24px 48px;}
+
+/* FEED GRID */
+.feed-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;}
+
+/* SOURCE CARD */
+.src-card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;display:flex;flex-direction:column;overflow:hidden;}
+.card-hd{padding:11px 14px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.card-hd-left{display:flex;align-items:center;gap:8px;min-width:0;}
+.card-acc{width:3px;height:16px;border-radius:2px;flex-shrink:0;}
+.card-info{}
+.card-name{font-size:12.5px;font-weight:600;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.card-org{font-size:10.5px;color:var(--t3);margin-top:1px;}
+.card-go{font-size:11px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:3px;flex-shrink:0;white-space:nowrap;}
+.card-go:hover{opacity:.7;}
+.card-go svg{width:10px;height:10px;}
+
+/* POST LIST */
+.card-body{flex:1;}
+.post-row{display:flex;align-items:baseline;gap:8px;padding:7px 14px;border-bottom:1px solid var(--bd);transition:background .1s;}
+.post-row:last-child{border-bottom:none;}
+.post-row:hover{background:var(--bg3);}
+.badge-new{font-size:9px;padding:1px 5px;background:#fef2f2;color:#dc2626;border:1px solid #fecaca;border-radius:3px;font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
+.post-date{font-size:10.5px;color:var(--t3);font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
+.post-a{font-size:12px;color:var(--t);text-decoration:none;line-height:1.4;flex:1;}
+.post-a:hover{color:var(--blue);}
+.card-msg{padding:18px 14px;font-size:12px;color:var(--t3);text-align:center;line-height:1.6;}
+.card-msg code{font-family:var(--mono);font-size:11px;background:var(--bg3);padding:1px 5px;border-radius:3px;}
+
+/* STATIC CARD (크롤링 불가) */
+.static-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:5px;padding:10px 14px;}
+.static-item{background:var(--bg3);border:1px solid var(--bd);border-radius:5px;padding:8px 10px;}
+.si-cat{font-size:9px;color:var(--blue);font-weight:600;letter-spacing:.4px;text-transform:uppercase;margin-bottom:3px;font-family:var(--mono);}
+.si-title{font-size:11.5px;color:var(--t);font-weight:500;line-height:1.4;}
+.si-desc{font-size:10.5px;color:var(--t2);margin-top:2px;line-height:1.4;}
+.static-note{padding:0 14px 10px;font-size:10.5px;color:var(--t3);font-style:italic;line-height:1.5;}
+
+/* LIST MODE */
+.sec-block{margin-bottom:22px;}
 .sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
 .sec-acc{width:3px;height:16px;border-radius:2px;flex-shrink:0;}
-.sec-name{font-size:13px;font-weight:600;letter-spacing:-.2px;}
+.sec-name{font-size:13px;font-weight:600;}
 .sec-cnt{font-size:11px;color:var(--t3);}
 .list-wrap{background:var(--bg2);border:1px solid var(--bd);border-radius:8px;overflow:hidden;}
-.col-hd{display:grid;grid-template-columns:18% 27% 31% 1fr;padding:7px 16px;background:var(--bg3);border-bottom:1px solid var(--bd);}
+.col-hd{display:grid;grid-template-columns:20% 30% 34% 1fr;padding:7px 14px;background:var(--bg3);border-bottom:1px solid var(--bd);}
 .col-hd span{font-size:10px;color:var(--t3);font-weight:500;letter-spacing:.3px;text-transform:uppercase;}
 .col-hd span:last-child{text-align:right;}
-.row-group:not(:last-child){border-bottom:1px solid var(--bd);}
-.data-row{display:grid;grid-template-columns:18% 27% 31% 1fr;align-items:center;padding:11px 16px;cursor:pointer;transition:background .1s;min-height:46px;}
-.data-row:hover{background:var(--bg3);}
-.data-row.open{background:var(--blue-lt);}
-.col-org{font-size:12.5px;font-weight:600;color:var(--t);padding-right:12px;display:flex;align-items:center;gap:6px;}
-.col-titles{display:flex;flex-wrap:wrap;gap:4px;padding-right:12px;}
-.chip{font-size:11px;padding:2px 8px;border:1px solid var(--bd2);border-radius:4px;color:var(--t2);background:var(--bg3);white-space:nowrap;}
-.col-folder{font-family:var(--mono);font-size:10.5px;color:var(--t3);padding-right:12px;line-height:1.7;}
+.list-row{display:grid;grid-template-columns:20% 30% 34% 1fr;align-items:center;padding:9px 14px;border-bottom:1px solid var(--bd);min-height:42px;}
+.list-row:last-child{border-bottom:none;}
+.list-row:hover{background:var(--bg3);}
+.col-org{font-size:12px;font-weight:600;color:var(--t);padding-right:10px;}
+.chips{display:flex;flex-wrap:wrap;gap:3px;padding-right:10px;}
+.chip{font-size:11px;padding:2px 7px;border:1px solid var(--bd2);border-radius:4px;color:var(--t2);background:var(--bg3);}
+.col-folder{font-family:var(--mono);font-size:10.5px;color:var(--t3);line-height:1.7;padding-right:10px;}
 .star{color:var(--amber);}
 .nosave{color:var(--red);font-style:italic;}
-.col-link{display:flex;align-items:center;justify-content:flex-end;gap:8px;}
-.go-btn{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;color:var(--blue);text-decoration:none;white-space:nowrap;}
+.col-link{text-align:right;}
+.go-btn{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;color:var(--blue);text-decoration:none;}
 .go-btn:hover{opacity:.65;}
-.go-btn svg{width:11px;height:11px;}
-.chev{font-size:11px;color:var(--t3);transition:transform .2s;}
-.open .chev{transform:rotate(180deg);}
-.new-dot{width:6px;height:6px;border-radius:50%;background:#ef4444;flex-shrink:0;}
-.live-panel{display:none;background:var(--blue-lt);border-top:1px solid var(--blue-bd);padding:14px 16px 16px;}
-.live-panel.visible{display:block;}
-.live-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
-.live-source{font-size:10px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.7px;font-family:var(--mono);}
-.live-crawled{font-size:10px;color:var(--t3);font-family:var(--mono);}
-.live-item{display:flex;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid var(--blue-bd);}
-.live-item:last-child{border-bottom:none;}
-.live-new{font-size:9px;padding:1px 5px;border-radius:3px;background:#fef2f2;color:var(--red);border:1px solid #fecaca;font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
-.live-date{font-size:10.5px;color:var(--t3);font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
-.live-link{font-size:12.5px;color:var(--blue);text-decoration:none;line-height:1.4;flex:1;}
-.live-link:hover{text-decoration:underline;}
-.live-msg{font-size:12px;color:var(--t3);padding:14px 0;text-align:center;}
-.live-more{display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:11.5px;color:var(--blue);text-decoration:none;}
-.live-more:hover{text-decoration:underline;}
-.acc-정책기본구상{background:#2563eb;}.acc-지자체정책구상{background:#0d9488;}.acc-사업계획안{background:#d97706;}.acc-각종법령{background:#dc2626;}
-.dot-정책기본구상{background:#2563eb;}.dot-지자체정책구상{background:#0d9488;}.dot-사업계획안{background:#d97706;}.dot-각종법령{background:#dc2626;}
+.go-btn svg{width:10px;height:10px;}
+
+/* cat accent */
+.acc-정책기본구상,.card-acc-정책기본구상{background:#2563eb;}
+.acc-지자체정책구상,.card-acc-지자체정책구상{background:#0d9488;}
+.acc-사업계획안,.card-acc-사업계획안{background:#d97706;}
+.acc-각종법령,.card-acc-각종법령{background:#dc2626;}
+.dot-정책기본구상{background:#2563eb;}
+.dot-지자체정책구상{background:#0d9488;}
+.dot-사업계획안{background:#d97706;}
+.dot-각종법령{background:#dc2626;}
+
 .empty{text-align:center;padding:48px;color:var(--t3);font-size:13px;}
 ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:3px;}
 </style>
 </head>
 <body>
+
 <aside>
   <div class="brand">
     <div class="brand-t">정책 자료 대시보드</div>
     <div class="brand-s">Urban Planning Navigator</div>
   </div>
+
   <div class="nav-sec">
-    <div class="nav-lbl">자료 목록</div>
-    <div class="nav-item active" data-cat="정책기본구상"><span class="nav-dot dot-정책기본구상"></span>정책기본구상</div>
+    <div class="nav-lbl">뷰</div>
+    <div class="nav-item active" data-view="feed">
+      <span class="nav-icon">📋</span>최신 업데이트
+    </div>
+    <div class="nav-item" data-view="list">
+      <span class="nav-icon">🔗</span>링크 목록
+    </div>
+  </div>
+
+  <div class="nav-div"></div>
+
+  <div class="nav-sec">
+    <div class="nav-lbl">링크 목록 분류</div>
+    <div class="nav-item" data-cat="정책기본구상"><span class="nav-dot dot-정책기본구상"></span>정책기본구상</div>
     <div class="nav-item" data-cat="지자체정책구상"><span class="nav-dot dot-지자체정책구상"></span>지자체정책구상</div>
     <div class="nav-item" data-cat="사업계획안"><span class="nav-dot dot-사업계획안"></span>사업계획(안)</div>
     <div class="nav-item" data-cat="각종법령"><span class="nav-dot dot-각종법령"></span>각종 법령</div>
   </div>
+
+  <div class="nav-div"></div>
+
   <div class="nav-sec">
     <div class="nav-lbl">외부 링크</div>
     <a class="nav-ext" href="https://www.molit.go.kr" target="_blank">국토교통부<span class="nav-ext-arr">↗</span></a>
@@ -111,31 +165,59 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
     <a class="nav-ext" href="https://www.g2b.go.kr" target="_blank">나라장터<span class="nav-ext-arr">↗</span></a>
   </div>
 </aside>
+
 <div class="main">
   <div class="topbar">
     <div>
-      <div class="topbar-t" id="topTitle">정책기본구상</div>
-      <div class="topbar-s" id="topSub">국회 · 국토연구원 · 국토교통부</div>
+      <div class="topbar-t" id="topTitle">최신 업데이트</div>
+      <div class="topbar-s" id="topSub">국토연구원 · 국회입법조사처 최신 게시글</div>
     </div>
-    <div class="topbar-right">
-      <span class="update-status" id="updateStatus">업데이트 확인 중…</span>
+    <div class="topbar-r">
+      <span class="new-pill" id="newPill">0 NEW</span>
+      <span class="upd-time" id="updTime"></span>
       <div class="srch">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6.5" cy="6.5" r="4.5"/><path d="M11 11l3 3"/></svg>
-        <input id="searchInput" type="text" placeholder="기관명, 자료명 검색…">
+        <input id="searchInput" type="text" placeholder="제목 검색…">
       </div>
     </div>
   </div>
   <div class="content" id="content"></div>
 </div>
+
 <script>
-const URL_TO_SID={
-  "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1":"krihs_brief",
-  "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP":"krihs_working",
-  "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1":"krihs_article",
-  "https://www.nars.go.kr/report/list.do?cmsCode=CM0043":"nars_report",
-  "https://www.nars.go.kr/report/list.do?cmsCode=CM0010":"nars_research",
-};
-const DATA=[
+const FEED_SOURCES = [
+  {sid:"krihs_brief",   name:"국토정책 Brief",   org:"국토연구원",    cat:"정책기본구상", url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1"},
+  {sid:"krihs_working", name:"워킹페이퍼",        org:"국토연구원",    cat:"정책기본구상", url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP"},
+  {sid:"krihs_article", name:"월간국토 Article",  org:"국토연구원",    cat:"정책기본구상", url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"},
+  {sid:"nars_report",   name:"연구보고서",         org:"국회입법조사처", cat:"정책기본구상", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043"},
+  {sid:"nars_research", name:"정책연구용역",       org:"국회입법조사처", cat:"정책기본구상", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010"},
+];
+
+const STATIC_SOURCES = [
+  {name:"보도자료 / 홍보자료",org:"국토교통부",cat:"정책기본구상",url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp",
+   items:[{cat:"필터",title:"부서별 분류",desc:"주택토지실/도시정책관 등"},{cat:"필터",title:"날짜·키워드",desc:"기간·제목·내용 검색"},{cat:"목록",title:"제목·날짜·부서",desc:"클릭 시 첨부파일"}],
+   note:"※ '국토도시' 부서 필터 활용"},
+  {name:"보도자료 / 홍보자료",org:"서울특별시",cat:"지자체정책구상",url:"https://www.seoul.go.kr/news/news_report.do",
+   items:[{cat:"필터",title:"부서 선택",desc:"도시계획국/주택정책실 등"},{cat:"필터",title:"기간·키워드",desc:"날짜범위·제목 검색"},{cat:"목록",title:"제목·날짜·담당부서",desc:"첨부 PDF 제공"}],
+   note:"※ 미래공간기획관·균형발전본부 등 부서 필터 선택"},
+  {name:"법정계획 / 운영지침",org:"서울 도시계획포털",cat:"지자체정책구상",url:"https://urban.seoul.go.kr/view/html/PMNU5020000001",
+   items:[{cat:"계획",title:"2040 서울도시기본계획",desc:"최상위 법정 도시계획"},{cat:"계획",title:"2030 생활권계획",desc:"5개 권역 116개 생활권"},{cat:"지침",title:"사업별 운영지침",desc:"재개발·재건축·도시재생"}],
+   note:"※ 좌측 메뉴에서 계획 유형 선택"},
+  {name:"소관 의안 / 심사·검토보고서",org:"서울시의회",cat:"지자체정책구상",url:"https://www.smc.seoul.kr/info/index.do?menuId=001003008",
+   items:[{cat:"메뉴",title:"의안 검색",desc:"의안번호·의안명·소관위"},{cat:"메뉴",title:"처리/계류 의안",desc:"가결·부결·심사 중 목록"},{cat:"보고서",title:"검토·심사보고서 PDF",desc:"의안 상세 하단 첨부"}],
+   note:"※ 소관위원회 필터로 주택공간·도시계획균형위 구분"},
+  {name:"열람공고(안)",org:"서울 도시계획포털",cat:"사업계획안",url:"https://urban.seoul.go.kr/view/html/PMNU4010000001",
+   items:[{cat:"목록",title:"공고 제목·기간",desc:"도시계획 변경 열람공고"},{cat:"상세",title:"계획도서 열람",desc:"결정조서·계획도면 PDF"},{cat:"상세",title:"의견 제출",desc:"열람기간 중 주민 의견"}],
+   note:"※ 열람기간(14~30일) 중에만 계획도서 열람 가능"},
+  {name:"결정고시(안)",org:"서울 도시계획포털",cat:"사업계획안",url:"https://urban.seoul.go.kr/view/html/PMNU4030100001",
+   items:[{cat:"목록",title:"고시번호·고시일·구역명",desc:"도시계획 결정·변경 고시"},{cat:"상세",title:"고시 원문+계획도면",desc:"서울시보 원문 및 결정조서"}],
+   note:"※ 고시번호 검색으로 관련 계획도서 일괄 확인"},
+  {name:"법, 시행령, 시행규칙, 조례 등",org:"국가법령정보센터",cat:"각종법령",url:"https://www.law.go.kr/main.html",
+   items:[{cat:"법령",title:"현행/연혁 법령",desc:"법률·대통령령·총리령·조례"},{cat:"행정규칙",title:"훈령·예규·고시",desc:"각 부처 행정규칙 원문"},{cat:"판례",title:"헌재·대법원",desc:"법령 관련 주요 판례"}],
+   note:"※ 파일 아닌 링크로 관리"},
+];
+
+const LIST_DATA = [
   {cat:"정책기본구상",sub:"국회",org:"국토교통위원회",titles:["국토교통위 소관 의안","심사보고서","검토보고서"],folder:"★사업별 자료 - 법령/지침",url:"https://ltc.na.go.kr/cmmit/bill/cntsBill/list.do?menuNo=2000079"},
   {cat:"정책기본구상",sub:"국회",org:"국회입법조사처",titles:["국토해양팀 소관 연구보고서"],folder:"★사업별 자료 - 법령/지침",url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043"},
   {cat:"정책기본구상",sub:"국회",org:"국회입법조사처",titles:["국토해양팀 소관 정책연구용역"],folder:"★사업별 자료 - 법령/지침",url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010"},
@@ -153,119 +235,169 @@ const DATA=[
   {cat:"사업계획안",sub:"서울특별시",org:"서울특별시",titles:["위원회 심의 결과"],folder:"저장 X",url:"https://commission.eseoul.go.kr/"},
   {cat:"각종법령",sub:"각종법령",org:"국가법령정보센터",titles:["법, 시행령, 시행규칙, 조례 등"],folder:"★사업별 자료 - 법령/지침 (파일 아닌 링크로 저장)",url:"https://www.law.go.kr/main.html"},
 ];
+
 const CAT_LABELS={정책기본구상:"정책기본구상",지자체정책구상:"지자체정책구상",사업계획안:"사업계획(안)",각종법령:"각종 법령"};
 const CAT_SUBS={정책기본구상:"국회 · 국토연구원 · 국토교통부",지자체정책구상:"서울특별시 · 서울시의회",사업계획안:"서울특별시",각종법령:"국가법령정보센터"};
-let activeCat="정책기본구상",searchQ="",updatesData=null;
+
+let viewMode="feed", activeCat="정책기본구상", searchQ="";
+let updData=null;
+
+function goSvg(){return`<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg>`;}
+function fmt(f){return f.replace(/★/g,'<span class="star">★</span>').replace(/저장 X/g,'<span class="nosave">저장 X</span>');}
 
 async function loadUpdates(){
+  if(updData) return updData;
   try{
-    const res=await fetch("data/updates.json?t="+Date.now());
-    if(!res.ok)throw new Error();
-    updatesData=await res.json();
+    const r=await fetch("data/updates.json?t="+Date.now());
+    if(!r.ok) throw new Error();
+    updData=await r.json();
     let n=0;
-    Object.values(updatesData.sources).forEach(s=>s.items.forEach(i=>{if(i.is_new)n++;}));
-    const kst=new Date(updatesData.updated_at);
-    const ds=kst.toLocaleDateString("ko-KR",{month:"numeric",day:"numeric"})+" "+kst.toLocaleTimeString("ko-KR",{hour:"2-digit",minute:"2-digit"});
-    document.getElementById("updateStatus").innerHTML=`업데이트 ${ds}${n>0?`<span class="new-badge">NEW ${n}</span>`:""}`;
-  }catch(e){
-    document.getElementById("updateStatus").textContent="업데이트 데이터 없음";
+    Object.values(updData.sources).forEach(s=>s.items.forEach(i=>{if(i.is_new)n++;}));
+    if(n>0){const el=document.getElementById("newPill");el.textContent=n+" NEW";el.classList.add("on");}
+    const d=new Date(updData.updated_at);
+    document.getElementById("updTime").textContent="업데이트 "+d.toLocaleString("ko-KR",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
+    return updData;
+  }catch{return null;}
+}
+
+function renderFeedCard(src, data){
+  const q=searchQ.trim().toLowerCase();
+  const card=document.createElement("div");
+  card.className="src-card";
+
+  card.innerHTML=`<div class="card-hd">
+    <div class="card-hd-left">
+      <span class="card-acc card-acc-${src.cat}"></span>
+      <div class="card-info">
+        <div class="card-name">${src.name}</div>
+        <div class="card-org">${src.org}</div>
+      </div>
+    </div>
+    <a class="card-go" href="${src.url}" target="_blank" rel="noopener">원문 ${goSvg()}</a>
+  </div>
+  <div class="card-body" id="cb-${src.sid}"></div>`;
+
+  const body=card.querySelector(`#cb-${src.sid}`);
+
+  if(!data){
+    body.innerHTML=`<div class="card-msg">⚠ <code>data/updates.json</code>이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;
+    return card;
+  }
+  const s=data.sources[src.sid];
+  if(!s||!s.items.length){body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;return card;}
+
+  const items=q?s.items.filter(i=>i.title.toLowerCase().indexOf(q)!==-1):s.items;
+  if(!items.length){body.innerHTML=`<div class="card-msg">검색 결과가 없습니다.</div>`;return card;}
+
+  body.innerHTML=items.map(item=>{
+    const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
+    const date=item.date?`<span class="post-date">${item.date}</span>`:'';
+    return`<div class="post-row">${badge}${date}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+  }).join('');
+  return card;
+}
+
+function renderStaticCard(src){
+  const card=document.createElement("div");
+  card.className="src-card";
+  card.innerHTML=`<div class="card-hd">
+    <div class="card-hd-left">
+      <span class="card-acc card-acc-${src.cat}"></span>
+      <div class="card-info">
+        <div class="card-name">${src.name}</div>
+        <div class="card-org">${src.org}</div>
+      </div>
+    </div>
+    <a class="card-go" href="${src.url}" target="_blank" rel="noopener">바로가기 ${goSvg()}</a>
+  </div>
+  <div class="static-grid">${src.items.map(it=>`<div class="static-item"><div class="si-cat">${it.cat}</div><div class="si-title">${it.title}</div><div class="si-desc">${it.desc}</div></div>`).join('')}</div>
+  ${src.note?`<div class="static-note">${src.note}</div>`:''}`;
+  return card;
+}
+
+async function render(){
+  const content=document.getElementById("content");
+  content.innerHTML="";
+
+  if(viewMode==="feed"){
+    const data=await loadUpdates();
+    const grid=document.createElement("div");
+    grid.className="feed-grid";
+    // 크롤링 가능한 소스: 실제 게시글
+    FEED_SOURCES.forEach(src=>grid.appendChild(renderFeedCard(src,data)));
+    // 크롤링 불가 소스: 페이지 안내
+    const q=searchQ.trim().toLowerCase();
+    STATIC_SOURCES.forEach(src=>{
+      if(q&&src.name.toLowerCase().indexOf(q)===-1&&src.org.toLowerCase().indexOf(q)===-1) return;
+      grid.appendChild(renderStaticCard(src));
+    });
+    content.appendChild(grid);
+
+  } else {
+    // 링크 목록 모드
+    const q=searchQ.trim().toLowerCase();
+    const filtered=LIST_DATA.filter(d=>
+      d.cat===activeCat&&
+      (!q||d.org.toLowerCase().indexOf(q)!==-1||d.titles.some(t=>t.toLowerCase().indexOf(q)!==-1))
+    );
+    if(!filtered.length){content.innerHTML='<div class="empty">검색 결과가 없습니다.</div>';return;}
+
+    const bySub={};
+    filtered.forEach(d=>{(bySub[d.sub]=bySub[d.sub]||[]).push(d);});
+
+    Object.entries(bySub).forEach(([sub,items])=>{
+      const block=document.createElement("div");
+      block.className="sec-block";
+      block.innerHTML=`<div class="sec-hd"><span class="sec-acc acc-${activeCat}"></span><span class="sec-name">${sub}</span><span class="sec-cnt">${items.length}건</span></div>`;
+
+      const wrap=document.createElement("div");
+      wrap.className="list-wrap";
+      const colHd=document.createElement("div");
+      colHd.className="col-hd";
+      colHd.innerHTML="<span>기관</span><span>자료명</span><span>폴더 체계</span><span>바로가기</span>";
+      wrap.appendChild(colHd);
+
+      const byOrg=new Map();
+      items.forEach(d=>{if(!byOrg.has(d.org))byOrg.set(d.org,[]);byOrg.get(d.org).push(d);});
+      byOrg.forEach((rows,org)=>{
+        rows.forEach((d,ri)=>{
+          const row=document.createElement("div");
+          row.className="list-row";
+          row.innerHTML=`<div class="col-org">${ri===0?org:''}</div>
+            <div class="chips">${d.titles.map(t=>`<span class="chip">${t}</span>`).join('')}</div>
+            <div class="col-folder">${fmt(d.folder)}</div>
+            <div class="col-link">${d.url?`<a class="go-btn" href="${d.url}" target="_blank" rel="noopener">바로가기${goSvg()}</a>`:'<span style="font-size:11px;color:var(--t3)">-</span>'}</div>`;
+          wrap.appendChild(row);
+        });
+      });
+      block.appendChild(wrap);
+      content.appendChild(block);
+    });
   }
 }
 
-function buildLiveHTML(sid,listUrl){
-  if(!updatesData)return null;
-  const src=updatesData.sources[sid];
-  if(!src||!src.items.length)return null;
-  const rows=src.items.map(i=>{
-    const nb=i.is_new?`<span class="live-new">NEW</span>`:"";
-    const dt=i.date?`<span class="live-date">${i.date}</span>`:"";
-    return `<div class="live-item">${nb}${dt}<a class="live-link" href="${i.url}" target="_blank" rel="noopener">${i.title}</a></div>`;
-  }).join("");
-  return `<div class="live-hd"><span class="live-source">${src.org} · ${src.name}</span><span class="live-crawled">수집일 ${src.crawled_at}</span></div><div>${rows}</div><a class="live-more" href="${listUrl}" target="_blank" rel="noopener">전체 목록 보기 ↗</a>`;
+function setFeed(){
+  viewMode="feed";
+  document.querySelectorAll(".nav-item[data-view]").forEach(el=>el.classList.toggle("active",el.dataset.view==="feed"));
+  document.querySelectorAll(".nav-item[data-cat]").forEach(el=>el.classList.remove("active"));
+  document.getElementById("topTitle").textContent="최신 업데이트";
+  document.getElementById("topSub").textContent="국토연구원 · 국회입법조사처 최신 게시글";
+  render();
 }
-
-function fmt(f){return f.replace(/★/g,'<span class="star">★</span>').replace(/저장 X/g,'<span class="nosave">저장 X</span>');}
-function goBtn(url){if(!url)return"";return`<a class="go-btn" href="${url}" target="_blank" rel="noopener">바로가기<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg></a>`;}
-function match(s,q){return s.toLowerCase().indexOf(q)!==-1;}
-
-function render(){
-  const content=document.getElementById("content");
-  const q=searchQ.trim().toLowerCase();
-  const filtered=DATA.filter(d=>{
-    const catOk=q?true:d.cat===activeCat;
-    const qOk=!q||match(d.org,q)||d.titles.some(t=>match(t,q))||match(d.sub,q)||match(d.folder,q);
-    return catOk&&qOk;
-  });
-  const bySub={};
-  filtered.forEach(d=>{const k=q?`[${CAT_LABELS[d.cat]}] ${d.sub}`:d.sub;(bySub[k]=bySub[k]||[]).push(d);});
-  content.innerHTML="";
-  if(!filtered.length){content.innerHTML='<div class="empty">검색 결과가 없습니다.</div>';return;}
-
-  Object.entries(bySub).forEach(([sub,items])=>{
-    const repCat=items[0].cat;
-    const block=document.createElement("div");
-    block.className="sec-block";
-    const hd=document.createElement("div");
-    hd.className="sec-hd";
-    hd.innerHTML=`<span class="sec-acc acc-${repCat}"></span><span class="sec-name">${sub}</span><span class="sec-cnt">${items.length}건</span>`;
-    block.appendChild(hd);
-    const lw=document.createElement("div");
-    lw.className="list-wrap";
-    lw.innerHTML='<div class="col-hd"><span>기관</span><span>자료명</span><span>폴더 체계</span><span>바로가기</span></div>';
-
-    const byOrg=new Map();
-    items.forEach(d=>{if(!byOrg.has(d.org))byOrg.set(d.org,[]);byOrg.get(d.org).push(d);});
-
-    byOrg.forEach((rows,org)=>{
-      rows.forEach((d,ri)=>{
-        const sid=URL_TO_SID[d.url]||null;
-        const hasNew=sid&&updatesData&&updatesData.sources[sid]&&updatesData.sources[sid].items.some(i=>i.is_new);
-        const rg=document.createElement("div");
-        rg.className="row-group";
-        const dr=document.createElement("div");
-        dr.className="data-row";
-        const orgHtml=ri===0?`<div class="col-org">${org}${hasNew?'<span class="new-dot"></span>':''}</div>`:`<div class="col-org"></div>`;
-        dr.innerHTML=orgHtml
-          +`<div class="col-titles">${d.titles.map(t=>`<span class="chip">${t}</span>`).join("")}</div>`
-          +`<div class="col-folder">${fmt(d.folder)}</div>`
-          +`<div class="col-link">${goBtn(d.url)}${sid?'<span class="chev">▾</span>':''}</div>`;
-        rg.appendChild(dr);
-
-        if(sid){
-          const lp=document.createElement("div");
-          lp.className="live-panel";
-          dr.addEventListener("click",function(e){
-            if(e.target.tagName==="A")return;
-            const isOpen=dr.classList.toggle("open");
-            lp.classList.toggle("visible",isOpen);
-            if(isOpen&&!lp.dataset.loaded){
-              lp.dataset.loaded="1";
-              const fill=()=>{const html=buildLiveHTML(sid,d.url);lp.innerHTML=html||'<div class="live-msg">수집된 항목이 없습니다. GitHub Actions를 먼저 실행해주세요.</div>';};
-              if(updatesData)fill();
-              else{lp.innerHTML='<div class="live-msg">로딩 중…</div>';const t=setInterval(()=>{if(updatesData){clearInterval(t);fill();}},300);}
-            }
-          });
-          rg.appendChild(lp);
-        }
-        lw.appendChild(rg);
-      });
-    });
-
-    block.appendChild(lw);
-    content.appendChild(block);
-  });
-}
-
-function setActiveCat(cat){
-  activeCat=cat;
+function setListCat(cat){
+  viewMode="list"; activeCat=cat;
+  document.querySelectorAll(".nav-item[data-view]").forEach(el=>el.classList.toggle("active",el.dataset.view==="list"));
   document.querySelectorAll(".nav-item[data-cat]").forEach(el=>el.classList.toggle("active",el.dataset.cat===cat));
   document.getElementById("topTitle").textContent=CAT_LABELS[cat]||cat;
   document.getElementById("topSub").textContent=CAT_SUBS[cat]||"";
   render();
 }
-document.querySelectorAll(".nav-item[data-cat]").forEach(el=>el.addEventListener("click",()=>setActiveCat(el.dataset.cat)));
+
+document.querySelectorAll(".nav-item[data-view]").forEach(el=>el.addEventListener("click",()=>el.dataset.view==="feed"?setFeed():setListCat(activeCat)));
+document.querySelectorAll(".nav-item[data-cat]").forEach(el=>el.addEventListener("click",()=>setListCat(el.dataset.cat)));
 document.getElementById("searchInput").addEventListener("input",e=>{searchQ=e.target.value;render();});
-loadUpdates().then(()=>render());
+
+render();
 </script>
 </body>
 </html>
