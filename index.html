@@ -113,9 +113,9 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .go-btn:hover{opacity:.65;}
 .go-btn svg{width:10px;height:10px;}
 
-/* 열람공고 자치구 탭 — 콤팩트 5열 그리드 */
-.wrtanc-tabs{display:grid !important;grid-template-columns:repeat(5,1fr);gap:5px;padding:10px 12px;flex-wrap:unset;}
-.wrtanc-tab{font-size:11.5px !important;padding:5px 2px !important;text-align:center;text-decoration:none;}
+/* 열람공고 자치구 탭 — 3열 그리드 */
+.wrtanc-tabs{display:grid !important;grid-template-columns:repeat(3,1fr);gap:5px;padding:10px 12px;flex-wrap:unset;}
+.wrtanc-tab{font-size:12.5px !important;padding:6px 4px !important;text-align:center;text-decoration:none;}
 .wrtanc-dday{font-size:10px;white-space:nowrap;flex-shrink:0;font-family:var(--mono);}
 
 /* TAB BUTTONS — 크기 확대 */
@@ -291,20 +291,18 @@ const LIST_DATA = [
   {cat:"각종법령",sub:"각종법령",org:"국가법령정보센터",titles:["법, 시행령, 시행규칙, 조례 등"],folder:"★사업별 자료 - 법령/지침 (파일 아닌 링크로 저장)",url:"https://www.law.go.kr/main.html"},
 ];
 
-// ── 국토교통부 분야 탭 — 실제 URL 매핑 (검증 완료) ──
-// p_sec_1: 국토도시  p_sec_2: 주택토지  p_sec_3: 건설
-// p_sec_4: 도로철도  p_sec_5: 교통물류  p_sec_6: 항공
-// p_sec_7: 모빌리티/자동차  p_sec_8: 일반  (설명자료 등은 별도)
+// ── 국토교통부 분야 탭 — 직접 확인된 URL 매핑만 사용 ──
+// p_sec_1: 일반  p_sec_2: 주택토지  p_sec_3: 건설
+// p_sec_4: 도로철도  p_sec_5: 교통물류  p_sec_7: 항공
+// 국토도시·모빌리티 번호 미확인 → 제거
 const MOLIT_TABS = [
   {label:"전체",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
-  {label:"국토도시",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_1"},
   {label:"주택토지",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_2"},
   {label:"건설",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_3"},
   {label:"도로철도",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_4"},
   {label:"교통물류",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_5"},
-  {label:"항공",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_6"},
-  {label:"모빌리티",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_7"},
-  {label:"일반",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_8"},
+  {label:"항공",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_7"},
+  {label:"일반",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_1"},
 ];
 
 const SEOUL_GROUPS = [
@@ -343,8 +341,8 @@ async function loadUpdates(){
     updData=await r.json();
     let n=0;
     Object.values(updData.sources).forEach(s=>{
-      // wrtanc는 items 대신 all 키 사용
-      const list = s.items || s.all || [];
+      // wrtanc는 items 대신 all 키 사용. by_gu 등 배열이 아닌 값은 skip
+      const list = Array.isArray(s.items) ? s.items : Array.isArray(s.all) ? s.all : [];
       list.forEach(i=>{if(i.is_new)n++;});
     });
     if(n>0){const el=document.getElementById("newPill");el.textContent=n+" NEW";el.classList.add("on");}
@@ -421,7 +419,11 @@ function renderFeedCard(src, data){
         body.innerHTML=`<div class="card-msg">열람공고 데이터가 없습니다.<br>GitHub Actions를 실행해주세요.</div>`;
         return;
       }
-      const items = ws[guVal] || [];   // "all" or "11680" etc.
+      // guVal "all" → ws.all
+      // 자치구 코드 → ws.by_gu["11680"] (신버전) 또는 ws["11680"] (구버전 flat)
+      const items = guVal === "all"
+        ? (ws.all || [])
+        : ((ws.by_gu && ws.by_gu[guVal]) || ws[guVal] || []);
       if(!items.length){
         body.innerHTML=`<div class="card-msg">진행중인 열람공고가 없습니다.</div>`;
         return;
