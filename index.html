@@ -54,8 +54,10 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 /* CONTENT */
 .content{flex:1;overflow-y:auto;padding:20px 24px 48px;}
 
-/* FEED GRID */
-.feed-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;}
+/* FEED GRID — 상단 와이드(1열) + 하단 2열 하이브리드 */
+.feed-grid{display:flex;flex-direction:column;gap:14px;}
+.feed-wide{display:grid;grid-template-columns:1fr;gap:14px;}
+.feed-2col{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;}
 
 /* SOURCE CARD */
 .src-card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;display:flex;flex-direction:column;overflow:hidden;}
@@ -64,19 +66,30 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .card-acc{width:3px;height:32px;border-radius:2px;flex-shrink:0;}
 .card-info{}
 .card-name{font-size:13px;font-weight:600;color:var(--t);letter-spacing:-.2px;}
-.card-org{font-size:11.5px;color:var(--t2);margin-top:3px;font-weight:400;}
+/* 기관명 — 기관별 색상 */
+.card-org{font-size:11.5px;margin-top:3px;font-weight:500;}
+.org-molit{color:#7c3aed;}       /* 국토교통부 — 보라 */
+.org-seoul{color:#0d9488;}       /* 서울특별시 — 틸 */
+.org-urban{color:#d97706;}       /* 서울 도시계획포털 — 앰버 */
+.org-krihs{color:#2563eb;}       /* 국토연구원 — 블루 */
+.org-nars{color:#dc2626;}        /* 국회입법조사처 — 레드 */
+.org-default{color:var(--t2);}
 .card-go{font-size:11px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:3px;flex-shrink:0;white-space:nowrap;}
 .card-go:hover{opacity:.7;}
 .card-go svg{width:10px;height:10px;}
 
 /* POST LIST */
 .card-body{flex:1;}
-.post-row{display:flex;align-items:baseline;gap:8px;padding:7px 14px;border-bottom:1px solid var(--bd);transition:background .1s;}
+.post-row{display:flex;align-items:center;gap:6px;padding:7px 14px;border-bottom:1px solid var(--bd);transition:background .1s;}
 .post-row:last-child{border-bottom:none;}
 .post-row:hover{background:var(--bg3);}
 .badge-new{font-size:9px;padding:1px 5px;background:#fef2f2;color:#dc2626;border:1px solid #fecaca;border-radius:3px;font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
-.post-date{font-size:10.5px;color:var(--t3);font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
-.post-a{font-size:12px;color:var(--t);text-decoration:none;line-height:1.4;flex:1;}
+.post-date{font-size:10px;color:var(--t3);font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
+/* 부서·자치구 배지 — 눈에 띄게 */
+.post-dept{font-size:10.5px;font-weight:600;color:#fff;background:var(--blue);border-radius:3px;padding:1px 6px;white-space:nowrap;flex-shrink:0;letter-spacing:-.1px;}
+.post-dept.dept-seoul{background:#0d9488;}
+.post-dept.dept-gu{background:#d97706;}
+.post-a{font-size:12.5px;color:var(--t);text-decoration:none;line-height:1.4;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .post-a:hover{color:var(--blue);}
 .card-msg{padding:18px 14px;font-size:12px;color:var(--t3);text-align:center;line-height:1.6;}
 .card-msg code{font-family:var(--mono);font-size:11px;background:var(--bg3);padding:1px 5px;border-radius:3px;}
@@ -337,11 +350,10 @@ async function loadUpdates(){
   if(updData) return updData;
   try{
     const r=await fetch("data/updates.json?t="+Date.now());
-    if(!r.ok) throw new Error();
+    if(!r.ok) throw new Error("HTTP "+r.status);
     updData=await r.json();
     let n=0;
     Object.values(updData.sources).forEach(s=>{
-      // wrtanc는 items 대신 all 키 사용. by_gu 등 배열이 아닌 값은 skip
       const list = Array.isArray(s.items) ? s.items : Array.isArray(s.all) ? s.all : [];
       list.forEach(i=>{if(i.is_new)n++;});
     });
@@ -349,7 +361,7 @@ async function loadUpdates(){
     const d=new Date(updData.updated_at);
     document.getElementById("updTime").textContent="업데이트 "+d.toLocaleString("ko-KR",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
     return updData;
-  }catch(e){console.error("loadUpdates error:",e);return null;}
+  }catch(e){console.error("loadUpdates error:",e.message||e);return null;}
 }
 
 function renderPostRows(items, q){
@@ -359,9 +371,18 @@ function renderPostRows(items, q){
   return filtered.map(item=>{
     const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
     const date=item.date?`<span class="post-date">${item.date}</span>`:'';
-    const dept=item.dept?`<span class="post-date">[${item.dept}]</span>`:'';
+    const dept=item.dept?`<span class="post-dept dept-seoul">${item.dept}</span>`:'';
     return`<div class="post-row">${badge}${date}${dept}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
   }).join('');
+}
+
+function orgClass(org){
+  if(org.includes("국토교통부")) return "org-molit";
+  if(org.includes("서울특별시")) return "org-seoul";
+  if(org.includes("도시계획포털")||org.includes("도시공간포털")) return "org-urban";
+  if(org.includes("국토연구원")) return "org-krihs";
+  if(org.includes("국회입법조사처")) return "org-nars";
+  return "org-default";
 }
 
 function renderFeedCard(src, data){
@@ -374,7 +395,7 @@ function renderFeedCard(src, data){
       <span class="card-acc card-acc-${src.cat}"></span>
       <div class="card-info">
         <div class="card-name">${src.name}</div>
-        <div class="card-org">${src.org}</div>
+        <div class="card-org ${orgClass(src.org)}">${src.org}</div>
       </div>
     </div>
     <a class="card-go" href="${src.url}" target="_blank" rel="noopener">원문 ${goSvg()}</a>
@@ -437,7 +458,7 @@ function renderFeedCard(src, data){
       body.innerHTML = filtered.slice(0,10).map(item=>{
         const badge   = item.is_new ? `<span class="badge-new">NEW</span>` : '';
         const date    = item.date   ? `<span class="post-date">${item.date}</span>` : '';
-        const gu      = item.gu     ? `<span class="post-date">[${item.gu}]</span>` : '';
+        const gu      = item.gu     ? `<span class="post-dept dept-gu">${item.gu}</span>` : '';
         const endDate = item.end_date
           ? `<span class="wrtanc-dday" title="의견제출 종료">${calcDday(item.end_date)}</span>`
           : '';
@@ -533,7 +554,7 @@ function renderStaticCard(src){
       <span class="card-acc card-acc-${src.cat}"></span>
       <div class="card-info">
         <div class="card-name">${src.name}</div>
-        <div class="card-org">${src.org}</div>
+        <div class="card-org ${orgClass(src.org)}">${src.org}</div>
       </div>
     </div>
     <a class="card-go" href="${src.url}" target="_blank" rel="noopener">바로가기 ${goSvg()}</a>
@@ -549,15 +570,27 @@ async function render(){
 
   if(viewMode==="feed"){
     const data=await loadUpdates();
-    const grid=document.createElement("div");
-    grid.className="feed-grid";
-    FEED_SOURCES.forEach(src=>grid.appendChild(renderFeedCard(src,data)));
+    const wrap=document.createElement("div");
+    wrap.className="feed-grid";
+
+    // ① 상단 와이드 (1열) — 보도자료 2개 + 열람공고
+    const wide=document.createElement("div");
+    wide.className="feed-wide";
+    const WIDE_SIDS=["molit_press","seoul_press","wrtanc"];
+    FEED_SOURCES.filter(s=>WIDE_SIDS.includes(s.sid)).forEach(src=>wide.appendChild(renderFeedCard(src,data)));
+    wrap.appendChild(wide);
+
+    // ② 하단 2열 — 나머지 소스 + 정적 카드
+    const two=document.createElement("div");
+    two.className="feed-2col";
     const q=searchQ.trim().toLowerCase();
+    FEED_SOURCES.filter(s=>!WIDE_SIDS.includes(s.sid)).forEach(src=>two.appendChild(renderFeedCard(src,data)));
     STATIC_SOURCES.forEach(src=>{
       if(q&&src.name.toLowerCase().indexOf(q)===-1&&src.org.toLowerCase().indexOf(q)===-1) return;
-      grid.appendChild(renderStaticCard(src));
+      two.appendChild(renderStaticCard(src));
     });
-    content.appendChild(grid);
+    wrap.appendChild(two);
+    content.appendChild(wrap);
 
   } else {
     const q=searchQ.trim().toLowerCase();
