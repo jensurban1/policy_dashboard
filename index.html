@@ -113,6 +113,12 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .go-btn:hover{opacity:.65;}
 .go-btn svg{width:10px;height:10px;}
 
+/* TAB BUTTONS (국토교통부 분야, 서울시 본부) */
+.card-tabs{display:flex;flex-wrap:wrap;gap:5px;padding:10px 14px;border-bottom:1px solid var(--bd);}
+.tab-btn{font-size:11px;padding:4px 10px;border-radius:5px;border:1px solid var(--bd2);background:transparent;color:var(--t2);cursor:pointer;transition:all .15s;font-family:var(--font);white-space:nowrap;}
+.tab-btn:hover{background:var(--bg3);color:var(--t);}
+.tab-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:500;}
+
 /* cat accent */
 .acc-정책기본구상,.card-acc-정책기본구상{background:#2563eb;}
 .acc-지자체정책구상,.card-acc-지자체정책구상{background:#0d9488;}
@@ -296,12 +302,24 @@ async function loadUpdates(){
   }catch{return null;}
 }
 
+function renderPostRows(items, q){
+  if(!items||!items.length) return `<div class="card-msg">해당 항목이 없습니다.</div>`;
+  const filtered = q ? items.filter(i=>i.title.toLowerCase().indexOf(q)!==-1) : items;
+  if(!filtered.length) return `<div class="card-msg">검색 결과가 없습니다.</div>`;
+  return filtered.map(item=>{
+    const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
+    const date=item.date?`<span class="post-date">${item.date}</span>`:'';
+    const dept=item.dept?`<span class="post-date">[${item.dept}]</span>`:'';
+    return`<div class="post-row">${badge}${date}${dept}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+  }).join('');
+}
+
 function renderFeedCard(src, data){
   const q=searchQ.trim().toLowerCase();
   const card=document.createElement("div");
   card.className="src-card";
 
-  card.innerHTML=`<div class="card-hd">
+  const hd=`<div class="card-hd">
     <div class="card-hd-left">
       <span class="card-acc card-acc-${src.cat}"></span>
       <div class="card-info">
@@ -310,29 +328,87 @@ function renderFeedCard(src, data){
       </div>
     </div>
     <a class="card-go" href="${src.url}" target="_blank" rel="noopener">원문 ${goSvg()}</a>
-  </div>
-  <div class="card-body" id="cb-${src.sid}"></div>`;
+  </div>`;
 
-  const body=card.querySelector(`#cb-${src.sid}`);
-
-  // links 타입: 직접 링크 목록 표시 (크롤링 불가 사이트)
-  if(src.links){
-    body.innerHTML = src.links.map(lk=>
-      `<div class="post-row"><a class="post-a" href="${lk.url}" target="_blank" rel="noopener">${lk.title}</a></div>`
-    ).join('') + (src.note ? `<div class="static-note">${src.note}</div>` : '');
+  // ── 국토교통부: 분야 탭 → 새 탭으로 열기 ──
+  if(src.sid==="molit_press"){
+    const MOLIT_TABS=[
+      {label:"전체",   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
+      {label:"주택토지", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_7"},
+      {label:"국토도시", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_4"},
+      {label:"건설",   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_3"},
+      {label:"교통물류", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_5"},
+      {label:"도로철도", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_6"},
+      {label:"항공",   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_8"},
+      {label:"일반",   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_1"},
+    ];
+    const tabs=MOLIT_TABS.map(t=>
+      `<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label} ${goSvg()}</a>`
+    ).join('');
+    card.innerHTML=hd+`<div class="card-tabs">${tabs}</div>
+      <div class="card-msg" style="font-size:11px;padding:12px 14px;">분야 버튼을 클릭하면 해당 분야 보도자료 페이지가 열립니다.</div>`;
     return card;
   }
+
+  // ── 서울시: 본부/실 탭 → 카드 내 필터 ──
+  if(src.sid==="seoul_press"){
+    const SEOUL_GROUPS=[
+      {label:"전체",    depts:null},
+      {label:"미래공간기획관", depts:["미래공간담당관","공공개발담당관","용산입체도시담당관","도시활력담당관"]},
+      {label:"균형발전본부", depts:["균형발전기획관","균형발전정책과","도시정비과","동남권사업과","동북권사업과","서부권사업과","광화문광장사업과"]},
+      {label:"도시공간본부", depts:["도시공간기획관","도시공간전략과","도시계획과","도시계획상임기획과","도시재창조과","신속통합기획과","도시관리과","시설계획과","토지관리과"]},
+      {label:"주택실",   depts:["주택정책관","건축기획관","주택정책과","임대주택과","부동산정책개발센터","공공주택과","주거환경개선과","건축기획과","전략주택공급과","공동주택과","주거정비과","재정비촉진과"]},
+    ];
+    const bodyId=`cb-seoul-${Date.now()}`;
+    const tabsHtml=SEOUL_GROUPS.map((g,i)=>
+      `<button class="tab-btn${i===0?' active':''}" data-group="${i}">${g.label}</button>`
+    ).join('');
+    card.innerHTML=hd+`<div class="card-tabs" id="seoul-tabs-${bodyId}">${tabsHtml}</div><div class="card-body" id="${bodyId}"></div>`;
+
+    const body=card.querySelector(`#${bodyId}`);
+    const tabEls=card.querySelectorAll(`#seoul-tabs-${bodyId} .tab-btn`);
+
+    const renderSeoul=(groupIdx)=>{
+      if(!data){body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.</div>`;return;}
+      const s=data.sources["seoul_press"];
+      if(!s||!s.items.length){
+        if(src.static){
+          const grid=src.static.items.map(it=>`<div class="static-item"><div class="si-cat">${it.cat}</div><div class="si-title">${it.title}</div><div class="si-desc">${it.desc}</div></div>`).join('');
+          body.innerHTML=`<div class="static-grid">${grid}</div>${src.static.note?`<div class="static-note">${src.static.note}</div>`:''}`;
+        } else {
+          body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;
+        }
+        return;
+      }
+      const g=SEOUL_GROUPS[groupIdx];
+      const filtered=g.depts
+        ? s.items.filter(i=>g.depts.some(d=>i.dept&&i.dept.includes(d)))
+        : s.items;
+      body.innerHTML=renderPostRows(filtered.slice(0,5), q);
+    };
+
+    tabEls.forEach((btn,i)=>{
+      btn.addEventListener("click",()=>{
+        tabEls.forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        renderSeoul(i);
+      });
+    });
+    renderSeoul(0);
+    return card;
+  }
+
+  // ── 일반 피드 카드 (국토연구원, 국회입법조사처 등) ──
+  card.innerHTML=hd+`<div class="card-body" id="cb-${src.sid}"></div>`;
+  const body=card.querySelector(`#cb-${src.sid}`);
 
   if(!data){
     body.innerHTML=`<div class="card-msg">⚠ <code>data/updates.json</code>이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;
     return card;
   }
   const s=data.sources[src.sid];
-
-  // 수집 항목 없으면 → 정적 안내가 있으면 그걸로, 없으면 빈 메시지
   if(!s||!s.items.length){
     if(src.static){
-      // 정적 안내 카드로 fallback
       const grid=src.static.items.map(it=>`<div class="static-item"><div class="si-cat">${it.cat}</div><div class="si-title">${it.title}</div><div class="si-desc">${it.desc}</div></div>`).join('');
       body.innerHTML=`<div class="static-grid">${grid}</div>${src.static.note?`<div class="static-note">${src.static.note}</div>`:''}`;
     } else {
@@ -340,19 +416,7 @@ function renderFeedCard(src, data){
     }
     return card;
   }
-
-  // 소스별 표시 개수: 서울시는 5건, 나머지는 전체
-  const maxItems = src.sid === "seoul_press" ? 5 : s.items.length;
-  const allItems = q ? s.items.filter(i=>i.title.toLowerCase().indexOf(q)!==-1) : s.items;
-  const items = allItems.slice(0, maxItems);
-  if(!items.length){body.innerHTML=`<div class="card-msg">검색 결과가 없습니다.</div>`;return card;}
-
-  body.innerHTML=items.map(item=>{
-    const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
-    const date=item.date?`<span class="post-date">${item.date}</span>`:'';
-    const dept=item.dept?`<span class="post-date">[${item.dept}]</span>`:'';
-    return`<div class="post-row">${badge}${date}${dept}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
-  }).join('');
+  body.innerHTML=renderPostRows(s.items, q);
   return card;
 }
 
