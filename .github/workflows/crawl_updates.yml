@@ -1,10 +1,8 @@
 name: 정책자료 업데이트 크롤링
-
 on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
-
 jobs:
   crawl:
     runs-on: ubuntu-latest
