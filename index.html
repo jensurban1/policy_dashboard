@@ -170,7 +170,7 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
   <div class="topbar">
     <div>
       <div class="topbar-t" id="topTitle">최신 업데이트</div>
-      <div class="topbar-s" id="topSub">국토연구원 · 국회입법조사처 최신 게시글</div>
+      <div class="topbar-s" id="topSub">국토연구원 · 국회입법조사처 · 서울시 최신 게시글</div>
     </div>
     <div class="topbar-r">
       <span class="new-pill" id="newPill">0 NEW</span>
@@ -191,15 +191,13 @@ const FEED_SOURCES = [
   {sid:"krihs_article", name:"월간국토 Article",  org:"국토연구원",    cat:"정책기본구상", url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"},
   {sid:"nars_report",   name:"연구보고서",         org:"국회입법조사처", cat:"정책기본구상", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043"},
   {sid:"nars_research", name:"정책연구용역",       org:"국회입법조사처", cat:"정책기본구상", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010"},
+  {sid:"seoul_press",   name:"보도자료",           org:"서울특별시",    cat:"지자체정책구상", url:"https://www.seoul.go.kr/news/news_report.do"},
 ];
 
 const STATIC_SOURCES = [
   {name:"보도자료 / 홍보자료",org:"국토교통부",cat:"정책기본구상",url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp",
    items:[{cat:"필터",title:"부서별 분류",desc:"주택토지실/도시정책관 등"},{cat:"필터",title:"날짜·키워드",desc:"기간·제목·내용 검색"},{cat:"목록",title:"제목·날짜·부서",desc:"클릭 시 첨부파일"}],
    note:"※ '국토도시' 부서 필터 활용"},
-  {name:"보도자료 / 홍보자료",org:"서울특별시",cat:"지자체정책구상",url:"https://www.seoul.go.kr/news/news_report.do",
-   items:[{cat:"필터",title:"부서 선택",desc:"도시계획국/주택정책실 등"},{cat:"필터",title:"기간·키워드",desc:"날짜범위·제목 검색"},{cat:"목록",title:"제목·날짜·담당부서",desc:"첨부 PDF 제공"}],
-   note:"※ 미래공간기획관·균형발전본부 등 부서 필터 선택"},
   {name:"법정계획 / 운영지침",org:"서울 도시계획포털",cat:"지자체정책구상",url:"https://urban.seoul.go.kr/view/html/PMNU5020000001",
    items:[{cat:"계획",title:"2040 서울도시기본계획",desc:"최상위 법정 도시계획"},{cat:"계획",title:"2030 생활권계획",desc:"5개 권역 116개 생활권"},{cat:"지침",title:"사업별 운영지침",desc:"재개발·재건축·도시재생"}],
    note:"※ 좌측 메뉴에서 계획 유형 선택"},
@@ -292,7 +290,8 @@ function renderFeedCard(src, data){
   body.innerHTML=items.map(item=>{
     const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
     const date=item.date?`<span class="post-date">${item.date}</span>`:'';
-    return`<div class="post-row">${badge}${date}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+    const dept=item.dept?`<span class="post-date">[${item.dept}]</span>`:'';
+    return`<div class="post-row">${badge}${date}${dept}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
   }).join('');
   return card;
 }
@@ -381,7 +380,7 @@ function setFeed(){
   document.querySelectorAll(".nav-item[data-view]").forEach(el=>el.classList.toggle("active",el.dataset.view==="feed"));
   document.querySelectorAll(".nav-item[data-cat]").forEach(el=>el.classList.remove("active"));
   document.getElementById("topTitle").textContent="최신 업데이트";
-  document.getElementById("topSub").textContent="국토연구원 · 국회입법조사처 최신 게시글";
+  document.getElementById("topSub").textContent="국토연구원 · 국회입법조사처 · 서울시 최신 게시글";
   render();
 }
 function setListCat(cat){
