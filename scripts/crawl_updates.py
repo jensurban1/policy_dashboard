@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+import re
 from datetime import datetime, timezone, timedelta
 
 KST = timezone(timedelta(hours=9))
@@ -11,6 +12,9 @@ OUTPUT_PATH = "data/updates.json"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
 }
+
+# 서울시 관심 부서 키워드
+SEOUL_DEPTS = ["미래공간기획관", "균형발전", "도시공간", "주택실", "주택정책과"]
 
 SOURCES = [
     {
@@ -48,6 +52,13 @@ SOURCES = [
         "url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
         "type": "nars",
     },
+    {
+        "id": "seoul_press",
+        "name": "보도자료",
+        "org": "서울특별시",
+        "url": "https://www.seoul.go.kr/news/news_report.do",
+        "type": "seoul",
+    },
 ]
 
 
@@ -64,17 +75,27 @@ def fetch(url):
 
 def parse_krihs(soup):
     items = []
-    links = soup.select("a[href*='briefView'], a[href*='pub_list_no'], a[href*='briefs']")
-    if not links:
-        links = soup.select("div.board_list a, ul.board_list a, li.item a")
-    for a in links[:10]:
+    rows = soup.select("ul.board_list li") or soup.select("div.board_list li") or soup.select("li.item")
+    if not rows:
+        links = soup.select("a[href*='briefView'], a[href*='pub_list_no'], a[href*='briefs']")
+        for a in links[:10]:
+            title = a.get_text(strip=True)
+            if len(title) < 5:
+                continue
+            href = a.get("href", "")
+            url = "https://www.krihs.re.kr" + href if href.startswith("/") else href
+            items.append({"title": title, "url": url, "date": ""})
+        return items
+    for li in rows[:10]:
+        a = li.select_one("a")
+        if not a:
+            continue
         title = a.get_text(strip=True)
         if len(title) < 5:
             continue
         href = a.get("href", "")
         url = "https://www.krihs.re.kr" + href if href.startswith("/") else href
-        li = a.find_parent("li") or a.find_parent("tr")
-        date_el = li.select_one(".date, em, span.date") if li else None
+        date_el = li.select_one(".date, em, span.date")
         date = date_el.get_text(strip=True) if date_el else ""
         items.append({"title": title, "url": url, "date": date})
     return items
@@ -128,20 +149,84 @@ def parse_nars(soup):
     return items
 
 
+def parse_seoul_page(soup):
+    """서울시 보도자료 1페이지 파싱 — 관심 부서 필터링"""
+    items = []
+    rows = soup.select("table tbody tr")
+    for row in rows:
+        cols = row.select("td")
+        if len(cols) < 4:
+            continue
+        title_td = cols[1]
+        title_text = title_td.get_text(strip=True).replace("파일있음", "").strip()
+        if not title_text or len(title_text) < 5:
+            continue
+        dept = cols[2].get_text(strip=True)
+        date = cols[3].get_text(strip=True)
+
+        # 관심 부서 필터
+        if not any(k in dept for k in SEOUL_DEPTS):
+            continue
+
+        # 게시글 번호 추출
+        a_tag = title_td.select_one("a")
+        bbs_no = ""
+        if a_tag:
+            href = a_tag.get("href", "") or ""
+            onclick = a_tag.get("onclick", "") or ""
+            m = re.search(r"fnTbbsView\('(\d+)'\)", href + onclick)
+            if m:
+                bbs_no = m.group(1)
+
+        post_url = (
+            f"https://www.seoul.go.kr/news/news_report.do#view/{bbs_no}"
+            if bbs_no
+            else "https://www.seoul.go.kr/news/news_report.do"
+        )
+        items.append({
+            "title": title_text,
+            "url": post_url,
+            "date": date,
+            "dept": dept,
+        })
+    return items
+
+
+def crawl_seoul(base_url, max_pages=10, target=10):
+    """여러 페이지를 순회하며 관심 부서 글 target건 수집"""
+    items = []
+    for page in range(1, max_pages + 1):
+        url = f"{base_url}?curPage={page}&bbsNo=158"
+        print(f"  서울시 {page}페이지 크롤링...")
+        soup = fetch(url)
+        if not soup:
+            break
+        page_items = parse_seoul_page(soup)
+        items.extend(page_items)
+        if len(items) >= target:
+            break
+    return items[:target]
+
+
 def crawl_source(source):
     print(f"크롤링: {source['org']} - {source['name']}")
-    soup = fetch(source["url"])
-    if not soup:
-        return []
     t = source["type"]
-    if t == "krihs":
-        items = parse_krihs(soup)
-    elif t == "krihs_article":
-        items = parse_krihs_article(soup)
-    elif t == "nars":
-        items = parse_nars(soup)
+
+    if t == "seoul":
+        items = crawl_seoul(source["url"], max_pages=10, target=10)
     else:
-        items = []
+        soup = fetch(source["url"])
+        if not soup:
+            return []
+        if t == "krihs":
+            items = parse_krihs(soup)
+        elif t == "krihs_article":
+            items = parse_krihs_article(soup)
+        elif t == "nars":
+            items = parse_nars(soup)
+        else:
+            items = []
+
     print(f"  → {len(items)}건 수집")
     return items
 
