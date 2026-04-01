@@ -1,78 +1,62 @@
 {
-  "updated_at": "2026-03-31T13:55:52.489744+09:00",
+  "updated_at": "2026-04-01T10:17:35.070789+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
-      "items": [
-        {
-          "title": "[국토정책Brief 제1056호] 노후계획도시정비, '주택 통합 재건축'을 넘어 '도시기능 향상'으로저자구지영, 김중은, 송지은권호1056호발행일2026-03-30조회수1",
-          "url": "javascript:viewCntAdd('BR_1','kc-7728932','/library/10120/contents/7728932')",
-          "date": "발행일2026-03-30",
-          "is_new": true
-        },
-        {
-          "title": "[국토정책Brief 제1055호] 지방소멸시대, 세대별 다지역 거주 정책의 수요성과 추진 전략저자김은란, 정유진, 서연미, 이우진, 신휴석, 곽병조권호1055호발행일2026-03-23조회수189",
-          "url": "javascript:viewCntAdd('BR_1','kc-7710368','/library/10120/contents/7710368')",
-          "date": "발행일2026-03-23",
-          "is_new": true
-        },
-        {
-          "title": "[국토정책Brief 제1054호] 스마트도시 확산을 위한 성과관리체계 구축 방안저자김익회, 노원준, 구형수, 방설아, 신서경, 최경아권호1054호발행일2026-03-16조회수161",
-          "url": "javascript:viewCntAdd('BR_1','kc-7708419','/library/10120/contents/7708419')",
-          "date": "발행일2026-03-16",
-          "is_new": true
-        }
-      ],
-      "crawled_at": "2026-03-31"
+      "items": [],
+      "crawled_at": "2026-04-01"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
-      "items": [
-        {
-          "title": "언론기사에서 나타나는 국유지 관리 갈등 및 쟁점 분석저자정민기발행일2026-01-22조회수194",
-          "url": "javascript:viewCntAdd('WKP','iw-7636384','/library/10120/contents/7636384')",
-          "date": "발행일2026-01-22",
-          "is_new": true
-        },
-        {
-          "title": "Housing as a Driver of Growth and Well-being: Lessons from Korea저자이소영, 박진백, 이성욱발행일2025-12-30조회수121",
-          "url": "javascript:viewCntAdd('WKP','iw-7626971','/library/10120/contents/7626971')",
-          "date": "발행일2025-12-30",
-          "is_new": true
-        },
-        {
-          "title": "계층별 주거위상 진단과 향후 정책방향저자박천규, 윤성진, 이건우, 오민준발행일2025-12-30조회수140",
-          "url": "javascript:viewCntAdd('WKP','iw-7626970','/library/10120/contents/7626970')",
-          "date": "발행일2025-12-30",
-          "is_new": true
-        }
-      ],
-      "crawled_at": "2026-03-31"
+      "items": [],
+      "crawled_at": "2026-04-01"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-03-31"
+      "crawled_at": "2026-04-01"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [],
-      "crawled_at": "2026-03-31"
+      "crawled_at": "2026-04-01"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
       "items": [],
-      "crawled_at": "2026-03-31"
+      "crawled_at": "2026-04-01"
+    },
+    "seoul_press": {
+      "name": "보도자료",
+      "org": "서울특별시",
+      "list_url": "https://www.seoul.go.kr/news/news_report.do",
+      "items": [
+        {
+          "title": "(기자설명회) '공공주택 공급부터 전월세 금융·계약지원까지'… 무주택 서울시민 주거안정 실현",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/455273",
+          "date": "2026-03-31",
+          "dept": "주택정책과",
+          "is_new": true
+        },
+        {
+          "title": "'325개 全 역세권 복합개발 대상지로'… 서울시, 이동중심→ 생활거점 개발 본격화",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/454930",
+          "date": "2026-03-25",
+          "dept": "도시공간전략과",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-04-01"
     }
   }
 }
