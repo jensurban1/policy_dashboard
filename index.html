@@ -333,20 +333,19 @@ function renderFeedCard(src, data){
   // ── 국토교통부: 분야 탭 → 새 탭으로 열기 ──
   if(src.sid==="molit_press"){
     const MOLIT_TABS=[
-      {label:"전체",   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
+      {label:"전체",    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
       {label:"주택토지", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_7"},
       {label:"국토도시", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_4"},
-      {label:"건설",   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_3"},
+      {label:"건설",    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_3"},
       {label:"교통물류", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_5"},
       {label:"도로철도", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_6"},
-      {label:"항공",   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_8"},
-      {label:"일반",   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_1"},
+      {label:"항공",    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_8"},
+      {label:"일반",    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_1"},
     ];
     const tabs=MOLIT_TABS.map(t=>
-      `<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label} ${goSvg()}</a>`
+      `<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label}</a>`
     ).join('');
-    card.innerHTML=hd+`<div class="card-tabs">${tabs}</div>
-      <div class="card-msg" style="font-size:11px;padding:12px 14px;">분야 버튼을 클릭하면 해당 분야 보도자료 페이지가 열립니다.</div>`;
+    card.innerHTML=hd+`<div class="card-tabs">${tabs}</div>`;
     return card;
   }
 
