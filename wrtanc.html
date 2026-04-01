@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>열람공고 — 서울 도시계획포털</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --font:-apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  --sb:#1e2433;--blue:#2563eb;--bg:#f7f8fa;--bd:rgba(0,0,0,0.08);
+  --t:#111827;--t2:#4b5563;--t3:#9ca3af;
+}
+html,body{height:100%;overflow:hidden;font-family:var(--font);}
+body{display:flex;flex-direction:column;background:var(--bg);}
+
+/* 상단 바 */
+.bar{
+  flex-shrink:0;
+  background:var(--sb);
+  display:flex;align-items:center;gap:12px;
+  padding:8px 14px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.bar-back{
+  display:flex;align-items:center;gap:5px;
+  font-size:12px;color:#94a3b8;text-decoration:none;
+  padding:4px 8px;border-radius:5px;
+  transition:background .12s;
+}
+.bar-back:hover{background:rgba(255,255,255,.08);color:#f1f5f9;}
+.bar-back svg{width:12px;height:12px;}
+.bar-title{font-size:13px;font-weight:600;color:#f1f5f9;flex:1;}
+.bar-gu{
+  font-size:11px;color:#fff;background:var(--blue);
+  border-radius:4px;padding:2px 9px;font-weight:600;
+  display:none;
+}
+.bar-gu.on{display:inline-block;}
+
+/* 로딩 오버레이 */
+.overlay{
+  position:absolute;inset:0;
+  background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:14px;z-index:10;
+  transition:opacity .3s;
+}
+.overlay.done{opacity:0;pointer-events:none;}
+.spinner{
+  width:32px;height:32px;border-radius:50%;
+  border:3px solid var(--bd);
+  border-top-color:var(--blue);
+  animation:spin .7s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+.load-txt{font-size:12.5px;color:var(--t2);}
+.load-sub{font-size:11px;color:var(--t3);}
+
+/* iframe */
+.frame-wrap{flex:1;position:relative;overflow:hidden;}
+iframe{width:100%;height:100%;border:none;display:block;}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="bar-back" href="javascript:history.back()">
+    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2L4 6l4 4"/></svg>
+    대시보드로
+  </a>
+  <span class="bar-title">열람공고(안) — 서울 도시계획포털</span>
+  <span class="bar-gu" id="guLabel"></span>
+</div>
+
+<div class="frame-wrap">
+  <div class="overlay" id="overlay">
+    <div class="spinner"></div>
+    <div class="load-txt" id="loadTxt">포털 로딩 중…</div>
+    <div class="load-sub">잠시만 기다려 주세요</div>
+  </div>
+  <iframe
+    id="frame"
+    src="https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"
+    title="서울 도시계획포털 열람공고"
+  ></iframe>
+</div>
+
+<script>
+const PORTAL_URL = 'https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing';
+
+// URL 파라미터에서 자치구 코드와 이름 읽기
+const params = new URLSearchParams(location.search);
+const guCode = params.get('gu') || '';
+const guName = params.get('name') || '';
+
+// 상단 바 자치구 레이블
+if (guName) {
+  const el = document.getElementById('guLabel');
+  el.textContent = guName;
+  el.classList.add('on');
+  document.title = `열람공고 — ${guName}`;
+}
+
+const frame   = document.getElementById('frame');
+const overlay = document.getElementById('overlay');
+const loadTxt = document.getElementById('loadTxt');
+
+if (guName) loadTxt.textContent = `${guName} 열람공고 로딩 중…`;
+
+// iframe 로드 완료 후 자치구 select 세팅 + 검색 실행
+frame.addEventListener('load', () => {
+  if (!guCode) {
+    // 전체 — 그냥 오버레이만 숨김
+    overlay.classList.add('done');
+    return;
+  }
+
+  try {
+    const doc = frame.contentDocument || frame.contentWindow.document;
+
+    // sidoR select 세팅
+    const sel = doc.getElementById('sidoR');
+    if (sel) {
+      sel.value = guCode;
+      sel.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    // 검색버튼 클릭
+    const btn = doc.querySelector('button.search-button');
+    if (btn) btn.click();
+
+    // 결과 로딩 대기 후 오버레이 숨김
+    setTimeout(() => overlay.classList.add('done'), 1200);
+
+  } catch(e) {
+    // cross-origin 접근 실패 시 (보험) 그냥 숨김
+    overlay.classList.add('done');
+  }
+});
+</script>
+</body>
+</html>
