@@ -9,12 +9,17 @@
 :root{
   --font:-apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
   --mono:"D2Coding","Consolas","Courier New",monospace;
-  --bg:#f7f8fa;--bg2:#fff;--bg3:#f2f4f7;--bg4:#eaecf2;
-  --bd:rgba(0,0,0,0.07);--bd2:rgba(0,0,0,0.13);
-  --t:#111827;--t2:#4b5563;--t3:#9ca3af;
-  --blue:#2563eb;--blue-lt:#eff6ff;--blue-bd:#bfdbfe;
-  --amber:#d97706;--red:#dc2626;
-  --sb:#1e2433;--sb-t:#cbd5e1;--sb-m:#64748b;
+  /* 배경 */
+  --bg:#f4f6f9;--bg2:#ffffff;--bg3:#f1f3f7;--bg4:#e8ebf2;
+  /* 보더 */
+  --bd:rgba(0,0,0,0.06);--bd2:rgba(0,0,0,0.11);
+  /* 텍스트 */
+  --t:#1a202c;--t2:#4a5568;--t3:#a0aec0;
+  /* 액센트 */
+  --blue:#3b82f6;--blue-lt:#eff6ff;--blue-bd:#bfdbfe;
+  --amber:#f59e0b;--red:#ef4444;
+  /* 사이드바 */
+  --sb:#1a2236;--sb-t:#cbd5e1;--sb-m:#64748b;
 }
 html,body{height:100%;}
 body{font-family:var(--font);background:var(--bg);color:var(--t);display:flex;height:100vh;overflow:hidden;}
@@ -68,8 +73,8 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .card-name{font-size:13px;font-weight:600;color:var(--t);letter-spacing:-.2px;}
 /* 기관명 — 기관별 색상 */
 .card-org{font-size:11.5px;margin-top:3px;font-weight:500;}
-.org-molit{color:#7c3aed;}       /* 국토교통부 — 보라 */
-.org-seoul{color:#0d9488;}       /* 서울특별시 — 틸 */
+.org-molit{color:#7c3aed;}       /* 국토교통부 — 인디고 */
+.org-seoul{color:#0891b2;}       /* 서울특별시 — 사이안 */
 .org-urban{color:#d97706;}       /* 서울 도시계획포털 — 앰버 */
 .org-krihs{color:#2563eb;}       /* 국토연구원 — 블루 */
 .org-nars{color:#dc2626;}        /* 국회입법조사처 — 레드 */
@@ -83,17 +88,23 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .post-row{display:flex;align-items:center;gap:6px;padding:7px 14px;border-bottom:1px solid var(--bd);transition:background .1s;}
 .post-row:last-child{border-bottom:none;}
 .post-row:hover{background:var(--bg3);}
-.badge-new{font-size:9px;padding:1px 5px;background:#fef2f2;color:#dc2626;border:1px solid #fecaca;border-radius:3px;font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
+.badge-new{font-size:9px;padding:1px 5px;background:#fff0f0;color:#e53e3e;border:1px solid #fed7d7;border-radius:3px;font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
 .post-date{font-size:10px;color:var(--t3);font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
-/* 부서·자치구 배지 — 파스텔 톤 */
-.post-dept{font-size:10.5px;font-weight:600;border-radius:3px;padding:1px 6px;white-space:nowrap;flex-shrink:0;letter-spacing:-.1px;border:1px solid transparent;}
-/* 서울시 본부별 색상 */
-.dept-미래공간{background:#ede9fe;color:#5b21b6;border-color:#ddd6fe;}
-.dept-균형발전{background:#d1fae5;color:#065f46;border-color:#a7f3d0;}
-.dept-도시공간{background:#dbeafe;color:#1e40af;border-color:#bfdbfe;}
-.dept-주택{background:#fef3c7;color:#92400e;border-color:#fde68a;}
-.dept-gu{background:#fef3c7;color:#92400e;border-color:#fde68a;}
-.dept-default{background:#f3f4f6;color:#374151;border-color:#e5e7eb;}
+/* 부서·자치구 배지 */
+.post-dept{font-size:10.5px;font-weight:600;border-radius:3px;padding:1px 7px;white-space:nowrap;flex-shrink:0;letter-spacing:-.1px;border:1px solid transparent;}
+/* 서울시 본부별 — 중성적 파스텔 */
+.dept-미래공간{background:#ede9fe;color:#6d28d9;border-color:#c4b5fd;}
+.dept-균형발전{background:#dcfce7;color:#166534;border-color:#86efac;}
+.dept-도시공간{background:#dbeafe;color:#1d4ed8;border-color:#93c5fd;}
+.dept-주택{background:#fef9c3;color:#854d0e;border-color:#fde047;}
+.dept-gu{background:#f0fdf4;color:#15803d;border-color:#86efac;}
+.dept-default{background:#f8fafc;color:#475569;border-color:#e2e8f0;}
+/* 자치구 5색 배지 */
+.gu-a{background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;}
+.gu-b{background:#f0fdf4;color:#15803d;border-color:#86efac;}
+.gu-c{background:#fdf4ff;color:#7e22ce;border-color:#e9d5ff;}
+.gu-d{background:#fff7ed;color:#c2410c;border-color:#fed7aa;}
+.gu-e{background:#f0fdfa;color:#0f766e;border-color:#99f6e4;}
 .post-a{font-size:12.5px;color:var(--t);text-decoration:none;line-height:1.4;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .post-a:hover{color:var(--blue);}
 .card-msg{padding:18px 14px;font-size:12px;color:var(--t3);text-align:center;line-height:1.6;}
@@ -131,9 +142,22 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .go-btn:hover{opacity:.65;}
 .go-btn svg{width:10px;height:10px;}
 
-/* 열람공고 자치구 탭 — 5열 콤팩트 */
-.wrtanc-tabs{display:grid !important;grid-template-columns:repeat(5,1fr);gap:4px;padding:8px 10px;flex-wrap:unset;}
-.wrtanc-tab{font-size:11px !important;padding:4px 2px !important;text-align:center;text-decoration:none;font-weight:500 !important;}
+/* 열람공고 자치구 탭 — 5열 콤팩트, 글자는 선명하게 */
+.wrtanc-tabs{display:grid !important;grid-template-columns:repeat(5,1fr);gap:3px;padding:6px 10px 8px;flex-wrap:unset;border-bottom:1px solid var(--bd);}
+.wrtanc-tab{
+  font-size:12px !important;
+  font-weight:500 !important;
+  padding:3px 2px !important;
+  text-align:center;
+  text-decoration:none;
+  border-radius:4px !important;
+  border:1px solid var(--bd) !important;
+  background:var(--bg3) !important;
+  color:var(--t2) !important;
+  transition:all .12s;
+}
+.wrtanc-tab:hover{background:var(--bg4) !important;color:var(--t) !important;}
+.wrtanc-tab.active{background:var(--blue) !important;border-color:var(--blue) !important;color:#fff !important;font-weight:600 !important;}
 .wrtanc-dday{font-size:10px;white-space:nowrap;flex-shrink:0;font-family:var(--mono);}
 
 /* TAB BUTTONS — 크기 확대 */
@@ -369,6 +393,16 @@ async function loadUpdates(){
   }catch(e){console.error("loadUpdates error:",e.message||e);return null;}
 }
 
+// 자치구별 배지 색상 — 5가지 색 그룹으로 순환
+const GU_COLOR_MAP = {
+  "강남구":"gu-a","강동구":"gu-b","강북구":"gu-c","강서구":"gu-d","관악구":"gu-e",
+  "광진구":"gu-a","구로구":"gu-b","금천구":"gu-c","노원구":"gu-d","도봉구":"gu-e",
+  "동대문구":"gu-a","동작구":"gu-b","마포구":"gu-c","서대문구":"gu-d","서초구":"gu-e",
+  "성동구":"gu-a","성북구":"gu-b","송파구":"gu-c","양천구":"gu-d","영등포구":"gu-e",
+  "용산구":"gu-a","은평구":"gu-b","종로구":"gu-c","중구":"gu-d","중랑구":"gu-e",
+};
+function guClass(gu){ return GU_COLOR_MAP[gu] || 'dept-default'; }
+
 function deptClass(dept){
   if(!dept) return 'dept-default';
   if(["미래공간담당관","공공개발담당관","용산입체도시담당관","도시활력담당관"].some(d=>dept.includes(d))) return 'dept-미래공간';
@@ -472,7 +506,7 @@ function renderFeedCard(src, data){
       body.innerHTML = filtered.slice(0,10).map(item=>{
         const badge   = item.is_new ? `<span class="badge-new">NEW</span>` : '';
         const date    = item.date   ? `<span class="post-date">${item.date}</span>` : '';
-        const gu      = item.gu     ? `<span class="post-dept dept-gu">${item.gu}</span>` : '';
+        const gu      = item.gu     ? `<span class="post-dept ${guClass(item.gu)}">${item.gu}</span>` : '';
         const endDate = item.end_date
           ? `<span class="wrtanc-dday" title="의견제출 종료">${calcDday(item.end_date)}</span>`
           : '';
