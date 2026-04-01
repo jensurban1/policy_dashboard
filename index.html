@@ -113,11 +113,24 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .go-btn:hover{opacity:.65;}
 .go-btn svg{width:10px;height:10px;}
 
-/* TAB BUTTONS (국토교통부 분야, 서울시 본부) */
-.card-tabs{display:flex;flex-wrap:wrap;gap:5px;padding:10px 14px;border-bottom:1px solid var(--bd);}
-.tab-btn{font-size:11px;padding:4px 10px;border-radius:5px;border:1px solid var(--bd2);background:transparent;color:var(--t2);cursor:pointer;transition:all .15s;font-family:var(--font);white-space:nowrap;}
+/* TAB BUTTONS — 크기 확대 */
+.card-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:12px 14px;border-bottom:1px solid var(--bd);}
+.tab-btn{
+  font-size:12.5px;
+  padding:6px 14px;
+  border-radius:6px;
+  border:1px solid var(--bd2);
+  background:transparent;
+  color:var(--t2);
+  cursor:pointer;
+  transition:all .15s;
+  font-family:var(--font);
+  white-space:nowrap;
+  font-weight:500;
+  line-height:1.4;
+}
 .tab-btn:hover{background:var(--bg3);color:var(--t);}
-.tab-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:500;}
+.tab-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600;}
 
 /* cat accent */
 .acc-정책기본구상,.card-acc-정책기본구상{background:#2563eb;}
@@ -191,7 +204,14 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 </div>
 
 <script>
+// ── 피드 소스 순서: 보도자료(국토부·서울시) 먼저, 나머지 뒤 ──
 const FEED_SOURCES = [
+  // ① 보도자료 카드 2개 — 상단
+  {sid:"molit_press", name:"보도자료 / 홍보자료", org:"국토교통부", cat:"정책기본구상",
+   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
+  {sid:"seoul_press", name:"보도자료", org:"서울특별시", cat:"지자체정책구상",
+   url:"https://www.seoul.go.kr/news/news_report.do"},
+  // ② 크롤링 가능한 나머지 소스
   {sid:"krihs_brief", name:"국토정책 Brief", org:"국토연구원", cat:"정책기본구상",
    url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
    static:{items:[
@@ -227,18 +247,6 @@ const FEED_SOURCES = [
      {cat:"정보",title:"연구기관·책임자",desc:"수행기관 및 담당 연구자"},
      {cat:"정보",title:"연구기간·보고서",desc:"최종보고서 PDF 첨부"},
    ], note:"※ 국토해양팀 발주 용역만 필터링됨"}},
-  {sid:"molit_press", name:"보도자료 / 홍보자료", org:"국토교통부", cat:"정책기본구상",
-   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp",
-   links:[
-     {title:"보도자료 전체 목록", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
-     {title:"정책정보 — 도시재생", url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp"},
-     {title:"정책정보 — 주거복지", url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp"},
-     {title:"정책정보 — 스마트시티", url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp"},
-     {title:"정책정보 — 도시계획", url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp"},
-   ],
-   note:"※ 국토교통부는 크롤링이 차단됩니다. 링크를 클릭해 최신 자료를 직접 확인하세요."},
-  {sid:"seoul_press", name:"보도자료", org:"서울특별시", cat:"지자체정책구상",
-   url:"https://www.seoul.go.kr/news/news_report.do"},
 ];
 
 const STATIC_SOURCES = [
@@ -276,6 +284,30 @@ const LIST_DATA = [
   {cat:"사업계획안",sub:"서울특별시",org:"서울특별시",titles:["결정고시(안)"],folder:"★사업별 자료 - 참고사례",url:"https://urban.seoul.go.kr/view/html/PMNU4030100001"},
   {cat:"사업계획안",sub:"서울특별시",org:"서울특별시",titles:["위원회 심의 결과"],folder:"저장 X",url:"https://commission.eseoul.go.kr/"},
   {cat:"각종법령",sub:"각종법령",org:"국가법령정보센터",titles:["법, 시행령, 시행규칙, 조례 등"],folder:"★사업별 자료 - 법령/지침 (파일 아닌 링크로 저장)",url:"https://www.law.go.kr/main.html"},
+];
+
+// ── 국토교통부 분야 탭 — 실제 URL 매핑 (검증 완료) ──
+// p_sec_1: 국토도시  p_sec_2: 주택토지  p_sec_3: 건설
+// p_sec_4: 도로철도  p_sec_5: 교통물류  p_sec_6: 항공
+// p_sec_7: 모빌리티/자동차  p_sec_8: 일반  (설명자료 등은 별도)
+const MOLIT_TABS = [
+  {label:"전체",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
+  {label:"국토도시",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_1"},
+  {label:"주택토지",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_2"},
+  {label:"건설",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_3"},
+  {label:"도로철도",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_4"},
+  {label:"교통물류",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_5"},
+  {label:"항공",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_6"},
+  {label:"모빌리티",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_7"},
+  {label:"일반",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_8"},
+];
+
+const SEOUL_GROUPS = [
+  {label:"전체",        depts:null},
+  {label:"미래공간기획관", depts:["미래공간담당관","공공개발담당관","용산입체도시담당관","도시활력담당관"]},
+  {label:"균형발전본부", depts:["균형발전기획관","균형발전정책과","도시정비과","동남권사업과","동북권사업과","서부권사업과","광화문광장사업과"]},
+  {label:"도시공간본부", depts:["도시공간기획관","도시공간전략과","도시계획과","도시계획상임기획과","도시재창조과","신속통합기획과","도시관리과","시설계획과","토지관리과"]},
+  {label:"주택실",      depts:["주택정책관","건축기획관","주택정책과","임대주택과","부동산정책개발센터","공공주택과","주거환경개선과","건축기획과","전략주택공급과","공동주택과","주거정비과","재정비촉진과"]},
 ];
 
 const CAT_LABELS={정책기본구상:"정책기본구상",지자체정책구상:"지자체정책구상",사업계획안:"사업계획(안)",각종법령:"각종 법령"};
@@ -332,16 +364,6 @@ function renderFeedCard(src, data){
 
   // ── 국토교통부: 분야 탭 → 새 탭으로 열기 ──
   if(src.sid==="molit_press"){
-    const MOLIT_TABS=[
-      {label:"전체",    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
-      {label:"주택토지", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_7"},
-      {label:"국토도시", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_4"},
-      {label:"건설",    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_3"},
-      {label:"교통물류", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_5"},
-      {label:"도로철도", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_6"},
-      {label:"항공",    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_8"},
-      {label:"일반",    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_1"},
-    ];
     const tabs=MOLIT_TABS.map(t=>
       `<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label}</a>`
     ).join('');
@@ -351,13 +373,6 @@ function renderFeedCard(src, data){
 
   // ── 서울시: 본부/실 탭 → 카드 내 필터 ──
   if(src.sid==="seoul_press"){
-    const SEOUL_GROUPS=[
-      {label:"전체",    depts:null},
-      {label:"미래공간기획관", depts:["미래공간담당관","공공개발담당관","용산입체도시담당관","도시활력담당관"]},
-      {label:"균형발전본부", depts:["균형발전기획관","균형발전정책과","도시정비과","동남권사업과","동북권사업과","서부권사업과","광화문광장사업과"]},
-      {label:"도시공간본부", depts:["도시공간기획관","도시공간전략과","도시계획과","도시계획상임기획과","도시재창조과","신속통합기획과","도시관리과","시설계획과","토지관리과"]},
-      {label:"주택실",   depts:["주택정책관","건축기획관","주택정책과","임대주택과","부동산정책개발센터","공공주택과","주거환경개선과","건축기획과","전략주택공급과","공동주택과","주거정비과","재정비촉진과"]},
-    ];
     const bodyId=`cb-seoul-${Date.now()}`;
     const tabsHtml=SEOUL_GROUPS.map((g,i)=>
       `<button class="tab-btn${i===0?' active':''}" data-group="${i}">${g.label}</button>`
@@ -371,12 +386,7 @@ function renderFeedCard(src, data){
       if(!data){body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.</div>`;return;}
       const s=data.sources["seoul_press"];
       if(!s||!s.items.length){
-        if(src.static){
-          const grid=src.static.items.map(it=>`<div class="static-item"><div class="si-cat">${it.cat}</div><div class="si-title">${it.title}</div><div class="si-desc">${it.desc}</div></div>`).join('');
-          body.innerHTML=`<div class="static-grid">${grid}</div>${src.static.note?`<div class="static-note">${src.static.note}</div>`:''}`;
-        } else {
-          body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;
-        }
+        body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;
         return;
       }
       const g=SEOUL_GROUPS[groupIdx];
@@ -445,9 +455,7 @@ async function render(){
     const data=await loadUpdates();
     const grid=document.createElement("div");
     grid.className="feed-grid";
-    // 크롤링 가능한 소스: 실제 게시글
     FEED_SOURCES.forEach(src=>grid.appendChild(renderFeedCard(src,data)));
-    // 크롤링 불가 소스: 페이지 안내
     const q=searchQ.trim().toLowerCase();
     STATIC_SOURCES.forEach(src=>{
       if(q&&src.name.toLowerCase().indexOf(q)===-1&&src.org.toLowerCase().indexOf(q)===-1) return;
@@ -456,7 +464,6 @@ async function render(){
     content.appendChild(grid);
 
   } else {
-    // 링크 목록 모드
     const q=searchQ.trim().toLowerCase();
     const filtered=LIST_DATA.filter(d=>
       d.cat===activeCat&&
