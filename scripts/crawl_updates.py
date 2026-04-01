@@ -436,7 +436,9 @@ def main():
         "org": "서울 도시계획포털",
         "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
         "crawled_at": TODAY,
-        **wrtanc_data,   # all, 11680, 11740, ... 키가 여기 들어감
+        "items": wrtanc_data.get("all", []),   # 전체 목록 (is_new 체크용)
+        "by_gu": {k: v for k, v in wrtanc_data.items() if k != "all"},  # 자치구별
+        "all": wrtanc_data.get("all", []),     # 전체 (카드에서 직접 접근)
     }
 
     total_wrtanc = len(wrtanc_data.get("all", []))
