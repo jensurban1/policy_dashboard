@@ -342,12 +342,16 @@ async function loadUpdates(){
     if(!r.ok) throw new Error();
     updData=await r.json();
     let n=0;
-    Object.values(updData.sources).forEach(s=>s.items.forEach(i=>{if(i.is_new)n++;}));
+    Object.values(updData.sources).forEach(s=>{
+      // wrtanc는 items 대신 all 키 사용
+      const list = s.items || s.all || [];
+      list.forEach(i=>{if(i.is_new)n++;});
+    });
     if(n>0){const el=document.getElementById("newPill");el.textContent=n+" NEW";el.classList.add("on");}
     const d=new Date(updData.updated_at);
     document.getElementById("updTime").textContent="업데이트 "+d.toLocaleString("ko-KR",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
     return updData;
-  }catch{return null;}
+  }catch(e){console.error("loadUpdates error:",e);return null;}
 }
 
 function renderPostRows(items, q){
@@ -406,12 +410,13 @@ function renderFeedCard(src, data){
     const tabEls = card.querySelectorAll(`#wrtanc-tabs-${bodyId} .wrtanc-tab`);
 
     const renderWrtanc = (guVal) => {
-      // data 없음
-      if(!data){
+      // updData 전역변수 직접 참조 (비동기 로드 완료 후 탭 클릭 대응)
+      const liveData = updData;
+      if(!liveData){
         body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;
         return;
       }
-      const ws = data.sources["wrtanc"];
+      const ws = liveData.sources["wrtanc"];
       if(!ws){
         body.innerHTML=`<div class="card-msg">열람공고 데이터가 없습니다.<br>GitHub Actions를 실행해주세요.</div>`;
         return;
@@ -445,7 +450,9 @@ function renderFeedCard(src, data){
         renderWrtanc(btn.dataset.gu);
       });
     });
-    renderWrtanc("all");
+
+    // loadUpdates가 완료된 시점에 초기 렌더 (updData가 이미 있으면 즉시, 없으면 로드 후)
+    loadUpdates().then(()=>renderWrtanc("all"));
     return card;
   }
 
