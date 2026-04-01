@@ -59,12 +59,12 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 
 /* SOURCE CARD */
 .src-card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;display:flex;flex-direction:column;overflow:hidden;}
-.card-hd{padding:11px 14px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.card-hd{padding:11px 14px 10px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:8px;}
 .card-hd-left{display:flex;align-items:center;gap:8px;min-width:0;}
-.card-acc{width:3px;height:16px;border-radius:2px;flex-shrink:0;}
+.card-acc{width:3px;height:32px;border-radius:2px;flex-shrink:0;}
 .card-info{}
-.card-name{font-size:12.5px;font-weight:600;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.card-org{font-size:10.5px;color:var(--t3);margin-top:1px;}
+.card-name{font-size:13px;font-weight:600;color:var(--t);letter-spacing:-.2px;}
+.card-org{font-size:11.5px;color:var(--t2);margin-top:3px;font-weight:400;}
 .card-go{font-size:11px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:3px;flex-shrink:0;white-space:nowrap;}
 .card-go:hover{opacity:.7;}
 .card-go svg{width:10px;height:10px;}
@@ -221,14 +221,21 @@ const FEED_SOURCES = [
      {cat:"정보",title:"연구기관·책임자",desc:"수행기관 및 담당 연구자"},
      {cat:"정보",title:"연구기간·보고서",desc:"최종보고서 PDF 첨부"},
    ], note:"※ 국토해양팀 발주 용역만 필터링됨"}},
+  {sid:"molit_press", name:"보도자료 / 홍보자료", org:"국토교통부", cat:"정책기본구상",
+   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp",
+   links:[
+     {title:"보도자료 전체 목록", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
+     {title:"정책정보 — 도시재생", url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp"},
+     {title:"정책정보 — 주거복지", url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp"},
+     {title:"정책정보 — 스마트시티", url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp"},
+     {title:"정책정보 — 도시계획", url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp"},
+   ],
+   note:"※ 국토교통부는 크롤링이 차단됩니다. 링크를 클릭해 최신 자료를 직접 확인하세요."},
   {sid:"seoul_press", name:"보도자료", org:"서울특별시", cat:"지자체정책구상",
    url:"https://www.seoul.go.kr/news/news_report.do"},
 ];
 
 const STATIC_SOURCES = [
-  {name:"보도자료 / 홍보자료",org:"국토교통부",cat:"정책기본구상",url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp",
-   items:[{cat:"필터",title:"부서별 분류",desc:"주택토지실/도시정책관 등"},{cat:"필터",title:"날짜·키워드",desc:"기간·제목·내용 검색"},{cat:"목록",title:"제목·날짜·부서",desc:"클릭 시 첨부파일"}],
-   note:"※ '국토도시' 부서 필터 활용"},
   {name:"법정계획 / 운영지침",org:"서울 도시계획포털",cat:"지자체정책구상",url:"https://urban.seoul.go.kr/view/html/PMNU5020000001",
    items:[{cat:"계획",title:"2040 서울도시기본계획",desc:"최상위 법정 도시계획"},{cat:"계획",title:"2030 생활권계획",desc:"5개 권역 116개 생활권"},{cat:"지침",title:"사업별 운영지침",desc:"재개발·재건축·도시재생"}],
    note:"※ 좌측 메뉴에서 계획 유형 선택"},
@@ -307,6 +314,14 @@ function renderFeedCard(src, data){
   <div class="card-body" id="cb-${src.sid}"></div>`;
 
   const body=card.querySelector(`#cb-${src.sid}`);
+
+  // links 타입: 직접 링크 목록 표시 (크롤링 불가 사이트)
+  if(src.links){
+    body.innerHTML = src.links.map(lk=>
+      `<div class="post-row"><a class="post-a" href="${lk.url}" target="_blank" rel="noopener">${lk.title}</a></div>`
+    ).join('') + (src.note ? `<div class="static-note">${src.note}</div>` : '');
+    return card;
+  }
 
   if(!data){
     body.innerHTML=`<div class="card-msg">⚠ <code>data/updates.json</code>이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;
