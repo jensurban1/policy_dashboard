@@ -27,6 +27,36 @@ SEOUL_DEPTS = [
     "공공주택과", "주거환경개선과", "건축기획과", "전략주택공급과", "공동주택과",
     "주거정비과", "재정비촉진과",
 ]
+
+# 서울 25개 자치구 코드
+SGG_LIST = [
+    {"val": "11680", "txt": "강남구"},
+    {"val": "11740", "txt": "강동구"},
+    {"val": "11305", "txt": "강북구"},
+    {"val": "11500", "txt": "강서구"},
+    {"val": "11620", "txt": "관악구"},
+    {"val": "11215", "txt": "광진구"},
+    {"val": "11530", "txt": "구로구"},
+    {"val": "11545", "txt": "금천구"},
+    {"val": "11350", "txt": "노원구"},
+    {"val": "11320", "txt": "도봉구"},
+    {"val": "11230", "txt": "동대문구"},
+    {"val": "11590", "txt": "동작구"},
+    {"val": "11440", "txt": "마포구"},
+    {"val": "11410", "txt": "서대문구"},
+    {"val": "11650", "txt": "서초구"},
+    {"val": "11200", "txt": "성동구"},
+    {"val": "11290", "txt": "성북구"},
+    {"val": "11710", "txt": "송파구"},
+    {"val": "11470", "txt": "양천구"},
+    {"val": "11560", "txt": "영등포구"},
+    {"val": "11170", "txt": "용산구"},
+    {"val": "11380", "txt": "은평구"},
+    {"val": "11110", "txt": "종로구"},
+    {"val": "11140", "txt": "중구"},
+    {"val": "11260", "txt": "중랑구"},
+]
+
 SOURCES = [
     {
         "id": "krihs_brief",
@@ -219,6 +249,126 @@ def crawl_seoul(base_url, max_pages=10, target=10):
     return items[:target]
 
 
+def crawl_wrtanc():
+    """
+    서울 도시계획포털 열람공고 API 크롤링.
+    전체 + 25개 자치구별로 진행중 공고를 수집해서 반환.
+    반환 구조:
+    {
+      "all":   [{"title":..., "url":..., "date":..., "end_date":..., "gu":...}, ...],
+      "11680": [...],  # 강남구
+      ...
+    }
+    """
+    API_URL = "https://urban.seoul.go.kr/wrtanc/getWrtancList.json"
+    DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU4010100001"
+
+    # 날짜 범위: 오늘 기준 6개월 전 ~ 6개월 후 (진행중이므로 넉넉하게)
+    today = datetime.now(KST)
+    bgn = (today - timedelta(days=180)).strftime("%Y-%m-%d")
+    end = (today + timedelta(days=180)).strftime("%Y-%m-%d")
+
+    def fetch_gu(reading_area=""):
+        payload = {
+            "pageNo": 1,
+            "pageSize": 50,
+            "searchGubun": "ing",          # 진행중 고정
+            "announceNo": "-",
+            "title": "",
+            "pubSiteCode": "",
+            "readingArea": reading_area,   # "" = 전체, "11680" = 강남구 등
+            "bgnDate": bgn,
+            "endDate": end,
+            "onOff": "ALL",
+            "sido": "",
+            "announceNo1": "",
+            "sidoR": "",
+            "siteCode": "",
+            "noticeBgnDt": " ",
+            "noticeEndDt": " ",
+        }
+        try:
+            r = requests.post(
+                API_URL,
+                json=payload,
+                headers={**HEADERS, "Content-Type": "application/json"},
+                timeout=20,
+            )
+            r.raise_for_status()
+            data = r.json()
+            return data.get("content") or data.get("list") or data.get("resultList") or []
+        except Exception as e:
+            print(f"  [ERROR] 열람공고 API ({reading_area or '전체'}): {e}")
+            return []
+
+    def parse_item(item, gu_name=""):
+        """API 응답 아이템 → 공통 포맷 변환"""
+        # 공고 URL: announceCode로 상세 페이지 링크
+        announce_code = item.get("announceCode", "")
+        proj_code = item.get("projCode", "")
+        if announce_code:
+            url = f"{DETAIL_BASE}?announceCode={announce_code}&projCode={proj_code}&searchGubun=ing"
+        else:
+            url = f"{DETAIL_BASE}?searchGubun=ing"
+
+        # 공고명: projNm 또는 title 필드
+        title = (
+            item.get("projNm")
+            or item.get("title")
+            or item.get("announceTitle")
+            or ""
+        ).strip()
+
+        # 날짜: 공고일
+        date = (
+            item.get("createDatetime", "")[:10]
+            if item.get("createDatetime")
+            else ""
+        )
+
+        # 의견제출 종료일 (D-day 표시용)
+        end_date = (item.get("noticeEndDt") or "").strip()
+
+        # 자치구명: dept.deptName 또는 siteNm
+        if not gu_name:
+            dept = item.get("dept") or {}
+            gu_name = (
+                dept.get("deptNm")
+                or dept.get("deptName")
+                or item.get("siteNm")
+                or item.get("pubSiteNm")
+                or ""
+            ).strip()
+
+        return {
+            "title": title,
+            "url": url,
+            "date": date,
+            "end_date": end_date,
+            "gu": gu_name,
+        }
+
+    result = {}
+
+    # 전체 수집
+    print("  열람공고 전체 수집 중...")
+    all_raw = fetch_gu("")
+    result["all"] = [parse_item(i) for i in all_raw if i.get("projNm") or i.get("title")]
+    print(f"    → 전체 {len(result['all'])}건")
+
+    # 자치구별 수집
+    for sgg in SGG_LIST:
+        code = sgg["val"]
+        name = sgg["txt"]
+        raw = fetch_gu(code)
+        items = [parse_item(i, gu_name=name) for i in raw if i.get("projNm") or i.get("title")]
+        result[code] = items
+        if items:
+            print(f"    → {name} {len(items)}건")
+
+    return result
+
+
 def crawl_source(source):
     print(f"크롤링: {source['org']} - {source['name']}")
     t = source["type"]
@@ -253,6 +403,7 @@ def main():
         "sources": {}
     }
 
+    # ── 기존 소스 크롤링 ──
     for source in SOURCES:
         sid = source["id"]
         items = crawl_source(source)
@@ -267,12 +418,43 @@ def main():
             "crawled_at": TODAY,
         }
 
+    # ── 열람공고 크롤링 ──
+    print("\n크롤링: 서울 도시계획포털 - 열람공고(안)")
+    wrtanc_data = crawl_wrtanc()
+
+    # is_new 체크: 기존 전체 목록의 url 집합과 비교
+    old_wrtanc_urls = {
+        i["url"]
+        for i in existing.get("sources", {}).get("wrtanc", {}).get("all", [])
+    }
+    for key, items in wrtanc_data.items():
+        for item in items:
+            item["is_new"] = bool(item["url"]) and item["url"] not in old_wrtanc_urls
+
+    result["sources"]["wrtanc"] = {
+        "name": "열람공고(안)",
+        "org": "서울 도시계획포털",
+        "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
+        "crawled_at": TODAY,
+        **wrtanc_data,   # all, 11680, 11740, ... 키가 여기 들어감
+    }
+
+    total_wrtanc = len(wrtanc_data.get("all", []))
+    new_wrtanc = sum(1 for i in wrtanc_data.get("all", []) if i.get("is_new"))
+    print(f"  → 전체 {total_wrtanc}건 / 신규 {new_wrtanc}건")
+
     os.makedirs("data", exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
-    total = sum(len(v["items"]) for v in result["sources"].values())
-    new_count = sum(sum(1 for i in v["items"] if i.get("is_new")) for v in result["sources"].values())
+    total = sum(
+        len(v.get("items", v.get("all", [])))
+        for v in result["sources"].values()
+    )
+    new_count = sum(
+        sum(1 for i in v.get("items", v.get("all", [])) if i.get("is_new"))
+        for v in result["sources"].values()
+    )
     print(f"\n✅ 완료: 총 {total}건 / 신규 {new_count}건")
 
 
