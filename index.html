@@ -186,12 +186,43 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 
 <script>
 const FEED_SOURCES = [
-  {sid:"krihs_brief",   name:"국토정책 Brief",   org:"국토연구원",    cat:"정책기본구상", url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1"},
-  {sid:"krihs_working", name:"워킹페이퍼",        org:"국토연구원",    cat:"정책기본구상", url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP"},
-  {sid:"krihs_article", name:"월간국토 Article",  org:"국토연구원",    cat:"정책기본구상", url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"},
-  {sid:"nars_report",   name:"연구보고서",         org:"국회입법조사처", cat:"정책기본구상", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043"},
-  {sid:"nars_research", name:"정책연구용역",       org:"국회입법조사처", cat:"정책기본구상", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010"},
-  {sid:"seoul_press",   name:"보도자료",           org:"서울특별시",    cat:"지자체정책구상", url:"https://www.seoul.go.kr/news/news_report.do"},
+  {sid:"krihs_brief", name:"국토정책 Brief", org:"국토연구원", cat:"정책기본구상",
+   url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
+   static:{items:[
+     {cat:"성격",title:"주간 발행 (매주 월요일)",desc:"현재 1054호까지 발행"},
+     {cat:"내용",title:"핵심 연구 요약 + 정책 제안",desc:"도시계획·주거·균형발전 등"},
+     {cat:"다운로드",title:"PDF 무료 다운로드",desc:"회원가입 없이 열람 가능"},
+   ], note:"※ 크롤링 실패 시 표시. 원문 링크에서 직접 확인하세요."}},
+  {sid:"krihs_working", name:"워킹페이퍼", org:"국토연구원", cat:"정책기본구상",
+   url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
+   static:{items:[
+     {cat:"성격",title:"연구 중간 산출물",desc:"정식 보고서 발간 전 초안 공유"},
+     {cat:"내용",title:"과제명·연구자·발행일",desc:"연구과제별 중간 결과물"},
+     {cat:"다운로드",title:"PDF 무료 열람",desc:"비회원 접근 가능"},
+   ], note:"※ 크롤링 실패 시 표시. 원문 링크에서 직접 확인하세요."}},
+  {sid:"krihs_article", name:"월간국토 Article", org:"국토연구원", cat:"정책기본구상",
+   url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
+   static:{items:[
+     {cat:"구성",title:"권호별 특집 주제",desc:"매월 테마 선정 후 아티클 묶음"},
+     {cat:"구성",title:"기고문·연구논단",desc:"국토·도시 전문가 기고"},
+     {cat:"구성",title:"국토 통계·지표",desc:"주요 통계 및 지표 수록"},
+   ], note:"※ 크롤링 실패 시 표시. 원문 링크에서 직접 확인하세요."}},
+  {sid:"nars_report", name:"연구보고서", org:"국회입법조사처", cat:"정책기본구상",
+   url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
+   static:{items:[
+     {cat:"유형",title:"이슈와논점",desc:"주요 현안 쟁점 분석 (2~4쪽)"},
+     {cat:"유형",title:"NARS 현안분석",desc:"심층 분석 보고서 (20~60쪽)"},
+     {cat:"유형",title:"외국입법·정책분석",desc:"해외 입법사례 비교"},
+   ], note:"※ 국토해양팀 소관 — 국토·도시·주택·건설 분야"}},
+  {sid:"nars_research", name:"정책연구용역", org:"국회입법조사처", cat:"정책기본구상",
+   url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
+   static:{items:[
+     {cat:"정보",title:"용역 과제명",desc:"외부 연구기관 위탁 과제 목록"},
+     {cat:"정보",title:"연구기관·책임자",desc:"수행기관 및 담당 연구자"},
+     {cat:"정보",title:"연구기간·보고서",desc:"최종보고서 PDF 첨부"},
+   ], note:"※ 국토해양팀 발주 용역만 필터링됨"}},
+  {sid:"seoul_press", name:"보도자료", org:"서울특별시", cat:"지자체정책구상",
+   url:"https://www.seoul.go.kr/news/news_report.do"},
 ];
 
 const STATIC_SOURCES = [
@@ -282,9 +313,23 @@ function renderFeedCard(src, data){
     return card;
   }
   const s=data.sources[src.sid];
-  if(!s||!s.items.length){body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;return card;}
 
-  const items=q?s.items.filter(i=>i.title.toLowerCase().indexOf(q)!==-1):s.items;
+  // 수집 항목 없으면 → 정적 안내가 있으면 그걸로, 없으면 빈 메시지
+  if(!s||!s.items.length){
+    if(src.static){
+      // 정적 안내 카드로 fallback
+      const grid=src.static.items.map(it=>`<div class="static-item"><div class="si-cat">${it.cat}</div><div class="si-title">${it.title}</div><div class="si-desc">${it.desc}</div></div>`).join('');
+      body.innerHTML=`<div class="static-grid">${grid}</div>${src.static.note?`<div class="static-note">${src.static.note}</div>`:''}`;
+    } else {
+      body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;
+    }
+    return card;
+  }
+
+  // 소스별 표시 개수: 서울시는 5건, 나머지는 전체
+  const maxItems = src.sid === "seoul_press" ? 5 : s.items.length;
+  const allItems = q ? s.items.filter(i=>i.title.toLowerCase().indexOf(q)!==-1) : s.items;
+  const items = allItems.slice(0, maxItems);
   if(!items.length){body.innerHTML=`<div class="card-msg">검색 결과가 없습니다.</div>`;return card;}
 
   body.innerHTML=items.map(item=>{
