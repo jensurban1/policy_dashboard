@@ -113,13 +113,9 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .go-btn:hover{opacity:.65;}
 .go-btn svg{width:10px;height:10px;}
 
-/* 열람공고 자치구 탭 — 콤팩트 그리드 */
-.wrtanc-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;padding:10px 12px;}
-.wrtanc-tabs .tab-btn{
-  font-size:11.5px;padding:5px 4px;text-align:center;
-  border-radius:5px;white-space:nowrap;
-}
-.wrtanc-note{padding:8px 14px 12px;font-size:11.5px;color:var(--t2);text-align:center;line-height:1.7;}
+/* 열람공고 자치구 탭 — 콤팩트 5열 그리드 */
+.wrtanc-tabs{display:grid !important;grid-template-columns:repeat(5,1fr);gap:5px;padding:10px 12px;flex-wrap:unset;}
+.wrtanc-tab{font-size:11.5px !important;padding:5px 2px !important;text-align:center;text-decoration:none;}
 
 /* TAB BUTTONS — 크기 확대 */
 .card-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:12px 14px;border-bottom:1px solid var(--bd);}
@@ -212,20 +208,6 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 </div>
 
 <script>
-// ── 자치구 코드 (urban.seoul.go.kr sidoR select 기준) ──
-const SGG_LIST = [
-  {val:"",     txt:"전체"},
-  {val:"11680",txt:"강남구"},{val:"11740",txt:"강동구"},{val:"11305",txt:"강북구"},
-  {val:"11500",txt:"강서구"},{val:"11620",txt:"관악구"},{val:"11215",txt:"광진구"},
-  {val:"11530",txt:"구로구"},{val:"11545",txt:"금천구"},{val:"11350",txt:"노원구"},
-  {val:"11320",txt:"도봉구"},{val:"11230",txt:"동대문구"},{val:"11590",txt:"동작구"},
-  {val:"11440",txt:"마포구"},{val:"11410",txt:"서대문구"},{val:"11650",txt:"서초구"},
-  {val:"11200",txt:"성동구"},{val:"11290",txt:"성북구"},{val:"11710",txt:"송파구"},
-  {val:"11470",txt:"양천구"},{val:"11560",txt:"영등포구"},{val:"11170",txt:"용산구"},
-  {val:"11380",txt:"은평구"},{val:"11110",txt:"종로구"},{val:"11140",txt:"중구"},
-  {val:"11260",txt:"중랑구"},
-];
-
 // ── 피드 소스 순서: 보도자료(국토부·서울시) 먼저, 나머지 뒤 ──
 const FEED_SOURCES = [
   // ① 보도자료 카드 2개 — 상단
@@ -233,7 +215,7 @@ const FEED_SOURCES = [
    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
   {sid:"seoul_press", name:"보도자료", org:"서울특별시", cat:"지자체정책구상",
    url:"https://www.seoul.go.kr/news/news_report.do"},
-  // ② 열람공고 카드 — 자치구별 탭
+  // ② 열람공고 카드
   {sid:"wrtanc", name:"열람공고(안)", org:"서울 도시계획포털", cat:"사업계획안",
    url:"https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"},
   // ② 크롤링 가능한 나머지 소스
@@ -384,21 +366,28 @@ function renderFeedCard(src, data){
     <a class="card-go" href="${src.url}" target="_blank" rel="noopener">원문 ${goSvg()}</a>
   </div>`;
 
-  // ── 열람공고(안): 자치구 탭 → 새 탭으로 열기 ──
+  // ── 열람공고(안): 자치구 탭 → wrtanc.html 래퍼로 열기 ──
   if(src.sid==="wrtanc"){
-    const BASE="https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing";
-    // 탭: 전체 + 25개 자치구 (3열 그리드)
-    const tabsHtml = SGG_LIST.map((g,i)=>{
-      const url = g.val ? BASE+"&readingArea="+g.val : BASE;
-      const cls = i===0 ? "tab-btn active" : "tab-btn";
-      return `<a class="${cls}" href="${url}" target="_blank" rel="noopener">${g.txt}</a>`;
+    const SGG=[
+      {val:"",     txt:"전체"},
+      {val:"11680",txt:"강남구"},{val:"11740",txt:"강동구"},{val:"11305",txt:"강북구"},
+      {val:"11500",txt:"강서구"},{val:"11620",txt:"관악구"},{val:"11215",txt:"광진구"},
+      {val:"11530",txt:"구로구"},{val:"11545",txt:"금천구"},{val:"11350",txt:"노원구"},
+      {val:"11320",txt:"도봉구"},{val:"11230",txt:"동대문구"},{val:"11590",txt:"동작구"},
+      {val:"11440",txt:"마포구"},{val:"11410",txt:"서대문구"},{val:"11650",txt:"서초구"},
+      {val:"11200",txt:"성동구"},{val:"11290",txt:"성북구"},{val:"11710",txt:"송파구"},
+      {val:"11470",txt:"양천구"},{val:"11560",txt:"영등포구"},{val:"11170",txt:"용산구"},
+      {val:"11380",txt:"은평구"},{val:"11110",txt:"종로구"},{val:"11140",txt:"중구"},
+      {val:"11260",txt:"중랑구"},
+    ];
+    const tabs=SGG.map((g,i)=>{
+      const href=g.val
+        ? `wrtanc.html?gu=${g.val}&name=${encodeURIComponent(g.txt)}`
+        : `wrtanc.html`;
+      return `<a class="tab-btn wrtanc-tab${i===0?' active':''}" href="${href}" target="_blank" rel="noopener">${g.txt}</a>`;
     }).join('');
-    card.innerHTML = hd + `
-      <div class="card-tabs wrtanc-tabs">${tabsHtml}</div>
-      <div class="card-msg wrtanc-note">
-        탭을 누르면 해당 자치구의 <strong>진행중 열람공고</strong> 목록을 새 탭에서 확인합니다.<br>
-        <span style="color:var(--t3);font-size:10.5px">※ 서울 도시계획포털 · 진행현황: 진행중 고정</span>
-      </div>`;
+    card.innerHTML=hd+`<div class="card-tabs wrtanc-tabs">${tabs}</div>
+      <div class="static-note" style="padding:6px 14px 10px">※ 탭 클릭 시 해당 자치구 진행중 열람공고가 자동 필터됩니다.</div>`;
     return card;
   }
 
