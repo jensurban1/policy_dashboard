@@ -116,6 +116,7 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 /* 열람공고 자치구 탭 — 콤팩트 5열 그리드 */
 .wrtanc-tabs{display:grid !important;grid-template-columns:repeat(5,1fr);gap:5px;padding:10px 12px;flex-wrap:unset;}
 .wrtanc-tab{font-size:11.5px !important;padding:5px 2px !important;text-align:center;text-decoration:none;}
+.wrtanc-dday{font-size:10px;white-space:nowrap;flex-shrink:0;font-family:var(--mono);}
 
 /* TAB BUTTONS — 크기 확대 */
 .card-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:12px 14px;border-bottom:1px solid var(--bd);}
@@ -323,6 +324,17 @@ let updData=null;
 function goSvg(){return`<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg>`;}
 function fmt(f){return f.replace(/★/g,'<span class="star">★</span>').replace(/저장 X/g,'<span class="nosave">저장 X</span>');}
 
+function calcDday(endDateStr){
+  if(!endDateStr) return '';
+  const end = new Date(endDateStr.replace(/\./g,'-').trim());
+  if(isNaN(end)) return '';
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const diff = Math.round((end - today) / 86400000);
+  if(diff < 0)  return `<span style="color:var(--t3)">종료</span>`;
+  if(diff === 0) return `<span style="color:var(--red);font-weight:600">D-Day</span>`;
+  return `<span style="color:var(--amber);font-weight:500">D-${diff}</span>`;
+}
 async function loadUpdates(){
   if(updData) return updData;
   try{
@@ -366,10 +378,10 @@ function renderFeedCard(src, data){
     <a class="card-go" href="${src.url}" target="_blank" rel="noopener">원문 ${goSvg()}</a>
   </div>`;
 
-  // ── 열람공고(안): 자치구 탭 → wrtanc.html 래퍼로 열기 ──
+  // ── 열람공고(안): updates.json 기반 자치구 탭 필터 ──
   if(src.sid==="wrtanc"){
     const SGG=[
-      {val:"",     txt:"전체"},
+      {val:"all", txt:"전체"},
       {val:"11680",txt:"강남구"},{val:"11740",txt:"강동구"},{val:"11305",txt:"강북구"},
       {val:"11500",txt:"강서구"},{val:"11620",txt:"관악구"},{val:"11215",txt:"광진구"},
       {val:"11530",txt:"구로구"},{val:"11545",txt:"금천구"},{val:"11350",txt:"노원구"},
@@ -380,14 +392,60 @@ function renderFeedCard(src, data){
       {val:"11380",txt:"은평구"},{val:"11110",txt:"종로구"},{val:"11140",txt:"중구"},
       {val:"11260",txt:"중랑구"},
     ];
-    const tabs=SGG.map((g,i)=>{
-      const href=g.val
-        ? `wrtanc.html?gu=${g.val}&name=${encodeURIComponent(g.txt)}`
-        : `wrtanc.html`;
-      return `<a class="tab-btn wrtanc-tab${i===0?' active':''}" href="${href}" target="_blank" rel="noopener">${g.txt}</a>`;
-    }).join('');
-    card.innerHTML=hd+`<div class="card-tabs wrtanc-tabs">${tabs}</div>
-      <div class="static-note" style="padding:6px 14px 10px">※ 탭 클릭 시 해당 자치구 진행중 열람공고가 자동 필터됩니다.</div>`;
+
+    const bodyId = `cb-wrtanc-${Date.now()}`;
+    const tabsHtml = SGG.map((g,i)=>
+      `<button class="tab-btn wrtanc-tab${i===0?' active':''}" data-gu="${g.val}">${g.txt}</button>`
+    ).join('');
+
+    card.innerHTML = hd
+      + `<div class="card-tabs wrtanc-tabs" id="wrtanc-tabs-${bodyId}">${tabsHtml}</div>`
+      + `<div class="card-body" id="${bodyId}"></div>`;
+
+    const body   = card.querySelector(`#${bodyId}`);
+    const tabEls = card.querySelectorAll(`#wrtanc-tabs-${bodyId} .wrtanc-tab`);
+
+    const renderWrtanc = (guVal) => {
+      // data 없음
+      if(!data){
+        body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;
+        return;
+      }
+      const ws = data.sources["wrtanc"];
+      if(!ws){
+        body.innerHTML=`<div class="card-msg">열람공고 데이터가 없습니다.<br>GitHub Actions를 실행해주세요.</div>`;
+        return;
+      }
+      const items = ws[guVal] || [];   // "all" or "11680" etc.
+      if(!items.length){
+        body.innerHTML=`<div class="card-msg">진행중인 열람공고가 없습니다.</div>`;
+        return;
+      }
+      // 검색 필터 적용
+      const filtered = q ? items.filter(i=>i.title.toLowerCase().includes(q)) : items;
+      if(!filtered.length){
+        body.innerHTML=`<div class="card-msg">검색 결과가 없습니다.</div>`;
+        return;
+      }
+      body.innerHTML = filtered.slice(0,10).map(item=>{
+        const badge   = item.is_new ? `<span class="badge-new">NEW</span>` : '';
+        const date    = item.date   ? `<span class="post-date">${item.date}</span>` : '';
+        const gu      = item.gu     ? `<span class="post-date">[${item.gu}]</span>` : '';
+        const endDate = item.end_date
+          ? `<span class="wrtanc-dday" title="의견제출 종료">${calcDday(item.end_date)}</span>`
+          : '';
+        return `<div class="post-row">${badge}${date}${gu}${endDate}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+      }).join('');
+    };
+
+    tabEls.forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        tabEls.forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        renderWrtanc(btn.dataset.gu);
+      });
+    });
+    renderWrtanc("all");
     return card;
   }
 
