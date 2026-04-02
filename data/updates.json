@@ -1,40 +1,40 @@
 {
-  "updated_at": "2026-04-01T15:13:03.164811+09:00",
+  "updated_at": "2026-04-02T09:07:31.261143+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-04-01"
+      "crawled_at": "2026-04-02"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-04-01"
+      "crawled_at": "2026-04-02"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-04-01"
+      "crawled_at": "2026-04-02"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [],
-      "crawled_at": "2026-04-01"
+      "crawled_at": "2026-04-02"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
       "items": [],
-      "crawled_at": "2026-04-01"
+      "crawled_at": "2026-04-02"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -61,23 +61,48 @@
           "date": "2026-03-30",
           "dept": "공공주택과",
           "is_new": false
-        },
-        {
-          "title": "(석간) 시민과 함께하는 예술섬 … 서울시, 3일 「노들 미리봄 페스티벌」개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/455162",
-          "date": "2026-03-30",
-          "dept": "미래공간담당관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-04-01"
+      "crawled_at": "2026-04-02"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-04-01",
+      "crawled_at": "2026-04-02",
       "items": [
+        {
+          "title": "도시관리계획(석계역 주변 지구단위계획구역 및 계획) 결정(안) 재열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11350ANN202604010001&projCode=11350PPL202310240006&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
+        {
+          "title": "도시관리계획(용도지역) 결정(변경)(안) 및 전략환경영향평가서(초안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604010001&projCode=11000PPL202603300001&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
+        {
+          "title": "은마아파트 재건축정비사업에 따른 근린공원 및 소공원 조성계획(안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11680ANN202604010001&projCode=11680PPL202604010008&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
+        {
+          "title": "도시관리계획(노량진지구 지구단위계획 및 동작구청부지 특별계획구역 세부개발계획) 결정(변경)(안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11590ANN202604010001&projCode=11590PPL202604010002&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
         {
           "title": "월계시영고층아파트 재건축사업 정비구역 지정 및 정비계획 수립(안) 공람 공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11350ANN202603260002&projCode=11350PPL202603260003&searchGubun=ing",
@@ -133,6 +158,14 @@
           "end_date": "",
           "gu": "",
           "is_new": false
+        },
+        {
+          "title": "여의대방역세권(신길동 1343일원) 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안)에 대한 재공람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11560ANN202604010001&projCode=11560PPL202604010007&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
         },
         {
           "title": "도시관리계획[동작구 상도동 194-27번지 일원 역세권 장기전세주택 지구단위계획구역 지정 및 계획] 결정(안) 재열람공고",
@@ -338,6 +371,14 @@
       "by_gu": {
         "11680": [
           {
+            "title": "은마아파트 재건축정비사업에 따른 근린공원 및 소공원 조성계획(안) 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11680ANN202604010001&projCode=11680PPL202604010008&searchGubun=ing",
+            "date": "2026-04-01",
+            "end_date": "",
+            "gu": "강남구",
+            "is_new": true
+          },
+          {
             "title": "국제교류복합지구(코엑스~잠실종합운동장 일대) 지구단위계획 결정(변경)(안) 재열람 공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202603260002&projCode=11000PPL202503190005&searchGubun=ing",
             "date": "2026-03-26",
@@ -448,6 +489,14 @@
         ],
         "11350": [
           {
+            "title": "도시관리계획(석계역 주변 지구단위계획구역 및 계획) 결정(안) 재열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11350ANN202604010001&projCode=11350PPL202310240006&searchGubun=ing",
+            "date": "2026-04-01",
+            "end_date": "",
+            "gu": "노원구",
+            "is_new": true
+          },
+          {
             "title": "월계시영고층아파트 재건축사업 정비구역 지정 및 정비계획 수립(안) 공람 공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11350ANN202603260002&projCode=11350PPL202603260003&searchGubun=ing",
             "date": "2026-03-26",
@@ -475,6 +524,14 @@
         "11320": [],
         "11230": [],
         "11590": [
+          {
+            "title": "도시관리계획(노량진지구 지구단위계획 및 동작구청부지 특별계획구역 세부개발계획) 결정(변경)(안) 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11590ANN202604010001&projCode=11590PPL202604010002&searchGubun=ing",
+            "date": "2026-04-01",
+            "end_date": "",
+            "gu": "동작구",
+            "is_new": true
+          },
           {
             "title": "도시관리계획(상도지구 지구단위계획 결정(변경) 및 상도동 176-3번지 일대 특별계획구역 세부개발계획) 결정(안) 열람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11590ANN202603250001&projCode=11590PPL202603250004&searchGubun=ing",
@@ -550,7 +607,24 @@
             "is_new": false
           }
         ],
-        "11560": [],
+        "11560": [
+          {
+            "title": "도시관리계획(용도지역) 결정(변경)(안) 및 전략환경영향평가서(초안) 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604010001&projCode=11000PPL202603300001&searchGubun=ing",
+            "date": "2026-04-01",
+            "end_date": "",
+            "gu": "영등포구",
+            "is_new": true
+          },
+          {
+            "title": "여의대방역세권(신길동 1343일원) 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안)에 대한 재공람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11560ANN202604010001&projCode=11560PPL202604010007&searchGubun=ing",
+            "date": "2026-04-01",
+            "end_date": "",
+            "gu": "영등포구",
+            "is_new": true
+          }
+        ],
         "11170": [
           {
             "title": "청화아파트 재건축사업 정비계획 결정 및 정비구역 지정(안), 지구단위계획구역 지정 및 지구단위계획 결정(안) 재공람공고",
@@ -651,6 +725,38 @@
       },
       "all": [
         {
+          "title": "도시관리계획(석계역 주변 지구단위계획구역 및 계획) 결정(안) 재열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11350ANN202604010001&projCode=11350PPL202310240006&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
+        {
+          "title": "도시관리계획(용도지역) 결정(변경)(안) 및 전략환경영향평가서(초안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604010001&projCode=11000PPL202603300001&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
+        {
+          "title": "은마아파트 재건축정비사업에 따른 근린공원 및 소공원 조성계획(안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11680ANN202604010001&projCode=11680PPL202604010008&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
+        {
+          "title": "도시관리계획(노량진지구 지구단위계획 및 동작구청부지 특별계획구역 세부개발계획) 결정(변경)(안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11590ANN202604010001&projCode=11590PPL202604010002&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
+        {
           "title": "월계시영고층아파트 재건축사업 정비구역 지정 및 정비계획 수립(안) 공람 공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11350ANN202603260002&projCode=11350PPL202603260003&searchGubun=ing",
           "date": "2026-03-26",
@@ -705,6 +811,14 @@
           "end_date": "",
           "gu": "",
           "is_new": false
+        },
+        {
+          "title": "여의대방역세권(신길동 1343일원) 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안)에 대한 재공람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11560ANN202604010001&projCode=11560PPL202604010007&searchGubun=ing",
+          "date": "2026-04-01",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
         },
         {
           "title": "도시관리계획[동작구 상도동 194-27번지 일원 역세권 장기전세주택 지구단위계획구역 지정 및 계획] 결정(안) 재열람공고",
