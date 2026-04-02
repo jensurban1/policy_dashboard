@@ -124,11 +124,19 @@ def _parse_krihs_board(page):
             date_raw = date_el.inner_text().strip() if date_el else ""
             date = re.sub(r"발행일\s*", "", date_raw).strip()
 
-            # URL: href 속성에서 /library/.../contents/{id} 추출
+            # URL: href에서 kc-{list_no} 또는 iw-{list_no} 추출 → gallery.es 상세 페이지
             a_el = li.query_selector("a")
             href = a_el.get_attribute("href") if a_el else ""
-            m = re.search(r"(/library/[^'\")\s]+)", href)
-            url = "https://www.krihs.re.kr" + m.group(1) if m else "https://www.krihs.re.kr"
+            # viewCntAdd('BR_1','kc-7728932','/library/...') 패턴에서 list_no 추출
+            m = re.search(r"'[a-z]+-(\d+)'", href)
+            if m:
+                list_no = m.group(1)
+                # mid는 소스별로 다름 — URL에서 mid 파라미터 추출
+                mid_m = re.search(r"mid=([a-z0-9]+)", page.url)
+                mid = mid_m.group(1) if mid_m else "a10103050000"
+                url = f"https://www.krihs.re.kr/gallery.es?mid={mid}&bid=0022&act=view&list_no={list_no}"
+            else:
+                url = page.url  # fallback: 목록 페이지
 
             items.append({"title": title, "url": url, "date": date})
         except Exception:
@@ -154,19 +162,15 @@ def _parse_krihs_table(page):
             # td[1] = 권호 (날짜 대용)
             vol = tds[1].inner_text().strip() if len(tds) > 1 else ""
 
-            # 바로가기 a.btn_line — href에서 pmediaId 추출
+            # 바로가기 a.btn_line — href에서 a-{id} 추출 → gallery.es 상세 페이지
             a_el = row.query_selector("a.btn_line")
             url = "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"
             if a_el:
                 href = a_el.get_attribute("href") or ""
-                m = re.search(r"pmediaId=(\d+)", href)
+                m = re.search(r"'a-(\d+)'", href)
                 if m:
-                    url = f"https://www.krihs.re.kr/library/api/media?pmediaId={m.group(1)}"
-                else:
-                    # fallback: /library/... 경로 통째로
-                    m2 = re.search(r"(/library/[^'\")\s]+)", href)
-                    if m2:
-                        url = "https://www.krihs.re.kr" + m2.group(1)
+                    list_no = m.group(1)
+                    url = f"https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no={list_no}"
 
             items.append({"title": title, "url": url, "date": vol})
         except Exception:
