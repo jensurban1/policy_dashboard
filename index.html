@@ -84,10 +84,15 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .card-go svg{width:10px;height:10px;}
 
 /* POST LIST */
-.card-body{flex:1;}
-.post-row{display:flex;align-items:center;gap:6px;padding:7px 14px;border-bottom:1px solid var(--bd);transition:background .1s;}
+.card-body{flex:1;overflow-y:auto;max-height:340px;}
+.post-row{
+  display:flex;flex-direction:column;gap:3px;
+  padding:8px 14px;border-bottom:1px solid var(--bd);
+  transition:background .1s;
+}
 .post-row:last-child{border-bottom:none;}
 .post-row:hover{background:var(--bg3);}
+.post-row-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
 .badge-new{font-size:9px;padding:1px 5px;background:#fff0f0;color:#e53e3e;border:1px solid #fed7d7;border-radius:3px;font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
 .post-date{font-size:10px;color:var(--t3);font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
 /* 부서·자치구 배지 */
@@ -105,7 +110,7 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .gu-c{background:#f3f7fb;color:#374f6b;border-color:#bdd0e4;}
 .gu-d{background:#fbf7f2;color:#6b4e2e;border-color:#e4cdb0;}
 .gu-e{background:#f8f5fb;color:#5c4a6e;border-color:#d4c4e4;}
-.post-a{font-size:12.5px;color:var(--t);text-decoration:none;line-height:1.4;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.post-a{font-size:12.5px;color:var(--t);text-decoration:none;line-height:1.45;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .post-a:hover{color:var(--blue);}
 .card-msg{padding:18px 14px;font-size:12px;color:var(--t3);text-align:center;line-height:1.6;}
 .card-msg code{font-family:var(--mono);font-size:11px;background:var(--bg3);padding:1px 5px;border-radius:3px;}
@@ -455,15 +460,18 @@ function renderPostRows(items, q){
     const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
     const date=item.date?`<span class="post-date">${item.date}</span>`:'';
     const dept=item.dept?`<span class="post-dept ${deptClass(item.dept)}">${item.dept}</span>`:'';
-    return`<div class="post-row">${badge}${date}${dept}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+    return`<div class="post-row">
+      <div class="post-row-meta">${badge}${date}${dept}</div>
+      <a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a>
+    </div>`;
   }).join('');
 }
 
 // 권역+자치구 2단계 탭 카드 렌더 (wrtanc·ntfc 공용)
+// getItems(guName) — guName이 null이면 전체, 문자열이면 해당 자치구
 function renderRegionCard(card, hd, sid, getItems){
   const uid = `${sid}-${Date.now()}`;
 
-  // 권역 탭 + 자치구 소탭 + 2열 바디
   const regionTabsHtml = REGIONS.map((r,i)=>
     `<button class="region-tab${i===0?' active':''}" data-ri="${i}">${r.label}</button>`
   ).join('');
@@ -481,16 +489,18 @@ function renderRegionCard(card, hd, sid, getItems){
   let curGu     = null; // null = 권역 전체
 
   function renderBody(){
-    const items = getItems();
-    if(!items){
+    // getItems에 현재 선택된 자치구명 전달
+    const items = getItems(curGu);
+    if(items === null){
       body.innerHTML=`<div class="card-msg" style="grid-column:1/-1">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 실행해주세요.</div>`;
       return;
     }
+    // curGu가 null(전체/권역)이면 권역 필터 적용
     const region = REGIONS[curRegion];
-    // 권역 필터
-    let filtered = region.gus ? items.filter(i=>region.gus.includes(i.gu)) : items;
-    // 자치구 소탭 필터
-    if(curGu) filtered = filtered.filter(i=>i.gu===curGu);
+    let filtered = items;
+    if(curGu === null && region.gus){
+      filtered = items.filter(i=>region.gus.includes(i.gu));
+    }
     const q = searchQ.trim().toLowerCase();
     if(q) filtered = filtered.filter(i=>i.title.toLowerCase().includes(q));
     if(!filtered.length){
@@ -503,7 +513,10 @@ function renderRegionCard(card, hd, sid, getItems){
       const gu      = item.gu?`<span class="post-dept ${guClass(item.gu)}">${item.gu}</span>`:'';
       const no      = item.notice_no?`<span class="post-date">${item.notice_no}</span>`:'';
       const dday    = item.end_date?`<span class="wrtanc-dday">${calcDday(item.end_date)}</span>`:'';
-      return `<div class="post-row">${badge}${date}${gu}${no}${dday}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+      return `<div class="post-row">
+        <div class="post-row-meta">${badge}${date}${gu}${no}${dday}</div>
+        <a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a>
+      </div>`;
     }).join('');
   }
 
@@ -566,20 +579,32 @@ function renderFeedCard(src, data){
 
   // ── 열람공고(안): 권역+자치구 2단계 탭 ──
   if(src.sid==="wrtanc"){
-    renderRegionCard(card, hd, "wrtanc", ()=>{
+    // SGG 코드 → 자치구명 역매핑
+    const SGG_CODE = {
+      "강남구":"11680","강동구":"11740","강북구":"11305","강서구":"11500","관악구":"11620",
+      "광진구":"11215","구로구":"11530","금천구":"11545","노원구":"11350","도봉구":"11320",
+      "동대문구":"11230","동작구":"11590","마포구":"11440","서대문구":"11410","서초구":"11650",
+      "성동구":"11200","성북구":"11290","송파구":"11710","양천구":"11470","영등포구":"11560",
+      "용산구":"11170","은평구":"11380","종로구":"11110","중구":"11140","중랑구":"11260",
+    };
+    renderRegionCard(card, hd, "wrtanc", (guName)=>{
       const ws = updData && updData.sources["wrtanc"];
       if(!ws) return null;
-      return ws.all || [];
+      if(!guName) return ws.all || [];            // 전체
+      const code = SGG_CODE[guName];
+      return (ws.by_gu && code && ws.by_gu[code]) || [];  // 자치구별
     });
     return card;
   }
 
   // ── 결정고시(안): 권역+자치구 2단계 탭 ──
   if(src.sid==="ntfc"){
-    renderRegionCard(card, hd, "ntfc", ()=>{
+    renderRegionCard(card, hd, "ntfc", (guName)=>{
       const ws = updData && updData.sources["ntfc"];
       if(!ws) return null;
-      return ws.items || [];
+      const items = ws.items || [];
+      if(!guName) return items;
+      return items.filter(i=>i.gu===guName);
     });
     return card;
   }
@@ -642,7 +667,10 @@ function renderFeedCard(src, data){
       const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
       const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
       const dept=item.dept?`<span class="post-dept ${deptClass(item.dept)}">${item.dept}</span>`:'';
-      return`<div class="post-row">${badge}${date}${dept}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+      return`<div class="post-row">
+        <div class="post-row-meta">${badge}${date}${dept}</div>
+        <a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a>
+      </div>`;
     }).join('');
     return card;
   }
