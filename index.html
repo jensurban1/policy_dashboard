@@ -9,217 +9,116 @@
 :root{
   --font:-apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
   --mono:"D2Coding","Consolas","Courier New",monospace;
-  /* 배경 */
   --bg:#f4f6f9;--bg2:#ffffff;--bg3:#f1f3f7;--bg4:#e8ebf2;
-  /* 보더 */
   --bd:rgba(0,0,0,0.06);--bd2:rgba(0,0,0,0.11);
-  /* 텍스트 */
   --t:#1a202c;--t2:#4a5568;--t3:#a0aec0;
-  /* 액센트 */
   --blue:#3b82f6;--blue-lt:#eff6ff;--blue-bd:#bfdbfe;
   --amber:#f59e0b;--red:#ef4444;
-  /* 사이드바 */
   --sb:#1a2236;--sb-t:#cbd5e1;--sb-m:#64748b;
 }
 html,body{height:100%;}
 body{font-family:var(--font);background:var(--bg);color:var(--t);display:flex;height:100vh;overflow:hidden;}
 
-/* SIDEBAR */
-aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction:column;height:100%;overflow-y:auto;}
-.brand{padding:20px 16px 16px;border-bottom:1px solid rgba(255,255,255,.07);}
-.brand-t{font-size:13px;font-weight:600;color:#f1f5f9;letter-spacing:-.2px;}
-.brand-s{font-size:10px;color:var(--sb-m);margin-top:2px;font-family:var(--mono);}
-.nav-sec{padding:14px 8px 4px;}
-.nav-lbl{font-size:9.5px;color:var(--sb-m);letter-spacing:.8px;text-transform:uppercase;padding:0 8px;margin-bottom:4px;}
-.nav-item{display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:6px;cursor:pointer;font-size:12px;color:var(--sb-t);transition:background .12s;user-select:none;}
+/* ── SIDEBAR ── */
+aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction:column;height:100%;overflow-y:auto;}
+.brand{padding:18px 14px 14px;border-bottom:1px solid rgba(255,255,255,.07);}
+.brand-t{font-size:12.5px;font-weight:600;color:#f1f5f9;letter-spacing:-.2px;line-height:1.4;}
+.brand-s{font-size:10px;color:var(--sb-m);margin-top:3px;font-family:var(--mono);}
+.nav-sec{padding:10px 6px 4px;}
+.nav-lbl{font-size:9px;color:var(--sb-m);letter-spacing:.8px;text-transform:uppercase;padding:0 8px;margin-bottom:5px;}
+.nav-item{display:flex;align-items:flex-start;gap:8px;padding:8px 8px;border-radius:6px;cursor:pointer;font-size:11.5px;color:var(--sb-t);transition:background .12s;user-select:none;line-height:1.4;}
 .nav-item:hover{background:rgba(255,255,255,.05);}
-.nav-item.active{background:rgba(255,255,255,.09);color:#f1f5f9;font-weight:500;}
-.nav-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
-.nav-icon{font-size:13px;line-height:1;}
-.nav-ext{display:flex;align-items:center;gap:7px;padding:6px 8px;border-radius:6px;font-size:11.5px;color:var(--sb-m);text-decoration:none;transition:color .12s,background .12s;}
-.nav-ext:hover{color:var(--sb-t);background:rgba(255,255,255,.05);}
-.nav-ext-arr{font-size:10px;margin-left:auto;}
-.nav-div{height:1px;background:rgba(255,255,255,.07);margin:8px 16px;}
+.nav-item.active{background:rgba(255,255,255,.10);color:#f1f5f9;font-weight:600;}
+.nav-item.active .nav-org{color:#94a3b8;}
+.nav-icon{font-size:13px;flex-shrink:0;margin-top:1px;}
+.nav-name{display:block;font-size:11.5px;}
+.nav-org{display:block;font-size:10px;color:var(--sb-m);margin-top:1px;font-weight:400;}
+.nav-div{height:1px;background:rgba(255,255,255,.07);margin:6px 14px;}
 
-/* MAIN */
+/* ── MAIN ── */
 .main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0;}
-.topbar{background:var(--bg2);border-bottom:1px solid var(--bd);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;z-index:10;}
-.topbar-t{font-size:15px;font-weight:600;letter-spacing:-.3px;}
+.topbar{background:var(--bg2);border-bottom:1px solid var(--bd);padding:11px 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;z-index:10;}
+.topbar-t{font-size:14.5px;font-weight:600;letter-spacing:-.3px;}
 .topbar-s{font-size:11px;color:var(--t3);margin-top:2px;}
 .topbar-r{display:flex;align-items:center;gap:8px;}
 .new-pill{background:#ef4444;color:#fff;font-size:10px;border-radius:10px;padding:2px 8px;font-family:var(--mono);display:none;}
 .new-pill.on{display:inline-block;}
 .upd-time{font-size:10px;color:var(--t3);font-family:var(--mono);}
 .srch{position:relative;}
-.srch svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);width:13px;height:13px;color:var(--t3);pointer-events:none;}
-.srch input{background:var(--bg3);border:1px solid var(--bd);border-radius:6px;padding:6px 10px 6px 28px;font-size:12px;font-family:var(--font);color:var(--t);outline:none;width:200px;transition:border-color .15s;}
+.srch svg{position:absolute;left:8px;top:50%;transform:translateY(-50%);width:12px;height:12px;color:var(--t3);pointer-events:none;}
+.srch input{background:var(--bg3);border:1px solid var(--bd);border-radius:6px;padding:5px 9px 5px 26px;font-size:12px;font-family:var(--font);color:var(--t);outline:none;width:190px;transition:border-color .15s;}
 .srch input:focus{border-color:var(--blue);}
 .srch input::placeholder{color:var(--t3);}
 
-/* CONTENT */
-.content{flex:1;overflow-y:auto;padding:20px 24px 48px;}
-
-/* FEED GRID — 상단 와이드(1열) + 하단 2열 하이브리드 */
-.feed-grid{display:flex;flex-direction:column;gap:14px;}
-.feed-wide{display:grid;grid-template-columns:1fr;gap:14px;}
+/* ── CONTENT ── */
+.content{flex:1;overflow-y:auto;padding:18px 22px 48px;}
+.feed-wide{display:flex;flex-direction:column;gap:14px;}
 .feed-2col{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;}
 
-/* SOURCE CARD */
+/* ── SOURCE CARD ── */
 .src-card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;display:flex;flex-direction:column;overflow:hidden;}
-.card-hd{padding:11px 14px 10px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.card-hd{padding:10px 13px 9px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0;}
 .card-hd-left{display:flex;align-items:center;gap:8px;min-width:0;}
-.card-acc{width:3px;height:32px;border-radius:2px;flex-shrink:0;}
-.card-info{}
-.card-name{font-size:13px;font-weight:600;color:var(--t);letter-spacing:-.2px;}
-/* 기관명 — 기관별 색상 */
-.card-org{font-size:11.5px;margin-top:3px;font-weight:500;}
-.org-molit{color:#7c3aed;}       /* 국토교통부 — 인디고 */
-.org-seoul{color:#0891b2;}       /* 서울특별시 — 사이안 */
-.org-urban{color:#d97706;}       /* 서울 도시계획포털 — 앰버 */
-.org-krihs{color:#2563eb;}       /* 국토연구원 — 블루 */
-.org-nars{color:#dc2626;}        /* 국회입법조사처 — 레드 */
-.org-default{color:var(--t2);}
+.card-name{font-size:12.5px;font-weight:600;color:var(--t);letter-spacing:-.2px;}
+.card-org{font-size:11px;margin-top:2px;font-weight:500;}
+.org-molit{color:#7c3aed;}.org-seoul{color:#0891b2;}.org-urban{color:#d97706;}
+.org-krihs{color:#2563eb;}.org-nars{color:#dc2626;}.org-smc{color:#059669;}.org-law{color:#64748b;}.org-default{color:var(--t2);}
 .card-go{font-size:11px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:3px;flex-shrink:0;white-space:nowrap;}
 .card-go:hover{opacity:.7;}
 .card-go svg{width:10px;height:10px;}
 
-/* POST LIST */
-.card-body{flex:1;overflow-y:auto;max-height:340px;}
-.post-row{
-  display:flex;flex-direction:column;gap:3px;
-  padding:8px 14px;border-bottom:1px solid var(--bd);
-  transition:background .1s;
-}
+/* ── POST LIST ── */
+.card-body{flex:1;overflow-y:auto;max-height:360px;}
+.post-row{display:flex;flex-direction:column;gap:3px;padding:7px 13px;border-bottom:1px solid var(--bd);transition:background .1s;}
 .post-row:last-child{border-bottom:none;}
 .post-row:hover{background:var(--bg3);}
 .post-row-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
 .badge-new{font-size:9px;padding:1px 5px;background:#fff0f0;color:#e53e3e;border:1px solid #fed7d7;border-radius:3px;font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
 .post-date{font-size:10px;color:var(--t3);font-family:var(--mono);white-space:nowrap;flex-shrink:0;}
-/* 부서·자치구 배지 */
-.post-dept{font-size:10.5px;font-weight:600;border-radius:3px;padding:1px 7px;white-space:nowrap;flex-shrink:0;letter-spacing:-.1px;border:1px solid transparent;}
-/* 서울시 본부별 — 뮤트 톤 */
+.post-dept{font-size:10px;font-weight:600;border-radius:3px;padding:1px 6px;white-space:nowrap;flex-shrink:0;border:1px solid transparent;}
 .dept-미래공간{background:#f7f5fc;color:#5a4e7a;border-color:#d8d0f0;}
 .dept-균형발전{background:#f3f8f4;color:#3d5c42;border-color:#bdd8c2;}
 .dept-도시공간{background:#f3f7fb;color:#374f6b;border-color:#bdd0e4;}
 .dept-주택{background:#fbf7f2;color:#6b4e2e;border-color:#e4cdb0;}
-.dept-gu{background:#f3f7fb;color:#374f6b;border-color:#bdd0e4;}
 .dept-default{background:#f8fafc;color:#475569;border-color:#e2e8f0;}
-/* 자치구 5색 배지 */
 .gu-a{background:#f7f5fc;color:#5a4e7a;border-color:#d8d0f0;}
 .gu-b{background:#f3f8f4;color:#3d5c42;border-color:#bdd8c2;}
 .gu-c{background:#f3f7fb;color:#374f6b;border-color:#bdd0e4;}
 .gu-d{background:#fbf7f2;color:#6b4e2e;border-color:#e4cdb0;}
 .gu-e{background:#f8f5fb;color:#5c4a6e;border-color:#d4c4e4;}
-.post-a{font-size:12.5px;color:var(--t);text-decoration:none;line-height:1.45;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.post-a{font-size:12px;color:var(--t);text-decoration:none;line-height:1.45;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .post-a:hover{color:var(--blue);}
-.card-msg{padding:18px 14px;font-size:12px;color:var(--t3);text-align:center;line-height:1.6;}
-.card-msg code{font-family:var(--mono);font-size:11px;background:var(--bg3);padding:1px 5px;border-radius:3px;}
+.card-msg{padding:18px 13px;font-size:12px;color:var(--t3);text-align:center;line-height:1.6;}
 
-/* STATIC CARD (크롤링 불가) */
-.static-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:5px;padding:10px 14px;}
-.static-item{background:var(--bg3);border:1px solid var(--bd);border-radius:5px;padding:8px 10px;}
-.si-cat{font-size:9px;color:var(--blue);font-weight:600;letter-spacing:.4px;text-transform:uppercase;margin-bottom:3px;font-family:var(--mono);}
-.si-title{font-size:11.5px;color:var(--t);font-weight:500;line-height:1.4;}
-.si-desc{font-size:10.5px;color:var(--t2);margin-top:2px;line-height:1.4;}
-.static-note{padding:0 14px 10px;font-size:10.5px;color:var(--t3);font-style:italic;line-height:1.5;}
+/* ── 카드 내부 필터 탭 ── */
+.card-tabs{display:flex;flex-wrap:wrap;gap:5px;padding:10px 13px;border-bottom:1px solid var(--bd);}
+.tab-btn{font-size:12px;padding:5px 12px;border-radius:6px;border:1px solid var(--bd2);background:transparent;color:var(--t2);cursor:pointer;transition:all .15s;font-family:var(--font);white-space:nowrap;font-weight:500;}
+.tab-btn:hover{background:var(--bg3);color:var(--t);}
+.tab-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600;}
 
-/* LIST MODE */
-.sec-block{margin-bottom:22px;}
-.sec-hd{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
-.sec-acc{width:3px;height:16px;border-radius:2px;flex-shrink:0;}
-.sec-name{font-size:13px;font-weight:600;}
-.sec-cnt{font-size:11px;color:var(--t3);}
-.list-wrap{background:var(--bg2);border:1px solid var(--bd);border-radius:8px;overflow:hidden;}
-.col-hd{display:grid;grid-template-columns:20% 30% 34% 1fr;padding:7px 14px;background:var(--bg3);border-bottom:1px solid var(--bd);}
-.col-hd span{font-size:10px;color:var(--t3);font-weight:500;letter-spacing:.3px;text-transform:uppercase;}
-.col-hd span:last-child{text-align:right;}
-.list-row{display:grid;grid-template-columns:20% 30% 34% 1fr;align-items:center;padding:9px 14px;border-bottom:1px solid var(--bd);min-height:42px;}
-.list-row:last-child{border-bottom:none;}
-.list-row:hover{background:var(--bg3);}
-.col-org{font-size:12px;font-weight:600;color:var(--t);padding-right:10px;}
-.chips{display:flex;flex-wrap:wrap;gap:3px;padding-right:10px;}
-.chip{font-size:11px;padding:2px 7px;border:1px solid var(--bd2);border-radius:4px;color:var(--t2);background:var(--bg3);}
-.col-folder{font-family:var(--mono);font-size:10.5px;color:var(--t3);line-height:1.7;padding-right:10px;}
-.star{color:var(--amber);}
-.nosave{color:var(--red);font-style:italic;}
-.col-link{text-align:right;}
-.go-btn{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;color:var(--blue);text-decoration:none;}
-.go-btn:hover{opacity:.65;}
-.go-btn svg{width:10px;height:10px;}
-
-/* 열람공고 자치구 탭 — 8열 콤팩트, 글자는 선명하게 */
-.wrtanc-tabs{display:grid !important;grid-template-columns:repeat(8,1fr);gap:3px;padding:6px 10px 8px;flex-wrap:unset;border-bottom:1px solid var(--bd);}
-.wrtanc-tab{
-  font-size:12px !important;
-  font-weight:500 !important;
-  padding:3px 1px !important;
-  text-align:center;
-  text-decoration:none;
-  border-radius:4px !important;
-  border:1px solid var(--bd) !important;
-  background:var(--bg3) !important;
-  color:var(--t2) !important;
-  transition:all .12s;
-}
-.wrtanc-tab:hover{background:var(--bg4) !important;color:var(--t) !important;}
-.wrtanc-tab.active{background:var(--blue) !important;border-color:var(--blue) !important;color:#fff !important;font-weight:600 !important;}
-.wrtanc-dday{font-size:10px;white-space:nowrap;flex-shrink:0;font-family:var(--mono);}
-
-/* 권역별 탭 (열람공고·결정고시) */
-.region-tabs{display:flex;gap:5px;padding:8px 12px 0;border-bottom:none;}
-.region-tab{
-  font-size:11.5px;font-weight:600;padding:5px 12px;border-radius:6px 6px 0 0;
-  border:1px solid var(--bd);border-bottom:none;
-  background:var(--bg3);color:var(--t2);cursor:pointer;transition:all .12s;
-  font-family:var(--font);white-space:nowrap;
-}
+/* ── 권역·자치구 탭 ── */
+.region-tabs{display:flex;gap:4px;padding:8px 10px 0;}
+.region-tab{font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px 6px 0 0;border:1px solid var(--bd);border-bottom:none;background:var(--bg3);color:var(--t2);cursor:pointer;transition:all .12s;font-family:var(--font);white-space:nowrap;}
 .region-tab:hover{background:var(--bg4);color:var(--t);}
 .region-tab.active{background:var(--bg2);color:var(--blue);border-color:var(--bd2);font-weight:700;}
-/* 자치구 소탭 */
-.gu-tabs{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;padding:8px 10px;border-bottom:1px solid var(--bd);background:var(--bg3);}
-.gu-tab{
-  font-size:11.5px;font-weight:500;padding:3px 2px;text-align:center;
-  border-radius:4px;border:1px solid var(--bd);background:var(--bg2);
-  color:var(--t2);cursor:pointer;transition:all .12s;font-family:var(--font);
-}
+.gu-tabs{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;padding:7px 10px;border-bottom:1px solid var(--bd);background:var(--bg3);}
+.gu-tab{font-size:11px;font-weight:500;padding:3px 2px;text-align:center;border-radius:4px;border:1px solid var(--bd);background:var(--bg2);color:var(--t2);cursor:pointer;transition:all .12s;font-family:var(--font);}
 .gu-tab:hover{background:var(--bg4);color:var(--t);}
 .gu-tab.active{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600;}
-/* 2열 목록 */
 .post-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
 .post-grid .post-row{border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);}
 .post-grid .post-row:nth-child(even){border-right:none;}
 .post-grid .post-row:nth-last-child(-n+2){border-bottom:none;}
+.wrtanc-dday{font-size:10px;white-space:nowrap;flex-shrink:0;font-family:var(--mono);}
 
-/* TAB BUTTONS — 크기 확대 */
-.card-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:12px 14px;border-bottom:1px solid var(--bd);}
-.tab-btn{
-  font-size:12.5px;
-  padding:6px 14px;
-  border-radius:6px;
-  border:1px solid var(--bd2);
-  background:transparent;
-  color:var(--t2);
-  cursor:pointer;
-  transition:all .15s;
-  font-family:var(--font);
-  white-space:nowrap;
-  font-weight:500;
-  line-height:1.4;
-}
-.tab-btn:hover{background:var(--bg3);color:var(--t);}
-.tab-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600;}
+/* ── STATIC CARD ── */
+.static-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:5px;padding:10px 13px;}
+.static-item{background:var(--bg3);border:1px solid var(--bd);border-radius:5px;padding:8px 10px;}
+.si-cat{font-size:9px;color:var(--blue);font-weight:600;letter-spacing:.4px;text-transform:uppercase;margin-bottom:3px;font-family:var(--mono);}
+.si-title{font-size:11px;color:var(--t);font-weight:500;line-height:1.4;}
+.si-desc{font-size:10px;color:var(--t2);margin-top:2px;line-height:1.4;}
+.static-note{padding:0 13px 10px;font-size:10.5px;color:var(--t3);font-style:italic;line-height:1.5;}
 
-/* cat accent */
-.acc-정책기본구상,.card-acc-정책기본구상{background:#2563eb;}
-.acc-지자체정책구상,.card-acc-지자체정책구상{background:#0d9488;}
-.acc-사업계획안,.card-acc-사업계획안{background:#d97706;}
-.acc-각종법령,.card-acc-각종법령{background:#dc2626;}
-.dot-정책기본구상{background:#2563eb;}
-.dot-지자체정책구상{background:#0d9488;}
-.dot-사업계획안{background:#d97706;}
-.dot-각종법령{background:#dc2626;}
-
-.empty{text-align:center;padding:48px;color:var(--t3);font-size:13px;}
 ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:3px;}
 </style>
 </head>
@@ -227,46 +126,79 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 
 <aside>
   <div class="brand">
-    <div class="brand-t">정책 자료 대시보드</div>
-    <div class="brand-s">Urban Planning Navigator</div>
+    <div class="brand-t">정책 자료<br>대시보드</div>
+    <div class="brand-s">Urban Planning</div>
   </div>
-
   <div class="nav-sec">
-    <div class="nav-lbl">뷰</div>
-    <div class="nav-item active" data-view="feed">
-      <span class="nav-icon">📋</span>최신 업데이트
+    <div class="nav-lbl">기관</div>
+
+    <div class="nav-item active" data-tab="molit">
+      <span class="nav-icon">🏛</span>
+      <span>
+        <span class="nav-name">보도자료·홍보자료</span>
+        <span class="nav-org">국토교통부</span>
+      </span>
     </div>
-    <div class="nav-item" data-view="list">
-      <span class="nav-icon">🔗</span>링크 목록
+
+    <div class="nav-item" data-tab="seoul">
+      <span class="nav-icon">🌆</span>
+      <span>
+        <span class="nav-name">보도자료</span>
+        <span class="nav-org">서울특별시</span>
+      </span>
     </div>
-  </div>
 
-  <div class="nav-div"></div>
+    <div class="nav-item" data-tab="urban">
+      <span class="nav-icon">🗺</span>
+      <span>
+        <span class="nav-name">열람공고·고시·업무자료</span>
+        <span class="nav-org">서울 도시계획포털</span>
+      </span>
+    </div>
 
-  <div class="nav-sec">
-    <div class="nav-lbl">링크 목록 분류</div>
-    <div class="nav-item" data-cat="정책기본구상"><span class="nav-dot dot-정책기본구상"></span>정책기본구상</div>
-    <div class="nav-item" data-cat="지자체정책구상"><span class="nav-dot dot-지자체정책구상"></span>지자체정책구상</div>
-    <div class="nav-item" data-cat="사업계획안"><span class="nav-dot dot-사업계획안"></span>사업계획(안)</div>
-    <div class="nav-item" data-cat="각종법령"><span class="nav-dot dot-각종법령"></span>각종 법령</div>
-  </div>
+    <div class="nav-div"></div>
 
-  <div class="nav-div"></div>
+    <div class="nav-item" data-tab="krihs">
+      <span class="nav-icon">📚</span>
+      <span>
+        <span class="nav-name">Brief·워킹페이퍼·Article</span>
+        <span class="nav-org">국토연구원</span>
+      </span>
+    </div>
 
-  <div class="nav-sec">
-    <div class="nav-lbl">외부 링크</div>
-    <a class="nav-ext" href="https://www.molit.go.kr" target="_blank">국토교통부<span class="nav-ext-arr">↗</span></a>
-    <a class="nav-ext" href="https://www.seoul.go.kr" target="_blank">서울특별시<span class="nav-ext-arr">↗</span></a>
-    <a class="nav-ext" href="https://www.moleg.go.kr" target="_blank">법제처<span class="nav-ext-arr">↗</span></a>
-    <a class="nav-ext" href="https://www.g2b.go.kr" target="_blank">나라장터<span class="nav-ext-arr">↗</span></a>
+    <div class="nav-item" data-tab="nars">
+      <span class="nav-icon">📋</span>
+      <span>
+        <span class="nav-name">연구보고서·정책연구용역</span>
+        <span class="nav-org">국회입법조사처</span>
+      </span>
+    </div>
+
+    <div class="nav-div"></div>
+
+    <div class="nav-item" data-tab="smc">
+      <span class="nav-icon">🏛</span>
+      <span>
+        <span class="nav-name">소관의안·심사검토보고서</span>
+        <span class="nav-org">서울시의회</span>
+      </span>
+    </div>
+
+    <div class="nav-item" data-tab="law">
+      <span class="nav-icon">⚖</span>
+      <span>
+        <span class="nav-name">법령·시행령·조례</span>
+        <span class="nav-org">국가법령정보센터</span>
+      </span>
+    </div>
   </div>
 </aside>
 
 <div class="main">
   <div class="topbar">
     <div>
-      <div class="topbar-t" id="topTitle">최신 업데이트</div>
-      <div class="topbar-s" id="topSub">국토연구원 · 국회입법조사처 · 서울시 최신 게시글</div>
+      <div class="topbar-t" id="topTitle">보도자료 / 홍보자료</div>
+      <div class="topbar-s" id="topSub">국토교통부</div>
     </div>
     <div class="topbar-r">
       <span class="new-pill" id="newPill">0 NEW</span>
@@ -281,167 +213,55 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 </div>
 
 <script>
-// ── 피드 소스 순서: 보도자료(국토부·서울시) 먼저, 나머지 뒤 ──
-const FEED_SOURCES = [
-  // ① 보도자료 카드 2개 — 상단
-  {sid:"molit_press", name:"보도자료 / 홍보자료", org:"국토교통부", cat:"정책기본구상",
-   url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
-  {sid:"seoul_press", name:"보도자료", org:"서울특별시", cat:"지자체정책구상",
-   url:"https://www.seoul.go.kr/news/news_report.do"},
-  // ② 열람공고 카드 — 자치구별 탭
-  {sid:"wrtanc", name:"열람공고(안)", org:"서울 도시계획포털", cat:"사업계획안",
-   url:"https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"},
-  // ③ 결정고시 카드
-  {sid:"ntfc", name:"결정고시(안)", org:"서울 도시계획포털", cat:"사업계획안",
-   url:"https://urban.seoul.go.kr/view/html/PMNU4030100001"},
-  // ④ 업무자료 카드
-  {sid:"upmu", name:"업무자료 (법정계획/운영지침)", org:"서울 도시계획포털", cat:"지자체정책구상",
-   url:"https://urban.seoul.go.kr/view/html/PMNU5020000001"},
-  // ② 크롤링 가능한 나머지 소스
-  {sid:"krihs_brief", name:"국토정책 Brief", org:"국토연구원", cat:"정책기본구상",
-   url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
-   static:{items:[
-     {cat:"성격",title:"주간 발행 (매주 월요일)",desc:"현재 1054호까지 발행"},
-     {cat:"내용",title:"핵심 연구 요약 + 정책 제안",desc:"도시계획·주거·균형발전 등"},
-     {cat:"다운로드",title:"PDF 무료 다운로드",desc:"회원가입 없이 열람 가능"},
-   ], note:"※ 크롤링 실패 시 표시. 원문 링크에서 직접 확인하세요."}},
-  {sid:"krihs_working", name:"워킹페이퍼", org:"국토연구원", cat:"정책기본구상",
-   url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
-   static:{items:[
-     {cat:"성격",title:"연구 중간 산출물",desc:"정식 보고서 발간 전 초안 공유"},
-     {cat:"내용",title:"과제명·연구자·발행일",desc:"연구과제별 중간 결과물"},
-     {cat:"다운로드",title:"PDF 무료 열람",desc:"비회원 접근 가능"},
-   ], note:"※ 크롤링 실패 시 표시. 원문 링크에서 직접 확인하세요."}},
-  {sid:"krihs_article", name:"월간국토 Article", org:"국토연구원", cat:"정책기본구상",
-   url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
-   static:{items:[
-     {cat:"구성",title:"권호별 특집 주제",desc:"매월 테마 선정 후 아티클 묶음"},
-     {cat:"구성",title:"기고문·연구논단",desc:"국토·도시 전문가 기고"},
-     {cat:"구성",title:"국토 통계·지표",desc:"주요 통계 및 지표 수록"},
-   ], note:"※ 크롤링 실패 시 표시. 원문 링크에서 직접 확인하세요."}},
-  {sid:"nars_report", name:"연구보고서", org:"국회입법조사처", cat:"정책기본구상",
-   url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-   static:{items:[
-     {cat:"유형",title:"이슈와논점",desc:"주요 현안 쟁점 분석 (2~4쪽)"},
-     {cat:"유형",title:"NARS 현안분석",desc:"심층 분석 보고서 (20~60쪽)"},
-     {cat:"유형",title:"외국입법·정책분석",desc:"해외 입법사례 비교"},
-   ], note:"※ 국토해양팀 소관 — 국토·도시·주택·건설 분야"}},
-  {sid:"nars_research", name:"정책연구용역", org:"국회입법조사처", cat:"정책기본구상",
-   url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-   static:{items:[
-     {cat:"정보",title:"용역 과제명",desc:"외부 연구기관 위탁 과제 목록"},
-     {cat:"정보",title:"연구기관·책임자",desc:"수행기관 및 담당 연구자"},
-     {cat:"정보",title:"연구기간·보고서",desc:"최종보고서 PDF 첨부"},
-   ], note:"※ 국토해양팀 발주 용역만 필터링됨"}},
+const MOLIT_TABS=[
+  {label:"전체",     url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
+  {label:"주택토지", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_2"},
+  {label:"건설",     url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_3"},
+  {label:"도로철도", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_4"},
+  {label:"교통물류", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_5"},
+  {label:"항공",     url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_7"},
+  {label:"일반",     url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_1"},
 ];
-
-const STATIC_SOURCES = [
-  {name:"소관 의안 / 심사·검토보고서",org:"서울시의회",cat:"지자체정책구상",url:"https://www.smc.seoul.kr/info/index.do?menuId=001003008",
-   items:[{cat:"메뉴",title:"의안 검색",desc:"의안번호·의안명·소관위"},{cat:"메뉴",title:"처리/계류 의안",desc:"가결·부결·심사 중 목록"},{cat:"보고서",title:"검토·심사보고서 PDF",desc:"의안 상세 하단 첨부"}],
-   note:"※ 소관위원회 필터로 주택공간·도시계획균형위 구분"},
-  {name:"법, 시행령, 시행규칙, 조례 등",org:"국가법령정보센터",cat:"각종법령",url:"https://www.law.go.kr/main.html",
-   items:[{cat:"법령",title:"현행/연혁 법령",desc:"법률·대통령령·총리령·조례"},{cat:"행정규칙",title:"훈령·예규·고시",desc:"각 부처 행정규칙 원문"},{cat:"판례",title:"헌재·대법원",desc:"법령 관련 주요 판례"}],
-   note:"※ 파일 아닌 링크로 관리"},
-];
-
-const LIST_DATA = [
-  {cat:"정책기본구상",sub:"국회",org:"국토교통위원회",titles:["국토교통위 소관 의안","심사보고서","검토보고서"],folder:"★사업별 자료 - 법령/지침",url:"https://ltc.na.go.kr/cmmit/bill/cntsBill/list.do?menuNo=2000079"},
-  {cat:"정책기본구상",sub:"국회",org:"국회입법조사처",titles:["국토해양팀 소관 연구보고서"],folder:"★사업별 자료 - 법령/지침",url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043"},
-  {cat:"정책기본구상",sub:"국회",org:"국회입법조사처",titles:["국토해양팀 소관 정책연구용역"],folder:"★사업별 자료 - 법령/지침",url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010"},
-  {cat:"정책기본구상",sub:"국토연구원",org:"국토연구원",titles:["국토정책 Brief"],folder:"★사업별 자료 - 정책/연구",url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1"},
-  {cat:"정책기본구상",sub:"국토연구원",org:"국토연구원",titles:["워킹페이퍼"],folder:"★사업별 자료 - 정책/연구",url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP"},
-  {cat:"정책기본구상",sub:"국토연구원",org:"국토연구원",titles:["월간국토 Article"],folder:"★사업별 자료 - 정책/연구",url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"},
-  {cat:"정책기본구상",sub:"국토교통부",org:"국토교통부",titles:["정책발표용 홍보자료","보도자료 (국토도시)"],folder:"★사업별 자료 - 정책/연구",url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
-  {cat:"정책기본구상",sub:"국토교통부",org:"국토교통부",titles:["정책정보 (국토도시)"],folder:"★사업별 자료 - 정책/연구",url:"https://www.molit.go.kr/USR/policyData/m_34681/lst.jsp"},
-  {cat:"지자체정책구상",sub:"서울특별시",org:"미래공간기획관·균형발전본부·도시공간본부·주택실",titles:["정책발표용 홍보자료","보도자료"],folder:"★사업별 자료 - 정책/연구",url:"https://www.seoul.go.kr/news/news_report.do"},
-  {cat:"지자체정책구상",sub:"서울특별시",org:"미래공간기획관·균형발전본부·도시공간본부·주택실",titles:["법률에 따른 기본계획","사업별 운영지침 등"],folder:"★사업별 자료 - 상위계획",url:"https://urban.seoul.go.kr/view/html/PMNU5020000001"},
-  {cat:"지자체정책구상",sub:"서울시의회",org:"주택공간위원회",titles:["주택공간위원회 소관 의안","심사보고서","검토보고서"],folder:"★사업별 자료 - 법령/지침",url:"https://www.smc.seoul.kr/info/index.do?menuId=001003008"},
-  {cat:"지자체정책구상",sub:"서울시의회",org:"도시계획균형위원회",titles:["도시계획균형위원회 소관 의안","심사보고서","검토보고서"],folder:"★사업별 자료 - 법령/지침",url:"https://www.smc.seoul.kr/info/index.do?menuId=001003008"},
-  {cat:"사업계획안",sub:"서울특별시",org:"서울특별시",titles:["열람공고(안)"],folder:"★사업별 자료 - 참고사례",url:"https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"},
-  {cat:"사업계획안",sub:"서울특별시",org:"서울특별시",titles:["결정고시(안)"],folder:"★사업별 자료 - 참고사례",url:"https://urban.seoul.go.kr/view/html/PMNU4030100001"},
-  {cat:"사업계획안",sub:"서울특별시",org:"서울특별시",titles:["위원회 심의 결과"],folder:"저장 X",url:"https://commission.eseoul.go.kr/"},
-  {cat:"각종법령",sub:"각종법령",org:"국가법령정보센터",titles:["법, 시행령, 시행규칙, 조례 등"],folder:"★사업별 자료 - 법령/지침 (파일 아닌 링크로 저장)",url:"https://www.law.go.kr/main.html"},
-];
-
-// ── 국토교통부 분야 탭 — 직접 확인된 URL 매핑만 사용 ──
-// p_sec_1: 일반  p_sec_2: 주택토지  p_sec_3: 건설
-// p_sec_4: 도로철도  p_sec_5: 교통물류  p_sec_7: 항공
-// 국토도시·모빌리티 번호 미확인 → 제거
-const MOLIT_TABS = [
-  {label:"전체",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
-  {label:"주택토지",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_2"},
-  {label:"건설",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_3"},
-  {label:"도로철도",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_4"},
-  {label:"교통물류",  url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_5"},
-  {label:"항공",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_7"},
-  {label:"일반",      url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_1"},
-];
-
-const SEOUL_GROUPS = [
-  {label:"전체",        depts:null},
+const SEOUL_GROUPS=[
+  {label:"전체",       depts:null},
   {label:"미래공간기획관", depts:["미래공간담당관","공공개발담당관","용산입체도시담당관","도시활력담당관"]},
   {label:"균형발전본부", depts:["균형발전기획관","균형발전정책과","도시정비과","동남권사업과","동북권사업과","서부권사업과","광화문광장사업과"]},
   {label:"도시공간본부", depts:["도시공간기획관","도시공간전략과","도시계획과","도시계획상임기획과","도시재창조과","신속통합기획과","도시관리과","시설계획과","토지관리과"]},
-  {label:"주택실",      depts:["주택정책관","건축기획관","주택정책과","임대주택과","부동산정책개발센터","공공주택과","주거환경개선과","건축기획과","전략주택공급과","공동주택과","주거정비과","재정비촉진과"]},
+  {label:"주택실",     depts:["주택정책관","건축기획관","주택정책과","임대주택과","부동산정책개발센터","공공주택과","주거환경개선과","건축기획과","전략주택공급과","공동주택과","주거정비과","재정비촉진과"]},
 ];
+const REGIONS=[
+  {label:"전체",   gus:null},
+  {label:"도심권", gus:["종로구","중구","용산구"]},
+  {label:"동북권", gus:["성동구","광진구","동대문구","중랑구","성북구","강북구","도봉구","노원구"]},
+  {label:"서북권", gus:["은평구","서대문구","마포구"]},
+  {label:"서남권", gus:["양천구","강서구","구로구","금천구","영등포구","동작구","관악구"]},
+  {label:"동남권", gus:["서초구","강남구","송파구","강동구"]},
+];
+const SGG_CODE={"강남구":"11680","강동구":"11740","강북구":"11305","강서구":"11500","관악구":"11620","광진구":"11215","구로구":"11530","금천구":"11545","노원구":"11350","도봉구":"11320","동대문구":"11230","동작구":"11590","마포구":"11440","서대문구":"11410","서초구":"11650","성동구":"11200","성북구":"11290","송파구":"11710","양천구":"11470","영등포구":"11560","용산구":"11170","은평구":"11380","종로구":"11110","중구":"11140","중랑구":"11260"};
+const GU_COLOR={"강남구":"gu-a","강동구":"gu-b","강북구":"gu-c","강서구":"gu-d","관악구":"gu-e","광진구":"gu-a","구로구":"gu-b","금천구":"gu-c","노원구":"gu-d","도봉구":"gu-e","동대문구":"gu-a","동작구":"gu-b","마포구":"gu-c","서대문구":"gu-d","서초구":"gu-e","성동구":"gu-a","성북구":"gu-b","송파구":"gu-c","양천구":"gu-d","영등포구":"gu-e","용산구":"gu-a","은평구":"gu-b","종로구":"gu-c","중구":"gu-d","중랑구":"gu-e"};
+const TAB_META={
+  molit:{title:"보도자료 / 홍보자료",sub:"국토교통부"},
+  seoul:{title:"보도자료",sub:"서울특별시"},
+  urban:{title:"열람공고(안) · 결정고시(안) · 업무자료",sub:"서울 도시계획포털"},
+  krihs:{title:"국토정책 Brief · 워킹페이퍼 · 월간국토 Article",sub:"국토연구원"},
+  nars: {title:"연구보고서 · 정책연구용역",sub:"국회입법조사처"},
+  smc:  {title:"소관의안 / 심사·검토보고서",sub:"서울시의회"},
+  law:  {title:"법령 · 시행령 · 시행규칙 · 조례",sub:"국가법령정보센터"},
+};
 
-const CAT_LABELS={정책기본구상:"정책기본구상",지자체정책구상:"지자체정책구상",사업계획안:"사업계획(안)",각종법령:"각종 법령"};
-const CAT_SUBS={정책기본구상:"국회 · 국토연구원 · 국토교통부",지자체정책구상:"서울특별시 · 서울시의회",사업계획안:"서울특별시",각종법령:"국가법령정보센터"};
-
-let viewMode="feed", activeCat="정책기본구상", searchQ="";
-let updData=null;
+let activeTab="molit", searchQ="", updData=null;
 
 function goSvg(){return`<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg>`;}
-function fmt(f){return f.replace(/★/g,'<span class="star">★</span>').replace(/저장 X/g,'<span class="nosave">저장 X</span>');}
 
-function calcDday(endDateStr){
-  if(!endDateStr) return '';
-  const end = new Date(endDateStr.replace(/\./g,'-').trim());
-  if(isNaN(end)) return '';
-  const today = new Date();
-  today.setHours(0,0,0,0);
-  const diff = Math.round((end - today) / 86400000);
-  if(diff < 0)  return `<span style="color:var(--t3)">종료</span>`;
-  if(diff === 0) return `<span style="color:var(--red);font-weight:600">D-Day</span>`;
-  return `<span style="color:var(--amber);font-weight:500">D-${diff}</span>`;
+function orgClass(org){
+  if(org.includes("국토교통부")) return "org-molit";
+  if(org.includes("서울특별시")) return "org-seoul";
+  if(org.includes("도시계획포털")) return "org-urban";
+  if(org.includes("국토연구원")) return "org-krihs";
+  if(org.includes("국회입법조사처")) return "org-nars";
+  if(org.includes("서울시의회")) return "org-smc";
+  return "org-law";
 }
-async function loadUpdates(){
-  if(updData) return updData;
-  try{
-    const r=await fetch("data/updates.json?t="+Date.now());
-    if(!r.ok) throw new Error("HTTP "+r.status);
-    updData=await r.json();
-    let n=0;
-    Object.values(updData.sources).forEach(s=>{
-      const list = Array.isArray(s.items) ? s.items : Array.isArray(s.all) ? s.all : [];
-      list.forEach(i=>{if(i.is_new)n++;});
-    });
-    if(n>0){const el=document.getElementById("newPill");el.textContent=n+" NEW";el.classList.add("on");}
-    const d=new Date(updData.updated_at);
-    document.getElementById("updTime").textContent="업데이트 "+d.toLocaleString("ko-KR",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
-    return updData;
-  }catch(e){console.error("loadUpdates error:",e.message||e);return null;}
-}
-
-// 자치구별 배지 색상 — 5가지 색 그룹으로 순환
-const GU_COLOR_MAP = {
-  "강남구":"gu-a","강동구":"gu-b","강북구":"gu-c","강서구":"gu-d","관악구":"gu-e",
-  "광진구":"gu-a","구로구":"gu-b","금천구":"gu-c","노원구":"gu-d","도봉구":"gu-e",
-  "동대문구":"gu-a","동작구":"gu-b","마포구":"gu-c","서대문구":"gu-d","서초구":"gu-e",
-  "성동구":"gu-a","성북구":"gu-b","송파구":"gu-c","양천구":"gu-d","영등포구":"gu-e",
-  "용산구":"gu-a","은평구":"gu-b","종로구":"gu-c","중구":"gu-d","중랑구":"gu-e",
-};
-function guClass(gu){ return GU_COLOR_MAP[gu] || 'dept-default'; }
-
-// 서울 5개 권역
-const REGIONS = [
-  {label:"전체",    gus:null},
-  {label:"도심권",  gus:["종로구","중구","용산구"]},
-  {label:"동북권",  gus:["성동구","광진구","동대문구","중랑구","성북구","강북구","도봉구","노원구"]},
-  {label:"서북권",  gus:["은평구","서대문구","마포구"]},
-  {label:"서남권",  gus:["양천구","강서구","구로구","금천구","영등포구","동작구","관악구"]},
-  {label:"동남권",  gus:["서초구","강남구","송파구","강동구"]},
-];
 
 function deptClass(dept){
   if(!dept) return 'dept-default';
@@ -452,366 +272,247 @@ function deptClass(dept){
   return 'dept-default';
 }
 
-function renderPostRows(items, q){
-  if(!items||!items.length) return `<div class="card-msg">해당 항목이 없습니다.</div>`;
-  const filtered = q ? items.filter(i=>i.title.toLowerCase().indexOf(q)!==-1) : items;
-  if(!filtered.length) return `<div class="card-msg">검색 결과가 없습니다.</div>`;
-  return filtered.map(item=>{
+function calcDday(s){
+  if(!s) return '';
+  const end=new Date(s.replace(/\./g,'-'));
+  if(isNaN(end)) return '';
+  const today=new Date(); today.setHours(0,0,0,0);
+  const d=Math.round((end-today)/86400000);
+  if(d<0) return `<span style="color:var(--t3)">종료</span>`;
+  if(d===0) return `<span style="color:var(--red);font-weight:600">D-Day</span>`;
+  return `<span style="color:var(--amber);font-weight:500">D-${d}</span>`;
+}
+
+async function loadUpdates(){
+  if(updData) return updData;
+  try{
+    const r=await fetch("data/updates.json?t="+Date.now());
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    updData=await r.json();
+    let n=0;
+    Object.values(updData.sources).forEach(s=>{
+      (Array.isArray(s.items)?s.items:Array.isArray(s.all)?s.all:[]).forEach(i=>{if(i.is_new)n++;});
+    });
+    if(n>0){const el=document.getElementById("newPill");el.textContent=n+" NEW";el.classList.add("on");}
+    const d=new Date(updData.updated_at);
+    document.getElementById("updTime").textContent="업데이트 "+d.toLocaleString("ko-KR",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
+    return updData;
+  }catch(e){return null;}
+}
+
+function makeHd(name,org,url,label="원문"){
+  return `<div class="card-hd"><div class="card-hd-left"><div><div class="card-name">${name}</div><div class="card-org ${orgClass(org)}">${org}</div></div></div><a class="card-go" href="${url}" target="_blank" rel="noopener">${label} ${goSvg()}</a></div>`;
+}
+
+function postRows(items, q, limit=12){
+  if(!items||!items.length) return `<div class="card-msg">수집된 항목이 없습니다.</div>`;
+  const f=q?items.filter(i=>i.title.toLowerCase().includes(q)):items;
+  if(!f.length) return `<div class="card-msg">검색 결과가 없습니다.</div>`;
+  return f.slice(0,limit).map(item=>{
     const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
-    const date=item.date?`<span class="post-date">${item.date}</span>`:'';
+    const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
     const dept=item.dept?`<span class="post-dept ${deptClass(item.dept)}">${item.dept}</span>`:'';
-    return`<div class="post-row">
-      <div class="post-row-meta">${badge}${date}${dept}</div>
-      <a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a>
-    </div>`;
+    return`<div class="post-row"><div class="post-row-meta">${badge}${date}${dept}</div><a class="post-a" href="${item.url}" target="_blank" rel="noopener" title="${item.title}">${item.title}</a></div>`;
   }).join('');
 }
 
-// 권역+자치구 2단계 탭 카드 렌더 (wrtanc·ntfc 공용)
-// getItems(guName) — guName이 null이면 전체, 문자열이면 해당 자치구
-function renderRegionCard(card, hd, sid, getItems){
-  const uid = `${sid}-${Date.now()}`;
+// ── 탭별 렌더 ────────────────────────────────────────
 
-  const regionTabsHtml = REGIONS.map((r,i)=>
-    `<button class="region-tab${i===0?' active':''}" data-ri="${i}">${r.label}</button>`
-  ).join('');
-
-  card.innerHTML = hd
-    + `<div class="region-tabs" id="rtabs-${uid}">${regionTabsHtml}</div>`
-    + `<div class="gu-tabs" id="gutabs-${uid}"></div>`
-    + `<div class="card-body post-grid" id="body-${uid}"></div>`;
-
-  const rtabEls  = card.querySelectorAll(`#rtabs-${uid} .region-tab`);
-  const gutabDiv = card.querySelector(`#gutabs-${uid}`);
-  const body     = card.querySelector(`#body-${uid}`);
-
-  let curRegion = 0;
-  let curGu     = null; // null = 권역 전체
-
-  function renderBody(){
-    // getItems에 현재 선택된 자치구명 전달
-    const items = getItems(curGu);
-    if(items === null){
-      body.innerHTML=`<div class="card-msg" style="grid-column:1/-1">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 실행해주세요.</div>`;
-      return;
-    }
-    // curGu가 null(전체/권역)이면 권역 필터 적용
-    const region = REGIONS[curRegion];
-    let filtered = items;
-    if(curGu === null && region.gus){
-      filtered = items.filter(i=>region.gus.includes(i.gu));
-    }
-    const q = searchQ.trim().toLowerCase();
-    if(q) filtered = filtered.filter(i=>i.title.toLowerCase().includes(q));
-    if(!filtered.length){
-      body.innerHTML=`<div class="card-msg" style="grid-column:1/-1">해당 항목이 없습니다.</div>`;
-      return;
-    }
-    body.innerHTML = filtered.slice(0,20).map(item=>{
-      const badge   = item.is_new?`<span class="badge-new">NEW</span>`:'';
-      const date    = item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
-      const gu      = item.gu?`<span class="post-dept ${guClass(item.gu)}">${item.gu}</span>`:'';
-      const no      = item.notice_no?`<span class="post-date">${item.notice_no}</span>`:'';
-      const dday    = item.end_date?`<span class="wrtanc-dday">${calcDday(item.end_date)}</span>`:'';
-      return `<div class="post-row">
-        <div class="post-row-meta">${badge}${date}${gu}${no}${dday}</div>
-        <a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a>
-      </div>`;
-    }).join('');
-  }
-
-  function renderGuTabs(){
-    const region = REGIONS[curRegion];
-    if(!region.gus){ gutabDiv.innerHTML=''; return; }
-    const guHtml = [`<button class="gu-tab${curGu===null?' active':''}" data-gu="">전체</button>`]
-      .concat(region.gus.map(g=>
-        `<button class="gu-tab${curGu===g?' active':''}" data-gu="${g}">${g}</button>`
-      )).join('');
-    gutabDiv.innerHTML = guHtml;
-    gutabDiv.querySelectorAll('.gu-tab').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        curGu = btn.dataset.gu || null;
-        gutabDiv.querySelectorAll('.gu-tab').forEach(b=>b.classList.remove('active'));
-        btn.classList.add('active');
-        renderBody();
-      });
-    });
-  }
-
-  rtabEls.forEach((btn,i)=>{
-    btn.addEventListener('click',()=>{
-      curRegion=i; curGu=null;
-      rtabEls.forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      renderGuTabs();
-      renderBody();
-    });
-  });
-
-  // 초기 렌더
-  loadUpdates().then(()=>{ renderGuTabs(); renderBody(); });
+function renderMolit(){
+  const wrap=document.createElement('div'); wrap.className='feed-wide';
+  const card=document.createElement('div'); card.className='src-card';
+  const tabs=MOLIT_TABS.map(t=>`<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label}</a>`).join('');
+  card.innerHTML=makeHd("보도자료 / 홍보자료","국토교통부","https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp","바로가기")
+    +`<div class="card-tabs">${tabs}</div>`
+    +`<div class="card-msg" style="text-align:left;color:var(--t2);padding:14px 13px;">분야 탭을 클릭하면 해당 페이지로 바로 이동합니다.<br><span style="font-size:11px;color:var(--t3)">※ robots.txt 제한으로 자동 크롤링 불가</span></div>`;
+  wrap.appendChild(card); return wrap;
 }
 
-function orgClass(org){
-  if(org.includes("국토교통부")) return "org-molit";
-  if(org.includes("서울특별시")) return "org-seoul";
-  if(org.includes("도시계획포털")||org.includes("도시공간포털")) return "org-urban";
-  if(org.includes("국토연구원")) return "org-krihs";
-  if(org.includes("국회입법조사처")) return "org-nars";
-  return "org-default";
-}
-
-function renderFeedCard(src, data){
+function renderSeoul(data){
+  const wrap=document.createElement('div'); wrap.className='feed-wide';
+  const card=document.createElement('div'); card.className='src-card';
+  const uid='seoul-'+Date.now();
+  const tabsHtml=SEOUL_GROUPS.map((g,i)=>`<button class="tab-btn${i===0?' active':''}" data-gi="${i}">${g.label}</button>`).join('');
+  card.innerHTML=makeHd("보도자료","서울특별시","https://www.seoul.go.kr/news/news_report.do")
+    +`<div class="card-tabs" id="st-${uid}">${tabsHtml}</div><div class="card-body" id="sb-${uid}"></div>`;
+  const body=card.querySelector(`#sb-${uid}`);
+  const tabs=card.querySelectorAll(`#st-${uid} .tab-btn`);
   const q=searchQ.trim().toLowerCase();
-  const card=document.createElement("div");
-  card.className="src-card";
+  const renderG=(gi)=>{
+    if(!data){body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.</div>`;return;}
+    const s=data.sources["seoul_press"];
+    if(!s||!s.items.length){body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;return;}
+    const g=SEOUL_GROUPS[gi];
+    const f=g.depts?s.items.filter(i=>g.depts.some(d=>i.dept&&i.dept.includes(d))):s.items;
+    body.innerHTML=postRows(f,q,15);
+  };
+  tabs.forEach((b,i)=>b.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));b.classList.add('active');renderG(i);}));
+  renderG(0);
+  wrap.appendChild(card); return wrap;
+}
 
-  const hd=`<div class="card-hd">
-    <div class="card-hd-left">
-      <span class="card-acc card-acc-${src.cat}"></span>
-      <div class="card-info">
-        <div class="card-name">${src.name}</div>
-        <div class="card-org ${orgClass(src.org)}">${src.org}</div>
-      </div>
-    </div>
-    <a class="card-go" href="${src.url}" target="_blank" rel="noopener">원문 ${goSvg()}</a>
-  </div>`;
+function renderUrban(data){
+  const wrap=document.createElement('div'); wrap.className='feed-wide';
 
-  // ── 열람공고(안): 권역+자치구 2단계 탭 ──
-  if(src.sid==="wrtanc"){
-    // SGG 코드 → 자치구명 역매핑
-    const SGG_CODE = {
-      "강남구":"11680","강동구":"11740","강북구":"11305","강서구":"11500","관악구":"11620",
-      "광진구":"11215","구로구":"11530","금천구":"11545","노원구":"11350","도봉구":"11320",
-      "동대문구":"11230","동작구":"11590","마포구":"11440","서대문구":"11410","서초구":"11650",
-      "성동구":"11200","성북구":"11290","송파구":"11710","양천구":"11470","영등포구":"11560",
-      "용산구":"11170","은평구":"11380","종로구":"11110","중구":"11140","중랑구":"11260",
-    };
-    renderRegionCard(card, hd, "wrtanc", (guName)=>{
-      const ws = updData && updData.sources["wrtanc"];
-      if(!ws) return null;
-      if(!guName){
-        // 전체: by_gu의 모든 값을 합산 (gu 필드가 있는 데이터)
-        const byGu = ws.by_gu || {};
-        const allItems = Object.values(byGu).flat();
-        // 중복 제거 (url 기준)
-        const seen = new Set();
-        return allItems.filter(i=>{ if(seen.has(i.url)) return false; seen.add(i.url); return true; });
-      }
-      const code = SGG_CODE[guName];
-      return (ws.by_gu && code && ws.by_gu[code]) || [];
-    });
-    return card;
-  }
+  // 열람공고
+  const w1=document.createElement('div'); w1.className='src-card';
+  buildRegionCard(w1, makeHd("열람공고(안)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"), "wrtanc", guName=>{
+    const ws=updData&&updData.sources["wrtanc"]; if(!ws) return null;
+    if(!guName){const seen=new Set();return Object.values(ws.by_gu||{}).flat().filter(i=>{if(seen.has(i.url))return false;seen.add(i.url);return true;});}
+    const code=SGG_CODE[guName]; return(ws.by_gu&&code&&ws.by_gu[code])||[];
+  });
+  wrap.appendChild(w1);
 
-  // ── 결정고시(안): 권역+자치구 2단계 탭 ──
-  if(src.sid==="ntfc"){
-    renderRegionCard(card, hd, "ntfc", (guName)=>{
-      const ws = updData && updData.sources["ntfc"];
-      if(!ws) return null;
-      const items = ws.items || [];
-      if(!guName) return items;
-      return items.filter(i=>i.gu===guName);
-    });
-    return card;
-  }
+  // 결정고시
+  const w2=document.createElement('div'); w2.className='src-card';
+  buildRegionCard(w2, makeHd("결정고시(안)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU4030100001"), "ntfc", guName=>{
+    const ws=updData&&updData.sources["ntfc"]; if(!ws) return null;
+    const items=ws.items||[]; return guName?items.filter(i=>i.gu===guName):items;
+  });
+  wrap.appendChild(w2);
 
-  // ── 국토교통부: 분야 탭 → 새 탭으로 열기 ──
-  if(src.sid==="molit_press"){
-    const tabs=MOLIT_TABS.map(t=>
-      `<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label}</a>`
-    ).join('');
-    card.innerHTML=hd+`<div class="card-tabs">${tabs}</div>`;
-    return card;
-  }
+  // 업무자료
+  const w3=document.createElement('div'); w3.className='src-card';
+  w3.innerHTML=makeHd("업무자료 (법정계획/운영지침)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU5020000001")+`<div class="card-body" id="cb-upmu"></div>`;
+  const upmuBody=w3.querySelector('#cb-upmu');
+  if(!data) upmuBody.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.</div>`;
+  else{const s=data.sources["upmu"];upmuBody.innerHTML=postRows(s&&s.items,searchQ.trim().toLowerCase(),10);}
+  wrap.appendChild(w3);
 
-  // ── 서울시: 본부/실 탭 → 카드 내 필터 ──
-  if(src.sid==="seoul_press"){
-    const bodyId=`cb-seoul-${Date.now()}`;
-    const tabsHtml=SEOUL_GROUPS.map((g,i)=>
-      `<button class="tab-btn${i===0?' active':''}" data-group="${i}">${g.label}</button>`
-    ).join('');
-    card.innerHTML=hd+`<div class="card-tabs" id="seoul-tabs-${bodyId}">${tabsHtml}</div><div class="card-body" id="${bodyId}"></div>`;
+  return wrap;
+}
 
-    const body=card.querySelector(`#${bodyId}`);
-    const tabEls=card.querySelectorAll(`#seoul-tabs-${bodyId} .tab-btn`);
+function buildRegionCard(card, hd, sid, getItems){
+  const uid=`${sid}-${Date.now()}`;
+  const rHtml=REGIONS.map((r,i)=>`<button class="region-tab${i===0?' active':''}" data-ri="${i}">${r.label}</button>`).join('');
+  card.innerHTML=hd+`<div class="region-tabs" id="rt-${uid}">${rHtml}</div><div class="gu-tabs" id="gt-${uid}"></div><div class="card-body post-grid" id="bd-${uid}"></div>`;
+  const rTabs=card.querySelectorAll(`#rt-${uid} .region-tab`);
+  const gDiv=card.querySelector(`#gt-${uid}`);
+  const body=card.querySelector(`#bd-${uid}`);
+  let curR=0, curG=null;
 
-    const renderSeoul=(groupIdx)=>{
-      if(!data){body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.</div>`;return;}
-      const s=data.sources["seoul_press"];
-      if(!s||!s.items.length){
-        body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;
-        return;
-      }
-      const g=SEOUL_GROUPS[groupIdx];
-      const filtered=g.depts
-        ? s.items.filter(i=>g.depts.some(d=>i.dept&&i.dept.includes(d)))
-        : s.items;
-      body.innerHTML=renderPostRows(filtered.slice(0,5), q);
-    };
-
-    tabEls.forEach((btn,i)=>{
-      btn.addEventListener("click",()=>{
-        tabEls.forEach(b=>b.classList.remove("active"));
-        btn.classList.add("active");
-        renderSeoul(i);
-      });
-    });
-    renderSeoul(0);
-    return card;
-  }
-
-  // ── 업무자료: items 기반 일반 피드 카드 ──
-  if(src.sid==="upmu"){
-    card.innerHTML=hd+`<div class="card-body" id="cb-upmu"></div>`;
-    const body=card.querySelector(`#cb-upmu`);
-    if(!data){body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;return card;}
-    const s=data.sources["upmu"];
-    if(!s||!s.items||!s.items.length){body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.<br><span style="font-size:11px">GitHub Actions를 실행해주세요.</span></div>`;return card;}
-    const filtered=q?s.items.filter(i=>i.title.toLowerCase().includes(q)):s.items;
-    if(!filtered.length){body.innerHTML=`<div class="card-msg">검색 결과가 없습니다.</div>`;return card;}
-    body.innerHTML=filtered.slice(0,10).map(item=>{
+  const drawBody=()=>{
+    const items=getItems(curG);
+    if(items===null){body.innerHTML=`<div class="card-msg" style="grid-column:1/-1">⚠ data/updates.json이 없습니다.</div>`;return;}
+    const region=REGIONS[curR]; let f=items;
+    if(curG===null&&region.gus) f=items.filter(i=>region.gus.includes(i.gu));
+    const q=searchQ.trim().toLowerCase(); if(q) f=f.filter(i=>i.title.toLowerCase().includes(q));
+    if(!f.length){body.innerHTML=`<div class="card-msg" style="grid-column:1/-1">해당 항목이 없습니다.</div>`;return;}
+    body.innerHTML=f.slice(0,20).map(item=>{
       const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
       const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
-      const dept=item.dept?`<span class="post-dept ${deptClass(item.dept)}">${item.dept}</span>`:'';
-      return`<div class="post-row">
-        <div class="post-row-meta">${badge}${date}${dept}</div>
-        <a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a>
-      </div>`;
+      const gu=item.gu?`<span class="post-dept ${GU_COLOR[item.gu]||'dept-default'}">${item.gu}</span>`:'';
+      const dday=item.end_date?`<span class="wrtanc-dday">${calcDday(item.end_date)}</span>`:'';
+      return`<div class="post-row"><div class="post-row-meta">${badge}${date}${gu}${dday}</div><a class="post-a" href="${item.url}" target="_blank" rel="noopener" title="${item.title}">${item.title}</a></div>`;
     }).join('');
-    return card;
-  }
+  };
 
-  // ── 일반 피드 카드 (국토연구원, 국회입법조사처 등) ──
-  card.innerHTML=hd+`<div class="card-body" id="cb-${src.sid}"></div>`;
-  const body=card.querySelector(`#cb-${src.sid}`);
+  const drawGuTabs=()=>{
+    const region=REGIONS[curR]; if(!region.gus){gDiv.innerHTML='';return;}
+    gDiv.innerHTML=[`<button class="gu-tab${curG===null?' active':''}" data-gu="">전체</button>`]
+      .concat(region.gus.map(g=>`<button class="gu-tab${curG===g?' active':''}" data-gu="${g}">${g}</button>`)).join('');
+    gDiv.querySelectorAll('.gu-tab').forEach(b=>b.addEventListener('click',()=>{
+      curG=b.dataset.gu||null;
+      gDiv.querySelectorAll('.gu-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');drawBody();
+    }));
+  };
 
-  if(!data){
-    body.innerHTML=`<div class="card-msg">⚠ <code>data/updates.json</code>이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;
-    return card;
-  }
-  const s=data.sources[src.sid];
-  if(!s||!s.items.length){
-    if(src.static){
-      const grid=src.static.items.map(it=>`<div class="static-item"><div class="si-cat">${it.cat}</div><div class="si-title">${it.title}</div><div class="si-desc">${it.desc}</div></div>`).join('');
-      body.innerHTML=`<div class="static-grid">${grid}</div>${src.static.note?`<div class="static-note">${src.static.note}</div>`:''}`;
-    } else {
-      body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;
-    }
-    return card;
-  }
-  body.innerHTML=renderPostRows(s.items, q);
-  return card;
+  rTabs.forEach((b,i)=>b.addEventListener('click',()=>{
+    curR=i;curG=null;rTabs.forEach(x=>x.classList.remove('active'));b.classList.add('active');drawGuTabs();drawBody();
+  }));
+  loadUpdates().then(()=>{drawGuTabs();drawBody();});
 }
 
-function renderStaticCard(src){
-  const card=document.createElement("div");
-  card.className="src-card";
-  card.innerHTML=`<div class="card-hd">
-    <div class="card-hd-left">
-      <span class="card-acc card-acc-${src.cat}"></span>
-      <div class="card-info">
-        <div class="card-name">${src.name}</div>
-        <div class="card-org ${orgClass(src.org)}">${src.org}</div>
-      </div>
-    </div>
-    <a class="card-go" href="${src.url}" target="_blank" rel="noopener">바로가기 ${goSvg()}</a>
-  </div>
-  <div class="static-grid">${src.items.map(it=>`<div class="static-item"><div class="si-cat">${it.cat}</div><div class="si-title">${it.title}</div><div class="si-desc">${it.desc}</div></div>`).join('')}</div>
-  ${src.note?`<div class="static-note">${src.note}</div>`:''}`;
-  return card;
+function renderKrihs(data){
+  const wrap=document.createElement('div'); wrap.className='feed-2col';
+  const q=searchQ.trim().toLowerCase();
+  [
+    {sid:"krihs_brief",   name:"국토정책 Brief",   url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1"},
+    {sid:"krihs_working", name:"워킹페이퍼",        url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP"},
+    {sid:"krihs_article", name:"월간국토 Article", url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"},
+  ].forEach(src=>{
+    const card=document.createElement('div'); card.className='src-card';
+    const s=data&&data.sources[src.sid];
+    card.innerHTML=makeHd(src.name,"국토연구원",src.url);
+    const body=document.createElement('div'); body.className='card-body';
+    body.innerHTML=postRows(s&&s.items,q);
+    card.appendChild(body); wrap.appendChild(card);
+  });
+  return wrap;
 }
+
+function renderNars(data){
+  const wrap=document.createElement('div'); wrap.className='feed-2col';
+  const q=searchQ.trim().toLowerCase();
+  [
+    {sid:"nars_report",   name:"연구보고서",   url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043"},
+    {sid:"nars_research", name:"정책연구용역", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010"},
+  ].forEach(src=>{
+    const card=document.createElement('div'); card.className='src-card';
+    const s=data&&data.sources[src.sid];
+    card.innerHTML=makeHd(src.name,"국회입법조사처",src.url);
+    const body=document.createElement('div'); body.className='card-body';
+    body.innerHTML=postRows(s&&s.items,q);
+    card.appendChild(body); wrap.appendChild(card);
+  });
+  return wrap;
+}
+
+function renderSmc(){
+  const wrap=document.createElement('div'); wrap.className='feed-2col';
+  const card=document.createElement('div'); card.className='src-card';
+  card.innerHTML=makeHd("소관의안 / 심사·검토보고서","서울시의회","https://www.smc.seoul.kr/info/index.do?menuId=001003008","바로가기")
+    +`<div class="static-grid">
+      <div class="static-item"><div class="si-cat">메뉴</div><div class="si-title">의안 검색</div><div class="si-desc">의안번호·의안명·소관위</div></div>
+      <div class="static-item"><div class="si-cat">메뉴</div><div class="si-title">처리/계류 의안</div><div class="si-desc">가결·부결·심사 중 목록</div></div>
+      <div class="static-item"><div class="si-cat">보고서</div><div class="si-title">검토·심사보고서 PDF</div><div class="si-desc">의안 상세 하단 첨부</div></div>
+    </div><div class="static-note">※ 소관위원회 필터로 주택공간·도시계획균형위 구분</div>`;
+  wrap.appendChild(card); return wrap;
+}
+
+function renderLaw(){
+  const wrap=document.createElement('div'); wrap.className='feed-2col';
+  const card=document.createElement('div'); card.className='src-card';
+  card.innerHTML=makeHd("법령·시행령·시행규칙·조례","국가법령정보센터","https://www.law.go.kr/main.html","바로가기")
+    +`<div class="static-grid">
+      <div class="static-item"><div class="si-cat">법령</div><div class="si-title">현행/연혁 법령</div><div class="si-desc">법률·대통령령·총리령·조례</div></div>
+      <div class="static-item"><div class="si-cat">행정규칙</div><div class="si-title">훈령·예규·고시</div><div class="si-desc">각 부처 행정규칙 원문</div></div>
+      <div class="static-item"><div class="si-cat">판례</div><div class="si-title">헌재·대법원</div><div class="si-desc">법령 관련 주요 판례</div></div>
+    </div><div class="static-note">※ 파일 아닌 링크로 관리</div>`;
+  wrap.appendChild(card); return wrap;
+}
+
+// ── 메인 렌더 ────────────────────────────────────────
 
 async function render(){
-  const content=document.getElementById("content");
-  content.innerHTML="";
-
-  if(viewMode==="feed"){
-    const data=await loadUpdates();
-    const wrap=document.createElement("div");
-    wrap.className="feed-grid";
-
-    // ① 상단 와이드 (1열) — 보도자료 2개 + 열람공고
-    const wide=document.createElement("div");
-    wide.className="feed-wide";
-    const WIDE_SIDS=["molit_press","seoul_press","wrtanc","ntfc","upmu"];
-    FEED_SOURCES.filter(s=>WIDE_SIDS.includes(s.sid)).forEach(src=>wide.appendChild(renderFeedCard(src,data)));
-    wrap.appendChild(wide);
-
-    // ② 하단 2열 — 나머지 소스 + 정적 카드
-    const two=document.createElement("div");
-    two.className="feed-2col";
-    const q=searchQ.trim().toLowerCase();
-    FEED_SOURCES.filter(s=>!WIDE_SIDS.includes(s.sid)).forEach(src=>two.appendChild(renderFeedCard(src,data)));
-    STATIC_SOURCES.forEach(src=>{
-      if(q&&src.name.toLowerCase().indexOf(q)===-1&&src.org.toLowerCase().indexOf(q)===-1) return;
-      two.appendChild(renderStaticCard(src));
-    });
-    wrap.appendChild(two);
-    content.appendChild(wrap);
-
-  } else {
-    const q=searchQ.trim().toLowerCase();
-    const filtered=LIST_DATA.filter(d=>
-      d.cat===activeCat&&
-      (!q||d.org.toLowerCase().indexOf(q)!==-1||d.titles.some(t=>t.toLowerCase().indexOf(q)!==-1))
-    );
-    if(!filtered.length){content.innerHTML='<div class="empty">검색 결과가 없습니다.</div>';return;}
-
-    const bySub={};
-    filtered.forEach(d=>{(bySub[d.sub]=bySub[d.sub]||[]).push(d);});
-
-    Object.entries(bySub).forEach(([sub,items])=>{
-      const block=document.createElement("div");
-      block.className="sec-block";
-      block.innerHTML=`<div class="sec-hd"><span class="sec-acc acc-${activeCat}"></span><span class="sec-name">${sub}</span><span class="sec-cnt">${items.length}건</span></div>`;
-
-      const wrap=document.createElement("div");
-      wrap.className="list-wrap";
-      const colHd=document.createElement("div");
-      colHd.className="col-hd";
-      colHd.innerHTML="<span>기관</span><span>자료명</span><span>폴더 체계</span><span>바로가기</span>";
-      wrap.appendChild(colHd);
-
-      const byOrg=new Map();
-      items.forEach(d=>{if(!byOrg.has(d.org))byOrg.set(d.org,[]);byOrg.get(d.org).push(d);});
-      byOrg.forEach((rows,org)=>{
-        rows.forEach((d,ri)=>{
-          const row=document.createElement("div");
-          row.className="list-row";
-          row.innerHTML=`<div class="col-org">${ri===0?org:''}</div>
-            <div class="chips">${d.titles.map(t=>`<span class="chip">${t}</span>`).join('')}</div>
-            <div class="col-folder">${fmt(d.folder)}</div>
-            <div class="col-link">${d.url?`<a class="go-btn" href="${d.url}" target="_blank" rel="noopener">바로가기${goSvg()}</a>`:'<span style="font-size:11px;color:var(--t3)">-</span>'}</div>`;
-          wrap.appendChild(row);
-        });
-      });
-      block.appendChild(wrap);
-      content.appendChild(block);
-    });
+  const content=document.getElementById('content');
+  content.innerHTML='';
+  const data=await loadUpdates();
+  let el;
+  switch(activeTab){
+    case 'molit': el=renderMolit(); break;
+    case 'seoul': el=renderSeoul(data); break;
+    case 'urban': el=renderUrban(data); break;
+    case 'krihs': el=renderKrihs(data); break;
+    case 'nars':  el=renderNars(data); break;
+    case 'smc':   el=renderSmc(); break;
+    case 'law':   el=renderLaw(); break;
+    default: el=document.createElement('div');
   }
+  content.appendChild(el);
 }
 
-function setFeed(){
-  viewMode="feed";
-  document.querySelectorAll(".nav-item[data-view]").forEach(el=>el.classList.toggle("active",el.dataset.view==="feed"));
-  document.querySelectorAll(".nav-item[data-cat]").forEach(el=>el.classList.remove("active"));
-  document.getElementById("topTitle").textContent="최신 업데이트";
-  document.getElementById("topSub").textContent="국토연구원 · 국회입법조사처 · 서울시 최신 게시글";
-  render();
-}
-function setListCat(cat){
-  viewMode="list"; activeCat=cat;
-  document.querySelectorAll(".nav-item[data-view]").forEach(el=>el.classList.toggle("active",el.dataset.view==="list"));
-  document.querySelectorAll(".nav-item[data-cat]").forEach(el=>el.classList.toggle("active",el.dataset.cat===cat));
-  document.getElementById("topTitle").textContent=CAT_LABELS[cat]||cat;
-  document.getElementById("topSub").textContent=CAT_SUBS[cat]||"";
+function setTab(tab){
+  activeTab=tab;
+  document.querySelectorAll('.nav-item[data-tab]').forEach(el=>el.classList.toggle('active',el.dataset.tab===tab));
+  const m=TAB_META[tab]||{};
+  document.getElementById('topTitle').textContent=m.title||'';
+  document.getElementById('topSub').textContent=m.sub||'';
   render();
 }
 
-document.querySelectorAll(".nav-item[data-view]").forEach(el=>el.addEventListener("click",()=>el.dataset.view==="feed"?setFeed():setListCat(activeCat)));
-document.querySelectorAll(".nav-item[data-cat]").forEach(el=>el.addEventListener("click",()=>setListCat(el.dataset.cat)));
-document.getElementById("searchInput").addEventListener("input",e=>{searchQ=e.target.value;render();});
+document.querySelectorAll('.nav-item[data-tab]').forEach(el=>el.addEventListener('click',()=>setTab(el.dataset.tab)));
+document.getElementById('searchInput').addEventListener('input',e=>{searchQ=e.target.value;render();});
 
 render();
 </script>
