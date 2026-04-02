@@ -63,9 +63,15 @@ aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .card-hd{padding:10px 13px 9px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0;}
 .card-hd-left{display:flex;align-items:center;gap:8px;min-width:0;}
 .card-name{font-size:12.5px;font-weight:600;color:var(--t);letter-spacing:-.2px;}
-.card-org{font-size:11px;margin-top:2px;font-weight:500;}
-.org-molit{color:#7c3aed;}.org-seoul{color:#0891b2;}.org-urban{color:#d97706;}
-.org-krihs{color:#2563eb;}.org-nars{color:#dc2626;}.org-smc{color:#059669;}.org-law{color:#64748b;}.org-default{color:var(--t2);}
+.card-org{display:inline-block;font-size:10.5px;margin-top:5px;font-weight:600;padding:2px 8px;border-radius:4px;letter-spacing:-.1px;}
+.org-molit{background:#ede9fe;color:#5b21b6;}
+.org-seoul{background:#cffafe;color:#0e7490;}
+.org-urban{background:#fef3c7;color:#92400e;}
+.org-krihs{background:#dbeafe;color:#1e40af;}
+.org-nars{background:#fee2e2;color:#991b1b;}
+.org-smc{background:#d1fae5;color:#065f46;}
+.org-law{background:#f1f5f9;color:#334155;}
+.org-default{background:var(--bg3);color:var(--t2);}
 .card-go{font-size:11px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:3px;flex-shrink:0;white-space:nowrap;}
 .card-go:hover{opacity:.7;}
 .card-go svg{width:10px;height:10px;}
@@ -304,15 +310,7 @@ function postRows(items, q, limit=12){
 function renderPress(data){
   const wrap=document.createElement('div'); wrap.className='feed-wide';
 
-  // 국토부
-  const c1=document.createElement('div'); c1.className='src-card';
-  const tabs=MOLIT_TABS.map(t=>`<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label}</a>`).join('');
-  c1.innerHTML=makeHd("보도자료 / 홍보자료","국토교통부","https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp","바로가기")
-    +`<div class="card-tabs">${tabs}</div>`
-    +`<div class="card-msg" style="text-align:left;color:var(--t2);padding:14px 13px;">분야 탭을 클릭하면 해당 페이지로 바로 이동합니다.<br><span style="font-size:11px;color:var(--t3)">※ robots.txt 제한으로 자동 크롤링 불가</span></div>`;
-  wrap.appendChild(c1);
-
-  // 서울시
+  // 서울시 (위)
   const c2=document.createElement('div'); c2.className='src-card';
   const uid='seoul-'+Date.now();
   const tabsHtml=SEOUL_GROUPS.map((g,i)=>`<button class="tab-btn${i===0?' active':''}" data-gi="${i}">${g.label}</button>`).join('');
@@ -332,6 +330,15 @@ function renderPress(data){
   stabs.forEach((b,i)=>b.addEventListener('click',()=>{stabs.forEach(x=>x.classList.remove('active'));b.classList.add('active');renderG(i);}));
   renderG(0);
   wrap.appendChild(c2);
+
+  // 국토부 (아래)
+  const c1=document.createElement('div'); c1.className='src-card';
+  const tabs=MOLIT_TABS.map(t=>`<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label}</a>`).join('');
+  c1.innerHTML=makeHd("보도자료 / 홍보자료","국토교통부","https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp","바로가기")
+    +`<div class="card-tabs">${tabs}</div>`
+    +`<div class="card-msg" style="text-align:left;color:var(--t2);padding:14px 13px;">분야 탭을 클릭하면 해당 페이지로 바로 이동합니다.<br><span style="font-size:11px;color:var(--t3)">※ robots.txt 제한으로 자동 크롤링 불가</span></div>`;
+  wrap.appendChild(c1);
+
   return wrap;
 }
 
