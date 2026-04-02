@@ -402,7 +402,7 @@ def crawl_upmu():
     seoulboard API: listVO.listObject 배열 사용
     상세 URL: seoulboard.seoul.go.kr/front/detail.do?bbsNo=318&nttNo={nttNo}
     """
-    DETAIL_BASE = "https://seoulboard.seoul.go.kr/front/detail.do?bbsNo=318&nttNo="
+    DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq="
     try:
         r = requests.get(
             "https://seoulboard.seoul.go.kr/front/bbs.json",
