@@ -1,7 +1,7 @@
 name: 정책자료 업데이트 크롤링
 on:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '0 22 * * *'
   workflow_dispatch:
 jobs:
   crawl:
