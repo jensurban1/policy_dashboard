@@ -590,9 +590,16 @@ function renderFeedCard(src, data){
     renderRegionCard(card, hd, "wrtanc", (guName)=>{
       const ws = updData && updData.sources["wrtanc"];
       if(!ws) return null;
-      if(!guName) return ws.all || [];            // 전체
+      if(!guName){
+        // 전체: by_gu의 모든 값을 합산 (gu 필드가 있는 데이터)
+        const byGu = ws.by_gu || {};
+        const allItems = Object.values(byGu).flat();
+        // 중복 제거 (url 기준)
+        const seen = new Set();
+        return allItems.filter(i=>{ if(seen.has(i.url)) return false; seen.add(i.url); return true; });
+      }
       const code = SGG_CODE[guName];
-      return (ws.by_gu && code && ws.by_gu[code]) || [];  // 자치구별
+      return (ws.by_gu && code && ws.by_gu[code]) || [];
     });
     return card;
   }
