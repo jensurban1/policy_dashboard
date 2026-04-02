@@ -160,6 +160,31 @@ aside{width:188px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .wrtanc-tab.active{background:var(--blue) !important;border-color:var(--blue) !important;color:#fff !important;font-weight:600 !important;}
 .wrtanc-dday{font-size:10px;white-space:nowrap;flex-shrink:0;font-family:var(--mono);}
 
+/* 권역별 탭 (열람공고·결정고시) */
+.region-tabs{display:flex;gap:5px;padding:8px 12px 0;border-bottom:none;}
+.region-tab{
+  font-size:11.5px;font-weight:600;padding:5px 12px;border-radius:6px 6px 0 0;
+  border:1px solid var(--bd);border-bottom:none;
+  background:var(--bg3);color:var(--t2);cursor:pointer;transition:all .12s;
+  font-family:var(--font);white-space:nowrap;
+}
+.region-tab:hover{background:var(--bg4);color:var(--t);}
+.region-tab.active{background:var(--bg2);color:var(--blue);border-color:var(--bd2);font-weight:700;}
+/* 자치구 소탭 */
+.gu-tabs{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;padding:8px 10px;border-bottom:1px solid var(--bd);background:var(--bg3);}
+.gu-tab{
+  font-size:11.5px;font-weight:500;padding:3px 2px;text-align:center;
+  border-radius:4px;border:1px solid var(--bd);background:var(--bg2);
+  color:var(--t2);cursor:pointer;transition:all .12s;font-family:var(--font);
+}
+.gu-tab:hover{background:var(--bg4);color:var(--t);}
+.gu-tab.active{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600;}
+/* 2열 목록 */
+.post-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.post-grid .post-row{border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);}
+.post-grid .post-row:nth-child(even){border-right:none;}
+.post-grid .post-row:nth-last-child(-n+2){border-bottom:none;}
+
 /* TAB BUTTONS — 크기 확대 */
 .card-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:12px 14px;border-bottom:1px solid var(--bd);}
 .tab-btn{
@@ -403,6 +428,16 @@ const GU_COLOR_MAP = {
 };
 function guClass(gu){ return GU_COLOR_MAP[gu] || 'dept-default'; }
 
+// 서울 5개 권역
+const REGIONS = [
+  {label:"전체",    gus:null},
+  {label:"도심권",  gus:["종로구","중구","용산구"]},
+  {label:"동북권",  gus:["성동구","광진구","동대문구","중랑구","성북구","강북구","도봉구","노원구"]},
+  {label:"서북권",  gus:["은평구","서대문구","마포구"]},
+  {label:"서남권",  gus:["양천구","강서구","구로구","금천구","영등포구","동작구","관악구"]},
+  {label:"동남권",  gus:["서초구","강남구","송파구","강동구"]},
+];
+
 function deptClass(dept){
   if(!dept) return 'dept-default';
   if(["미래공간담당관","공공개발담당관","용산입체도시담당관","도시활력담당관"].some(d=>dept.includes(d))) return 'dept-미래공간';
@@ -422,6 +457,86 @@ function renderPostRows(items, q){
     const dept=item.dept?`<span class="post-dept ${deptClass(item.dept)}">${item.dept}</span>`:'';
     return`<div class="post-row">${badge}${date}${dept}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
   }).join('');
+}
+
+// 권역+자치구 2단계 탭 카드 렌더 (wrtanc·ntfc 공용)
+function renderRegionCard(card, hd, sid, getItems){
+  const uid = `${sid}-${Date.now()}`;
+
+  // 권역 탭 + 자치구 소탭 + 2열 바디
+  const regionTabsHtml = REGIONS.map((r,i)=>
+    `<button class="region-tab${i===0?' active':''}" data-ri="${i}">${r.label}</button>`
+  ).join('');
+
+  card.innerHTML = hd
+    + `<div class="region-tabs" id="rtabs-${uid}">${regionTabsHtml}</div>`
+    + `<div class="gu-tabs" id="gutabs-${uid}"></div>`
+    + `<div class="card-body post-grid" id="body-${uid}"></div>`;
+
+  const rtabEls  = card.querySelectorAll(`#rtabs-${uid} .region-tab`);
+  const gutabDiv = card.querySelector(`#gutabs-${uid}`);
+  const body     = card.querySelector(`#body-${uid}`);
+
+  let curRegion = 0;
+  let curGu     = null; // null = 권역 전체
+
+  function renderBody(){
+    const items = getItems();
+    if(!items){
+      body.innerHTML=`<div class="card-msg" style="grid-column:1/-1">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 실행해주세요.</div>`;
+      return;
+    }
+    const region = REGIONS[curRegion];
+    // 권역 필터
+    let filtered = region.gus ? items.filter(i=>region.gus.includes(i.gu)) : items;
+    // 자치구 소탭 필터
+    if(curGu) filtered = filtered.filter(i=>i.gu===curGu);
+    const q = searchQ.trim().toLowerCase();
+    if(q) filtered = filtered.filter(i=>i.title.toLowerCase().includes(q));
+    if(!filtered.length){
+      body.innerHTML=`<div class="card-msg" style="grid-column:1/-1">해당 항목이 없습니다.</div>`;
+      return;
+    }
+    body.innerHTML = filtered.slice(0,20).map(item=>{
+      const badge   = item.is_new?`<span class="badge-new">NEW</span>`:'';
+      const date    = item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
+      const gu      = item.gu?`<span class="post-dept ${guClass(item.gu)}">${item.gu}</span>`:'';
+      const no      = item.notice_no?`<span class="post-date">${item.notice_no}</span>`:'';
+      const dday    = item.end_date?`<span class="wrtanc-dday">${calcDday(item.end_date)}</span>`:'';
+      return `<div class="post-row">${badge}${date}${gu}${no}${dday}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+    }).join('');
+  }
+
+  function renderGuTabs(){
+    const region = REGIONS[curRegion];
+    if(!region.gus){ gutabDiv.innerHTML=''; return; }
+    const guHtml = [`<button class="gu-tab${curGu===null?' active':''}" data-gu="">전체</button>`]
+      .concat(region.gus.map(g=>
+        `<button class="gu-tab${curGu===g?' active':''}" data-gu="${g}">${g}</button>`
+      )).join('');
+    gutabDiv.innerHTML = guHtml;
+    gutabDiv.querySelectorAll('.gu-tab').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        curGu = btn.dataset.gu || null;
+        gutabDiv.querySelectorAll('.gu-tab').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        renderBody();
+      });
+    });
+  }
+
+  rtabEls.forEach((btn,i)=>{
+    btn.addEventListener('click',()=>{
+      curRegion=i; curGu=null;
+      rtabEls.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      renderGuTabs();
+      renderBody();
+    });
+  });
+
+  // 초기 렌더
+  loadUpdates().then(()=>{ renderGuTabs(); renderBody(); });
 }
 
 function orgClass(org){
@@ -449,81 +564,23 @@ function renderFeedCard(src, data){
     <a class="card-go" href="${src.url}" target="_blank" rel="noopener">원문 ${goSvg()}</a>
   </div>`;
 
-  // ── 열람공고(안): updates.json 기반 자치구 탭 필터 ──
+  // ── 열람공고(안): 권역+자치구 2단계 탭 ──
   if(src.sid==="wrtanc"){
-    const SGG=[
-      {val:"all", txt:"전체"},
-      {val:"11680",txt:"강남구"},{val:"11740",txt:"강동구"},{val:"11305",txt:"강북구"},
-      {val:"11500",txt:"강서구"},{val:"11620",txt:"관악구"},{val:"11215",txt:"광진구"},
-      {val:"11530",txt:"구로구"},{val:"11545",txt:"금천구"},{val:"11350",txt:"노원구"},
-      {val:"11320",txt:"도봉구"},{val:"11230",txt:"동대문구"},{val:"11590",txt:"동작구"},
-      {val:"11440",txt:"마포구"},{val:"11410",txt:"서대문구"},{val:"11650",txt:"서초구"},
-      {val:"11200",txt:"성동구"},{val:"11290",txt:"성북구"},{val:"11710",txt:"송파구"},
-      {val:"11470",txt:"양천구"},{val:"11560",txt:"영등포구"},{val:"11170",txt:"용산구"},
-      {val:"11380",txt:"은평구"},{val:"11110",txt:"종로구"},{val:"11140",txt:"중구"},
-      {val:"11260",txt:"중랑구"},
-    ];
-
-    const bodyId = `cb-wrtanc-${Date.now()}`;
-    const tabsHtml = SGG.map((g,i)=>
-      `<button class="tab-btn wrtanc-tab${i===0?' active':''}" data-gu="${g.val}">${g.txt}</button>`
-    ).join('');
-
-    card.innerHTML = hd
-      + `<div class="card-tabs wrtanc-tabs" id="wrtanc-tabs-${bodyId}">${tabsHtml}</div>`
-      + `<div class="card-body" id="${bodyId}"></div>`;
-
-    const body   = card.querySelector(`#${bodyId}`);
-    const tabEls = card.querySelectorAll(`#wrtanc-tabs-${bodyId} .wrtanc-tab`);
-
-    const renderWrtanc = (guVal) => {
-      // updData 전역변수 직접 참조 (비동기 로드 완료 후 탭 클릭 대응)
-      const liveData = updData;
-      if(!liveData){
-        body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;
-        return;
-      }
-      const ws = liveData.sources["wrtanc"];
-      if(!ws){
-        body.innerHTML=`<div class="card-msg">열람공고 데이터가 없습니다.<br>GitHub Actions를 실행해주세요.</div>`;
-        return;
-      }
-      // guVal "all" → ws.all
-      // 자치구 코드 → ws.by_gu["11680"] (신버전) 또는 ws["11680"] (구버전 flat)
-      const items = guVal === "all"
-        ? (ws.all || [])
-        : ((ws.by_gu && ws.by_gu[guVal]) || ws[guVal] || []);
-      if(!items.length){
-        body.innerHTML=`<div class="card-msg">진행중인 열람공고가 없습니다.</div>`;
-        return;
-      }
-      // 검색 필터 적용
-      const filtered = q ? items.filter(i=>i.title.toLowerCase().includes(q)) : items;
-      if(!filtered.length){
-        body.innerHTML=`<div class="card-msg">검색 결과가 없습니다.</div>`;
-        return;
-      }
-      body.innerHTML = filtered.slice(0,10).map(item=>{
-        const badge   = item.is_new ? `<span class="badge-new">NEW</span>` : '';
-        const date    = item.date   ? `<span class="post-date">${item.date}</span>` : '';
-        const gu      = item.gu     ? `<span class="post-dept ${guClass(item.gu)}">${item.gu}</span>` : '';
-        const endDate = item.end_date
-          ? `<span class="wrtanc-dday" title="의견제출 종료">${calcDday(item.end_date)}</span>`
-          : '';
-        return `<div class="post-row">${badge}${date}${gu}${endDate}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
-      }).join('');
-    };
-
-    tabEls.forEach(btn=>{
-      btn.addEventListener("click",()=>{
-        tabEls.forEach(b=>b.classList.remove("active"));
-        btn.classList.add("active");
-        renderWrtanc(btn.dataset.gu);
-      });
+    renderRegionCard(card, hd, "wrtanc", ()=>{
+      const ws = updData && updData.sources["wrtanc"];
+      if(!ws) return null;
+      return ws.all || [];
     });
+    return card;
+  }
 
-    // loadUpdates가 완료된 시점에 초기 렌더 (updData가 이미 있으면 즉시, 없으면 로드 후)
-    loadUpdates().then(()=>renderWrtanc("all"));
+  // ── 결정고시(안): 권역+자치구 2단계 탭 ──
+  if(src.sid==="ntfc"){
+    renderRegionCard(card, hd, "ntfc", ()=>{
+      const ws = updData && updData.sources["ntfc"];
+      if(!ws) return null;
+      return ws.items || [];
+    });
     return card;
   }
 
@@ -569,62 +626,6 @@ function renderFeedCard(src, data){
       });
     });
     renderSeoul(0);
-    return card;
-  }
-
-  // ── 결정고시: 자치구 탭 필터 (by_gu 구조) ──
-  if(src.sid==="ntfc"){
-    const SGG_NTFC=[
-      {val:"all", txt:"전체"},
-      {val:"11680",txt:"강남구"},{val:"11740",txt:"강동구"},{val:"11305",txt:"강북구"},
-      {val:"11500",txt:"강서구"},{val:"11620",txt:"관악구"},{val:"11215",txt:"광진구"},
-      {val:"11530",txt:"구로구"},{val:"11545",txt:"금천구"},{val:"11350",txt:"노원구"},
-      {val:"11320",txt:"도봉구"},{val:"11230",txt:"동대문구"},{val:"11590",txt:"동작구"},
-      {val:"11440",txt:"마포구"},{val:"11410",txt:"서대문구"},{val:"11650",txt:"서초구"},
-      {val:"11200",txt:"성동구"},{val:"11290",txt:"성북구"},{val:"11710",txt:"송파구"},
-      {val:"11470",txt:"양천구"},{val:"11560",txt:"영등포구"},{val:"11170",txt:"용산구"},
-      {val:"11380",txt:"은평구"},{val:"11110",txt:"종로구"},{val:"11140",txt:"중구"},
-      {val:"11260",txt:"중랑구"},
-    ];
-    const bodyId=`cb-ntfc-${Date.now()}`;
-    const tabsHtml=SGG_NTFC.map((g,i)=>
-      `<button class="tab-btn wrtanc-tab${i===0?' active':''}" data-gu="${g.val}">${g.txt}</button>`
-    ).join('');
-    card.innerHTML=hd
-      +`<div class="card-tabs wrtanc-tabs" id="ntfc-tabs-${bodyId}">${tabsHtml}</div>`
-      +`<div class="card-body" id="${bodyId}"></div>`;
-
-    const body=card.querySelector(`#${bodyId}`);
-    const tabEls=card.querySelectorAll(`#ntfc-tabs-${bodyId} .wrtanc-tab`);
-
-    const renderNtfc=(guVal)=>{
-      const liveData=updData;
-      if(!liveData){body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;return;}
-      const ws=liveData.sources["ntfc"];
-      if(!ws||!ws.items||!ws.items.length){body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;return;}
-      // 전체 or 자치구 필터
-      const items=guVal==="all"
-        ? ws.items
-        : ws.items.filter(i=>SGG_NTFC.find(g=>g.val===guVal)&&i.gu===SGG_NTFC.find(g=>g.val===guVal).txt);
-      const filtered=q?items.filter(i=>i.title.toLowerCase().includes(q)):items;
-      if(!filtered.length){body.innerHTML=`<div class="card-msg">해당 자치구 고시가 없습니다.</div>`;return;}
-      body.innerHTML=filtered.slice(0,10).map(item=>{
-        const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
-        const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
-        const gu=item.gu?`<span class="post-dept ${guClass(item.gu)}">${item.gu}</span>`:'';
-        const no=item.notice_no?`<span class="post-date">${item.notice_no}</span>`:'';
-        return`<div class="post-row">${badge}${date}${gu}${no}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
-      }).join('');
-    };
-
-    tabEls.forEach(btn=>{
-      btn.addEventListener("click",()=>{
-        tabEls.forEach(b=>b.classList.remove("active"));
-        btn.classList.add("active");
-        renderNtfc(btn.dataset.gu);
-      });
-    });
-    loadUpdates().then(()=>renderNtfc("all"));
     return card;
   }
 
