@@ -1,9 +1,11 @@
-import requests
-from bs4 import BeautifulSoup
 import json
 import os
 import re
+import time
 from datetime import datetime, timezone, timedelta
+
+import requests
+from bs4 import BeautifulSoup
 
 KST = timezone(timedelta(hours=9))
 TODAY = datetime.now(KST).strftime("%Y-%m-%d")
@@ -13,95 +15,168 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
 }
 
-# 서울시 관심 부서 키워드
+# ── 서울시 관심 부서 ──
 SEOUL_DEPTS = [
-    # 미래공간기획관
     "미래공간담당관", "공공개발담당관", "용산입체도시담당관", "도시활력담당관",
-    # 균형발전본부
     "균형발전기획관", "균형발전정책과", "도시정비과", "동남권사업과", "동북권사업과", "서부권사업과", "광화문광장사업과",
-    # 도시공간본부
     "도시공간기획관", "도시공간전략과", "도시계획과", "도시계획상임기획과", "도시재창조과",
     "신속통합기획과", "도시관리과", "시설계획과", "토지관리과",
-    # 주택실
     "주택정책관", "건축기획관", "주택정책과", "임대주택과", "부동산정책개발센터",
     "공공주택과", "주거환경개선과", "건축기획과", "전략주택공급과", "공동주택과",
     "주거정비과", "재정비촉진과",
 ]
 
-# 서울 25개 자치구 코드
+# ── 서울 25개 자치구 ──
 SGG_LIST = [
-    {"val": "11680", "txt": "강남구"},
-    {"val": "11740", "txt": "강동구"},
-    {"val": "11305", "txt": "강북구"},
-    {"val": "11500", "txt": "강서구"},
-    {"val": "11620", "txt": "관악구"},
-    {"val": "11215", "txt": "광진구"},
-    {"val": "11530", "txt": "구로구"},
-    {"val": "11545", "txt": "금천구"},
-    {"val": "11350", "txt": "노원구"},
-    {"val": "11320", "txt": "도봉구"},
-    {"val": "11230", "txt": "동대문구"},
-    {"val": "11590", "txt": "동작구"},
-    {"val": "11440", "txt": "마포구"},
-    {"val": "11410", "txt": "서대문구"},
-    {"val": "11650", "txt": "서초구"},
-    {"val": "11200", "txt": "성동구"},
-    {"val": "11290", "txt": "성북구"},
-    {"val": "11710", "txt": "송파구"},
-    {"val": "11470", "txt": "양천구"},
-    {"val": "11560", "txt": "영등포구"},
-    {"val": "11170", "txt": "용산구"},
-    {"val": "11380", "txt": "은평구"},
-    {"val": "11110", "txt": "종로구"},
-    {"val": "11140", "txt": "중구"},
+    {"val": "11680", "txt": "강남구"}, {"val": "11740", "txt": "강동구"},
+    {"val": "11305", "txt": "강북구"}, {"val": "11500", "txt": "강서구"},
+    {"val": "11620", "txt": "관악구"}, {"val": "11215", "txt": "광진구"},
+    {"val": "11530", "txt": "구로구"}, {"val": "11545", "txt": "금천구"},
+    {"val": "11350", "txt": "노원구"}, {"val": "11320", "txt": "도봉구"},
+    {"val": "11230", "txt": "동대문구"}, {"val": "11590", "txt": "동작구"},
+    {"val": "11440", "txt": "마포구"}, {"val": "11410", "txt": "서대문구"},
+    {"val": "11650", "txt": "서초구"}, {"val": "11200", "txt": "성동구"},
+    {"val": "11290", "txt": "성북구"}, {"val": "11710", "txt": "송파구"},
+    {"val": "11470", "txt": "양천구"}, {"val": "11560", "txt": "영등포구"},
+    {"val": "11170", "txt": "용산구"}, {"val": "11380", "txt": "은평구"},
+    {"val": "11110", "txt": "종로구"}, {"val": "11140", "txt": "중구"},
     {"val": "11260", "txt": "중랑구"},
 ]
 
-SOURCES = [
-    {
-        "id": "krihs_brief",
-        "name": "국토정책 Brief",
-        "org": "국토연구원",
-        "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
-        "type": "krihs",
-    },
-    {
-        "id": "krihs_working",
-        "name": "워킹페이퍼",
-        "org": "국토연구원",
-        "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
-        "type": "krihs",
-    },
-    {
-        "id": "krihs_article",
-        "name": "월간국토 Article",
-        "org": "국토연구원",
-        "url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
-        "type": "krihs_article",
-    },
-    {
-        "id": "nars_report",
-        "name": "연구보고서",
-        "org": "국회입법조사처",
-        "url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-        "type": "nars",
-    },
-    {
-        "id": "nars_research",
-        "name": "정책연구용역",
-        "org": "국회입법조사처",
-        "url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-        "type": "nars",
-    },
-    {
-        "id": "seoul_press",
-        "name": "보도자료",
-        "org": "서울특별시",
-        "url": "https://www.seoul.go.kr/news/news_report.do",
-        "type": "seoul",
-    },
+NARS_SOURCES = [
+    {"id": "nars_report",   "name": "연구보고서",   "org": "국회입법조사처", "url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043"},
+    {"id": "nars_research", "name": "정책연구용역", "org": "국회입법조사처", "url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010"},
 ]
 
+
+# ════════════════════════════════════════
+# KRIHS — playwright 헤드리스 크롤링
+# ════════════════════════════════════════
+
+def crawl_krihs_all():
+    """
+    playwright로 KRIHS 3개 소스를 한 번에 크롤링.
+    반환: {"krihs_brief": [...], "krihs_working": [...], "krihs_article": [...]}
+    """
+    from playwright.sync_api import sync_playwright
+
+    KRIHS_SOURCES = [
+        {
+            "id": "krihs_brief",
+            "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
+            "type": "board",   # div.board_list li 방식
+        },
+        {
+            "id": "krihs_working",
+            "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
+            "type": "board",
+        },
+        {
+            "id": "krihs_article",
+            "url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
+            "type": "table",   # table tbody tr 방식
+        },
+    ]
+
+    results = {s["id"]: [] for s in KRIHS_SOURCES}
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+        page.set_extra_http_headers({"User-Agent": HEADERS["User-Agent"]})
+
+        for src in KRIHS_SOURCES:
+            print(f"  KRIHS playwright: {src['id']} ...")
+            try:
+                page.goto(src["url"], wait_until="networkidle", timeout=30000)
+                # 목록이 렌더링될 때까지 대기
+                if src["type"] == "board":
+                    page.wait_for_selector("div.board_list li", timeout=15000)
+                    items = _parse_krihs_board(page)
+                else:
+                    page.wait_for_selector("table tbody tr", timeout=15000)
+                    items = _parse_krihs_table(page)
+
+                results[src["id"]] = items
+                print(f"    → {len(items)}건")
+            except Exception as e:
+                print(f"    [ERROR] {src['id']}: {e}")
+                results[src["id"]] = []
+
+        browser.close()
+
+    return results
+
+
+def _parse_krihs_board(page):
+    """div.board_list li 구조 파싱 (Brief·워킹페이퍼 공통)"""
+    items = []
+    lis = page.query_selector_all("div.board_list li")
+    for li in lis[:10]:
+        try:
+            title_el = li.query_selector("strong.title")
+            title = title_el.inner_text().strip() if title_el else ""
+            if not title:
+                continue
+
+            # 날짜: span.date 텍스트에서 "발행일" 제거
+            date_el = li.query_selector("span.date")
+            date_raw = date_el.inner_text().strip() if date_el else ""
+            date = re.sub(r"발행일\s*", "", date_raw).strip()
+
+            # URL: href 속성에서 /library/.../contents/{id} 추출
+            a_el = li.query_selector("a")
+            href = a_el.get_attribute("href") if a_el else ""
+            m = re.search(r"(/library/[^'\")\s]+)", href)
+            url = "https://www.krihs.re.kr" + m.group(1) if m else "https://www.krihs.re.kr"
+
+            items.append({"title": title, "url": url, "date": date})
+        except Exception:
+            continue
+    return items
+
+
+def _parse_krihs_table(page):
+    """table tbody tr 구조 파싱 (월간국토 Article)"""
+    items = []
+    rows = page.query_selector_all("table tbody tr")
+    for row in rows[:15]:
+        try:
+            tds = row.query_selector_all("td")
+            if len(tds) < 2:
+                continue
+
+            # td[0] = 제목
+            title = tds[0].inner_text().strip()
+            if not title or len(title) < 3:
+                continue
+
+            # td[1] = 권호 (날짜 대용)
+            vol = tds[1].inner_text().strip() if len(tds) > 1 else ""
+
+            # 바로가기 a.btn_line — href에서 pmediaId 추출
+            a_el = row.query_selector("a.btn_line")
+            url = "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"
+            if a_el:
+                href = a_el.get_attribute("href") or ""
+                m = re.search(r"pmediaId=(\d+)", href)
+                if m:
+                    url = f"https://www.krihs.re.kr/library/api/media?pmediaId={m.group(1)}"
+                else:
+                    # fallback: /library/... 경로 통째로
+                    m2 = re.search(r"(/library/[^'\")\s]+)", href)
+                    if m2:
+                        url = "https://www.krihs.re.kr" + m2.group(1)
+
+            items.append({"title": title, "url": url, "date": vol})
+        except Exception:
+            continue
+    return items
+
+
+# ════════════════════════════════════════
+# NARS
+# ════════════════════════════════════════
 
 def fetch(url):
     try:
@@ -114,49 +189,6 @@ def fetch(url):
         return None
 
 
-def parse_krihs(soup):
-    items = []
-    rows = soup.select("ul.board_list li") or soup.select("div.board_list li") or soup.select("li.item")
-    if not rows:
-        links = soup.select("a[href*='briefView'], a[href*='pub_list_no'], a[href*='briefs']")
-        for a in links[:10]:
-            title = a.get_text(strip=True)
-            if len(title) < 5:
-                continue
-            href = a.get("href", "")
-            url = "https://www.krihs.re.kr" + href if href.startswith("/") else href
-            items.append({"title": title, "url": url, "date": ""})
-        return items
-    for li in rows[:10]:
-        a = li.select_one("a")
-        if not a:
-            continue
-        title = a.get_text(strip=True)
-        if len(title) < 5:
-            continue
-        href = a.get("href", "")
-        url = "https://www.krihs.re.kr" + href if href.startswith("/") else href
-        date_el = li.select_one(".date, em, span.date")
-        date = date_el.get_text(strip=True) if date_el else ""
-        items.append({"title": title, "url": url, "date": date})
-    return items
-
-
-def parse_krihs_article(soup):
-    items = []
-    links = soup.select("a[href*='articleView'], a[href*='articleDetail']")
-    if not links:
-        links = soup.select("div.cont_list a, ul.list_type a")
-    for a in links[:10]:
-        title = a.get_text(strip=True)
-        if len(title) < 5:
-            continue
-        href = a.get("href", "")
-        url = "https://www.krihs.re.kr" + href if href.startswith("/") else href
-        items.append({"title": title, "url": url, "date": ""})
-    return items
-
-
 def parse_nars(soup):
     items = []
     rows = (
@@ -166,8 +198,7 @@ def parse_nars(soup):
         or soup.select("table tbody tr")
     )
     if not rows:
-        links = soup.select("a[href*='brdView'], a[href*='reportView']")
-        for a in links[:10]:
+        for a in soup.select("a[href*='brdView'], a[href*='reportView']")[:10]:
             title = a.get_text(strip=True)
             if len(title) < 5:
                 continue
@@ -175,6 +206,7 @@ def parse_nars(soup):
             url = "https://www.nars.go.kr" + href if href.startswith("/") else href
             items.append({"title": title, "url": url, "date": ""})
         return items
+
     for row in rows[:10]:
         a = row.select_one("a")
         if not a:
@@ -190,11 +222,13 @@ def parse_nars(soup):
     return items
 
 
+# ════════════════════════════════════════
+# 서울시 보도자료
+# ════════════════════════════════════════
+
 def parse_seoul_page(soup):
-    """서울시 보도자료 1페이지 파싱 — 관심 부서 필터링"""
     items = []
-    rows = soup.select("table tbody tr")
-    for row in rows:
+    for row in soup.select("table tbody tr"):
         cols = row.select("td")
         if len(cols) < 4:
             continue
@@ -204,12 +238,8 @@ def parse_seoul_page(soup):
             continue
         dept = cols[2].get_text(strip=True)
         date = cols[3].get_text(strip=True)
-
-        # 관심 부서 필터
         if not any(k in dept for k in SEOUL_DEPTS):
             continue
-
-        # 게시글 번호 추출
         a_tag = title_td.select_one("a")
         bbs_no = ""
         if a_tag:
@@ -218,81 +248,123 @@ def parse_seoul_page(soup):
             m = re.search(r"fnTbbsView\('(\d+)'\)", href + onclick)
             if m:
                 bbs_no = m.group(1)
-
         post_url = (
             f"https://www.seoul.go.kr/news/news_report.do#view/{bbs_no}"
             if bbs_no
             else "https://www.seoul.go.kr/news/news_report.do"
         )
-        items.append({
-            "title": title_text,
-            "url": post_url,
-            "date": date,
-            "dept": dept,
-        })
+        items.append({"title": title_text, "url": post_url, "date": date, "dept": dept})
     return items
 
 
-def crawl_seoul(base_url, max_pages=10, target=10):
-    """여러 페이지를 순회하며 관심 부서 글 target건 수집"""
+def crawl_seoul(base_url, max_pages=10, target=50):
     items = []
     for page in range(1, max_pages + 1):
         url = f"{base_url}?curPage={page}&bbsNo=158"
-        print(f"  서울시 {page}페이지 크롤링...")
+        print(f"  서울시 {page}페이지...")
         soup = fetch(url)
         if not soup:
             break
-        page_items = parse_seoul_page(soup)
-        items.extend(page_items)
+        items.extend(parse_seoul_page(soup))
         if len(items) >= target:
             break
-    return items[:target]
+    cutoff = (datetime.now(KST) - timedelta(days=14)).strftime("%Y-%m-%d")
+    return [i for i in items[:target] if i.get("date", "") >= cutoff]
+
+
+# ════════════════════════════════════════
+# 서울 도시계획포털
+# ════════════════════════════════════════
+
+def crawl_upmu():
+    DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq="
+    try:
+        r = requests.get(
+            "https://seoulboard.seoul.go.kr/front/bbs.json",
+            params={"bbsNo": "318", "curPage": "1", "cntPerPage": "15",
+                    "srchKey": "sj", "srchText": "", "srchBeginDt": "",
+                    "srchEndDt": "", "srchCtgry": ""},
+            headers=HEADERS, timeout=20,
+        )
+        r.raise_for_status()
+        data = r.json()
+    except Exception as e:
+        print(f"  [ERROR] 업무자료 API: {e}")
+        return []
+
+    items = []
+    for item in (data.get("listVO") or {}).get("listObject") or []:
+        title = (item.get("sj") or "").strip()
+        if not title:
+            continue
+        ntt_no = str(item.get("nttNo") or "")
+        items.append({
+            "title": title,
+            "url": f"{DETAIL_BASE}{ntt_no}" if ntt_no else "https://urban.seoul.go.kr/view/html/PMNU5020000001",
+            "date": (item.get("writngDe") or "")[:10],
+            "dept": (item.get("organDept") or "").strip(),
+        })
+    print(f"  → 업무자료 {len(items)}건")
+    return items[:15]
+
+
+def crawl_ntfc():
+    API_URL = "https://urban.seoul.go.kr/ntfc/getNtfcList.json"
+    DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU4030100001"
+    SGG_MAP = {s["val"]: s["txt"] for s in SGG_LIST}
+    try:
+        r = requests.post(
+            API_URL,
+            json={"pageNo": 1, "pageSize": 30, "keywordList": [""],
+                  "pubSiteCode": "", "organCode": "", "bgnDate": "",
+                  "endDate": "", "srchType": "title", "noticeCode": ""},
+            headers={**HEADERS, "Content-Type": "application/json"}, timeout=20,
+        )
+        r.raise_for_status()
+        data = r.json()
+    except Exception as e:
+        print(f"  [ERROR] 결정고시 API: {e}")
+        return []
+
+    items = []
+    for item in data.get("content", []):
+        title = (item.get("title") or "").strip()
+        if not title:
+            continue
+        notice_code = item.get("noticeCode", "")
+        site_code = item.get("siteCode", "")
+        site_cd = item.get("siteCd") or {}
+        gu_name = site_cd.get("siteName", "") or SGG_MAP.get(site_code, "")
+        items.append({
+            "title": title,
+            "url": f"{DETAIL_BASE}?noticeCode={notice_code}" if notice_code else DETAIL_BASE,
+            "date": (item.get("noticeDate") or "")[:10],
+            "gu": gu_name,
+            "notice_no": item.get("noticeNo", ""),
+        })
+    print(f"  → 결정고시 {len(items)}건")
+    return items
 
 
 def crawl_wrtanc():
-    """
-    서울 도시계획포털 열람공고 API 크롤링.
-    전체 + 25개 자치구별로 진행중 공고를 수집해서 반환.
-    반환 구조:
-    {
-      "all":   [{"title":..., "url":..., "date":..., "end_date":..., "gu":...}, ...],
-      "11680": [...],  # 강남구
-      ...
-    }
-    """
     API_URL = "https://urban.seoul.go.kr/wrtanc/getWrtancList.json"
     DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU4010100001"
-
-    # 날짜 범위: 오늘 기준 6개월 전 ~ 6개월 후 (진행중이므로 넉넉하게)
     today = datetime.now(KST)
     bgn = (today - timedelta(days=180)).strftime("%Y-%m-%d")
     end = (today + timedelta(days=180)).strftime("%Y-%m-%d")
 
     def fetch_gu(reading_area=""):
         payload = {
-            "pageNo": 1,
-            "pageSize": 50,
-            "searchGubun": "ing",          # 진행중 고정
-            "announceNo": "-",
-            "title": "",
-            "pubSiteCode": "",
-            "readingArea": reading_area,   # "" = 전체, "11680" = 강남구 등
-            "bgnDate": bgn,
-            "endDate": end,
-            "onOff": "ALL",
-            "sido": "",
-            "announceNo1": "",
-            "sidoR": "",
-            "siteCode": "",
-            "noticeBgnDt": " ",
-            "noticeEndDt": " ",
+            "pageNo": 1, "pageSize": 50, "searchGubun": "ing",
+            "announceNo": "-", "title": "", "pubSiteCode": "",
+            "readingArea": reading_area, "bgnDate": bgn, "endDate": end,
+            "onOff": "ALL", "sido": "", "announceNo1": "", "sidoR": "",
+            "siteCode": "", "noticeBgnDt": " ", "noticeEndDt": " ",
         }
         try:
             r = requests.post(
-                API_URL,
-                json=payload,
-                headers={**HEADERS, "Content-Type": "application/json"},
-                timeout=20,
+                API_URL, json=payload,
+                headers={**HEADERS, "Content-Type": "application/json"}, timeout=20,
             )
             r.raise_for_status()
             data = r.json()
@@ -302,204 +374,39 @@ def crawl_wrtanc():
             return []
 
     def parse_item(item, gu_name=""):
-        """API 응답 아이템 → 공통 포맷 변환"""
-        # 공고 URL: announceCode로 상세 페이지 링크
         announce_code = item.get("announceCode", "")
         proj_code = item.get("projCode", "")
-        if announce_code:
-            url = f"{DETAIL_BASE}?announceCode={announce_code}&projCode={proj_code}&searchGubun=ing"
-        else:
-            url = f"{DETAIL_BASE}?searchGubun=ing"
-
-        # 공고명: projNm 또는 title 필드
-        title = (
-            item.get("projNm")
-            or item.get("title")
-            or item.get("announceTitle")
-            or ""
-        ).strip()
-
-        # 날짜: 공고일
-        date = (
-            item.get("createDatetime", "")[:10]
-            if item.get("createDatetime")
-            else ""
+        url = (
+            f"{DETAIL_BASE}?announceCode={announce_code}&projCode={proj_code}&searchGubun=ing"
+            if announce_code else f"{DETAIL_BASE}?searchGubun=ing"
         )
-
-        # 의견제출 종료일 (D-day 표시용)
+        title = (item.get("projNm") or item.get("title") or item.get("announceTitle") or "").strip()
+        date = (item.get("createDatetime", "")[:10] if item.get("createDatetime") else "")
         end_date = (item.get("noticeEndDt") or "").strip()
-
-        # 자치구명: dept.deptName 또는 siteNm
         if not gu_name:
             dept = item.get("dept") or {}
-            gu_name = (
-                dept.get("deptNm")
-                or dept.get("deptName")
-                or item.get("siteNm")
-                or item.get("pubSiteNm")
-                or ""
-            ).strip()
-
-        return {
-            "title": title,
-            "url": url,
-            "date": date,
-            "end_date": end_date,
-            "gu": gu_name,
-        }
+            gu_name = (dept.get("deptNm") or dept.get("deptName") or item.get("siteNm") or item.get("pubSiteNm") or "").strip()
+        return {"title": title, "url": url, "date": date, "end_date": end_date, "gu": gu_name}
 
     result = {}
-
-    # 전체 수집
     print("  열람공고 전체 수집 중...")
     all_raw = fetch_gu("")
     result["all"] = [parse_item(i) for i in all_raw if i.get("projNm") or i.get("title")]
     print(f"    → 전체 {len(result['all'])}건")
 
-    # 자치구별 수집
     for sgg in SGG_LIST:
-        code = sgg["val"]
-        name = sgg["txt"]
-        raw = fetch_gu(code)
-        items = [parse_item(i, gu_name=name) for i in raw if i.get("projNm") or i.get("title")]
-        result[code] = items
+        raw = fetch_gu(sgg["val"])
+        items = [parse_item(i, gu_name=sgg["txt"]) for i in raw if i.get("projNm") or i.get("title")]
+        result[sgg["val"]] = items
         if items:
-            print(f"    → {name} {len(items)}건")
+            print(f"    → {sgg['txt']} {len(items)}건")
 
     return result
 
 
-def crawl_source(source):
-    print(f"크롤링: {source['org']} - {source['name']}")
-    t = source["type"]
-
-    if t == "seoul":
-        # 14일치 수집 — 페이지당 10건이므로 최대 10페이지, target=50으로 넉넉하게
-        items = crawl_seoul(source["url"], max_pages=10, target=50)
-        # 14일 이내 필터
-        cutoff = (datetime.now(KST) - timedelta(days=14)).strftime("%Y-%m-%d")
-        items = [i for i in items if i.get("date", "") >= cutoff]
-    else:
-        soup = fetch(source["url"])
-        if not soup:
-            return []
-        if t == "krihs":
-            items = parse_krihs(soup)
-        elif t == "krihs_article":
-            items = parse_krihs_article(soup)
-        elif t == "nars":
-            items = parse_nars(soup)
-        else:
-            items = []
-
-    print(f"  → {len(items)}건 수집")
-    return items
-
-
-def crawl_upmu():
-    """
-    서울 도시계획포털 업무자료(법정계획/운영지침)
-    seoulboard API: listVO.listObject 배열 사용
-    상세 URL: seoulboard.seoul.go.kr/front/detail.do?bbsNo=318&nttNo={nttNo}
-    """
-    DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq="
-    try:
-        r = requests.get(
-            "https://seoulboard.seoul.go.kr/front/bbs.json",
-            params={
-                "bbsNo": "318",
-                "curPage": "1",
-                "cntPerPage": "15",
-                "srchKey": "sj",
-                "srchText": "",
-                "srchBeginDt": "",
-                "srchEndDt": "",
-                "srchCtgry": "",
-            },
-            headers=HEADERS,
-            timeout=20,
-        )
-        r.raise_for_status()
-        data = r.json()
-    except Exception as e:
-        print(f"  [ERROR] 업무자료 API: {e}")
-        return []
-
-    raw_list = (data.get("listVO") or {}).get("listObject") or []
-    items = []
-    for item in raw_list[:15]:
-        title = (item.get("sj") or "").strip()
-        dept  = (item.get("organDept") or "").strip()
-        date  = (item.get("writngDe") or "")[:10]
-        ntt_no = str(item.get("nttNo") or "")
-        if not title:
-            continue
-        url = f"{DETAIL_BASE}{ntt_no}" if ntt_no else "https://urban.seoul.go.kr/view/html/PMNU5020000001"
-        items.append({"title": title, "url": url, "date": date, "dept": dept})
-
-    print(f"  → 업무자료 {len(items)}건")
-    return items
-
-
-def crawl_ntfc():
-    """
-    서울 도시계획포털 결정고시 API 크롤링
-    POST /ntfc/getNtfcList.json
-    """
-    API_URL = "https://urban.seoul.go.kr/ntfc/getNtfcList.json"
-    DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU4030100001"
-
-    # 자치구코드 → 자치구명 매핑
-    SGG_MAP = {s["val"]: s["txt"] for s in SGG_LIST}
-
-    try:
-        r = requests.post(
-            API_URL,
-            json={
-                "pageNo": 1,
-                "pageSize": 30,
-                "keywordList": [""],
-                "pubSiteCode": "",
-                "organCode": "",
-                "bgnDate": "",
-                "endDate": "",
-                "srchType": "title",
-                "noticeCode": "",
-            },
-            headers={**HEADERS, "Content-Type": "application/json"},
-            timeout=20,
-        )
-        r.raise_for_status()
-        data = r.json()
-    except Exception as e:
-        print(f"  [ERROR] 결정고시 API: {e}")
-        return []
-
-    items = []
-    content = data.get("content", [])
-    for item in content:
-        title = (item.get("title") or "").strip()
-        if not title:
-            continue
-        notice_code = item.get("noticeCode", "")
-        notice_no = item.get("noticeNo", "")
-        site_code = item.get("siteCode", "")
-        # siteCd 객체에서 자치구명 추출
-        site_cd = item.get("siteCd") or {}
-        gu_name = site_cd.get("siteName", "") or SGG_MAP.get(site_code, "")
-        date = (item.get("noticeDate") or "")[:10]
-        url = f"{DETAIL_BASE}?noticeCode={notice_code}" if notice_code else DETAIL_BASE
-        items.append({
-            "title": title,
-            "url": url,
-            "date": date,
-            "gu": gu_name,
-            "notice_no": notice_no,
-        })
-
-    print(f"  → 결정고시 {len(items)}건")
-    return items
-
+# ════════════════════════════════════════
+# MAIN
+# ════════════════════════════════════════
 
 def main():
     existing = {}
@@ -512,70 +419,89 @@ def main():
         "sources": {}
     }
 
-    # ── 기존 소스 크롤링 ──
-    for source in SOURCES:
-        sid = source["id"]
-        items = crawl_source(source)
+    # ── KRIHS 3종 (playwright) ──
+    print("\n크롤링: 국토연구원 (playwright 헤드리스)")
+    krihs_data = crawl_krihs_all()
+
+    krihs_meta = {
+        "krihs_brief":   {"name": "국토정책 Brief",   "org": "국토연구원", "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1"},
+        "krihs_working": {"name": "워킹페이퍼",        "org": "국토연구원", "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP"},
+        "krihs_article": {"name": "월간국토 Article", "org": "국토연구원", "url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"},
+    }
+    for sid, items in krihs_data.items():
+        meta = krihs_meta[sid]
         old_urls = {i["url"] for i in existing.get("sources", {}).get(sid, {}).get("items", [])}
         for item in items:
             item["is_new"] = bool(item["url"]) and item["url"] not in old_urls
         result["sources"][sid] = {
-            "name": source["name"],
-            "org": source["org"],
-            "list_url": source["url"],
-            "items": items,
-            "crawled_at": TODAY,
+            "name": meta["name"], "org": meta["org"],
+            "list_url": meta["url"], "items": items, "crawled_at": TODAY,
         }
 
-    # ── 업무자료(법정계획/운영지침) 크롤링 ──
-    print("\n크롤링: 서울 도시계획포털 - 업무자료(법정계획/운영지침)")
-    upmu_items = crawl_upmu()
-    old_upmu_urls = {i["url"] for i in existing.get("sources", {}).get("upmu", {}).get("items", [])}
-    for item in upmu_items:
-        item["is_new"] = bool(item["url"]) and item["url"] not in old_upmu_urls
-    result["sources"]["upmu"] = {
-        "name": "업무자료 (법정계획/운영지침)",
-        "org": "서울 도시계획포털",
-        "list_url": "https://urban.seoul.go.kr/view/html/PMNU5020000001",
-        "items": upmu_items,
-        "crawled_at": TODAY,
+    # ── NARS (requests) ──
+    for src in NARS_SOURCES:
+        print(f"\n크롤링: {src['org']} - {src['name']}")
+        soup = fetch(src["url"])
+        items = parse_nars(soup) if soup else []
+        old_urls = {i["url"] for i in existing.get("sources", {}).get(src["id"], {}).get("items", [])}
+        for item in items:
+            item["is_new"] = bool(item["url"]) and item["url"] not in old_urls
+        result["sources"][src["id"]] = {
+            "name": src["name"], "org": src["org"],
+            "list_url": src["url"], "items": items, "crawled_at": TODAY,
+        }
+        print(f"  → {len(items)}건")
+
+    # ── 서울시 보도자료 ──
+    print("\n크롤링: 서울특별시 - 보도자료")
+    seoul_items = crawl_seoul("https://www.seoul.go.kr/news/news_report.do")
+    old_urls = {i["url"] for i in existing.get("sources", {}).get("seoul_press", {}).get("items", [])}
+    for item in seoul_items:
+        item["is_new"] = bool(item["url"]) and item["url"] not in old_urls
+    result["sources"]["seoul_press"] = {
+        "name": "보도자료", "org": "서울특별시",
+        "list_url": "https://www.seoul.go.kr/news/news_report.do",
+        "items": seoul_items, "crawled_at": TODAY,
     }
 
-    # ── 결정고시 크롤링 ──
+    # ── 업무자료 ──
+    print("\n크롤링: 서울 도시계획포털 - 업무자료")
+    upmu_items = crawl_upmu()
+    old_urls = {i["url"] for i in existing.get("sources", {}).get("upmu", {}).get("items", [])}
+    for item in upmu_items:
+        item["is_new"] = bool(item["url"]) and item["url"] not in old_urls
+    result["sources"]["upmu"] = {
+        "name": "업무자료 (법정계획/운영지침)", "org": "서울 도시계획포털",
+        "list_url": "https://urban.seoul.go.kr/view/html/PMNU5020000001",
+        "items": upmu_items, "crawled_at": TODAY,
+    }
+
+    # ── 결정고시 ──
     print("\n크롤링: 서울 도시계획포털 - 결정고시(안)")
     ntfc_items = crawl_ntfc()
-    old_ntfc_urls = {i["url"] for i in existing.get("sources", {}).get("ntfc", {}).get("items", [])}
+    old_urls = {i["url"] for i in existing.get("sources", {}).get("ntfc", {}).get("items", [])}
     for item in ntfc_items:
-        item["is_new"] = bool(item["url"]) and item["url"] not in old_ntfc_urls
+        item["is_new"] = bool(item["url"]) and item["url"] not in old_urls
     result["sources"]["ntfc"] = {
-        "name": "결정고시(안)",
-        "org": "서울 도시계획포털",
+        "name": "결정고시(안)", "org": "서울 도시계획포털",
         "list_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001",
-        "items": ntfc_items,
-        "crawled_at": TODAY,
+        "items": ntfc_items, "crawled_at": TODAY,
     }
 
-    # ── 열람공고 크롤링 ──
+    # ── 열람공고 ──
     print("\n크롤링: 서울 도시계획포털 - 열람공고(안)")
     wrtanc_data = crawl_wrtanc()
-
-    # is_new 체크: 기존 전체 목록의 url 집합과 비교
-    old_wrtanc_urls = {
-        i["url"]
-        for i in existing.get("sources", {}).get("wrtanc", {}).get("all", [])
-    }
+    old_wrtanc_urls = {i["url"] for i in existing.get("sources", {}).get("wrtanc", {}).get("all", [])}
     for key, items in wrtanc_data.items():
         for item in items:
             item["is_new"] = bool(item["url"]) and item["url"] not in old_wrtanc_urls
-
     result["sources"]["wrtanc"] = {
-        "name": "열람공고(안)",
-        "org": "서울 도시계획포털",
+        "name": "열람공고(안)", "org": "서울 도시계획포털",
         "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
         "crawled_at": TODAY,
-        "items": wrtanc_data.get("all", []),   # 전체 목록 (is_new 체크용)
-        "by_gu": {k: v for k, v in wrtanc_data.items() if k != "all"},  # 자치구별
-        "all": wrtanc_data.get("all", []),     # 전체 (카드에서 직접 접근)
+        "items": wrtanc_data.get("all", []),
+        "by_gu": {k: v for k, v in wrtanc_data.items() if k != "all"},
+        "all": wrtanc_data.get("all", []),
     }
 
     total_wrtanc = len(wrtanc_data.get("all", []))
@@ -586,10 +512,7 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
-    total = sum(
-        len(v.get("items", v.get("all", [])))
-        for v in result["sources"].values()
-    )
+    total = sum(len(v.get("items", v.get("all", []))) for v in result["sources"].values())
     new_count = sum(
         sum(1 for i in v.get("items", v.get("all", [])) if i.get("is_new"))
         for v in result["sources"].values()
