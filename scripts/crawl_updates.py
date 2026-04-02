@@ -374,7 +374,11 @@ def crawl_source(source):
     t = source["type"]
 
     if t == "seoul":
-        items = crawl_seoul(source["url"], max_pages=5, target=10)
+        # 14일치 수집 — 페이지당 10건이므로 최대 10페이지, target=50으로 넉넉하게
+        items = crawl_seoul(source["url"], max_pages=10, target=50)
+        # 14일 이내 필터
+        cutoff = (datetime.now(KST) - timedelta(days=14)).strftime("%Y-%m-%d")
+        items = [i for i in items if i.get("date", "") >= cutoff]
     else:
         soup = fetch(source["url"])
         if not soup:
@@ -389,6 +393,140 @@ def crawl_source(source):
             items = []
 
     print(f"  → {len(items)}건 수집")
+    return items
+
+
+def crawl_upmu():
+    """
+    서울 도시계획포털 업무자료(법정계획/운영지침) 크롤링
+    seoulboard API: bbsNo=318
+    """
+    API_URL = "https://seoulboard.seoul.go.kr/front/bbs.json"
+    DETAIL_BASE = "https://seoulboard.seoul.go.kr/front/detail.do?bbsNo=318&nttNo="
+
+    try:
+        r = requests.get(
+            API_URL,
+            params={
+                "bbsNo": "318",
+                "curPage": "1",
+                "srchBeginDt": "",
+                "srchEndDt": "",
+                "srchCtgry": "",
+                "cntPerPage": "15",
+                "srchKey": "sj",
+                "srchText": "",
+            },
+            headers=HEADERS,
+            timeout=20,
+        )
+        r.raise_for_status()
+        data = r.json()
+    except Exception as e:
+        print(f"  [ERROR] 업무자료 API: {e}")
+        return []
+
+    items = []
+    # API 응답에서 목록 추출 — 페이지 HTML DOM 파싱으로 대체
+    # seoulboard는 서버사이드 렌더링이므로 직접 HTML 파싱
+    try:
+        r2 = requests.get(
+            "https://urban.seoul.go.kr/view/html/PMNU5020000001",
+            headers=HEADERS,
+            timeout=20,
+        )
+        r2.encoding = "utf-8"
+        soup = BeautifulSoup(r2.text, "html.parser")
+        rows = soup.select("table tbody tr")
+        for row in rows[:15]:
+            tds = row.select("td")
+            if len(tds) < 4:
+                continue
+            num_td = tds[0].get_text(strip=True)
+            title = tds[1].get_text(strip=True)
+            dept = tds[2].get_text(strip=True)
+            date = tds[3].get_text(strip=True)
+            if not title or len(title) < 3:
+                continue
+            # onclick에서 게시글 ID 추출
+            a = tds[1].select_one("a")
+            ntt_no = ""
+            if a:
+                onclick = a.get("onclick", "") or ""
+                m = re.search(r"onRowClick\((\d+)\)", onclick)
+                if m:
+                    ntt_no = m.group(1)
+            url = f"{DETAIL_BASE}{ntt_no}" if ntt_no else "https://urban.seoul.go.kr/view/html/PMNU5020000001"
+            items.append({
+                "title": title,
+                "url": url,
+                "date": date,
+                "dept": dept,
+            })
+    except Exception as e:
+        print(f"  [ERROR] 업무자료 HTML: {e}")
+
+    print(f"  → 업무자료 {len(items)}건")
+    return items
+
+
+def crawl_ntfc():
+    """
+    서울 도시계획포털 결정고시 API 크롤링
+    POST /ntfc/getNtfcList.json
+    """
+    API_URL = "https://urban.seoul.go.kr/ntfc/getNtfcList.json"
+    DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU4030100001"
+
+    # 자치구코드 → 자치구명 매핑
+    SGG_MAP = {s["val"]: s["txt"] for s in SGG_LIST}
+
+    try:
+        r = requests.post(
+            API_URL,
+            json={
+                "pageNo": 1,
+                "pageSize": 30,
+                "keywordList": [""],
+                "pubSiteCode": "",
+                "organCode": "",
+                "bgnDate": "",
+                "endDate": "",
+                "srchType": "title",
+                "noticeCode": "",
+            },
+            headers={**HEADERS, "Content-Type": "application/json"},
+            timeout=20,
+        )
+        r.raise_for_status()
+        data = r.json()
+    except Exception as e:
+        print(f"  [ERROR] 결정고시 API: {e}")
+        return []
+
+    items = []
+    content = data.get("content", [])
+    for item in content:
+        title = (item.get("title") or "").strip()
+        if not title:
+            continue
+        notice_code = item.get("noticeCode", "")
+        notice_no = item.get("noticeNo", "")
+        site_code = item.get("siteCode", "")
+        # siteCd 객체에서 자치구명 추출
+        site_cd = item.get("siteCd") or {}
+        gu_name = site_cd.get("siteName", "") or SGG_MAP.get(site_code, "")
+        date = (item.get("noticeDate") or "")[:10]
+        url = f"{DETAIL_BASE}?noticeCode={notice_code}" if notice_code else DETAIL_BASE
+        items.append({
+            "title": title,
+            "url": url,
+            "date": date,
+            "gu": gu_name,
+            "notice_no": notice_no,
+        })
+
+    print(f"  → 결정고시 {len(items)}건")
     return items
 
 
@@ -417,6 +555,34 @@ def main():
             "items": items,
             "crawled_at": TODAY,
         }
+
+    # ── 업무자료(법정계획/운영지침) 크롤링 ──
+    print("\n크롤링: 서울 도시계획포털 - 업무자료(법정계획/운영지침)")
+    upmu_items = crawl_upmu()
+    old_upmu_urls = {i["url"] for i in existing.get("sources", {}).get("upmu", {}).get("items", [])}
+    for item in upmu_items:
+        item["is_new"] = bool(item["url"]) and item["url"] not in old_upmu_urls
+    result["sources"]["upmu"] = {
+        "name": "업무자료 (법정계획/운영지침)",
+        "org": "서울 도시계획포털",
+        "list_url": "https://urban.seoul.go.kr/view/html/PMNU5020000001",
+        "items": upmu_items,
+        "crawled_at": TODAY,
+    }
+
+    # ── 결정고시 크롤링 ──
+    print("\n크롤링: 서울 도시계획포털 - 결정고시(안)")
+    ntfc_items = crawl_ntfc()
+    old_ntfc_urls = {i["url"] for i in existing.get("sources", {}).get("ntfc", {}).get("items", [])}
+    for item in ntfc_items:
+        item["is_new"] = bool(item["url"]) and item["url"] not in old_ntfc_urls
+    result["sources"]["ntfc"] = {
+        "name": "결정고시(안)",
+        "org": "서울 도시계획포털",
+        "list_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001",
+        "items": ntfc_items,
+        "crawled_at": TODAY,
+    }
 
     # ── 열람공고 크롤링 ──
     print("\n크롤링: 서울 도시계획포털 - 열람공고(안)")
