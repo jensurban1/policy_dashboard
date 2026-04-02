@@ -258,9 +258,15 @@ const FEED_SOURCES = [
    url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
   {sid:"seoul_press", name:"보도자료", org:"서울특별시", cat:"지자체정책구상",
    url:"https://www.seoul.go.kr/news/news_report.do"},
-  // ② 열람공고 카드
+  // ② 열람공고 카드 — 자치구별 탭
   {sid:"wrtanc", name:"열람공고(안)", org:"서울 도시계획포털", cat:"사업계획안",
    url:"https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"},
+  // ③ 결정고시 카드
+  {sid:"ntfc", name:"결정고시(안)", org:"서울 도시계획포털", cat:"사업계획안",
+   url:"https://urban.seoul.go.kr/view/html/PMNU4030100001"},
+  // ④ 업무자료 카드
+  {sid:"upmu", name:"업무자료 (법정계획/운영지침)", org:"서울 도시계획포털", cat:"지자체정책구상",
+   url:"https://urban.seoul.go.kr/view/html/PMNU5020000001"},
   // ② 크롤링 가능한 나머지 소스
   {sid:"krihs_brief", name:"국토정책 Brief", org:"국토연구원", cat:"정책기본구상",
    url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
@@ -300,15 +306,9 @@ const FEED_SOURCES = [
 ];
 
 const STATIC_SOURCES = [
-  {name:"법정계획 / 운영지침",org:"서울 도시계획포털",cat:"지자체정책구상",url:"https://urban.seoul.go.kr/view/html/PMNU5020000001",
-   items:[{cat:"계획",title:"2040 서울도시기본계획",desc:"최상위 법정 도시계획"},{cat:"계획",title:"2030 생활권계획",desc:"5개 권역 116개 생활권"},{cat:"지침",title:"사업별 운영지침",desc:"재개발·재건축·도시재생"}],
-   note:"※ 좌측 메뉴에서 계획 유형 선택"},
   {name:"소관 의안 / 심사·검토보고서",org:"서울시의회",cat:"지자체정책구상",url:"https://www.smc.seoul.kr/info/index.do?menuId=001003008",
    items:[{cat:"메뉴",title:"의안 검색",desc:"의안번호·의안명·소관위"},{cat:"메뉴",title:"처리/계류 의안",desc:"가결·부결·심사 중 목록"},{cat:"보고서",title:"검토·심사보고서 PDF",desc:"의안 상세 하단 첨부"}],
    note:"※ 소관위원회 필터로 주택공간·도시계획균형위 구분"},
-  {name:"결정고시(안)",org:"서울 도시계획포털",cat:"사업계획안",url:"https://urban.seoul.go.kr/view/html/PMNU4030100001",
-   items:[{cat:"목록",title:"고시번호·고시일·구역명",desc:"도시계획 결정·변경 고시"},{cat:"상세",title:"고시 원문+계획도면",desc:"서울시보 원문 및 결정조서"}],
-   note:"※ 고시번호 검색으로 관련 계획도서 일괄 확인"},
   {name:"법, 시행령, 시행규칙, 조례 등",org:"국가법령정보센터",cat:"각종법령",url:"https://www.law.go.kr/main.html",
    items:[{cat:"법령",title:"현행/연혁 법령",desc:"법률·대통령령·총리령·조례"},{cat:"행정규칙",title:"훈령·예규·고시",desc:"각 부처 행정규칙 원문"},{cat:"판례",title:"헌재·대법원",desc:"법령 관련 주요 판례"}],
    note:"※ 파일 아닌 링크로 관리"},
@@ -572,6 +572,34 @@ function renderFeedCard(src, data){
     return card;
   }
 
+  // ── 결정고시·업무자료: items 기반 일반 피드 카드 ──
+  if(src.sid==="ntfc"||src.sid==="upmu"){
+    card.innerHTML=hd+`<div class="card-body" id="cb-${src.sid}"></div>`;
+    const body=card.querySelector(`#cb-${src.sid}`);
+    if(!data){
+      body.innerHTML=`<div class="card-msg">⚠ <code>data/updates.json</code>이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;
+      return card;
+    }
+    const s=data.sources[src.sid];
+    if(!s||!s.items||!s.items.length){
+      body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.<br><span style="font-size:11px">GitHub Actions를 실행해주세요.</span></div>`;
+      return card;
+    }
+    const filtered=q?s.items.filter(i=>i.title.toLowerCase().includes(q)):s.items;
+    if(!filtered.length){body.innerHTML=`<div class="card-msg">검색 결과가 없습니다.</div>`;return card;}
+    body.innerHTML=filtered.slice(0,10).map(item=>{
+      const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
+      const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
+      // ntfc: 자치구 배지 + 고시번호 / upmu: 부서 배지
+      let tag='';
+      if(src.sid==="ntfc"&&item.gu) tag=`<span class="post-dept ${guClass(item.gu)}">${item.gu}</span>`;
+      if(src.sid==="ntfc"&&item.notice_no) tag+=`<span class="post-date">${item.notice_no}</span>`;
+      if(src.sid==="upmu"&&item.dept) tag=`<span class="post-dept ${deptClass(item.dept)}">${item.dept}</span>`;
+      return`<div class="post-row">${badge}${date}${tag}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+    }).join('');
+    return card;
+  }
+
   // ── 일반 피드 카드 (국토연구원, 국회입법조사처 등) ──
   card.innerHTML=hd+`<div class="card-body" id="cb-${src.sid}"></div>`;
   const body=card.querySelector(`#cb-${src.sid}`);
@@ -624,7 +652,7 @@ async function render(){
     // ① 상단 와이드 (1열) — 보도자료 2개 + 열람공고
     const wide=document.createElement("div");
     wide.className="feed-wide";
-    const WIDE_SIDS=["molit_press","seoul_press","wrtanc"];
+    const WIDE_SIDS=["molit_press","seoul_press","wrtanc","ntfc","upmu"];
     FEED_SOURCES.filter(s=>WIDE_SIDS.includes(s.sid)).forEach(src=>wide.appendChild(renderFeedCard(src,data)));
     wrap.appendChild(wide);
 
