@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02T10:09:02.620070+09:00",
+  "updated_at": "2026-04-02T10:22:17.979947+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -46,7 +46,7 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/455446",
           "date": "2026-04-02",
           "dept": "도시계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "\"퇴근후 '청년 전세사기' 예방교육·상담 받으세요\"…서울시, 현장설명회 확대",
@@ -111,7 +111,113 @@
       "name": "업무자료 (법정계획/운영지침)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU5020000001",
-      "items": [],
+      "items": [
+        {
+          "title": "2026 도시공간정책 컨퍼런스 자료집",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=454783",
+          "date": "2026-03-23",
+          "dept": "도시공간전략과",
+          "is_new": true
+        },
+        {
+          "title": "2040 서울 공업지역기본계획",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=453933",
+          "date": "2026-03-12",
+          "dept": "도시계획과",
+          "is_new": true
+        },
+        {
+          "title": "용적률 완화 중첩 적용에 따른 기반시설 충분여부 검토기준 및 매뉴얼",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=453712",
+          "date": "2026-03-09",
+          "dept": "도시관리과",
+          "is_new": true
+        },
+        {
+          "title": "2030 서울특별시 도시·주거환경정비기본계획(변경)(도시정비형 재개발사업부문) 보고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=453459",
+          "date": "2026-03-05",
+          "dept": "도시재창조과",
+          "is_new": true
+        },
+        {
+          "title": "20220809 도시계획시설 폐지·복합화 시 공공기여 기준",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=452982",
+          "date": "2026-02-25",
+          "dept": "시설계획과",
+          "is_new": true
+        },
+        {
+          "title": "사전협상제도 개정(2026.02.10)",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=452021",
+          "date": "2026-02-11",
+          "dept": "공공개발담당관",
+          "is_new": true
+        },
+        {
+          "title": "도시건축디자인혁신사업 운영기준(2025.12.31. 제정)",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=449693",
+          "date": "2026-01-06",
+          "dept": "미래공간담당관",
+          "is_new": true
+        },
+        {
+          "title": "도시계획시설 중복 입체적 결정 기준(&#39;25.12. 개선)",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=449645",
+          "date": "2026-01-05",
+          "dept": "시설계획과",
+          "is_new": true
+        },
+        {
+          "title": "2025 도시공간정책 국제컨퍼런스 자료집",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=448405",
+          "date": "2025-12-10",
+          "dept": "도시공간전략과",
+          "is_new": true
+        },
+        {
+          "title": "관광숙박시설 건립 관련 지구단위계획 수립기준",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=446667",
+          "date": "2025-11-06",
+          "dept": "도시관리과",
+          "is_new": true
+        },
+        {
+          "title": "2030 서울특별시 도시 및 주거환경정비 기본계획 변경(도시정비형 재개발사업 부문)(서고시 제2025-608호,2025.11.6.)",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=446175",
+          "date": "2025-11-06",
+          "dept": "도시재창조과",
+          "is_new": true
+        },
+        {
+          "title": "역세권 활성화사업 운영기준(2025.10.31.)",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=445981",
+          "date": "2025-10-31",
+          "dept": "도시공간전략과",
+          "is_new": true
+        },
+        {
+          "title": "역세권 활성화사업 역세권 범위 참고자료",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=445623",
+          "date": "2025-10-29",
+          "dept": "도시공간전략과",
+          "is_new": true
+        },
+        {
+          "title": "용도지구 재정비 관련 전략환경영향평가 협의 내용 반영결과 통보서",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=444353",
+          "date": "2025-10-10",
+          "dept": "도시계획과",
+          "is_new": true
+        },
+        {
+          "title": "용도지구 내 노후주거지 환경개선 관리모델 개발 용역 보고서",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq=444345",
+          "date": "2025-10-10",
+          "dept": "도시계획과",
+          "is_new": true
+        }
+      ],
       "crawled_at": "2026-04-02"
     },
     "ntfc": {
