@@ -398,24 +398,23 @@ def crawl_source(source):
 
 def crawl_upmu():
     """
-    서울 도시계획포털 업무자료(법정계획/운영지침) 크롤링
-    seoulboard API: bbsNo=318
+    서울 도시계획포털 업무자료(법정계획/운영지침)
+    seoulboard API: listVO.listObject 배열 사용
+    상세 URL: PMNU5020600001?brdSeq={nttNo}
     """
-    API_URL = "https://seoulboard.seoul.go.kr/front/bbs.json"
-    DETAIL_BASE = "https://seoulboard.seoul.go.kr/front/detail.do?bbsNo=318&nttNo="
-
+    DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq="
     try:
         r = requests.get(
-            API_URL,
+            "https://seoulboard.seoul.go.kr/front/bbs.json",
             params={
                 "bbsNo": "318",
                 "curPage": "1",
-                "srchBeginDt": "",
-                "srchEndDt": "",
-                "srchCtgry": "",
                 "cntPerPage": "15",
                 "srchKey": "sj",
                 "srchText": "",
+                "srchBeginDt": "",
+                "srchEndDt": "",
+                "srchCtgry": "",
             },
             headers=HEADERS,
             timeout=20,
@@ -426,45 +425,17 @@ def crawl_upmu():
         print(f"  [ERROR] 업무자료 API: {e}")
         return []
 
+    raw_list = (data.get("listVO") or {}).get("listObject") or []
     items = []
-    # API 응답에서 목록 추출 — 페이지 HTML DOM 파싱으로 대체
-    # seoulboard는 서버사이드 렌더링이므로 직접 HTML 파싱
-    try:
-        r2 = requests.get(
-            "https://urban.seoul.go.kr/view/html/PMNU5020000001",
-            headers=HEADERS,
-            timeout=20,
-        )
-        r2.encoding = "utf-8"
-        soup = BeautifulSoup(r2.text, "html.parser")
-        rows = soup.select("table tbody tr")
-        for row in rows[:15]:
-            tds = row.select("td")
-            if len(tds) < 4:
-                continue
-            num_td = tds[0].get_text(strip=True)
-            title = tds[1].get_text(strip=True)
-            dept = tds[2].get_text(strip=True)
-            date = tds[3].get_text(strip=True)
-            if not title or len(title) < 3:
-                continue
-            # onclick에서 게시글 ID 추출
-            a = tds[1].select_one("a")
-            ntt_no = ""
-            if a:
-                onclick = a.get("onclick", "") or ""
-                m = re.search(r"onRowClick\((\d+)\)", onclick)
-                if m:
-                    ntt_no = m.group(1)
-            url = f"{DETAIL_BASE}{ntt_no}" if ntt_no else "https://urban.seoul.go.kr/view/html/PMNU5020000001"
-            items.append({
-                "title": title,
-                "url": url,
-                "date": date,
-                "dept": dept,
-            })
-    except Exception as e:
-        print(f"  [ERROR] 업무자료 HTML: {e}")
+    for item in raw_list[:15]:
+        title = (item.get("sj") or "").strip()
+        dept  = (item.get("organDept") or "").strip()
+        date  = (item.get("writngDe") or "")[:10]
+        ntt_no = str(item.get("nttNo") or "")
+        if not title:
+            continue
+        url = f"{DETAIL_BASE}{ntt_no}" if ntt_no else "https://urban.seoul.go.kr/view/html/PMNU5020000001"
+        items.append({"title": title, "url": url, "date": date, "dept": dept})
 
     print(f"  → 업무자료 {len(items)}건")
     return items
