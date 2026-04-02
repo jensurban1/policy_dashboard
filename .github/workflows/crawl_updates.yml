@@ -14,7 +14,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install requests beautifulsoup4
+      - name: 패키지 설치
+        run: |
+          pip install requests beautifulsoup4 playwright
+          playwright install chromium --with-deps
       - run: python scripts/crawl_updates.py
       - name: Commit and push
         run: |
