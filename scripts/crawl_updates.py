@@ -400,9 +400,9 @@ def crawl_upmu():
     """
     서울 도시계획포털 업무자료(법정계획/운영지침)
     seoulboard API: listVO.listObject 배열 사용
-    상세 URL: PMNU5020600001?brdSeq={nttNo}
+    상세 URL: seoulboard.seoul.go.kr/front/detail.do?bbsNo=318&nttNo={nttNo}
     """
-    DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU5020600001?brdSeq="
+    DETAIL_BASE = "https://seoulboard.seoul.go.kr/front/detail.do?bbsNo=318&nttNo="
     try:
         r = requests.get(
             "https://seoulboard.seoul.go.kr/front/bbs.json",
