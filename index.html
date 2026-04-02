@@ -397,48 +397,24 @@ function renderUrban(data){
 }
 
 function renderResearch(data){
-  const wrap=document.createElement('div'); wrap.className='feed-wide';
+  const wrap=document.createElement('div'); wrap.className='feed-2col-grid';
   const q=searchQ.trim().toLowerCase();
-
-  // 업무자료 (도시계획포털)
-  const c0=document.createElement('div'); c0.className='src-card';
-  c0.innerHTML=makeHd("업무자료 (법정계획/운영지침)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU5020000001")+`<div class="card-body" id="cb-upmu"></div>`;
-  const upmuBody=c0.querySelector('#cb-upmu');
-  if(!data) upmuBody.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.</div>`;
-  else{const s=data.sources["upmu"];upmuBody.innerHTML=postRows(s&&s.items,q,10);}
-  wrap.appendChild(c0);
-
-  // 국토연구원 3개 — 3열 그리드
-  const krihs3=document.createElement('div'); krihs3.className='feed-3col';
-  [
-    {sid:"krihs_brief",   name:"국토정책 Brief",   url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1"},
-    {sid:"krihs_working", name:"워킹페이퍼",        url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP"},
-    {sid:"krihs_article", name:"월간국토 Article", url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"},
-  ].forEach(src=>{
+  const sources=[
+    {sid:"upmu",          name:"업무자료 (법정계획/운영지침)", org:"서울 도시계획포털",  url:"https://urban.seoul.go.kr/view/html/PMNU5020000001"},
+    {sid:"krihs_brief",   name:"국토정책 Brief",              org:"국토연구원",          url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1"},
+    {sid:"krihs_working", name:"워킹페이퍼",                  org:"국토연구원",          url:"https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP"},
+    {sid:"krihs_article", name:"월간국토 Article",            org:"국토연구원",          url:"https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"},
+    {sid:"nars_report",   name:"연구보고서",                  org:"국회입법조사처",      url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043"},
+    {sid:"nars_research", name:"정책연구용역",                org:"국회입법조사처",      url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010"},
+  ];
+  sources.forEach(src=>{
     const card=document.createElement('div'); card.className='src-card';
     const s=data&&data.sources[src.sid];
-    card.innerHTML=makeHd(src.name,"국토연구원",src.url);
+    card.innerHTML=makeHd(src.name, src.org, src.url);
     const body=document.createElement('div'); body.className='card-body';
-    body.innerHTML=postRows(s&&s.items,q);
-    card.appendChild(body); krihs3.appendChild(card);
+    body.innerHTML=postRows(s&&s.items, q);
+    card.appendChild(body); wrap.appendChild(card);
   });
-  wrap.appendChild(krihs3);
-
-  // 국회입법조사처 2개 — 2열 그리드
-  const nars2=document.createElement('div'); nars2.className='feed-2col-grid';
-  [
-    {sid:"nars_report",   name:"연구보고서",   url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0043"},
-    {sid:"nars_research", name:"정책연구용역", url:"https://www.nars.go.kr/report/list.do?cmsCode=CM0010"},
-  ].forEach(src=>{
-    const card=document.createElement('div'); card.className='src-card';
-    const s=data&&data.sources[src.sid];
-    card.innerHTML=makeHd(src.name,"국회입법조사처",src.url);
-    const body=document.createElement('div'); body.className='card-body';
-    body.innerHTML=postRows(s&&s.items,q);
-    card.appendChild(body); nars2.appendChild(card);
-  });
-  wrap.appendChild(nars2);
-
   return wrap;
 }
 
