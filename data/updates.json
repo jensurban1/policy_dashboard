@@ -1,25 +1,208 @@
 {
-  "updated_at": "2026-04-02T10:46:09.650760+09:00",
+  "updated_at": "2026-04-02T15:27:50.434031+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
-      "items": [],
+      "items": [
+        {
+          "title": "[국토정책Brief 제1056호] 노후계획도시정비, '주택 통합 재건축'을 넘어 '도시기능 향상'으로",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7728932",
+          "date": "2026-03-30",
+          "is_new": true
+        },
+        {
+          "title": "[국토정책Brief 제1055호] 지방소멸시대, 세대별 다지역 거주 정책의 수요성과 추진 전략",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7710368",
+          "date": "2026-03-23",
+          "is_new": true
+        },
+        {
+          "title": "[국토정책Brief 제1054호] 스마트도시 확산을 위한 성과관리체계 구축 방안",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7708419",
+          "date": "2026-03-16",
+          "is_new": true
+        },
+        {
+          "title": "[국토정책Brief 제1053호] 에너지 전환 시대 대응을 위한 이용자 중심의 전기차 스마트 충전 인프라",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7699573",
+          "date": "2026-03-09",
+          "is_new": true
+        },
+        {
+          "title": "[국토정책Brief 제1052호] 비아파트 소유 기피 현상과 주거정책 과제: 청년 주거안정을 중심으로",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7697870",
+          "date": "2026-03-03",
+          "is_new": true
+        },
+        {
+          "title": "[국토정책Brief 제1051호] 메가시티 공간전략 실현을 위한 광역도시계획 기능 제고 방안",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7697131",
+          "date": "2026-02-23",
+          "is_new": true
+        },
+        {
+          "title": "[국토정책Brief 제1050호] 생활인구정책의 전환: 전국단위 확장과 지역상생발전 전략",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7682333",
+          "date": "2026-02-09",
+          "is_new": true
+        },
+        {
+          "title": "[국토정책Brief 제1049호] LLM을 활용한 건설정책지원 효율화 방향",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7662623",
+          "date": "2026-02-02",
+          "is_new": true
+        },
+        {
+          "title": "[국토정책Brief 제1048호] 에너지 빈곤의 공간적 덫, 생활권 단위 접근으로 극복하자",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7637375",
+          "date": "2026-01-26",
+          "is_new": true
+        },
+        {
+          "title": "[국토정책Brief 제1047호] 국토의 종합건강검진을 위한 진단 도구, 국토변화모니터링 지수 활용 방안",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7635914",
+          "date": "2026-01-19",
+          "is_new": true
+        }
+      ],
       "crawled_at": "2026-04-02"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
-      "items": [],
+      "items": [
+        {
+          "title": "언론기사에서 나타나는 국유지 관리 갈등 및 쟁점 분석",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7636384",
+          "date": "2026-01-22",
+          "is_new": true
+        },
+        {
+          "title": "Housing as a Driver of Growth and Well-being: Lessons from Korea",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7626971",
+          "date": "2025-12-30",
+          "is_new": true
+        },
+        {
+          "title": "계층별 주거위상 진단과 향후 정책방향",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7626970",
+          "date": "2025-12-30",
+          "is_new": true
+        },
+        {
+          "title": "공간구조 기반, 초광역권 철도망 발전방향: 5극3특 중심으로",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7626966",
+          "date": "2025-12-30",
+          "is_new": true
+        },
+        {
+          "title": "우크라이나 전쟁 이후 북･러 협력과 한국의 국토·물류 부문 대응방향",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7541324",
+          "date": "2025-10-21",
+          "is_new": true
+        },
+        {
+          "title": "부동산 거래활동지표 기반 시장 분석과 활용 방안",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7541259",
+          "date": "2025-10-20",
+          "is_new": true
+        },
+        {
+          "title": "GeoAI 모델 성능에 대한 공간데이터 품질 요인 영향 분석: 정사보정 여부를 중심으로",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7540799",
+          "date": "2025-10-14",
+          "is_new": true
+        },
+        {
+          "title": "기후 젠트리피케이션, 바다 넘어온 경고와 우리의 대응: 해안 도시 해수면 상승 사례를 중심으로",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7540699",
+          "date": "2025-10-13",
+          "is_new": true
+        },
+        {
+          "title": "미국 수소도시 정책 동향: 지역 청정수소 허브(H2Hub) 프로그램",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7540255",
+          "date": "2025-10-01",
+          "is_new": true
+        },
+        {
+          "title": "군부대 철수가 접경지역의 낙후도에 미치는 영향",
+          "url": "https://www.krihs.re.kr/library/10120/contents/7532162",
+          "date": "2025-08-26",
+          "is_new": true
+        }
+      ],
       "crawled_at": "2026-04-02"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
-      "items": [],
+      "items": [
+        {
+          "title": "[월간 국토] 2026년 3월(통권533호)",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609448",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        },
+        {
+          "title": "[월간 국토] 2026년 3월(통권533호)_mobile",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609449",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        },
+        {
+          "title": "[표지] 2026년 3월 \"청산도의 봄\" (제13회 아름다운 우리 국토 사진공모전 수상작)",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609450",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        },
+        {
+          "title": "[목차] 2026년 3월",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609451",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        },
+        {
+          "title": "[국토시론] 미래 세대를 위한 국유지의 전략적 활용",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609452",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        },
+        {
+          "title": "[특집 | 공공자산 전략으로서의 국유지]",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609453",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        },
+        {
+          "title": "[특집 | 공공자산 전략으로서의 국유지 1] 현 정부의 국유재산 정책 방향과 과제: 공공성 강화와 국가 자산 가치 극대화를 위한 전략적 로드맵",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609454",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        },
+        {
+          "title": "[특집 | 공공자산 전략으로서의 국유지 2] 해외 국유지 관리 방식: 영국과 프랑스 사례를 중심으로",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609455",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        },
+        {
+          "title": "[특집 | 공공자산 전략으로서의 국유지 3] 국유재산의 헐값 매각 방지와 유연한 비축제도의 필요성",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609456",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        },
+        {
+          "title": "[특집 | 공공자산 전략으로서의 국유지 4] 국유지 개발사업에서의 갈등과 관리 방향: 개발사례를 중심으로",
+          "url": "https://www.krihs.re.kr/library/api/media?pmediaId=609457",
+          "date": "통권533호 (2026. 3.)",
+          "is_new": true
+        }
+      ],
       "crawled_at": "2026-04-02"
     },
     "nars_report": {
@@ -89,20 +272,6 @@
           "date": "2026-03-27",
           "dept": "전략주택공급과",
           "is_new": false
-        },
-        {
-          "title": "서울시,‘신속통합기획 온라인 아카이브’ 첫 공개… 신통기획 전 과정 한눈에",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/455016",
-          "date": "2026-03-26",
-          "dept": "신속통합기획과",
-          "is_new": false
-        },
-        {
-          "title": "제5차 서울특별시 도시·건축공동위원회 개최결과",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/455012",
-          "date": "2026-03-26",
-          "dept": "공공주택과",
-          "is_new": false
         }
       ],
       "crawled_at": "2026-04-02"
@@ -117,105 +286,105 @@
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=454783",
           "date": "2026-03-23",
           "dept": "도시공간전략과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "2040 서울 공업지역기본계획",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=453933",
           "date": "2026-03-12",
           "dept": "도시계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "용적률 완화 중첩 적용에 따른 기반시설 충분여부 검토기준 및 매뉴얼",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=453712",
           "date": "2026-03-09",
           "dept": "도시관리과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "2030 서울특별시 도시·주거환경정비기본계획(변경)(도시정비형 재개발사업부문) 보고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=453459",
           "date": "2026-03-05",
           "dept": "도시재창조과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "20220809 도시계획시설 폐지·복합화 시 공공기여 기준",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=452982",
           "date": "2026-02-25",
           "dept": "시설계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "사전협상제도 개정(2026.02.10)",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=452021",
           "date": "2026-02-11",
           "dept": "공공개발담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시건축디자인혁신사업 운영기준(2025.12.31. 제정)",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=449693",
           "date": "2026-01-06",
           "dept": "미래공간담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시계획시설 중복 입체적 결정 기준(&#39;25.12. 개선)",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=449645",
           "date": "2026-01-05",
           "dept": "시설계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "2025 도시공간정책 국제컨퍼런스 자료집",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=448405",
           "date": "2025-12-10",
           "dept": "도시공간전략과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "관광숙박시설 건립 관련 지구단위계획 수립기준",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=446667",
           "date": "2025-11-06",
           "dept": "도시관리과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "2030 서울특별시 도시 및 주거환경정비 기본계획 변경(도시정비형 재개발사업 부문)(서고시 제2025-608호,2025.11.6.)",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=446175",
           "date": "2025-11-06",
           "dept": "도시재창조과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "역세권 활성화사업 운영기준(2025.10.31.)",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=445981",
           "date": "2025-10-31",
           "dept": "도시공간전략과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "역세권 활성화사업 역세권 범위 참고자료",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=445623",
           "date": "2025-10-29",
           "dept": "도시공간전략과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "용도지구 재정비 관련 전략환경영향평가 협의 내용 반영결과 통보서",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=444353",
           "date": "2025-10-10",
           "dept": "도시계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "용도지구 내 노후주거지 환경개선 관리모델 개발 용역 보고서",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=444345",
           "date": "2025-10-10",
           "dept": "도시계획과",
-          "is_new": true
+          "is_new": false
         }
       ],
       "crawled_at": "2026-04-02"
@@ -225,6 +394,14 @@
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001",
       "items": [
+        {
+          "title": "도시계획시설(공원) 결정 실효 및 지형도면 정정 고시",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202604020002",
+          "date": "2026-04-02",
+          "gu": "서울특별시",
+          "notice_no": "2026-176",
+          "is_new": true
+        },
         {
           "title": "도시관리계획(개봉역 지구단위계획) 결정(경미한 변경) 및 지형도면 고시 - 구로구 개봉동 170-33 일원 개봉역 역세권 활성화사업 -",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11530NTC202604010002",
@@ -250,12 +427,12 @@
           "is_new": false
         },
         {
-          "title": "도시관리계획(용도지구:개발진흥지구) 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11200NTC202603120001",
+          "title": "도시시관리계획(도시계획시설: 수도공급설비) 결정(경미한 변경) 및 지형도면 고시",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11440NTC202604020003",
           "date": "2026-03-19",
-          "gu": "서울특별시",
-          "notice_no": "2026-136",
-          "is_new": false
+          "gu": "마포구",
+          "notice_no": "2026-44",
+          "is_new": true
         },
         {
           "title": "은평구 도시계획시설(도로) 결정 실효 및 지형도면 고시",
@@ -279,6 +456,14 @@
           "date": "2026-03-19",
           "gu": "성동구",
           "notice_no": "2026-43",
+          "is_new": false
+        },
+        {
+          "title": "도시관리계획(용도지구:개발진흥지구) 결정(변경) 및 지형도면 고시",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11200NTC202603120001",
+          "date": "2026-03-19",
+          "gu": "서울특별시",
+          "notice_no": "2026-136",
           "is_new": false
         },
         {
@@ -448,22 +633,6 @@
           "gu": "강북구",
           "notice_no": "2026-33",
           "is_new": false
-        },
-        {
-          "title": "이문·휘경재정비촉진지구 재정비촉진계획(이문4구역) 변경(경미한) 결정 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11230NTC202603060004",
-          "date": "2026-02-26",
-          "gu": "서울특별시",
-          "notice_no": "2026-101",
-          "is_new": false
-        },
-        {
-          "title": "미아중심재정비촉진지구 및 재정비촉진계획, 성북제2-신월곡1 결합정비구역, 도시관리계획, 정비계획 변경 결정, 성북제2 지구단위계획 결정 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603040008",
-          "date": "2026-02-26",
-          "gu": "서울특별시",
-          "notice_no": "2026-96",
-          "is_new": false
         }
       ],
       "crawled_at": "2026-04-02"
@@ -489,6 +658,14 @@
           "end_date": "",
           "gu": "",
           "is_new": false
+        },
+        {
+          "title": "서울목동지구 택지개발사업 지구단위계획구역 및 지구단위계획 결정(변경)(안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604020001&projCode=11000PPL202604020003&searchGubun=ing",
+          "date": "2026-04-02",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
         },
         {
           "title": "은마아파트 재건축정비사업에 따른 근린공원 및 소공원 조성계획(안) 열람공고",
@@ -994,6 +1171,14 @@
         ],
         "11470": [
           {
+            "title": "서울목동지구 택지개발사업 지구단위계획구역 및 지구단위계획 결정(변경)(안) 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604020001&projCode=11000PPL202604020003&searchGubun=ing",
+            "date": "2026-04-02",
+            "end_date": "",
+            "gu": "양천구",
+            "is_new": true
+          },
+          {
             "title": "도시관리계획(도시계획시설:시장) 결정(변경)(안) 열람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11470ANN202603300002&projCode=11470PPL202603300009&searchGubun=ing",
             "date": "2026-03-30",
@@ -1142,6 +1327,14 @@
           "end_date": "",
           "gu": "",
           "is_new": false
+        },
+        {
+          "title": "서울목동지구 택지개발사업 지구단위계획구역 및 지구단위계획 결정(변경)(안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604020001&projCode=11000PPL202604020003&searchGubun=ing",
+          "date": "2026-04-02",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
         },
         {
           "title": "은마아파트 재건축정비사업에 따른 근린공원 및 소공원 조성계획(안) 열람공고",
