@@ -572,30 +572,76 @@ function renderFeedCard(src, data){
     return card;
   }
 
-  // ── 결정고시·업무자료: items 기반 일반 피드 카드 ──
-  if(src.sid==="ntfc"||src.sid==="upmu"){
-    card.innerHTML=hd+`<div class="card-body" id="cb-${src.sid}"></div>`;
-    const body=card.querySelector(`#cb-${src.sid}`);
-    if(!data){
-      body.innerHTML=`<div class="card-msg">⚠ <code>data/updates.json</code>이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;
-      return card;
-    }
-    const s=data.sources[src.sid];
-    if(!s||!s.items||!s.items.length){
-      body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.<br><span style="font-size:11px">GitHub Actions를 실행해주세요.</span></div>`;
-      return card;
-    }
+  // ── 결정고시: 자치구 탭 필터 (by_gu 구조) ──
+  if(src.sid==="ntfc"){
+    const SGG_NTFC=[
+      {val:"all", txt:"전체"},
+      {val:"11680",txt:"강남구"},{val:"11740",txt:"강동구"},{val:"11305",txt:"강북구"},
+      {val:"11500",txt:"강서구"},{val:"11620",txt:"관악구"},{val:"11215",txt:"광진구"},
+      {val:"11530",txt:"구로구"},{val:"11545",txt:"금천구"},{val:"11350",txt:"노원구"},
+      {val:"11320",txt:"도봉구"},{val:"11230",txt:"동대문구"},{val:"11590",txt:"동작구"},
+      {val:"11440",txt:"마포구"},{val:"11410",txt:"서대문구"},{val:"11650",txt:"서초구"},
+      {val:"11200",txt:"성동구"},{val:"11290",txt:"성북구"},{val:"11710",txt:"송파구"},
+      {val:"11470",txt:"양천구"},{val:"11560",txt:"영등포구"},{val:"11170",txt:"용산구"},
+      {val:"11380",txt:"은평구"},{val:"11110",txt:"종로구"},{val:"11140",txt:"중구"},
+      {val:"11260",txt:"중랑구"},
+    ];
+    const bodyId=`cb-ntfc-${Date.now()}`;
+    const tabsHtml=SGG_NTFC.map((g,i)=>
+      `<button class="tab-btn wrtanc-tab${i===0?' active':''}" data-gu="${g.val}">${g.txt}</button>`
+    ).join('');
+    card.innerHTML=hd
+      +`<div class="card-tabs wrtanc-tabs" id="ntfc-tabs-${bodyId}">${tabsHtml}</div>`
+      +`<div class="card-body" id="${bodyId}"></div>`;
+
+    const body=card.querySelector(`#${bodyId}`);
+    const tabEls=card.querySelectorAll(`#ntfc-tabs-${bodyId} .wrtanc-tab`);
+
+    const renderNtfc=(guVal)=>{
+      const liveData=updData;
+      if(!liveData){body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;return;}
+      const ws=liveData.sources["ntfc"];
+      if(!ws||!ws.items||!ws.items.length){body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;return;}
+      // 전체 or 자치구 필터
+      const items=guVal==="all"
+        ? ws.items
+        : ws.items.filter(i=>SGG_NTFC.find(g=>g.val===guVal)&&i.gu===SGG_NTFC.find(g=>g.val===guVal).txt);
+      const filtered=q?items.filter(i=>i.title.toLowerCase().includes(q)):items;
+      if(!filtered.length){body.innerHTML=`<div class="card-msg">해당 자치구 고시가 없습니다.</div>`;return;}
+      body.innerHTML=filtered.slice(0,10).map(item=>{
+        const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
+        const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
+        const gu=item.gu?`<span class="post-dept ${guClass(item.gu)}">${item.gu}</span>`:'';
+        const no=item.notice_no?`<span class="post-date">${item.notice_no}</span>`:'';
+        return`<div class="post-row">${badge}${date}${gu}${no}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+      }).join('');
+    };
+
+    tabEls.forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        tabEls.forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        renderNtfc(btn.dataset.gu);
+      });
+    });
+    loadUpdates().then(()=>renderNtfc("all"));
+    return card;
+  }
+
+  // ── 업무자료: items 기반 일반 피드 카드 ──
+  if(src.sid==="upmu"){
+    card.innerHTML=hd+`<div class="card-body" id="cb-upmu"></div>`;
+    const body=card.querySelector(`#cb-upmu`);
+    if(!data){body.innerHTML=`<div class="card-msg">⚠ data/updates.json이 없습니다.<br>GitHub Actions를 먼저 실행해주세요.</div>`;return card;}
+    const s=data.sources["upmu"];
+    if(!s||!s.items||!s.items.length){body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.<br><span style="font-size:11px">GitHub Actions를 실행해주세요.</span></div>`;return card;}
     const filtered=q?s.items.filter(i=>i.title.toLowerCase().includes(q)):s.items;
     if(!filtered.length){body.innerHTML=`<div class="card-msg">검색 결과가 없습니다.</div>`;return card;}
     body.innerHTML=filtered.slice(0,10).map(item=>{
       const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
       const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
-      // ntfc: 자치구 배지 + 고시번호 / upmu: 부서 배지
-      let tag='';
-      if(src.sid==="ntfc"&&item.gu) tag=`<span class="post-dept ${guClass(item.gu)}">${item.gu}</span>`;
-      if(src.sid==="ntfc"&&item.notice_no) tag+=`<span class="post-date">${item.notice_no}</span>`;
-      if(src.sid==="upmu"&&item.dept) tag=`<span class="post-dept ${deptClass(item.dept)}">${item.dept}</span>`;
-      return`<div class="post-row">${badge}${date}${tag}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
+      const dept=item.dept?`<span class="post-dept ${deptClass(item.dept)}">${item.dept}</span>`:'';
+      return`<div class="post-row">${badge}${date}${dept}<a class="post-a" href="${item.url}" target="_blank" rel="noopener">${item.title}</a></div>`;
     }).join('');
     return card;
   }
