@@ -190,35 +190,38 @@ def fetch(url):
 
 
 def parse_nars(soup):
+    """
+    NARS 연구보고서·정책연구용역 파싱.
+    구조: #content 안 li > div.tt > a[href^="javascript:view('ID')"]
+    URL:  https://www.nars.go.kr/report/view.do?nttId={ID}
+    날짜: li 텍스트에서 YYYY.MM.DD 추출
+    """
     items = []
-    rows = (
-        soup.select("div.report_list li")
-        or soup.select("ul.report_list li")
-        or soup.select("div.board_list li")
-        or soup.select("table tbody tr")
-    )
-    if not rows:
-        for a in soup.select("a[href*='brdView'], a[href*='reportView']")[:10]:
-            title = a.get_text(strip=True)
-            if len(title) < 5:
-                continue
-            href = a.get("href", "")
-            url = "https://www.nars.go.kr" + href if href.startswith("/") else href
-            items.append({"title": title, "url": url, "date": ""})
+    content = soup.select_one("#content")
+    if not content:
         return items
 
-    for row in rows[:10]:
-        a = row.select_one("a")
-        if not a:
+    # view('ID') 패턴 링크를 포함한 li 탐색
+    for a in content.select("a[href]")[:50]:
+        href = a.get("href", "")
+        m = re.search(r"view\('(\d+)'\)", href)
+        if not m:
             continue
+        ntt_id = m.group(1)
         title = a.get_text(strip=True)
         if len(title) < 5:
             continue
-        href = a.get("href", "")
-        url = "https://www.nars.go.kr" + href if href.startswith("/") else href
-        date_el = row.select_one(".date, span.date, td.date")
-        date = date_el.get_text(strip=True) if date_el else ""
+        url = f"https://www.nars.go.kr/report/view.do?nttId={ntt_id}"
+        # 날짜: 가장 가까운 li 텍스트에서 YYYY.MM.DD 추출
+        li = a.find_parent("li")
+        date = ""
+        if li:
+            d = re.search(r"(\d{4}\.\d{2}\.\d{2})", li.get_text())
+            if d:
+                date = d.group(1).replace(".", "-")
         items.append({"title": title, "url": url, "date": date})
+        if len(items) >= 10:
+            break
     return items
 
 
