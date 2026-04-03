@@ -98,6 +98,7 @@ aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .post-a{font-size:12px;color:var(--t);text-decoration:none;line-height:1.45;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .post-a:hover{color:var(--blue);}
 .card-msg{padding:18px 13px;font-size:12px;color:var(--t3);text-align:center;line-height:1.6;}
+.post-notice-no{font-size:10px;color:var(--t3);font-family:var(--mono);white-space:nowrap;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;max-width:160px;}
 
 /* ── 카드 내부 필터 탭 ── */
 .card-tabs{display:flex;flex-wrap:wrap;gap:5px;padding:10px 13px;border-bottom:1px solid var(--bd);}
@@ -310,7 +311,6 @@ function postRows(items, q, limit=12){
 function renderPress(data){
   const wrap=document.createElement('div'); wrap.className='feed-wide';
 
-  // 서울시 (위)
   const c2=document.createElement('div'); c2.className='src-card';
   const uid='seoul-'+Date.now();
   const tabsHtml=SEOUL_GROUPS.map((g,i)=>`<button class="tab-btn${i===0?' active':''}" data-gi="${i}">${g.label}</button>`).join('');
@@ -331,7 +331,6 @@ function renderPress(data){
   renderG(0);
   wrap.appendChild(c2);
 
-  // 국토부 (아래)
   const c1=document.createElement('div'); c1.className='src-card';
   const tabs=MOLIT_TABS.map(t=>`<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label}</a>`).join('');
   c1.innerHTML=makeHd("보도자료 / 홍보자료","국토교통부","https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp","바로가기")
@@ -342,7 +341,8 @@ function renderPress(data){
   return wrap;
 }
 
-function buildRegionCard(card, hd, sid, getItems){
+function buildRegionCard(card, hd, listUrl, sid, getItems){
+  // ★ listUrl: 목록 페이지 URL (클릭 시 이동 대상)
   const uid=`${sid}-${Date.now()}`;
   const rHtml=REGIONS.map((r,i)=>`<button class="region-tab${i===0?' active':''}" data-ri="${i}">${r.label}</button>`).join('');
   card.innerHTML=hd+`<div class="region-tabs" id="rt-${uid}">${rHtml}</div><div class="gu-tabs" id="gt-${uid}"></div><div class="card-body post-grid" id="bd-${uid}"></div>`;
@@ -362,7 +362,12 @@ function buildRegionCard(card, hd, sid, getItems){
       const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
       const gu=item.gu?`<span class="post-dept ${GU_COLOR[item.gu]||'dept-default'}">${item.gu}</span>`:'';
       const dday=item.end_date?`<span class="wrtanc-dday">${calcDday(item.end_date)}</span>`:'';
-      return`<div class="post-row"><div class="post-row-meta">${badge}${date}${gu}${dday}</div><a class="post-a" href="${item.url}" target="_blank" rel="noopener" title="${item.title}">${item.title}</a></div>`;
+      // ★ 공고번호 표시 (notice_no 필드 활용)
+      const noticeNo=item.notice_no?`<span class="post-notice-no">${item.notice_no}</span>`:'';
+      return`<div class="post-row">
+        <div class="post-row-meta">${badge}${date}${gu}${dday}${noticeNo}</div>
+        <a class="post-a" href="${listUrl}" target="_blank" rel="noopener" title="${item.title}&#10;※ 목록에서 공고명으로 검색하세요">${item.title}</a>
+      </div>`;
     }).join('');
   };
   const drawGuTabs=()=>{
@@ -383,21 +388,29 @@ function buildRegionCard(card, hd, sid, getItems){
 function renderUrban(data){
   const wrap=document.createElement('div'); wrap.className='feed-wide';
 
-  // 열람공고
   const w1=document.createElement('div'); w1.className='src-card';
-  buildRegionCard(w1, makeHd("열람공고(안)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"), "wrtanc", guName=>{
-    const ws=updData&&updData.sources["wrtanc"]; if(!ws) return null;
-    if(!guName){const seen=new Set();return Object.values(ws.by_gu||{}).flat().filter(i=>{if(seen.has(i.url))return false;seen.add(i.url);return true;});}
-    const code=SGG_CODE[guName]; return(ws.by_gu&&code&&ws.by_gu[code])||[];
-  });
+  buildRegionCard(w1,
+    makeHd("열람공고(안)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"),
+    "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
+    "wrtanc",
+    guName=>{
+      const ws=updData&&updData.sources["wrtanc"]; if(!ws) return null;
+      if(!guName){const seen=new Set();return Object.values(ws.by_gu||{}).flat().filter(i=>{if(seen.has(i.url))return false;seen.add(i.url);return true;});}
+      const code=SGG_CODE[guName]; return(ws.by_gu&&code&&ws.by_gu[code])||[];
+    }
+  );
   wrap.appendChild(w1);
 
-  // 결정고시
   const w2=document.createElement('div'); w2.className='src-card';
-  buildRegionCard(w2, makeHd("결정고시(안)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU4030100001"), "ntfc", guName=>{
-    const ws=updData&&updData.sources["ntfc"]; if(!ws) return null;
-    const items=ws.items||[]; return guName?items.filter(i=>i.gu===guName):items;
-  });
+  buildRegionCard(w2,
+    makeHd("결정고시(안)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU4030100001"),
+    "https://urban.seoul.go.kr/view/html/PMNU4030100001",
+    "ntfc",
+    guName=>{
+      const ws=updData&&updData.sources["ntfc"]; if(!ws) return null;
+      const items=ws.items||[]; return guName?items.filter(i=>i.gu===guName):items;
+    }
+  );
   wrap.appendChild(w2);
 
   return wrap;
@@ -419,8 +432,9 @@ function renderResearch(data){
     const s=data&&data.sources[src.sid];
     card.innerHTML=makeHd(src.name, src.org, src.url);
     const body=document.createElement('div'); body.className='card-body';
-    const isNars=src.sid.startsWith('nars_');
-    if(isNars){
+    // ★ KRIHS·NARS 모두 목록 URL로 이동 + 상세↗ 버튼
+    const needsDetail=src.sid.startsWith('nars_')||src.sid.startsWith('krihs_');
+    if(needsDetail){
       const items=s&&s.items;
       if(!items||!items.length){body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;}
       else{
@@ -428,8 +442,11 @@ function renderResearch(data){
         body.innerHTML=f.slice(0,12).map(item=>{
           const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
           const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
-          const detail=`<a class="card-go" href="${item.url}" target="_blank" rel="noopener" title="개별 글 바로가기" style="margin-left:auto;flex-shrink:0;">상세<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8L8 2M4 2h4v4"/></svg></a>`;
-          return`<div class="post-row"><div class="post-row-meta">${badge}${date}${detail}</div><a class="post-a" href="${src.url}" target="_blank" rel="noopener" title="${item.title}">${item.title}</a></div>`;
+          const detail=`<a class="card-go" href="${item.url}" target="_blank" rel="noopener" title="상세 페이지 (목록 접속 후 열기)" style="margin-left:auto;flex-shrink:0;">상세${goSvg()}</a>`;
+          return`<div class="post-row">
+            <div class="post-row-meta">${badge}${date}${detail}</div>
+            <a class="post-a" href="${src.url}" target="_blank" rel="noopener" title="${item.title}">${item.title}</a>
+          </div>`;
         }).join('');
       }
     } else {
