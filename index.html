@@ -129,6 +129,9 @@ aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 .si-desc{font-size:10px;color:var(--t2);margin-top:2px;line-height:1.4;}
 .static-note{padding:0 13px 10px;font-size:10.5px;color:var(--t3);font-style:italic;line-height:1.5;}
 
+/* ── COPYRIGHT ── */
+.copyright{padding:14px;margin-top:auto;border-top:1px solid rgba(255,255,255,.07);font-size:10px;color:var(--sb-m);line-height:1.6;flex-shrink:0;}
+
 ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:3px;}
 </style>
 </head>
@@ -183,6 +186,10 @@ aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
         <span class="nav-name">국가법령정보센터</span>
       </span>
     </div>
+  </div>
+  <div class="copyright">
+    © 2026 Jensurban1<br>
+    All rights reserved.
   </div>
 </aside>
 
@@ -306,8 +313,6 @@ function postRows(items, q, limit=12){
   }).join('');
 }
 
-// ── 탭별 렌더 ────────────────────────────────────────
-
 function renderPress(data){
   const wrap=document.createElement('div'); wrap.className='feed-wide';
 
@@ -342,7 +347,6 @@ function renderPress(data){
 }
 
 function buildRegionCard(card, hd, listUrl, sid, getItems){
-  // ★ listUrl: 목록 페이지 URL (클릭 시 이동 대상)
   const uid=`${sid}-${Date.now()}`;
   const rHtml=REGIONS.map((r,i)=>`<button class="region-tab${i===0?' active':''}" data-ri="${i}">${r.label}</button>`).join('');
   card.innerHTML=hd+`<div class="region-tabs" id="rt-${uid}">${rHtml}</div><div class="gu-tabs" id="gt-${uid}"></div><div class="card-body post-grid" id="bd-${uid}"></div>`;
@@ -362,7 +366,6 @@ function buildRegionCard(card, hd, listUrl, sid, getItems){
       const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
       const gu=item.gu?`<span class="post-dept ${GU_COLOR[item.gu]||'dept-default'}">${item.gu}</span>`:'';
       const dday=item.end_date?`<span class="wrtanc-dday">${calcDday(item.end_date)}</span>`:'';
-      // ★ 공고번호 표시 (notice_no 필드 활용)
       const noticeNo=item.notice_no?`<span class="post-notice-no">${item.notice_no}</span>`:'';
       return`<div class="post-row">
         <div class="post-row-meta">${badge}${date}${gu}${dday}${noticeNo}</div>
@@ -432,7 +435,6 @@ function renderResearch(data){
     const s=data&&data.sources[src.sid];
     card.innerHTML=makeHd(src.name, src.org, src.url);
     const body=document.createElement('div'); body.className='card-body';
-    // ★ KRIHS·NARS 모두 목록 URL로 이동 + 상세↗ 버튼
     const needsDetail=src.sid.startsWith('nars_')||src.sid.startsWith('krihs_');
     if(needsDetail){
       const items=s&&s.items;
@@ -480,8 +482,6 @@ function renderLaw(){
     </div><div class="static-note">※ 파일 아닌 링크로 관리</div>`;
   wrap.appendChild(card); return wrap;
 }
-
-// ── 메인 렌더 ────────────────────────────────────────
 
 async function render(){
   const content=document.getElementById('content');
