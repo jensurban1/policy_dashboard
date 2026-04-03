@@ -419,7 +419,22 @@ function renderResearch(data){
     const s=data&&data.sources[src.sid];
     card.innerHTML=makeHd(src.name, src.org, src.url);
     const body=document.createElement('div'); body.className='card-body';
-    body.innerHTML=postRows(s&&s.items, q);
+    const isNars=src.sid.startsWith('nars_');
+    if(isNars){
+      const items=s&&s.items;
+      if(!items||!items.length){body.innerHTML=`<div class="card-msg">수집된 항목이 없습니다.</div>`;}
+      else{
+        const f=q?items.filter(i=>i.title.toLowerCase().includes(q)):items;
+        body.innerHTML=f.slice(0,12).map(item=>{
+          const badge=item.is_new?`<span class="badge-new">NEW</span>`:'';
+          const date=item.date?`<span class="post-date">${item.date.slice(0,10)}</span>`:'';
+          const detail=`<a class="card-go" href="${item.url}" target="_blank" rel="noopener" title="개별 글 바로가기" style="margin-left:auto;flex-shrink:0;">상세<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8L8 2M4 2h4v4"/></svg></a>`;
+          return`<div class="post-row"><div class="post-row-meta">${badge}${date}${detail}</div><a class="post-a" href="${src.url}" target="_blank" rel="noopener" title="${item.title}">${item.title}</a></div>`;
+        }).join('');
+      }
+    } else {
+      body.innerHTML=postRows(s&&s.items, q);
+    }
     card.appendChild(body); wrap.appendChild(card);
   });
   return wrap;
