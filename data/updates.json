@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03T08:43:57.270085+09:00",
+  "updated_at": "2026-04-03T09:23:38.185042+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -211,10 +211,22 @@
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [
         {
+          "title": "배임죄 폐지 논의와 향후 제도 설계 방향",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49049",
+          "date": "2026-04-03",
+          "is_new": true
+        },
+        {
           "title": "기본적으로 보장받아야 할 보편적 월경권 : 가격 이슈를 넘어 건강과 인권 관점에서 다뤄져야 할 생리대 문제",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49045",
           "date": "2026-04-02",
           "is_new": false
+        },
+        {
+          "title": "핀란드 학교 현장의 현황·과제 및 시사점",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49048",
+          "date": "2026-04-02",
+          "is_new": true
         },
         {
           "title": "EU 「1회용 플라스틱 지침」 이행결정과 국내 재생원료  의무사용 제도의 정비 과제",
@@ -226,18 +238,6 @@
           "title": "재외선거인 등의 참정권 보장을 위한 비대면 투표 도입 방안",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49041",
           "date": "2026-04-01",
-          "is_new": false
-        },
-        {
-          "title": "대북특사 파견 사례 분석과 정책적 고려사항",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49037",
-          "date": "2026-04-01",
-          "is_new": false
-        },
-        {
-          "title": "농지 전수조사, 어떻게 준비하고 무엇을 확인하며  어디에 활용할 것인가?",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49031",
-          "date": "2026-03-31",
           "is_new": false
         }
       ],
@@ -291,7 +291,7 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/455520",
           "date": "2026-04-03",
           "dept": "용산입체도시담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제5차 서울특별시 도시계획위원회 개최결과",
@@ -463,6 +463,14 @@
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001",
       "items": [
+        {
+          "title": "삼흥연립 소규모재건축사업 사업시행계획(변경)인가 고시",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11305NTC202603300009",
+          "date": "2026-04-03",
+          "gu": "강북구",
+          "notice_no": "2026-47",
+          "is_new": true
+        },
         {
           "title": "도시계획시설(공원) 결정 실효 및 지형도면 정정 고시",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202604020002",
@@ -693,14 +701,6 @@
           "date": "2026-03-05",
           "gu": "동작구",
           "notice_no": "2026-110",
-          "is_new": false
-        },
-        {
-          "title": "미아동 232-1 외 1필지 자율주택정비사업 사업시행계획인가",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11305NTC202602250003",
-          "date": "2026-02-27",
-          "gu": "강북구",
-          "notice_no": "2026-33",
           "is_new": false
         }
       ],
