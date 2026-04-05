@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03T09:23:38.185042+09:00",
+  "updated_at": "2026-04-06T08:50:54.834254+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-03"
+      "crawled_at": "2026-04-06"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-03"
+      "crawled_at": "2026-04-06"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-03"
+      "crawled_at": "2026-04-06"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -211,13 +211,19 @@
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [
         {
-          "title": "배임죄 폐지 논의와 향후 제도 설계 방향",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49049",
+          "title": "성차 과학 및 성차 의약학 활성화 정책 토론회",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49050",
           "date": "2026-04-03",
           "is_new": true
         },
         {
-          "title": "기본적으로 보장받아야 할 보편적 월경권 : 가격 이슈를 넘어 건강과 인권 관점에서 다뤄져야 할 생리대 문제",
+          "title": "배임죄 폐지 논의와 향후 제도 설계 방향",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49049",
+          "date": "2026-04-03",
+          "is_new": false
+        },
+        {
+          "title": "기본권으로 보장받아야 할 보편적 월경권",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49045",
           "date": "2026-04-02",
           "is_new": false
@@ -226,22 +232,16 @@
           "title": "핀란드 학교 현장의 현황·과제 및 시사점",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49048",
           "date": "2026-04-02",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "EU 「1회용 플라스틱 지침」 이행결정과 국내 재생원료  의무사용 제도의 정비 과제",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49042",
           "date": "2026-04-01",
           "is_new": false
-        },
-        {
-          "title": "재외선거인 등의 참정권 보장을 위한 비대면 투표 도입 방안",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49041",
-          "date": "2026-04-01",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-04-03"
+      "crawled_at": "2026-04-06"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -279,7 +279,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-03"
+      "crawled_at": "2026-04-06"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -327,23 +327,9 @@
           "date": "2026-03-30",
           "dept": "미래공간담당관",
           "is_new": false
-        },
-        {
-          "title": "(엠바고10시)(석간) 제6차 정비사업 통합심의위원회 개최결과",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/455104",
-          "date": "2026-03-27",
-          "dept": "주거정비과",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 모아타운·모아주택 사업성 보정계수 적용 소규모정비 통합심의 통과",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/455098",
-          "date": "2026-03-27",
-          "dept": "전략주택공급과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-04-03"
+      "crawled_at": "2026-04-06"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -456,7 +442,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-03"
+      "crawled_at": "2026-04-06"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -469,7 +455,7 @@
           "date": "2026-04-03",
           "gu": "강북구",
           "notice_no": "2026-47",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시계획시설(공원) 결정 실효 및 지형도면 정정 고시",
@@ -704,13 +690,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-03"
+      "crawled_at": "2026-04-06"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-04-03",
+      "crawled_at": "2026-04-06",
       "items": [
         {
           "title": "도시관리계획(석계역 주변 지구단위계획구역 및 계획) 결정(안) 재열람공고",
@@ -743,6 +729,14 @@
           "end_date": "",
           "gu": "",
           "is_new": false
+        },
+        {
+          "title": "도시관리계획(경복궁 서측 지구단위계획구역 등 9개 구역) 결정(변경) (안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604030001&projCode=11000PPL202604030002&searchGubun=ing",
+          "date": "2026-04-03",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
         },
         {
           "title": "도시관리계획(노량진지구 지구단위계획 및 동작구청부지 특별계획구역 세부개발계획) 결정(변경)(안) 열람공고",
@@ -897,14 +891,6 @@
           "is_new": false
         },
         {
-          "title": "수색동 72-2번지 일원 공공지원민간임대주택(어르신안심주택)공급촉진지구 지정 등을 위한 열람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11380ANN202603300001&projCode=11380PPL202603300006&searchGubun=ing",
-          "date": "2026-03-30",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
           "title": "한강로1가 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안)에 대한 재공람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202603130001&projCode=11170PPL202405170001&searchGubun=ing",
           "date": "2026-03-13",
@@ -975,14 +961,6 @@
           "end_date": "",
           "gu": "",
           "is_new": false
-        },
-        {
-          "title": "상일동 빌라단지 통합재건축정비사업  정비계획 수립 및 정비구역 지정(안) 공람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11740ANN202603030001&projCode=11740PPL202602250003&searchGubun=ing",
-          "date": "2026-03-03",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
         }
       ],
       "by_gu": {
@@ -1020,17 +998,17 @@
             "is_new": false
           }
         ],
-        "11740": [
+        "11740": [],
+        "11305": [
           {
-            "title": "상일동 빌라단지 통합재건축정비사업  정비계획 수립 및 정비구역 지정(안) 공람 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11740ANN202603030001&projCode=11740PPL202602250003&searchGubun=ing",
-            "date": "2026-03-03",
+            "title": "도시관리계획(경복궁 서측 지구단위계획구역 등 9개 구역) 결정(변경) (안) 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604030001&projCode=11000PPL202604030002&searchGubun=ing",
+            "date": "2026-04-03",
             "end_date": "",
-            "gu": "강동구",
-            "is_new": false
+            "gu": "강북구",
+            "is_new": true
           }
         ],
-        "11305": [],
         "11500": [
           {
             "title": "도시관리계획(가양？등촌 택지개발지구 지구단위계획구역 및 계획) 결정(변경)(안) 열람공고",
@@ -1060,6 +1038,14 @@
           }
         ],
         "11215": [
+          {
+            "title": "도시관리계획(경복궁 서측 지구단위계획구역 등 9개 구역) 결정(변경) (안) 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604030001&projCode=11000PPL202604030002&searchGubun=ing",
+            "date": "2026-04-03",
+            "end_date": "",
+            "gu": "광진구",
+            "is_new": true
+          },
           {
             "title": "광장극동아파트 재건축사업 정비계획 수립 및 정비구역 지정(안) 재공람·공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11215ANN202603100001&projCode=11215PPL202507090014&searchGubun=ing",
@@ -1154,7 +1140,16 @@
         "11410": [],
         "11650": [],
         "11200": [],
-        "11290": [],
+        "11290": [
+          {
+            "title": "도시관리계획(경복궁 서측 지구단위계획구역 등 9개 구역) 결정(변경) (안) 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604030001&projCode=11000PPL202604030002&searchGubun=ing",
+            "date": "2026-04-03",
+            "end_date": "",
+            "gu": "성북구",
+            "is_new": true
+          }
+        ],
         "11710": [
           {
             "title": "가락동 171-5번지일원 가락7차현대아파트 가로주택정비사업  사업시행계획(변경)인가를 위한 공람공고",
@@ -1261,14 +1256,6 @@
             "is_new": false
           },
           {
-            "title": "수색동 72-2번지 일원 공공지원민간임대주택(어르신안심주택)공급촉진지구 지정 등을 위한 열람 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11380ANN202603300001&projCode=11380PPL202603300006&searchGubun=ing",
-            "date": "2026-03-30",
-            "end_date": "",
-            "gu": "은평구",
-            "is_new": false
-          },
-          {
             "title": "구산역세권(대조동) 장기전세주택 도시정비형 재개발사업 정비계획 결정 및 정비구역 지정(안)을 위한 공람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11380ANN202603230001&projCode=11380PPL202603230001&searchGubun=ing",
             "date": "2026-03-23",
@@ -1285,8 +1272,25 @@
             "is_new": false
           }
         ],
-        "11110": [],
+        "11110": [
+          {
+            "title": "도시관리계획(경복궁 서측 지구단위계획구역 등 9개 구역) 결정(변경) (안) 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604030001&projCode=11000PPL202604030002&searchGubun=ing",
+            "date": "2026-04-03",
+            "end_date": "",
+            "gu": "종로구",
+            "is_new": true
+          }
+        ],
         "11140": [
+          {
+            "title": "도시관리계획(경복궁 서측 지구단위계획구역 등 9개 구역) 결정(변경) (안) 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604030001&projCode=11000PPL202604030002&searchGubun=ing",
+            "date": "2026-04-03",
+            "end_date": "",
+            "gu": "중구",
+            "is_new": true
+          },
           {
             "title": "도시관리계획(북창 지구단위계획) 결정(변경)(안) 주민 재열람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11140ANN202603240001&projCode=11140PPL202603240001&searchGubun=ing",
@@ -1347,6 +1351,14 @@
           "end_date": "",
           "gu": "",
           "is_new": false
+        },
+        {
+          "title": "도시관리계획(경복궁 서측 지구단위계획구역 등 9개 구역) 결정(변경) (안) 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202604030001&projCode=11000PPL202604030002&searchGubun=ing",
+          "date": "2026-04-03",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
         },
         {
           "title": "도시관리계획(노량진지구 지구단위계획 및 동작구청부지 특별계획구역 세부개발계획) 결정(변경)(안) 열람공고",
@@ -1501,14 +1513,6 @@
           "is_new": false
         },
         {
-          "title": "수색동 72-2번지 일원 공공지원민간임대주택(어르신안심주택)공급촉진지구 지정 등을 위한 열람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11380ANN202603300001&projCode=11380PPL202603300006&searchGubun=ing",
-          "date": "2026-03-30",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
           "title": "한강로1가 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안)에 대한 재공람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202603130001&projCode=11170PPL202405170001&searchGubun=ing",
           "date": "2026-03-13",
@@ -1576,14 +1580,6 @@
           "title": "도시관리계획[대방동 393-66 일대 역세권 활성화사업 도시정비형 재개발 정비구역 지정 및 정비계획, 대방동 393-66 일대 역세권 활성화사업 지구단위계획, 신대방지구 지구단위계획] (변경)결정(안) 재공람·공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11590ANN202603100002&projCode=11590PPL202603100010&searchGubun=ing",
           "date": "2026-03-10",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "상일동 빌라단지 통합재건축정비사업  정비계획 수립 및 정비구역 지정(안) 공람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11740ANN202603030001&projCode=11740PPL202602250003&searchGubun=ing",
-          "date": "2026-03-03",
           "end_date": "",
           "gu": "",
           "is_new": false
