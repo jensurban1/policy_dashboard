@@ -245,8 +245,6 @@ def parse_seoul_page(soup):
             continue
         dept = cols[2].get_text(strip=True)
         date = cols[3].get_text(strip=True)
-        if not any(k in dept for k in SEOUL_DEPTS):
-            continue
         a_tag = title_td.select_one("a")
         bbs_no = ""
         if a_tag:
