@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-18T07:05:47.567115+09:00",
+  "updated_at": "2026-04-19T06:51:58.801029+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-18"
+      "crawled_at": "2026-04-19"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-18"
+      "crawled_at": "2026-04-19"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-18"
+      "crawled_at": "2026-04-19"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -241,7 +241,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-18"
+      "crawled_at": "2026-04-19"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -279,7 +279,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-18"
+      "crawled_at": "2026-04-19"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -291,77 +291,77 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456479",
           "date": "2026-04-17",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 17일(금) 관악뷰티거리 방문",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456466",
           "date": "2026-04-17",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 한강버스, 전 구간 운항 재개 47일 만에 10만 명 탑승…정식운항 개시 후 누적 탑승객 20만 돌파",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456428",
           "date": "2026-04-17",
           "dept": "미래한강본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 4.18.(토)~19.(일) 친환경 소비문화 확산위한 '한강플플 그린마켓'",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456425",
           "date": "2026-04-17",
           "dept": "미래한강본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "\"AI 전문가 어디 없나?\"…고민 해결사 '서울AI플랫폼' 떴다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456424",
           "date": "2026-04-17",
           "dept": "서울AI재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "120다산콜, '감정노동 세미나' 교육…감정노동자 보호·사회적 인식 개선 나선다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456423",
           "date": "2026-04-17",
           "dept": "서울시120다산콜재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "“시민의 생각이 서울의 내일이 됩니다” 서울연구원, 2026년 ‘작은연구 좋은서울 지원사업’ 공모 접수 시작",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456422",
           "date": "2026-04-17",
           "dept": "서울연구원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시자원봉사센터, 지역 밀착형 돌봄 이끌 ‘비영리단체’ 모집",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456421",
           "date": "2026-04-17",
           "dept": "서울시자원봉사센터",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울동물원 제4기 동물해설사 출범, “시민과 동물을 잇는 전문 해설 본격 확대”",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456420",
           "date": "2026-04-17",
           "dept": "서울대공원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 창의행정으로 서울의 미래를 그리다…서울시, 2026년 첫 '창의 발표회' 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456419",
           "date": "2026-04-17",
           "dept": "창의규제담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제7차 정비사업 통합심의위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456418",
           "date": "2026-04-17",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시, 서울국제정원박람회 홍보대사 엔하이픈 정원의 홍보영상 공개",
@@ -637,7 +637,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-18"
+      "crawled_at": "2026-04-19"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -750,261 +750,20 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-18"
+      "crawled_at": "2026-04-19"
     },
     "ntfc": {
       "name": "결정고시(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001",
-      "items": [
-        {
-          "title": "신사생활권중심 지구단위계획 결정(경미한 변경) 및 특별계획구역 세부개발계획 (신사동 19-193번지 일대) 결정(경미한 변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11380NTC202604160003",
-          "date": "2026-04-16",
-          "gu": "은평구",
-          "notice_no": "2026-32",
-          "is_new": false
-        },
-        {
-          "title": "개발행위허가 제한 연장 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202604150005",
-          "date": "2026-04-10",
-          "gu": "서울특별시",
-          "notice_no": "2026-69",
-          "is_new": false
-        },
-        {
-          "title": "개포택지개발지구 지구단위계획구역 내 일원개포한신아파트 재건축정비사업 정비계획(경미한)변경 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202604150003",
-          "date": "2026-04-10",
-          "gu": "강남구",
-          "notice_no": "2026-70",
-          "is_new": false
-        },
-        {
-          "title": "삼흥연립 소규모재건축사업 사업시행계획(변경)인가 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11305NTC202603300009",
-          "date": "2026-04-03",
-          "gu": "강북구",
-          "notice_no": "2026-47",
-          "is_new": false
-        },
-        {
-          "title": "역촌1주택소공원2(가칭) 조성계획 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11380NTC202604160005",
-          "date": "2026-04-02",
-          "gu": "서울특별시",
-          "notice_no": "2026-27",
-          "is_new": false
-        },
-        {
-          "title": "역촌1주택소공원1(가칭) 조성계획 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11380NTC202604160004",
-          "date": "2026-04-02",
-          "gu": "은평구",
-          "notice_no": "2026-26",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(개봉역 지구단위계획) 결정(경미한 변경) 및 지형도면 고시 - 구로구 개봉동 170-33 일원 개봉역 역세권 활성화사업 -",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11530NTC202604010002",
-          "date": "2026-04-02",
-          "gu": "서울특별시",
-          "notice_no": "2026-37",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(고덕택지 지구단위계획) 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11740NTC202604090001",
-          "date": "2026-04-02",
-          "gu": "서울특별시",
-          "notice_no": "2026-51",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획[개포택지개발지구 지구단위계획구역 내 특별계획구역19(세부개발계획)]결정(변경), 도곡개포한신아파트 주택재건축정비사업 정비계획 결정(변경) 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202604150006",
-          "date": "2026-04-02",
-          "gu": "서울특별시",
-          "notice_no": "2026-169",
-          "is_new": false
-        },
-        {
-          "title": "도시계획시설(공원) 결정 실효 및 지형도면 정정 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202604020002",
-          "date": "2026-04-02",
-          "gu": "서울특별시",
-          "notice_no": "2026-176",
-          "is_new": false
-        },
-        {
-          "title": "거여마천재정비촉진지구재정비촉진계획(마천3구역) (경미)변경 결정 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202604010003",
-          "date": "2026-03-26",
-          "gu": "서울특별시",
-          "notice_no": "2026-151",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(국제교류복합지구 지구단위계획구역 내舊한국감정원부지 세부개발계획 수립) 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202601050003",
-          "date": "2026-03-26",
-          "gu": "서울특별시",
-          "notice_no": "2026-156",
-          "is_new": false
-        },
-        {
-          "title": "면목7구역 주택정비형 재개발사업 정비계획 변경(경미한 변경) 결정 / 지구단위계획(변경) 결정 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11260NTC202604100002",
-          "date": "2026-03-26",
-          "gu": "서울특별시",
-          "notice_no": "2026-32",
-          "is_new": false
-        },
-        {
-          "title": "묵동지구중심 지구단위계획 결정(경미한 변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11260NTC202604100001",
-          "date": "2026-03-26",
-          "gu": "서울특별시",
-          "notice_no": "2026-31",
-          "is_new": false
-        },
-        {
-          "title": "도시시관리계획(도시계획시설: 수도공급설비) 결정(경미한 변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11440NTC202604020003",
-          "date": "2026-03-19",
-          "gu": "마포구",
-          "notice_no": "2026-44",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획 (한남 지구단위계획구역 내 특별계획가능구역①-2 효력기간 연장) 결정(변경) 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11170NTC202604070004",
-          "date": "2026-03-19",
-          "gu": "서울특별시",
-          "notice_no": "2026-30",
-          "is_new": false
-        },
-        {
-          "title": "은평구 도시계획시설(도로) 결정 실효 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11380NTC202603300005",
-          "date": "2026-03-19",
-          "gu": "서울특별시",
-          "notice_no": "2026-20",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(도시계획시설:철도) 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11380NTC202603230001",
-          "date": "2026-03-19",
-          "gu": "은평구",
-          "notice_no": "2026-21",
-          "is_new": false
-        },
-        {
-          "title": "마장동 382번지 일대 주택정비형 재개발사업 조합설립추진위원회 구성 승인 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11200NTC202603160002",
-          "date": "2026-03-19",
-          "gu": "성동구",
-          "notice_no": "2026-43",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(용도지구:개발진흥지구) 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11200NTC202603120001",
-          "date": "2026-03-19",
-          "gu": "서울특별시",
-          "notice_no": "2026-136",
-          "is_new": false
-        },
-        {
-          "title": "주택건설사업계획승인 및 지구단위계획 지형도면 변경 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11590NTC202604080002",
-          "date": "2026-03-19",
-          "gu": "서울특별시",
-          "notice_no": "2026-48",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(동부화물터미널 지구단위계획 및 특별계획구역 세부개발계획) 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603120010",
-          "date": "2026-03-19",
-          "gu": "서울특별시",
-          "notice_no": "2026-140",
-          "is_new": false
-        },
-        {
-          "title": "주택건설사업계획 변경승인, 지구단위계획(경미한 사항)결정고시 및 지형도면고시, 도시계획시설[도로 및 공원(주차장)] 실시계획인가 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11590NTC202604080003",
-          "date": "2026-03-19",
-          "gu": "서울특별시",
-          "notice_no": "2026-51",
-          "is_new": false
-        },
-        {
-          "title": "마포로5구역 도시정비형 재개발사업, 마포로5구역 제10·11지구 도시정비형 재개발사업 정비계획 (경미한)결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11140NTC202604060005",
-          "date": "2026-03-18",
-          "gu": "서울특별시",
-          "notice_no": "2026-10",
-          "is_new": false
-        },
-        {
-          "title": "도시계획시설(문화시설·도로·광장)사업 실시계획 작성 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603180004",
-          "date": "2026-03-18",
-          "gu": "서울특별시",
-          "notice_no": "2026-152",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(세종로 지구단위계획) 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603120013",
-          "date": "2026-03-13",
-          "gu": "서울특별시",
-          "notice_no": "2026-141",
-          "is_new": false
-        },
-        {
-          "title": "관악산근린공원(목골지구) 조성계획결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603310002",
-          "date": "2026-03-12",
-          "gu": "서울특별시",
-          "notice_no": "2026-120",
-          "is_new": false
-        },
-        {
-          "title": "창신1,2,3,4구역 도시정비형 재개발사업 정비구역·정비계획 결정(변경), 지구단위계획구역·지구단위계획 결정(변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603170009",
-          "date": "2026-03-12",
-          "gu": "서울특별시",
-          "notice_no": "2026-133",
-          "is_new": false
-        },
-        {
-          "title": "수색·증산 재정비촉진지구 재정비촉진계획(수색7구역) (경미한)변경 결정 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603250001",
-          "date": "2026-03-12",
-          "gu": "서울특별시",
-          "notice_no": "2026-119",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(용두역세권 지구단위계획) 결정(경미한 변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11230NTC202603170001",
-          "date": "2026-03-12",
-          "gu": "서울특별시",
-          "notice_no": "2026-46",
-          "is_new": false
-        }
-      ],
-      "crawled_at": "2026-04-18"
+      "items": [],
+      "crawled_at": "2026-04-19"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-04-18",
+      "crawled_at": "2026-04-19",
       "items": [
         {
           "title": "대청마을 북측구역(일원동 619번지 일원) 소규모주택정비  관리계획(모아타운 관리계획) 수립(안) 주민공람 공고",
