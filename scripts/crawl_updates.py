@@ -11,9 +11,49 @@ KST = timezone(timedelta(hours=9))
 TODAY = datetime.now(KST).strftime("%Y-%m-%d")
 OUTPUT_PATH = "data/updates.json"
 
+# ════════════════════════════════════════
+# 헤더 강화: 실제 Chrome이 보내는 풀세트
+# ════════════════════════════════════════
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Sec-Ch-Ua": '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"Windows"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Upgrade-Insecure-Requests": "1",
 }
+
+
+def api_headers(referer):
+    """JSON API 호출용 헤더 (Referer/Origin/XMLHttpRequest 추가)"""
+    h = {**HEADERS}
+    h["Accept"] = "application/json, text/plain, */*"
+    h["Sec-Fetch-Dest"] = "empty"
+    h["Sec-Fetch-Mode"] = "cors"
+    h["Sec-Fetch-Site"] = "same-origin"
+    h["Referer"] = referer
+    parts = referer.split("/", 3)
+    h["Origin"] = parts[0] + "//" + parts[2]
+    h["X-Requested-With"] = "XMLHttpRequest"
+    return h
+
+
+def _normalize_date(s: str) -> str:
+    """다양한 날짜 형식을 YYYY-MM-DD로 통일. 실패 시 빈 문자열."""
+    if not s:
+        return ""
+    s = s.strip()
+    m = re.search(r"(\d{4})[\.\-/](\d{1,2})[\.\-/](\d{1,2})", s)
+    if m:
+        y, mo, d = m.groups()
+        return f"{y}-{int(mo):02d}-{int(d):02d}"
+    return ""
+
 
 # ── 서울시 관심 부서 ──
 SEOUL_DEPTS = [
@@ -54,28 +94,12 @@ NARS_SOURCES = [
 # ════════════════════════════════════════
 
 def crawl_krihs_all():
-    """
-    playwright로 KRIHS 3개 소스를 한 번에 크롤링.
-    반환: {"krihs_brief": [...], "krihs_working": [...], "krihs_article": [...]}
-    """
     from playwright.sync_api import sync_playwright
 
     KRIHS_SOURCES = [
-        {
-            "id": "krihs_brief",
-            "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
-            "type": "board",   # div.board_list li 방식
-        },
-        {
-            "id": "krihs_working",
-            "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
-            "type": "board",
-        },
-        {
-            "id": "krihs_article",
-            "url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
-            "type": "table",   # table tbody tr 방식
-        },
+        {"id": "krihs_brief",   "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1", "type": "board"},
+        {"id": "krihs_working", "url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",  "type": "board"},
+        {"id": "krihs_article", "url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1", "type": "table"},
     ]
 
     results = {s["id"]: [] for s in KRIHS_SOURCES}
@@ -89,7 +113,6 @@ def crawl_krihs_all():
             print(f"  KRIHS playwright: {src['id']} ...")
             try:
                 page.goto(src["url"], wait_until="networkidle", timeout=30000)
-                # 목록이 렌더링될 때까지 대기
                 if src["type"] == "board":
                     page.wait_for_selector("div.board_list li", timeout=15000)
                     items = _parse_krihs_board(page)
@@ -109,7 +132,6 @@ def crawl_krihs_all():
 
 
 def _parse_krihs_board(page):
-    """div.board_list li 구조 파싱 (Brief·워킹페이퍼 공통)"""
     items = []
     lis = page.query_selector_all("div.board_list li")
     for li in lis[:10]:
@@ -119,24 +141,20 @@ def _parse_krihs_board(page):
             if not title:
                 continue
 
-            # 날짜: span.date 텍스트에서 "발행일" 제거
             date_el = li.query_selector("span.date")
             date_raw = date_el.inner_text().strip() if date_el else ""
             date = re.sub(r"발행일\s*", "", date_raw).strip()
 
-            # URL: href에서 kc-{list_no} 또는 iw-{list_no} 추출 → gallery.es 상세 페이지
             a_el = li.query_selector("a")
             href = a_el.get_attribute("href") if a_el else ""
-            # viewCntAdd('BR_1','kc-7728932','/library/...') 패턴에서 list_no 추출
             m = re.search(r"'[a-z]+-(\d+)'", href)
             if m:
                 list_no = m.group(1)
-                # mid는 소스별로 다름 — URL에서 mid 파라미터 추출
                 mid_m = re.search(r"mid=([a-z0-9]+)", page.url)
                 mid = mid_m.group(1) if mid_m else "a10103050000"
                 url = f"https://www.krihs.re.kr/gallery.es?mid={mid}&bid=0022&act=view&list_no={list_no}"
             else:
-                url = page.url  # fallback: 목록 페이지
+                url = page.url
 
             items.append({"title": title, "url": url, "date": date})
         except Exception:
@@ -145,7 +163,6 @@ def _parse_krihs_board(page):
 
 
 def _parse_krihs_table(page):
-    """table tbody tr 구조 파싱 (월간국토 Article)"""
     items = []
     rows = page.query_selector_all("table tbody tr")
     for row in rows[:15]:
@@ -154,15 +171,12 @@ def _parse_krihs_table(page):
             if len(tds) < 2:
                 continue
 
-            # td[0] = 제목
             title = tds[0].inner_text().strip()
             if not title or len(title) < 3:
                 continue
 
-            # td[1] = 권호 (날짜 대용)
             vol = tds[1].inner_text().strip() if len(tds) > 1 else ""
 
-            # 바로가기 a.btn_line — href에서 a-{id} 추출 → gallery.es 상세 페이지
             a_el = row.query_selector("a.btn_line")
             url = "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1"
             if a_el:
@@ -194,18 +208,11 @@ def fetch(url):
 
 
 def parse_nars(soup):
-    """
-    NARS 연구보고서·정책연구용역 파싱.
-    구조: #content 안 li > div.tt > a[href^="javascript:view('ID')"]
-    URL:  https://www.nars.go.kr/report/view.do?nttId={ID}
-    날짜: li 텍스트에서 YYYY.MM.DD 추출
-    """
     items = []
     content = soup.select_one("#content")
     if not content:
         return items
 
-    # view('ID') 패턴 링크를 포함한 li 탐색
     for a in content.select("a[href]")[:50]:
         href = a.get("href", "")
         m = re.search(r"view\('(\d+)'\)", href)
@@ -216,7 +223,6 @@ def parse_nars(soup):
         if len(title) < 5:
             continue
         url = f"https://www.nars.go.kr/report/view.do?nttId={ntt_id}"
-        # 날짜: 가장 가까운 li 텍스트에서 YYYY.MM.DD 추출
         li = a.find_parent("li")
         date = ""
         if li:
@@ -230,7 +236,7 @@ def parse_nars(soup):
 
 
 # ════════════════════════════════════════
-# 서울시 보도자료
+# 서울시 보도자료 (헤더 강화 + 세션)
 # ════════════════════════════════════════
 
 def parse_seoul_page(soup):
@@ -264,33 +270,65 @@ def parse_seoul_page(soup):
 
 def crawl_seoul(base_url, max_pages=10, target=50):
     items = []
+    sess = requests.Session()
+    # 메인 페이지 한 번 방문해서 쿠키 획득
+    try:
+        sess.get("https://www.seoul.go.kr/main/index.jsp", headers=HEADERS, timeout=15)
+    except Exception as e:
+        print(f"  [WARN] 서울시 메인 방문 실패 (무시하고 진행): {e}")
+
     for page in range(1, max_pages + 1):
         url = f"{base_url}?curPage={page}&bbsNo=158"
         print(f"  서울시 {page}페이지...")
-        soup = fetch(url)
-        if not soup:
+        try:
+            r = sess.get(url, headers={**HEADERS, "Referer": base_url}, timeout=15)
+            print(f"    status={r.status_code}, len={len(r.text)}")  # 진단
+            r.raise_for_status()
+            r.encoding = r.apparent_encoding
+            soup = BeautifulSoup(r.text, "html.parser")
+        except Exception as e:
+            print(f"  [ERROR] 서울시 {page}페이지: {e}")
             break
-        items.extend(parse_seoul_page(soup))
+
+        page_items = parse_seoul_page(soup)
+        # 날짜 정규화 (안전장치)
+        for it in page_items:
+            it["date"] = _normalize_date(it.get("date", ""))
+        items.extend(page_items)
         if len(items) >= target:
             break
+
     cutoff = (datetime.now(KST) - timedelta(days=14)).strftime("%Y-%m-%d")
-    return [i for i in items[:target] if i.get("date", "") >= cutoff]
+    # 날짜 비어있으면 살려둠 (페이지 형식 변경 대비)
+    filtered = [i for i in items[:target] if (not i.get("date")) or i["date"] >= cutoff]
+    print(f"  → 서울시 보도자료 최종 {len(filtered)}건 (raw {len(items)}건)")
+    return filtered
 
 
 # ════════════════════════════════════════
-# 서울 도시계획포털
+# 서울 도시계획포털 - 업무자료 (헤더 강화 + 세션)
 # ════════════════════════════════════════
 
 def crawl_upmu():
     DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq="
+    REFERER = "https://urban.seoul.go.kr/view/html/PMNU5020000001"
+
+    sess = requests.Session()
     try:
-        r = requests.get(
+        sess.get(REFERER, headers=HEADERS, timeout=15)
+    except Exception as e:
+        print(f"  [WARN] 업무자료 페이지 방문 실패 (무시하고 진행): {e}")
+
+    try:
+        r = sess.get(
             "https://seoulboard.seoul.go.kr/front/bbs.json",
             params={"bbsNo": "318", "curPage": "1", "cntPerPage": "15",
                     "srchKey": "sj", "srchText": "", "srchBeginDt": "",
                     "srchEndDt": "", "srchCtgry": ""},
-            headers=HEADERS, timeout=20,
+            headers=api_headers(REFERER),
+            timeout=20,
         )
+        print(f"  업무자료 응답: status={r.status_code}, len={len(r.text)}")  # 진단
         r.raise_for_status()
         data = r.json()
     except Exception as e:
@@ -313,18 +351,32 @@ def crawl_upmu():
     return items[:15]
 
 
+# ════════════════════════════════════════
+# 서울 도시계획포털 - 결정고시 (헤더 강화 + 세션)
+# ════════════════════════════════════════
+
 def crawl_ntfc():
     API_URL = "https://urban.seoul.go.kr/ntfc/getNtfcList.json"
     DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU4030100001"
+    REFERER = DETAIL_BASE
     SGG_MAP = {s["val"]: s["txt"] for s in SGG_LIST}
+
+    sess = requests.Session()
     try:
-        r = requests.post(
+        sess.get(REFERER, headers=HEADERS, timeout=15)
+    except Exception as e:
+        print(f"  [WARN] 결정고시 페이지 방문 실패 (무시하고 진행): {e}")
+
+    try:
+        r = sess.post(
             API_URL,
             json={"pageNo": 1, "pageSize": 30, "keywordList": [""],
                   "pubSiteCode": "", "organCode": "", "bgnDate": "",
                   "endDate": "", "srchType": "title", "noticeCode": ""},
-            headers={**HEADERS, "Content-Type": "application/json"}, timeout=20,
+            headers={**api_headers(REFERER), "Content-Type": "application/json"},
+            timeout=20,
         )
+        print(f"  결정고시 응답: status={r.status_code}, len={len(r.text)}")  # 진단
         r.raise_for_status()
         data = r.json()
     except Exception as e:
@@ -351,12 +403,23 @@ def crawl_ntfc():
     return items
 
 
+# ════════════════════════════════════════
+# 서울 도시계획포털 - 열람공고 (헤더 강화 + 세션)
+# ════════════════════════════════════════
+
 def crawl_wrtanc():
     API_URL = "https://urban.seoul.go.kr/wrtanc/getWrtancList.json"
     DETAIL_BASE = "https://urban.seoul.go.kr/view/html/PMNU4010100001"
+    REFERER = "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"
     today = datetime.now(KST)
     bgn = (today - timedelta(days=180)).strftime("%Y-%m-%d")
     end = (today + timedelta(days=180)).strftime("%Y-%m-%d")
+
+    sess = requests.Session()
+    try:
+        sess.get(REFERER, headers=HEADERS, timeout=15)
+    except Exception as e:
+        print(f"  [WARN] 열람공고 페이지 방문 실패 (무시하고 진행): {e}")
 
     def fetch_gu(reading_area=""):
         payload = {
@@ -367,10 +430,12 @@ def crawl_wrtanc():
             "siteCode": "", "noticeBgnDt": " ", "noticeEndDt": " ",
         }
         try:
-            r = requests.post(
+            r = sess.post(
                 API_URL, json=payload,
-                headers={**HEADERS, "Content-Type": "application/json"}, timeout=20,
+                headers={**api_headers(REFERER), "Content-Type": "application/json"},
+                timeout=20,
             )
+            print(f"  열람공고 ({reading_area or '전체'}): status={r.status_code}, len={len(r.text)}")  # 진단
             r.raise_for_status()
             data = r.json()
             return data.get("content") or data.get("list") or data.get("resultList") or []
