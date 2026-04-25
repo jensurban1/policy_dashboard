@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-25T07:27:24.711983+09:00",
+  "updated_at": "2026-04-26T06:54:59.754521+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-25"
+      "crawled_at": "2026-04-26"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-25"
+      "crawled_at": "2026-04-26"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-25"
+      "crawled_at": "2026-04-26"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -241,7 +241,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-25"
+      "crawled_at": "2026-04-26"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -279,7 +279,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-25"
+      "crawled_at": "2026-04-26"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -287,60 +287,74 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 25일(토) 「2026 서울국제정원박람회」 개막 앞두고 현장점검",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456932",
+          "date": "2026-04-25",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 25일(토) 2026 이순신 축제 참석",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456929",
+          "date": "2026-04-25",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 24일(금) 서울시-한국예총 서울시연합회 간담회",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456885",
           "date": "2026-04-24",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "피어나는 모든 것을 위하여…25일(토) 서울식물원 네 번째 '해봄축제'",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456845",
           "date": "2026-04-24",
           "dept": "서울식물원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "‘예술로가 된 군사 도하로’ 서울숲나들목, 725명 재능기부 벽화로“화사한 재탄생”",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456844",
           "date": "2026-04-24",
           "dept": "미래한강본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, '제18회 서울건축문화제' 국형걸 총감독 연임 위촉… 5월부터 사전강좌 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456843",
           "date": "2026-04-24",
           "dept": "한옥건축자산과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시설공단, 화장로 유지관리‘데이터 기반·예측형’전환 … AI 활용체계 구축 시동",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456842",
           "date": "2026-04-24",
           "dept": "서울시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "자원봉사로 하나 된 서울 대학가…서울시자원봉사센터, ‘대학연계 사회참여 프로젝트’ 가속도",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456841",
           "date": "2026-04-24",
           "dept": "서울시자원봉사센터",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "노래로 배우는 생활 속 안전 … 서울시, 제27회 119소방동요 경연대회 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456840",
           "date": "2026-04-24",
           "dept": "소방재난본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) '사후복구'에서 '예방 중심' 치수…오세훈 시장, 광화문 대심도 빗물터널 점검",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456831",
           "date": "2026-04-24",
           "dept": "치수안전과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 산책 명소 남산공원에서 체험 가득 어린이날 만나보세요",
@@ -621,23 +635,9 @@
           "date": "2026-04-21",
           "dept": "산업입지과",
           "is_new": false
-        },
-        {
-          "title": "AI×기후테크 한자리…서울시, 2026 컨퍼런스 전시 참여기업 모집",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456619",
-          "date": "2026-04-21",
-          "dept": "기후환경정책과",
-          "is_new": false
-        },
-        {
-          "title": "(기자설명회) 창동, 365일 K-POP 가득 글로벌문화중심지로… 강북 경제 살리고, 삶의 질 높인다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456615",
-          "date": "2026-04-21",
-          "dept": "동북권사업과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-04-25"
+      "crawled_at": "2026-04-26"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -750,7 +750,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-25"
+      "crawled_at": "2026-04-26"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -771,7 +771,7 @@
           "date": "2026-04-16",
           "gu": "송파구",
           "notice_no": "2026-48",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "효창공원앞역세권(효창동 5-307일원) 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정 및 지형도면 고시",
@@ -795,7 +795,7 @@
           "date": "2026-04-16",
           "gu": "송파구",
           "notice_no": "2026-49",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "개발행위허가 제한 연장 및 지형도면 고시",
@@ -998,13 +998,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-25"
+      "crawled_at": "2026-04-26"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-04-25",
+      "crawled_at": "2026-04-26",
       "items": [
         {
           "title": "여의도 아파트지구 개발기본계획 및 도시관리계획 변경(안), 여의도 은하아파트 재건축 정비구역·정비계획 결정(변경)(안), 지구단위계획 결정(변경)(안) 재공람공고",
