@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-26T06:54:59.754521+09:00",
+  "updated_at": "2026-04-27T05:33:34.193601+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-26"
+      "crawled_at": "2026-04-27"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-26"
+      "crawled_at": "2026-04-27"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-26"
+      "crawled_at": "2026-04-27"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -241,7 +241,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-26"
+      "crawled_at": "2026-04-27"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -279,7 +279,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-26"
+      "crawled_at": "2026-04-27"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -287,18 +287,88 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 26일(일) 쉬엄쉬엄 모닝 참석",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456944",
+          "date": "2026-04-26",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 26일(일) ‘2026 서울하프마라톤’ 출발식 참석",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456943",
+          "date": "2026-04-26",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "“서울의 설렘, 공항부터 도심까지”…서울시,‘2026 서울환대주간’운영",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456902",
+          "date": "2026-04-26",
+          "dept": "관광정책과",
+          "is_new": true
+        },
+        {
+          "title": "`06년부터 시작된 신림재정비촉진지구 '신속통합기획'으로 대장정 마침표",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456901",
+          "date": "2026-04-26",
+          "dept": "신속통합기획과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 기업 규제 풀고 자영업 부담 낮춘다...‘민생 처방전’ 가동",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456900",
+          "date": "2026-04-26",
+          "dept": "규제개선담당관",
+          "is_new": true
+        },
+        {
+          "title": "'연이율 60% 초과 대출은 전면 무효'… 서울시, 불법사금융 집중신고기간 운영",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456899",
+          "date": "2026-04-26",
+          "dept": "공정경제과",
+          "is_new": true
+        },
+        {
+          "title": "서울시청이 '해치 테마파크'로…市, 어린이날 맞아 5일간 해치축제 연다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456890",
+          "date": "2026-04-26",
+          "dept": "서울브랜드담당관",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 상수도관 세척 2028년까지 2,088km 추진…깨끗한 아리수 공급",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456888",
+          "date": "2026-04-26",
+          "dept": "서울아리수본부",
+          "is_new": true
+        },
+        {
+          "title": "'오존(O3) 안심도시 서울', 여름철 고농도 오존 집중관리 시행",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456887",
+          "date": "2026-04-26",
+          "dept": "대기정책과",
+          "is_new": true
+        },
+        {
+          "title": "서울시민의 라이프스타일이 글로벌 콘텐츠가 된다…‘뷰티풀라이프 인 서울’ 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/456884",
+          "date": "2026-04-26",
+          "dept": "대기정책과",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 25일(토) 「2026 서울국제정원박람회」 개막 앞두고 현장점검",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456932",
           "date": "2026-04-25",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 25일(토) 2026 이순신 축제 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/456929",
           "date": "2026-04-25",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 24일(금) 서울시-한국예총 서울시연합회 간담회",
@@ -565,79 +635,9 @@
           "date": "2026-04-22",
           "dept": "공공개발담당관",
           "is_new": false
-        },
-        {
-          "title": "(석간) 지하철역의 변신, '러너지원공간' 러닝 프로그램 6개월간 1,147명 참여",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456676",
-          "date": "2026-04-22",
-          "dept": "도시활력담당관",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울AI재단, 英 케임브리지대·연세대와 ‘피지컬 AI 선도도시’ 구축 나서",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456674",
-          "date": "2026-04-22",
-          "dept": "서울AI재단",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 고지서 열람 후 세금 납부까지 한번에…서울시, 「ETAX 전자사서함 서비스」 시행",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456673",
-          "date": "2026-04-22",
-          "dept": "세무과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시, 북한산 소나무재선충병 재발생에 따른 긴급방제 총력",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456672",
-          "date": "2026-04-22",
-          "dept": "자연생태과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시보건환경연구원 검사·시험성적서, 언제 어디서나 클릭 한 번으로 바로 발급",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456671",
-          "date": "2026-04-22",
-          "dept": "보건환경연구원",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시, 4.30.(목) 한강 수난사고 대응력 높이기 위한 구조·구호 종합훈련",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456649",
-          "date": "2026-04-21",
-          "dept": "미래한강본부",
-          "is_new": false
-        },
-        {
-          "title": "서울시, '정릉공영차고지' 수영장·체육관 갖춘 복합플랫폼 개발 본격화",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456623",
-          "date": "2026-04-21",
-          "dept": "공공개발담당관",
-          "is_new": false
-        },
-        {
-          "title": "강북이 달라진다…'다시, 강북전성시대' 서울시 디자인경관 프로젝트 본격 가동",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456622",
-          "date": "2026-04-21",
-          "dept": "도시경관담당관",
-          "is_new": false
-        },
-        {
-          "title": "방학 때 ‘찐’ 실무경험 쌓자…서영커 인턴십 참여자 모집",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456621",
-          "date": "2026-04-21",
-          "dept": "청년정책담당관",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 제조업 기반 지킨다…'뿌리산업 지원허브' 가동",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456620",
-          "date": "2026-04-21",
-          "dept": "산업입지과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-04-26"
+      "crawled_at": "2026-04-27"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -750,7 +750,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-26"
+      "crawled_at": "2026-04-27"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -998,13 +998,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-04-26"
+      "crawled_at": "2026-04-27"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-04-26",
+      "crawled_at": "2026-04-27",
       "items": [
         {
           "title": "여의도 아파트지구 개발기본계획 및 도시관리계획 변경(안), 여의도 은하아파트 재건축 정비구역·정비계획 결정(변경)(안), 지구단위계획 결정(변경)(안) 재공람공고",
