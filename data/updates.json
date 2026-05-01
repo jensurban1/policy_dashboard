@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-01T05:55:07.818070+09:00",
+  "updated_at": "2026-05-02T05:44:17.380634+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-01"
+      "crawled_at": "2026-05-02"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-01"
+      "crawled_at": "2026-05-02"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -146,64 +146,64 @@
           "title": "[월간 국토] 2026년 4월(통권534호)",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940060",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "[월간 국토] 2026년 4월(통권534호)_mobile",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940061",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "[표지] 2026년 4월 \"남산의 봄\"",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940076",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "[목차] 2026년 4월",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940077",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "[국토시론] 에너지 전환 시대, 전기차 확산은 과제인가 기회인가?",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940096",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "[특집 | 에너지 전환 시대, 전기차의 역할 재정립]",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940097",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "[특집 | 에너지 전환 시대, 전기차의 역할 재정립 1] 재생에너지 확대에 따른 전기차 스마트 충전 인프라 역할 및 과제",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940098",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "[특집 | 에너지 전환 시대, 전기차의 역할 재정립 2] 이용자 중심의 전기차 스마트 충전 인프라 확산 방향",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940116",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "[특집 | 에너지 전환 시대, 전기차의 역할 재정립 3] 제주특별자치도 분산에너지 특화지역 V2G 시범사업과 정책 과제",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940136",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "[특집 | 에너지 전환 시대, 전기차의 역할 재정립 4] 성공적인 전기차-전력망 통합을 위한 미국의 지원 전략 방향",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103010000&bid=0025&act=view&list_no=1940137",
           "date": "통권534호 (2026. 4.)",
-          "is_new": true
+          "is_new": false
         }
       ],
-      "crawled_at": "2026-05-01"
+      "crawled_at": "2026-05-02"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -241,7 +241,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-01"
+      "crawled_at": "2026-05-02"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -279,7 +279,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-01"
+      "crawled_at": "2026-05-02"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -287,95 +287,151 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시장 사후동정 - 김성보 서울시장 권한대행, 1일(금) 「2026 서울국제정원박람회」 개막식 참석",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/457281",
+          "date": "2026-05-01",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "글로벌 청춘들이 한강에서 외치는 창작의 함성, 2026 한강 대학가요제",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/457220",
+          "date": "2026-05-01",
+          "dept": "미래한강본부",
+          "is_new": true
+        },
+        {
+          "title": "‘한성부터 서울까지’ 2천년 서울 역사 한 흐름으로…한성백제박물관·서울역사박물관 통합 교육 운영",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/457219",
+          "date": "2026-05-01",
+          "dept": "한성백제박물관",
+          "is_new": true
+        },
+        {
+          "title": "도심에 핀 수국의 낭만…서울식물원,‘낭만수국전’ 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/457218",
+          "date": "2026-05-01",
+          "dept": "서울식물원",
+          "is_new": true
+        },
+        {
+          "title": "푸르른 어린이날, 서울대공원과 함께 해요!",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/457217",
+          "date": "2026-05-01",
+          "dept": "서울대공원",
+          "is_new": true
+        },
+        {
+          "title": "“토요일엔 상암으로 AI 나들이 가요”…서울AI재단, 시민 대상‘무료 AI 실습·체험 교육’ 운영",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/457216",
+          "date": "2026-05-01",
+          "dept": "서울AI재단",
+          "is_new": true
+        },
+        {
+          "title": "서울시민대학, 역사·도시·디지털 3개전공 심화과정 학습자 모집…입학·학위 절차 간소화",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/457215",
+          "date": "2026-05-01",
+          "dept": "서울시평생교육진흥원",
+          "is_new": true
+        },
+        {
+          "title": "제2차 서울특별시 도시·건축공동위원회  수권분과위원회 개최결과",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/457214",
+          "date": "2026-05-01",
+          "dept": "도시관리과",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 보광나들목 인근 누수로 반포대교~한남역 한강자전거길 통제",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457246",
           "date": "2026-04-30",
           "dept": "서울아리수본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "'서울이 초록도시로'… 서울숲~성수 잇는 서울국제정원박람회 180일간 여정 시작",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457178",
           "date": "2026-04-30",
           "dept": "조경과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 5월 2일 월드컵공원 일대서 '2026 여성마라톤 대회' 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457177",
           "date": "2026-04-30",
           "dept": "체육진흥과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "'축제도 보고 장도 보고'…서울시, 4개 봄 행사에서 '서로장터' 5월 본격 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457173",
           "date": "2026-04-30",
           "dept": "대외협력과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 중장년 창업 '입주 넘어 성장까지'…팀빌딩·투자연계 지원 확대",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457172",
           "date": "2026-04-30",
           "dept": "창업정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "우리 강아지, 오늘도 순찰 중! '서울 반려견 순찰대' 신규 대원 모집",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457171",
           "date": "2026-04-30",
           "dept": "자치경찰위원회",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 중장년취업사관학교 정규반 2차 모집…출범 2개월 만에 867명 참여·수료율 90%",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457170",
           "date": "2026-04-30",
           "dept": "서울시50플러스재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 모아주택 2개소 소규모주택정비 통합심의 통과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457169",
           "date": "2026-04-30",
           "dept": "전략주택공급과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시 '청년 월세' 확대…전세피해자·신혼부부 포함 1만 5천 명 지원",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457144",
           "date": "2026-04-30",
           "dept": "주택정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시, 대학 기숙사 공급 확대 위해 규제 푼다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457143",
           "date": "2026-04-30",
           "dept": "시설계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시, 2026년도 개별공시지가 결정·공시",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457142",
           "date": "2026-04-30",
           "dept": "토지관리과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 포천 한탄강에서 밀양 영남알프스까지 함께할 서울 창업가 모집",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457141",
           "date": "2026-04-30",
           "dept": "대외협력과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 모두를 위한 디자인…서울디자인재단, 공동협력으로 삶의 현장 바꾼다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457140",
           "date": "2026-04-30",
           "dept": "서울디자인재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "전국 최초 지하차도 통제정보, 내비게이션 실시간 안내… 집중호우 전 안전성 확보",
@@ -579,65 +635,9 @@
           "date": "2026-04-27",
           "dept": "미래첨단교통과",
           "is_new": false
-        },
-        {
-          "title": "신풍역 한걸음 주거단지 조성…신길동 3922 신통기획 확정",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456974",
-          "date": "2026-04-27",
-          "dept": "신속통합기획과",
-          "is_new": false
-        },
-        {
-          "title": "고유가 피해지원금, 서울사랑상품권으로 신청하고 48만 가맹점에서 사용하세요!",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456972",
-          "date": "2026-04-27",
-          "dept": "소상공인정책과",
-          "is_new": false
-        },
-        {
-          "title": "문화비축기지, 미디어 아트전시 및 다양한 페스티벌 등 연간 100만 찾는 도심 복합문화거점으로 도약",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456971",
-          "date": "2026-04-27",
-          "dept": "도시활력담당관",
-          "is_new": false
-        },
-        {
-          "title": "서울 전역이 무대가 된다…‘구석구석라이브’로 거리공연 명소화",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456970",
-          "date": "2026-04-27",
-          "dept": "문화정책과",
-          "is_new": false
-        },
-        {
-          "title": "‘모두가 안전한 한강’ 서울시, 수난사고 종합훈련으로 신속 대응 체계 확립",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456969",
-          "date": "2026-04-27",
-          "dept": "미래한강본부",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 용미리에 어린이 전용 산분장지 '나비쉼터' 5월부터 시범운영",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456968",
-          "date": "2026-04-27",
-          "dept": "어르신복지과",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시, 오세훈 시장 지방선거 예비후보자 등록에 따라 김성보 행정2부시장 권한대행",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456966",
-          "date": "2026-04-27",
-          "dept": "인사과",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시, 정무부시장에 박찬구 現 서울시 정무특보 내정",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456965",
-          "date": "2026-04-27",
-          "dept": "인사과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-05-01"
+      "crawled_at": "2026-05-02"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -750,7 +750,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-01"
+      "crawled_at": "2026-05-02"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -763,7 +763,7 @@
           "date": "2026-04-30",
           "gu": "광진구",
           "notice_no": "2026-249",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(서울역 일대 지구단위계획구역 지정 및 계획) 결정(변경) 및 지형도면 고시",
@@ -771,7 +771,7 @@
           "date": "2026-04-23",
           "gu": "용산구",
           "notice_no": "2026-222",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시계획시설(주차장) 시행자 지정 및 실시계획인가 고시",
@@ -998,13 +998,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-01"
+      "crawled_at": "2026-05-02"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-05-01",
+      "crawled_at": "2026-05-02",
       "items": [
         {
           "title": "도시관리계획[동작구 신대방지구 지구단위계획구역 및 계획(재정비)] 결정(변경)(안) 재열람공고",
@@ -1020,7 +1020,7 @@
           "date": "2026-04-30",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시계획시설(도로) 결정(변경)을 위한 열람공고",
@@ -1119,22 +1119,6 @@
           "is_new": false
         },
         {
-          "title": "대청마을 북측구역(일원동 619번지 일원) 소규모주택정비  관리계획(모아타운 관리계획) 수립(안) 주민공람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11680ANN202604160001&projCode=11680PPL202604160005&searchGubun=ing",
-          "date": "2026-04-16",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(대학로 문화지구) 결정(변경)(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11110ANN202604200001&projCode=11110PPL202604200003&searchGubun=ing",
-          "date": "2026-04-20",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
           "title": "용산역전면 및 용산역전면 제1-2구역 도시정비형 재개발사업 정비구역(변경)(안) 공람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202604100001&projCode=11170PPL202604100006&searchGubun=ing",
           "date": "2026-04-10",
@@ -1175,14 +1159,6 @@
           "is_new": false
         },
         {
-          "title": "장안1구역(장안동 134-15번지 일대) 주택정비형 재개발사업정비계획 결정 및 정비구역 지정(안)에 대한 공람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202604080002&projCode=11230PPL202604080006&searchGubun=ing",
-          "date": "2026-04-08",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
           "title": "월계시영고층아파트 재건축사업 정비구역 지정 및 정비계획 수립(안) 공람 공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11350ANN202603260002&projCode=11350PPL202603260003&searchGubun=ing",
           "date": "2026-03-26",
@@ -1200,16 +1176,7 @@
         }
       ],
       "by_gu": {
-        "11680": [
-          {
-            "title": "대청마을 북측구역(일원동 619번지 일원) 소규모주택정비  관리계획(모아타운 관리계획) 수립(안) 주민공람 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11680ANN202604160001&projCode=11680PPL202604160005&searchGubun=ing",
-            "date": "2026-04-16",
-            "end_date": "",
-            "gu": "강남구",
-            "is_new": false
-          }
-        ],
+        "11680": [],
         "11740": [],
         "11305": [],
         "11500": [],
@@ -1284,14 +1251,6 @@
             "title": "동대문구 도시관리계획(도시계획시설: 도로, 학교) 결정(변경)(안) 열람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202604280001&projCode=11230PPL202604280002&searchGubun=ing",
             "date": "2026-04-28",
-            "end_date": "",
-            "gu": "동대문구",
-            "is_new": false
-          },
-          {
-            "title": "장안1구역(장안동 134-15번지 일대) 주택정비형 재개발사업정비계획 결정 및 정비구역 지정(안)에 대한 공람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202604080002&projCode=11230PPL202604080006&searchGubun=ing",
-            "date": "2026-04-08",
             "end_date": "",
             "gu": "동대문구",
             "is_new": false
@@ -1411,16 +1370,7 @@
           }
         ],
         "11380": [],
-        "11110": [
-          {
-            "title": "도시관리계획(대학로 문화지구) 결정(변경)(안) 열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11110ANN202604200001&projCode=11110PPL202604200003&searchGubun=ing",
-            "date": "2026-04-20",
-            "end_date": "",
-            "gu": "종로구",
-            "is_new": false
-          }
-        ],
+        "11110": [],
         "11140": [
           {
             "title": "DDP 1·2·3 구역 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안) 공람？공고",
@@ -1428,7 +1378,7 @@
             "date": "2026-04-30",
             "end_date": "",
             "gu": "중구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "마포로5구역 제10·11지구 도시정비형 재개발사업  사업시행계획(변경)인가를 위한 공람·공고",
@@ -1456,7 +1406,7 @@
           "date": "2026-04-30",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시계획시설(도로) 결정(변경)을 위한 열람공고",
@@ -1555,22 +1505,6 @@
           "is_new": false
         },
         {
-          "title": "대청마을 북측구역(일원동 619번지 일원) 소규모주택정비  관리계획(모아타운 관리계획) 수립(안) 주민공람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11680ANN202604160001&projCode=11680PPL202604160005&searchGubun=ing",
-          "date": "2026-04-16",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(대학로 문화지구) 결정(변경)(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11110ANN202604200001&projCode=11110PPL202604200003&searchGubun=ing",
-          "date": "2026-04-20",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
           "title": "용산역전면 및 용산역전면 제1-2구역 도시정비형 재개발사업 정비구역(변경)(안) 공람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202604100001&projCode=11170PPL202604100006&searchGubun=ing",
           "date": "2026-04-10",
@@ -1606,14 +1540,6 @@
           "title": "신림6구역 주택정비형 재개발사업 정비계획 결정 및 정비구역 지정(안)에 재공람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11620ANN202604070001&projCode=11620PPL202505290005&searchGubun=ing",
           "date": "2026-04-07",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "장안1구역(장안동 134-15번지 일대) 주택정비형 재개발사업정비계획 결정 및 정비구역 지정(안)에 대한 공람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202604080002&projCode=11230PPL202604080006&searchGubun=ing",
-          "date": "2026-04-08",
           "end_date": "",
           "gu": "",
           "is_new": false
