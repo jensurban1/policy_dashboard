@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-02T05:44:17.380634+09:00",
+  "updated_at": "2026-05-03T05:36:18.108258+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-02"
+      "crawled_at": "2026-05-03"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-02"
+      "crawled_at": "2026-05-03"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-02"
+      "crawled_at": "2026-05-03"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -241,7 +241,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-02"
+      "crawled_at": "2026-05-03"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -279,7 +279,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-02"
+      "crawled_at": "2026-05-03"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -287,60 +287,67 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) '2026 서울국제정원박람회' 개막 첫날 30만명 찾아… 서울시, 관람객 안전 최우선",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/457297",
+          "date": "2026-05-02",
+          "dept": "조경과",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 - 김성보 서울시장 권한대행, 1일(금) 「2026 서울국제정원박람회」 개막식 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457281",
           "date": "2026-05-01",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "글로벌 청춘들이 한강에서 외치는 창작의 함성, 2026 한강 대학가요제",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457220",
           "date": "2026-05-01",
           "dept": "미래한강본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "‘한성부터 서울까지’ 2천년 서울 역사 한 흐름으로…한성백제박물관·서울역사박물관 통합 교육 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457219",
           "date": "2026-05-01",
           "dept": "한성백제박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도심에 핀 수국의 낭만…서울식물원,‘낭만수국전’ 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457218",
           "date": "2026-05-01",
           "dept": "서울식물원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "푸르른 어린이날, 서울대공원과 함께 해요!",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457217",
           "date": "2026-05-01",
           "dept": "서울대공원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "“토요일엔 상암으로 AI 나들이 가요”…서울AI재단, 시민 대상‘무료 AI 실습·체험 교육’ 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457216",
           "date": "2026-05-01",
           "dept": "서울AI재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시민대학, 역사·도시·디지털 3개전공 심화과정 학습자 모집…입학·학위 절차 간소화",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457215",
           "date": "2026-05-01",
           "dept": "서울시평생교육진흥원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "제2차 서울특별시 도시·건축공동위원회  수권분과위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457214",
           "date": "2026-05-01",
           "dept": "도시관리과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 보광나들목 인근 누수로 반포대교~한남역 한강자전거길 통제",
@@ -628,16 +635,9 @@
           "date": "2026-04-27",
           "dept": "임대주택과",
           "is_new": false
-        },
-        {
-          "title": "새벽을 여는 'A504(금천~시청)' 노선 29일(수) 개통…동서남북 자율주행으로 연결",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/456975",
-          "date": "2026-04-27",
-          "dept": "미래첨단교통과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-05-02"
+      "crawled_at": "2026-05-03"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -750,7 +750,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-02"
+      "crawled_at": "2026-05-03"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -998,13 +998,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-02"
+      "crawled_at": "2026-05-03"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-05-02",
+      "crawled_at": "2026-05-03",
       "items": [
         {
           "title": "도시관리계획[동작구 신대방지구 지구단위계획구역 및 계획(재정비)] 결정(변경)(안) 재열람공고",
