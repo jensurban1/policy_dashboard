@@ -18,6 +18,113 @@
 }
 html,body{height:100%;}
 body{font-family:var(--font);background:var(--bg);color:var(--t);display:flex;height:100vh;overflow:hidden;}
+
+/* ========== 로그인 화면 스타일 ========== */
+.login-overlay{
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.login-box{
+  background:white;
+  border-radius:16px;
+  padding:48px 40px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+  width:90%;
+  max-width:400px;
+  text-align:center;
+}
+.login-logo{
+  font-size:48px;
+  margin-bottom:12px;
+}
+.login-title{
+  font-size:24px;
+  font-weight:700;
+  color:#1a202c;
+  margin-bottom:8px;
+  letter-spacing:-0.5px;
+}
+.login-subtitle{
+  font-size:14px;
+  color:#718096;
+  margin-bottom:32px;
+}
+.login-form{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.login-input{
+  padding:14px 16px;
+  border:2px solid #e2e8f0;
+  border-radius:8px;
+  font-size:15px;
+  font-family:var(--font);
+  transition:all 0.2s;
+  outline:none;
+}
+.login-input:focus{
+  border-color:#667eea;
+  box-shadow:0 0 0 3px rgba(102,126,234,0.1);
+}
+.login-input::placeholder{
+  color:#cbd5e0;
+}
+.login-btn{
+  padding:14px;
+  background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform 0.2s, box-shadow 0.2s;
+  font-family:var(--font);
+}
+.login-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(102,126,234,0.4);
+}
+.login-btn:active{
+  transform:translateY(0);
+}
+.login-error{
+  background:#fee;
+  color:#c53030;
+  padding:10px 12px;
+  border-radius:6px;
+  font-size:13px;
+  display:none;
+  border:1px solid #feb2b2;
+}
+.login-error.show{
+  display:block;
+}
+.login-footer{
+  margin-top:24px;
+  padding-top:20px;
+  border-top:1px solid #e2e8f0;
+  font-size:12px;
+  color:#a0aec0;
+  line-height:1.6;
+}
+
+/* ========== 메인 콘텐츠 (기존 스타일) ========== */
+#mainContent{
+  display:none;
+  width:100%;
+  height:100%;
+}
+#mainContent.unlocked{
+  display:flex;
+}
+
 aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction:column;height:100%;overflow-y:auto;}
 .brand{padding:18px 14px 14px;border-bottom:1px solid rgba(255,255,255,.07);}
 .brand-t{font-size:12.5px;font-weight:600;color:#f1f5f9;letter-spacing:-.2px;line-height:1.4;}
@@ -118,6 +225,35 @@ aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 </head>
 <body>
 
+<!-- ========== 로그인 화면 ========== -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <div class="login-logo">🔐</div>
+    <div class="login-title">정책 자료 대시보드</div>
+    <div class="login-subtitle">접근을 위해 패스워드를 입력하세요</div>
+    <form class="login-form" id="loginForm">
+      <input 
+        type="password" 
+        id="passwordInput" 
+        class="login-input" 
+        placeholder="패스워드 입력"
+        autocomplete="off"
+        required
+      >
+      <button type="submit" class="login-btn">접속하기</button>
+      <div class="login-error" id="loginError">
+        ⚠️ 패스워드가 올바르지 않습니다.
+      </div>
+    </form>
+    <div class="login-footer">
+      Urban Planning Dashboard<br>
+      © 2026 All rights reserved
+    </div>
+  </div>
+</div>
+
+<!-- ========== 메인 콘텐츠 ========== -->
+<div id="mainContent">
 <aside>
   <div class="brand">
     <div class="brand-t">정책 자료<br>대시보드</div>
@@ -185,8 +321,53 @@ aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
   </div>
   <div class="content" id="content"></div>
 </div>
+</div>
 
 <script>
+// ========== 패스워드 인증 ==========
+(function() {
+  // 🔑 여기서 패스워드 변경하세요!
+  const CORRECT_PASSWORD = 'urban2026';
+  
+  // 세션 확인
+  function checkSession() {
+    return sessionStorage.getItem('dashboard_auth') === 'true';
+  }
+  
+  // 대시보드 잠금 해제
+  function unlockDashboard() {
+    document.getElementById('loginOverlay').style.display = 'none';
+    document.getElementById('mainContent').classList.add('unlocked');
+    initDashboard();
+  }
+  
+  // 로그인 폼 처리
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const input = document.getElementById('passwordInput');
+    const errorDiv = document.getElementById('loginError');
+    const password = input.value.trim();
+    
+    if (password === CORRECT_PASSWORD) {
+      sessionStorage.setItem('dashboard_auth', 'true');
+      unlockDashboard();
+    } else {
+      errorDiv.classList.add('show');
+      input.value = '';
+      input.focus();
+      setTimeout(() => {
+        errorDiv.classList.remove('show');
+      }, 3000);
+    }
+  });
+  
+  // 초기 세션 확인
+  if (checkSession()) {
+    unlockDashboard();
+  }
+})();
+
+// ========== 기존 대시보드 코드 ==========
 const MOLIT_TABS=[
   {label:"전체",     url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
   {label:"주택토지", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_2"},
@@ -301,7 +482,6 @@ function postRows(items,q,limit=12){
 function renderPress(data){
   const wrap=document.createElement('div'); wrap.className='feed-wide';
 
-  /* ── 서울특별시 ── */
   const c2=document.createElement('div'); c2.className='src-card';
   const uid='seoul-'+Date.now();
   const tabsHtml=SEOUL_GROUPS.map((g,i)=>`<button class="tab-btn${i===0?' active':''}" data-gi="${i}">${g.label}</button>`).join('');
@@ -322,7 +502,6 @@ function renderPress(data){
   renderG(0);
   wrap.appendChild(c2);
 
-  /* ── 국토교통부 ── */
   const c1=document.createElement('div'); c1.className='src-card';
   const tabs=MOLIT_TABS.map(t=>`<a class="tab-btn" href="${t.url}" target="_blank" rel="noopener">${t.label}</a>`).join('');
   c1.innerHTML=makeHd("보도자료 / 홍보자료","국토교통부","https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp","바로가기")
@@ -495,10 +674,11 @@ function setTab(tab){
   render();
 }
 
-document.querySelectorAll('.nav-item[data-tab]').forEach(el=>el.addEventListener('click',()=>setTab(el.dataset.tab)));
-document.getElementById('searchInput').addEventListener('input',e=>{searchQ=e.target.value;render();});
-
-render();
+function initDashboard(){
+  document.querySelectorAll('.nav-item[data-tab]').forEach(el=>el.addEventListener('click',()=>setTab(el.dataset.tab)));
+  document.getElementById('searchInput').addEventListener('input',e=>{searchQ=e.target.value;render();});
+  render();
+}
 </script>
 </body>
 </html>
