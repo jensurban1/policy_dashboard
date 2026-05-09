@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-09T05:53:41.806519+09:00",
+  "updated_at": "2026-05-10T05:38:43.983051+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-09"
+      "crawled_at": "2026-05-10"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-09"
+      "crawled_at": "2026-05-10"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-09"
+      "crawled_at": "2026-05-10"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -241,7 +241,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-09"
+      "crawled_at": "2026-05-10"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -279,7 +279,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-09"
+      "crawled_at": "2026-05-10"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -291,63 +291,63 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457605",
           "date": "2026-05-08",
           "dept": "관광산업과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시설공단, 서울 공사현장 현수막 디자인 미관 개선해 시민 가독성·안전성 높인다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457604",
           "date": "2026-05-08",
           "dept": "서울시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "베이징에서 서울 AI 혁신 알린다 … 서울AI재단, 국제과학기술 산업박람회(CHITEC) ‘스마트라이프위크(SLW)’ 홍보관 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457603",
           "date": "2026-05-08",
           "dept": "서울AI재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울대공원 ‘식물원 속 동물원, 할아버지와 나의 식물원 이야기’ 특별전시 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457602",
           "date": "2026-05-08",
           "dept": "서울대공원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제8차 정비사업 통합심의위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457580",
           "date": "2026-05-08",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) ‘서울창업허브 관악’설계공모...관악S밸리 이끌 딥테크 창업거점 조성",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457574",
           "date": "2026-05-08",
           "dept": "미래공간담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 종량제봉투 함께 줄여요… 서울시 '파봉 캠페인' 통한 실천 확산",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457573",
           "date": "2026-05-08",
           "dept": "자원회수시설과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시복지재단, 돌봄 현장에 AI·로봇 도입한다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457569",
           "date": "2026-05-08",
           "dept": "서울시복지재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 작년 1천만명 방문 서울국제정원박람회… 올해는 6일만에 100만명 기록",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457599",
           "date": "2026-05-07",
           "dept": "조경과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(보도참고자료) 국가유산청, 세운4구역 관련 행정명령… 서울시, 합리적 해법 찾을 것",
@@ -637,7 +637,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-09"
+      "crawled_at": "2026-05-10"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -649,7 +649,7 @@
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=457609",
           "date": "2026-05-08",
           "dept": "미래공간담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "역세권 활성화사업 운영기준(2026.04.30.)",
@@ -750,7 +750,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-09"
+      "crawled_at": "2026-05-10"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -763,7 +763,7 @@
           "date": "2026-05-07",
           "gu": "도봉구",
           "notice_no": "2026-52",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(강남구 도곡동 914-1번지 일대 역세권 활성화사업 지구단위계획구역 지정 및 계획) 결정(경미한 변경) 및 지형도면 고시",
@@ -803,7 +803,7 @@
           "date": "2026-04-30",
           "gu": "강남구",
           "notice_no": "2026-82",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(광흥창역세권(상수동 281-2번지 일원) 장기전세주택 지구단위계획구역 지정 및 계획) 결정(변경)·지형도면 고시",
@@ -835,7 +835,7 @@
           "date": "2026-04-23",
           "gu": "영등포구",
           "notice_no": "2026-229",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(서울역 일대 지구단위계획구역 지정 및 계획) 결정(변경) 및 지형도면 고시",
@@ -998,13 +998,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-09"
+      "crawled_at": "2026-05-10"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-05-09",
+      "crawled_at": "2026-05-10",
       "items": [
         {
           "title": "원효로1가 역세권 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안)에 대한 재공람？공고",
@@ -1012,7 +1012,7 @@
           "date": "2026-05-08",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(온수역 일대 지구단위계획 및 럭비구장 특별계획구역 세부개발계획) 결정(변경)(안) 재열람공고",
@@ -1252,7 +1252,7 @@
             "date": "2026-05-08",
             "end_date": "",
             "gu": "용산구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "용산역전면 및 용산역전면 제1-2구역 도시정비형 재개발사업 정비구역(변경)(안) 공람공고",
@@ -1284,7 +1284,7 @@
           "date": "2026-05-08",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(온수역 일대 지구단위계획 및 럭비구장 특별계획구역 세부개발계획) 결정(변경)(안) 재열람공고",
