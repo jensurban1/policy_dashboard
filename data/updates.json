@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-16T05:55:34.707822+09:00",
+  "updated_at": "2026-05-17T05:40:32.345508+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-16"
+      "crawled_at": "2026-05-17"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-16"
+      "crawled_at": "2026-05-17"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-16"
+      "crawled_at": "2026-05-17"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -241,7 +241,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-16"
+      "crawled_at": "2026-05-17"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -279,7 +279,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-16"
+      "crawled_at": "2026-05-17"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -287,39 +287,60 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시, 17시 기준 오존 주의보 해제 (서울권역)",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458113",
+          "date": "2026-05-16",
+          "dept": "보건환경연구원",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시, 15시 기준 오존 주의보 해제 (서울권역)",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458112",
+          "date": "2026-05-16",
+          "dept": "보건환경연구원",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시 16일 14시 기준 오존(O3) 주의보 발령",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458107",
+          "date": "2026-05-16",
+          "dept": "보건환경연구원",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시, 17시 기준 오존 주의보 해제",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458090",
           "date": "2026-05-15",
           "dept": "보건환경연구원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시, 15일 14시 기준 오존(O3) 주의보 발령",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458063",
           "date": "2026-05-15",
           "dept": "보건환경연구원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제7차 도시계획위원회 신속통합기획 수권분과위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457992",
           "date": "2026-05-15",
           "dept": "도시계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울미래인재재단, 해외 교환학생 대학생 60명에 1인 최대 550만 원 장학금 지원",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457979",
           "date": "2026-05-15",
           "dept": "서울미래인재재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울생활사박물관, 시대를 품은 청춘의 기억 〈대학에서 우리는〉 기획전 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457978",
           "date": "2026-05-15",
           "dept": "서울역사박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시, 21시 기준 오존 주의보 해제",
@@ -452,14 +473,14 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457819",
           "date": "2026-05-13",
           "dept": "문화정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시, 건축자산 진흥구역 내 한옥 생태면적률 의무 적용 제외",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/457816",
           "date": "2026-05-13",
           "dept": "시설계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 긴급하게 지원하고 후속 연계까지…서울시, 18일 '그냥드림' 전면 시행",
@@ -614,30 +635,9 @@
           "date": "2026-05-11",
           "dept": "치수안전과",
           "is_new": false
-        },
-        {
-          "title": "(석간) 구직지원금부터 AI 직무교육과 인턴십까지 '취업패키지'…'서울커리업' 2차 모집 시작",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/457663",
-          "date": "2026-05-11",
-          "dept": "양성평등담당관",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 부모가 바뀌자, 자녀가 움직였다…서울시 고립·은둔 청년 가족 교육 6월부터 본격 운영",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/457662",
-          "date": "2026-05-11",
-          "dept": "청년사업담당관",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 한성백제박물관, KBS국악관현악단과 업무협약… 10월 백제성벽 앞 국악 공연 선보인다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/457661",
-          "date": "2026-05-11",
-          "dept": "한성백제박물관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-05-16"
+      "crawled_at": "2026-05-17"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -750,7 +750,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-16"
+      "crawled_at": "2026-05-17"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -763,7 +763,7 @@
           "date": "2026-05-14",
           "gu": "성북구",
           "notice_no": "2026-267",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "광운대역세권 공공임대주택 건립 관련 도시정비형 재개발정비구역 및 정비계획 해제 결정 및 지형도면 고시 - 월계생활권중심 지구단위계획구역 변경 및 지형도면 고시 -",
@@ -779,7 +779,7 @@
           "date": "2026-05-14",
           "gu": "강남구",
           "notice_no": "2026-91",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시계획시설(문화시설) 결정 실효 및 지형도면 고시",
@@ -998,13 +998,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-16"
+      "crawled_at": "2026-05-17"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-05-16",
+      "crawled_at": "2026-05-17",
       "items": [
         {
           "title": "미아동 345-1번지 일대 주택재개발 정비계획 결정 및 정비구역 지정(안) 재공람공고",
@@ -1084,7 +1084,7 @@
           "date": "2026-05-15",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(도시계획시설:도로) 결정을 위한 열람공고(안)",
@@ -1153,7 +1153,7 @@
             "date": "2026-05-15",
             "end_date": "",
             "gu": "강북구",
-            "is_new": true
+            "is_new": false
           }
         ],
         "11500": [
@@ -1376,7 +1376,7 @@
           "date": "2026-05-15",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(도시계획시설:도로) 결정을 위한 열람공고(안)",
