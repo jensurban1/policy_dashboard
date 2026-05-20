@@ -282,7 +282,7 @@ def crawl_seoul(base_url, max_pages=10, target=50):
         print(f"  서울시 {page}페이지...")
         try:
             r = sess.get(url, headers={**HEADERS, "Referer": base_url}, timeout=15)
-            print(f"    status={r.status_code}, len={len(r.text)}")  # 진단
+            print(f"    status={r.status_code}, len={len(r.text)}")
             r.raise_for_status()
             r.encoding = r.apparent_encoding
             soup = BeautifulSoup(r.text, "html.parser")
@@ -291,7 +291,6 @@ def crawl_seoul(base_url, max_pages=10, target=50):
             break
 
         page_items = parse_seoul_page(soup)
-        # 날짜 정규화 (안전장치)
         for it in page_items:
             it["date"] = _normalize_date(it.get("date", ""))
         items.extend(page_items)
@@ -299,7 +298,6 @@ def crawl_seoul(base_url, max_pages=10, target=50):
             break
 
     cutoff = (datetime.now(KST) - timedelta(days=14)).strftime("%Y-%m-%d")
-    # 날짜 비어있으면 살려둠 (페이지 형식 변경 대비)
     filtered = [i for i in items[:target] if (not i.get("date")) or i["date"] >= cutoff]
     print(f"  → 서울시 보도자료 최종 {len(filtered)}건 (raw {len(items)}건)")
     return filtered
@@ -328,7 +326,7 @@ def crawl_upmu():
             headers=api_headers(REFERER),
             timeout=20,
         )
-        print(f"  업무자료 응답: status={r.status_code}, len={len(r.text)}")  # 진단
+        print(f"  업무자료 응답: status={r.status_code}, len={len(r.text)}")
         r.raise_for_status()
         data = r.json()
     except Exception as e:
@@ -376,7 +374,7 @@ def crawl_ntfc():
             headers={**api_headers(REFERER), "Content-Type": "application/json"},
             timeout=20,
         )
-        print(f"  결정고시 응답: status={r.status_code}, len={len(r.text)}")  # 진단
+        print(f"  결정고시 응답: status={r.status_code}, len={len(r.text)}")
         r.raise_for_status()
         data = r.json()
     except Exception as e:
@@ -435,7 +433,7 @@ def crawl_wrtanc():
                 headers={**api_headers(REFERER), "Content-Type": "application/json"},
                 timeout=20,
             )
-            print(f"  열람공고 ({reading_area or '전체'}): status={r.status_code}, len={len(r.text)}")  # 진단
+            print(f"  열람공고 ({reading_area or '전체'}): status={r.status_code}, len={len(r.text)}")
             r.raise_for_status()
             data = r.json()
             return data.get("content") or data.get("list") or data.get("resultList") or []
@@ -453,15 +451,33 @@ def crawl_wrtanc():
         title = (item.get("projNm") or item.get("title") or item.get("announceTitle") or "").strip()
         date = (item.get("createDatetime", "")[:10] if item.get("createDatetime") else "")
         end_date = (item.get("noticeEndDt") or "").strip()
+        
+        # ✅ 수정: gu_name이 없을 때 API 응답에서 추출
         if not gu_name:
             dept = item.get("dept") or {}
-            gu_name = (dept.get("deptNm") or dept.get("deptName") or item.get("siteNm") or item.get("pubSiteNm") or "").strip()
+            gu_name = (dept.get("deptNm") or dept.get("deptName") or 
+                       item.get("siteNm") or item.get("pubSiteNm") or "").strip()
+        
         return {"title": title, "url": url, "date": date, "end_date": end_date, "gu": gu_name}
 
     result = {}
     print("  열람공고 전체 수집 중...")
     all_raw = fetch_gu("")
-    result["all"] = [parse_item(i) for i in all_raw if i.get("projNm") or i.get("title")]
+    
+    # ✅ 수정: all 배열에도 구 정보 추출
+    all_items = []
+    for i in all_raw:
+        if not (i.get("projNm") or i.get("title")):
+            continue
+        
+        # API 응답에서 직접 구 이름 추출
+        dept = i.get("dept") or {}
+        gu_name = (dept.get("deptNm") or dept.get("deptName") or 
+                   i.get("siteNm") or i.get("pubSiteNm") or "").strip()
+        
+        all_items.append(parse_item(i, gu_name=gu_name))
+    
+    result["all"] = all_items
     print(f"    → 전체 {len(result['all'])}건")
 
     for sgg in SGG_LIST:
