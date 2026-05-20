@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-20T17:01:08.343574+09:00",
+  "updated_at": "2026-05-21T06:47:45.754695+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-20"
+      "crawled_at": "2026-05-21"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-20"
+      "crawled_at": "2026-05-21"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-20"
+      "crawled_at": "2026-05-21"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -211,10 +211,16 @@
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [
         {
+          "title": "도서·산간 및 비수도권·비도시 지역주민의 건강과 의료,  또다시 외면할 것인가",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49213",
+          "date": "2026-05-20",
+          "is_new": true
+        },
+        {
           "title": "중동전쟁과 한반도 안보의 미래 -질서 전환기 전략적 선택",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49208",
           "date": "2026-05-20",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "의회조사기구 국제협력 및 산업·문화·정치 분야 현안 조사를 위한 국회입법조사처장 이탈리아·오스트리아 방문",
@@ -233,15 +239,9 @@
           "url": "https://www.nars.go.kr/report/view.do?nttId=49187",
           "date": "2026-05-13",
           "is_new": false
-        },
-        {
-          "title": "해저 갱도에 묻힌 조세이 탄광 희생자, 귀환길 열려면?",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49182",
-          "date": "2026-05-11",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-05-20"
+      "crawled_at": "2026-05-21"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -279,7 +279,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-20"
+      "crawled_at": "2026-05-21"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -287,60 +287,81 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(석간) ‘미디어아트 서울’, 5개소 플랫폼 봄전시로 야외미술관 확장",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458354",
+          "date": "2026-05-21",
+          "dept": "도시경관담당관",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울시, 보라매공원에 현대엔지니어링과 2호 꿀벌 서식지 조성",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458353",
+          "date": "2026-05-21",
+          "dept": "공원여가사업과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울시복지재단, 고대 안암병원과 함께 청년건강자립 지원",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458352",
+          "date": "2026-05-21",
+          "dept": "서울시복지재단",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 콜롬비아 매체 레드마스, '감사의 정원, 감사와 국제 연대 상징 공간' 호평",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458327",
           "date": "2026-05-20",
           "dept": "광화문광장사업과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(대변인 입장문) GTX-A 노선 삼성역 구간 공사와 관련 서울시 입장",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458326",
           "date": "2026-05-20",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "개막 20일차 250만명 넘은 서울국제정원박람회… 성수 상권 매출 30% 급증",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458311",
           "date": "2026-05-20",
           "dept": "조경과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 광장시장 '위생·상거래·안전' 종합점검 실시… 신뢰 회복 총력",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458310",
           "date": "2026-05-20",
           "dept": "상권활성화과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 발달장애인부터 노년층까지 실생활 경제교육 확대",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458309",
           "date": "2026-05-20",
           "dept": "경제정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, '사각지대' 무인점포까지 선제적 발굴·관리…\"먹거리 안전 최우선\"",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458308",
           "date": "2026-05-20",
           "dept": "식품정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 몽골 도시개발 실무자 초청연수 성공적 마무리…“서울형 도시정책 해외 확산”",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458307",
           "date": "2026-05-20",
           "dept": "도시계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 한강버스 누적 탑승객 30만 명 돌파… 전 구간 재운항 후 증가세 뚜렷",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458306",
           "date": "2026-05-20",
           "dept": "미래한강본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 마곡지구 출퇴근길 한결 빨라졌다…서울시, 강서로 직진차로 추가 확대",
@@ -614,30 +635,9 @@
           "date": "2026-05-15",
           "dept": "청소년정책과",
           "is_new": false
-        },
-        {
-          "title": "‘우리 기관, AI 잘 쓰고 있나’ 서울AI재단, 영국 케임브리지大 협력 기반 공공부문 AI 현황진단 개발",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/458140",
-          "date": "2026-05-15",
-          "dept": "서울AI재단",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시, 17시 기준 오존 주의보 해제",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/458090",
-          "date": "2026-05-15",
-          "dept": "보건환경연구원",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시, 15일 14시 기준 오존(O3) 주의보 발령",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/458063",
-          "date": "2026-05-15",
-          "dept": "보건환경연구원",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-05-20"
+      "crawled_at": "2026-05-21"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -750,7 +750,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-20"
+      "crawled_at": "2026-05-21"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -998,14 +998,30 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-20"
+      "crawled_at": "2026-05-21"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-05-20",
+      "crawled_at": "2026-05-21",
       "items": [
+        {
+          "title": "도시관리계획(궁동 108-1일대 지구단위계획 및 궁동 108-1일대 특별계획구역 세부개발계획) 결정(변경)(안) 재열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11530ANN202605200001&projCode=11530PPL202509080026&searchGubun=ing",
+          "date": "2026-05-20",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
+        {
+          "title": "압구정아파트지구 특별계획구역② 재건축정비사업 구역 내 신사근린공원 공원조성계획결정(변경)을 위한 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11680ANN202605190001&projCode=11680PPL202605190003&searchGubun=ing",
+          "date": "2026-05-19",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
         {
           "title": "미아동 75번지 일대 주택재개발 정비계획 결정 및 정비구역 지정(안) 열람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11305ANN202605140002&projCode=11305PPL202605140003&searchGubun=ing",
@@ -1136,7 +1152,16 @@
         }
       ],
       "by_gu": {
-        "11680": [],
+        "11680": [
+          {
+            "title": "압구정아파트지구 특별계획구역② 재건축정비사업 구역 내 신사근린공원 공원조성계획결정(변경)을 위한 열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11680ANN202605190001&projCode=11680PPL202605190003&searchGubun=ing",
+            "date": "2026-05-19",
+            "end_date": "",
+            "gu": "강남구",
+            "is_new": true
+          }
+        ],
         "11740": [],
         "11305": [
           {
@@ -1168,6 +1193,14 @@
         "11620": [],
         "11215": [],
         "11530": [
+          {
+            "title": "도시관리계획(궁동 108-1일대 지구단위계획 및 궁동 108-1일대 특별계획구역 세부개발계획) 결정(변경)(안) 재열람공고",
+            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11530ANN202605200001&projCode=11530PPL202509080026&searchGubun=ing",
+            "date": "2026-05-20",
+            "end_date": "",
+            "gu": "구로구",
+            "is_new": true
+          },
           {
             "title": "도시관리계획(온수역 일대 지구단위계획 및 럭비구장 특별계획구역 세부개발계획) 결정(변경)(안) 재열람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11530ANN202605040001&projCode=11530PPL202601050002&searchGubun=ing",
@@ -1297,6 +1330,22 @@
         "11260": []
       },
       "all": [
+        {
+          "title": "도시관리계획(궁동 108-1일대 지구단위계획 및 궁동 108-1일대 특별계획구역 세부개발계획) 결정(변경)(안) 재열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11530ANN202605200001&projCode=11530PPL202509080026&searchGubun=ing",
+          "date": "2026-05-20",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
+        {
+          "title": "압구정아파트지구 특별계획구역② 재건축정비사업 구역 내 신사근린공원 공원조성계획결정(변경)을 위한 열람공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11680ANN202605190001&projCode=11680PPL202605190003&searchGubun=ing",
+          "date": "2026-05-19",
+          "end_date": "",
+          "gu": "",
+          "is_new": true
+        },
         {
           "title": "미아동 75번지 일대 주택재개발 정비계획 결정 및 정비구역 지정(안) 열람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11305ANN202605140002&projCode=11305PPL202605140003&searchGubun=ing",
