@@ -1,10 +1,8 @@
 name: 정책자료 업데이트 크롤링
-
 on:
   schedule:
     - cron: '0 20 * * *'
   workflow_dispatch:
-
 jobs:
   crawl:
     runs-on: ubuntu-latest
@@ -13,18 +11,14 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
       - name: 패키지 설치
         run: |
           pip install requests beautifulsoup4 playwright
           python -m playwright install chromium --with-deps
-
       - run: python scripts/crawl_updates.py
-
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
@@ -35,3 +29,11 @@ jobs:
           git add data/updates.json data/last_run.txt
           git diff --staged --quiet || git commit -m "chore: 정책자료 업데이트 $(date +'%Y-%m-%d')"
           git push origin main
+      
+      # ✅ Netlify 자동 배포
+      - name: Deploy to Netlify
+        if: success()
+        run: |
+          echo "🚀 Netlify 배포 트리거 중..."
+          curl -X POST -d {} "${{ secrets.NETLIFY_DEPLOY_HOOK }}"
+          echo "✅ Netlify 배포가 시작되었습니다!"
