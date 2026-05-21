@@ -326,22 +326,18 @@ aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
 <script>
 // ========== 패스워드 인증 ==========
 (function() {
-  // 🔑 여기서 패스워드 변경하세요!
   const CORRECT_PASSWORD = 'urban2026';
   
-  // 세션 확인
   function checkSession() {
     return sessionStorage.getItem('dashboard_auth') === 'true';
   }
   
-  // 대시보드 잠금 해제
   function unlockDashboard() {
     document.getElementById('loginOverlay').style.display = 'none';
     document.getElementById('mainContent').classList.add('unlocked');
     initDashboard();
   }
   
-  // 로그인 폼 처리
   document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const input = document.getElementById('passwordInput');
@@ -361,13 +357,15 @@ aside{width:176px;flex-shrink:0;background:var(--sb);display:flex;flex-direction
     }
   });
   
-  // 초기 세션 확인
   if (checkSession()) {
     unlockDashboard();
   }
 })();
 
 // ========== 기존 대시보드 코드 ==========
+// ✅ 전역 변수 먼저 선언
+let activeTab="press", searchQ="", updData=null;
+
 const MOLIT_TABS=[
   {label:"전체",     url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp"},
   {label:"주택토지", url:"https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_2"},
@@ -412,8 +410,6 @@ const TAB_META={
   law:      {title:"법령 · 시행령 · 시행규칙 · 조례", sub:"국가법령정보센터"},
 };
 
-let activeTab="press", searchQ="", updData=null;
-
 function goSvg(){return`<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M5 2h5v5"/></svg>`;}
 
 function orgClass(org){
@@ -449,7 +445,6 @@ function calcDday(s){
 async function loadUpdates(){
   if(updData) return updData;
   try{
-    // ✅ 캐시 무효화 강화
     const r=await fetch("data/updates.json?t="+Date.now(), {
       cache: 'no-store',
       headers: {
@@ -523,8 +518,8 @@ function renderPress(data){
   return wrap;
 }
 
-function buildRegionCard(card,hd,listUrl,sid,getItems){
-  const uid=`${sid}-${Date.now()}`;
+function buildRegionCard(card,hd,listUrl,getItems){
+  const uid=listUrl.replace(/[^a-z0-9]/gi,'').substring(0,20)+'-'+Date.now();
   const rHtml=REGIONS.map((r,i)=>`<button class="region-tab${i===0?' active':''}" data-ri="${i}">${r.label}</button>`).join('');
   card.innerHTML=hd+`<div class="region-tabs" id="rt-${uid}">${rHtml}</div><div class="gu-tabs" id="gt-${uid}"></div><div class="card-body post-grid" id="bd-${uid}"></div>`;
   const rTabs=card.querySelectorAll(`#rt-${uid} .region-tab`);
@@ -546,7 +541,7 @@ function buildRegionCard(card,hd,listUrl,sid,getItems){
       const noticeNo=item.notice_no?`<span class="post-notice-no">${item.notice_no}</span>`:'';
       return`<div class="post-row">
         <div class="post-row-meta">${badge}${date}${gu}${dday}${noticeNo}</div>
-        <a class="post-a" href="${listUrl}" target="_blank" rel="noopener" title="${item.title}&#10;※ 목록에서 공고명으로 검색하세요">${item.title}</a>
+        <a class="post-a" href="${item.url}" target="_blank" rel="noopener" title="${item.title}">${item.title}</a>
       </div>`;
     }).join('');
   };
@@ -573,7 +568,8 @@ function renderUrban(data){
     makeHd("열람공고(안)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing"),
     "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
     guName=>{
-      const ws=updData&&updData.sources["wrtanc"]; if(!ws) return null;
+      if(!updData) return null;
+      const ws=updData.sources["wrtanc"]; if(!ws) return null;
       if(!guName){const seen=new Set();return Object.values(ws.by_gu||{}).flat().filter(i=>{if(seen.has(i.url))return false;seen.add(i.url);return true;});}
       const code=SGG_CODE[guName]; return(ws.by_gu&&code&&ws.by_gu[code])||[];
     }
@@ -585,7 +581,8 @@ function renderUrban(data){
     makeHd("결정고시(안)","서울 도시계획포털","https://urban.seoul.go.kr/view/html/PMNU4030100001"),
     "https://urban.seoul.go.kr/view/html/PMNU4030100001",
     guName=>{
-      const ws=updData&&updData.sources["ntfc"]; if(!ws) return null;
+      if(!updData) return null;
+      const ws=updData.sources["ntfc"]; if(!ws) return null;
       const items=ws.items||[]; return guName?items.filter(i=>i.gu===guName):items;
     }
   );
