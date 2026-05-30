@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-05-30T06:49:26.187782+09:00",
+  "updated_at": "2026-05-31T05:49:56.686626+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-05-30"
+      "crawled_at": "2026-05-31"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-05-30"
+      "crawled_at": "2026-05-31"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-05-30"
+      "crawled_at": "2026-05-31"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -58,7 +58,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-30"
+      "crawled_at": "2026-05-31"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -96,7 +96,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-30"
+      "crawled_at": "2026-05-31"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -104,60 +104,74 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시, 15시 기준 오존 주의보 해제(서울권역)",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458890",
+          "date": "2026-05-30",
+          "dept": "보건환경연구원",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시, 30일 13시 기준 오존(O3) 주의보 발령",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458889",
+          "date": "2026-05-30",
+          "dept": "보건환경연구원",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 권한대행 사후동정 - 김성보 서울시장 권한대행, 29일(금) 서소문고가 현장 점검",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458853",
           "date": "2026-05-29",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시, 해체·굴토 등 건설공사장 위험공정 특별점검… 고가·교량 정밀안전점검도",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458838",
           "date": "2026-05-29",
           "dept": "중대재해예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 집비둘기 먹이주기 금지구역 6월 집중 단속 및 과태료 부과 강화",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458807",
           "date": "2026-05-29",
           "dept": "자연생태과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "“서울은 저에게 제2의 고향이죠”… 2026 서울시 외국인 명예시민 후보자 추천접수",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458806",
           "date": "2026-05-29",
           "dept": "도시외교담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울역사박물관, 시니어 대상 ‘내 인생의 18번, 시대의 명곡이 되다!’ 신규 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458805",
           "date": "2026-05-29",
           "dept": "서울역사박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "플랫폼 기반 관광·숙박 창업 시대…공유숙박 호스트 양성 교육과정 3차년도 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458804",
           "date": "2026-05-29",
           "dept": "서울시 여성가족재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제10차 정비사업통합심의위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458803",
           "date": "2026-05-29",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 2호선 홍대입구역~을지로입구역 구간 지하 터널 안전점검 완료…전 구간 정상운행",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458802",
           "date": "2026-05-29",
           "dept": "서울교통공사",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시, 서울런 중학생에 1:1 독서멘토링 첫 도입…문해력 진단부터 토론까지 맞춤 지원",
@@ -438,23 +452,9 @@
           "date": "2026-05-25",
           "dept": "서울브랜드담당관",
           "is_new": false
-        },
-        {
-          "title": "서울시, 청년이 오래 일하고 싶은 '서울형 강소기업' 50곳 신규 인증",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/458494",
-          "date": "2026-05-25",
-          "dept": "일자리정책과",
-          "is_new": false
-        },
-        {
-          "title": "'3.3% 정산부터 계약서 검토까지'… 서울시, 프리랜서 무료 상담 확대",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/458493",
-          "date": "2026-05-25",
-          "dept": "노동정책과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-05-30"
+      "crawled_at": "2026-05-31"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -567,7 +567,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-30"
+      "crawled_at": "2026-05-31"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -604,7 +604,7 @@
           "date": "2026-05-27",
           "gu": "강동구",
           "notice_no": "2026-90",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(용도지역) 결정(변경), 남영동 4-2구역 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정, 지구단위계획(변경) 결정 및 지형도면 고시",
@@ -612,7 +612,7 @@
           "date": "2026-05-21",
           "gu": "용산구",
           "notice_no": "2026-286",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "돌곶이·상월곡역세권(장위동 66-300번지 일원) 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정 및 지형도면 고시",
@@ -815,13 +815,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-30"
+      "crawled_at": "2026-05-31"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-05-30",
+      "crawled_at": "2026-05-31",
       "items": [
         {
           "title": "상계한신1차아파트 재건축사업  정비구역 지정 및 정비계획 수립(안) 공람 공고",
@@ -1043,14 +1043,6 @@
           "title": "올림픽선수기자촌아파트 재건축정비사업 정비계획 수립·정비구역 지정(안) 및 전략환경영향평가서(초안) 주민공람 및 주민설명회 개최 공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11710ANN202605210001&projCode=11710PPL202605210011&searchGubun=ing",
           "date": "2026-05-21",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "DDP 1·2·3 구역 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안) 공람？공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11140ANN202604300001&projCode=11140PPL202604300003&searchGubun=ing",
-          "date": "2026-04-30",
           "end_date": "",
           "gu": "",
           "is_new": false
@@ -1671,14 +1663,6 @@
             "end_date": "",
             "gu": "중구",
             "is_new": false
-          },
-          {
-            "title": "DDP 1·2·3 구역 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안) 공람？공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11140ANN202604300001&projCode=11140PPL202604300003&searchGubun=ing",
-            "date": "2026-04-30",
-            "end_date": "",
-            "gu": "중구",
-            "is_new": false
           }
         ],
         "11260": [
@@ -1921,14 +1905,6 @@
           "title": "올림픽선수기자촌아파트 재건축정비사업 정비계획 수립·정비구역 지정(안) 및 전략환경영향평가서(초안) 주민공람 및 주민설명회 개최 공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11710ANN202605210001&projCode=11710PPL202605210011&searchGubun=ing",
           "date": "2026-05-21",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "DDP 1·2·3 구역 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안) 공람？공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11140ANN202604300001&projCode=11140PPL202604300003&searchGubun=ing",
-          "date": "2026-04-30",
           "end_date": "",
           "gu": "",
           "is_new": false
