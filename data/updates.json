@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-05-31T05:49:56.686626+09:00",
+  "updated_at": "2026-06-01T05:53:12.306846+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-05-31"
+      "crawled_at": "2026-06-01"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-05-31"
+      "crawled_at": "2026-06-01"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-05-31"
+      "crawled_at": "2026-06-01"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -58,7 +58,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-31"
+      "crawled_at": "2026-06-01"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -96,7 +96,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-31"
+      "crawled_at": "2026-06-01"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -104,18 +104,46 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "4월, 서울 찾은 외국인 156만 명… 소비액 1조 1500억 원 기록",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458865",
+          "date": "2026-05-31",
+          "dept": "관광산업과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 중심지·환승역 주변 고밀복합개발 본격 추진",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458864",
+          "date": "2026-05-31",
+          "dept": "도시공간전략과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 중동 상황 대응…수출 중소기업 2만1천여개사 보험료 전액 지원·자동 가입",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458863",
+          "date": "2026-05-31",
+          "dept": "경제정책과",
+          "is_new": true
+        },
+        {
+          "title": "인생 2막의 꿈, 지역에서 펼치다…중장년 넥스트로컬 창업가 모집",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/458862",
+          "date": "2026-05-31",
+          "dept": "대외협력과",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시, 15시 기준 오존 주의보 해제(서울권역)",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458890",
           "date": "2026-05-30",
           "dept": "보건환경연구원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시, 30일 13시 기준 오존(O3) 주의보 발령",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/458889",
           "date": "2026-05-30",
           "dept": "보건환경연구원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 권한대행 사후동정 - 김성보 서울시장 권한대행, 29일(금) 서소문고가 현장 점검",
@@ -424,37 +452,9 @@
           "date": "2026-05-26",
           "dept": "서부공원여가센터",
           "is_new": false
-        },
-        {
-          "title": "(보도참고자료) 영동대로 복합개발사업 건설공사 관련 서울시 입장",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/458565",
-          "date": "2026-05-25",
-          "dept": "도시기반시설본부",
-          "is_new": false
-        },
-        {
-          "title": "시민이 선택한 최고의 건축디자인 '노들 글로벌 예술섬'… 디자인·환경 모두 만족",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/458499",
-          "date": "2026-05-25",
-          "dept": "미래공간담당관",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 혜택은 있는데 이용이 어려운 생활 속 ‘문턱 규제’ 5건 걷어낸다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/458498",
-          "date": "2026-05-25",
-          "dept": "규제개선담당관",
-          "is_new": false
-        },
-        {
-          "title": "'마스크팩' 흥행 '토너 패드'로 잇는다…해치×메디힐, K-뷰티 한정판 출시",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/458497",
-          "date": "2026-05-25",
-          "dept": "서울브랜드담당관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-05-31"
+      "crawled_at": "2026-06-01"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -567,7 +567,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-31"
+      "crawled_at": "2026-06-01"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -815,13 +815,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-05-31"
+      "crawled_at": "2026-06-01"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-05-31",
+      "crawled_at": "2026-06-01",
       "items": [
         {
           "title": "상계한신1차아파트 재건축사업  정비구역 지정 및 정비계획 수립(안) 공람 공고",
