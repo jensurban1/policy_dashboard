@@ -1,40 +1,114 @@
 {
-  "updated_at": "2026-06-12T06:56:39.171928+09:00",
+  "updated_at": "2026-06-13T06:27:05.387624+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-06-12"
+      "crawled_at": "2026-06-13"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-06-12"
+      "crawled_at": "2026-06-13"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-06-12"
+      "crawled_at": "2026-06-13"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [],
-      "crawled_at": "2026-06-12"
+      "items": [
+        {
+          "title": "모로코·프랑스 출장보고서 - 싱크탱크의 신뢰 제고 및 국제연구협력을 중심으로 -",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49316",
+          "date": "2026-06-11",
+          "is_new": true
+        },
+        {
+          "title": "쿠팡 사례를 통해 본 플랫폼 시장 거래질서의 쟁점과 과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49309",
+          "date": "2026-06-11",
+          "is_new": true
+        },
+        {
+          "title": "개성공단 중단 10년, 현황과 과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49302",
+          "date": "2026-06-10",
+          "is_new": true
+        },
+        {
+          "title": "2026 다차원 불평등 지수 발표 및 연구 고도화 방안 세미나",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49298",
+          "date": "2026-06-09",
+          "is_new": true
+        },
+        {
+          "title": "헝가리 총선과 오르반 정부의 퇴장 득표 연동형 비례대표제의 효과",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49288",
+          "date": "2026-06-07",
+          "is_new": true
+        },
+        {
+          "title": "지방선거, 계속 이렇게 치러도 되나?",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49263",
+          "date": "2026-06-02",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-06-13"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [],
-      "crawled_at": "2026-06-12"
+      "items": [
+        {
+          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
+          "date": "2025-12-23",
+          "is_new": true
+        },
+        {
+          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
+          "date": "2025-12-21",
+          "is_new": true
+        },
+        {
+          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
+          "date": "2025-12-03",
+          "is_new": true
+        },
+        {
+          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
+          "date": "2025-11-30",
+          "is_new": true
+        },
+        {
+          "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
+          "date": "2025-11-29",
+          "is_new": true
+        },
+        {
+          "title": "기후위기 대응 통합 물관리 지표체계 구축 및 적용성 검토",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48417",
+          "date": "2025-11-07",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-06-13"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -42,102 +116,137 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울런 지원대상 5만 명 늘린다…교육격차 해소 넘어 '계층이동 사다리'로",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/459613",
+          "date": "2026-06-12",
+          "dept": "교육지원정책과",
+          "is_new": true
+        },
+        {
+          "title": "'최고의 몬스터' 찾아 서울 상륙한 미니언즈 … 14일 잠수교 뚜벅뚜벅축제서 '해치' 만난다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/459606",
+          "date": "2026-06-12",
+          "dept": "서울브랜드담당관",
+          "is_new": true
+        },
+        {
+          "title": "2026 서울국악축제 19일 개최…올해는 한강에서 즐긴다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/459605",
+          "date": "2026-06-12",
+          "dept": "문화예술과",
+          "is_new": true
+        },
+        {
+          "title": "''내가 만든 AI·로봇 직접 뽐낸다''…'2026 메이커 페어 서울' 참가자 모집",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/459604",
+          "date": "2026-06-12",
+          "dept": "서울시립과학관",
+          "is_new": true
+        },
+        {
+          "title": "“경기장 인파부터 도로 결빙·산불까지”서울시설공단, AI로 시민 안전 지킨다!",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/459603",
+          "date": "2026-06-12",
+          "dept": "서울시설공단",
+          "is_new": true
+        },
+        {
+          "title": "조선시대 외교 의전은 어땠을까…서울역사중점연구 제20권 발간",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/459602",
+          "date": "2026-06-12",
+          "dept": "서울역사편찬원",
+          "is_new": true
+        },
+        {
           "title": "(석간) 서울 지하철, 한 명 태울 때마다 781원 손실…무임수송 등 원인",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459570",
           "date": "2026-06-12",
           "dept": "서울교통공사",
-          "is_new": true
-        },
-        {
-          "title": "(석간) 전화상담 원하지만 구독 서비스 42.1% 고객센터 없어… 서울시, 소비자 접근성 점검",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/459567",
-          "date": "2026-06-12",
-          "dept": "공정경제과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 전화상담 원하지만 구독 서비스 42.1% 고객센터 없어… 서울시, 소비자 접근성 점검",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459566",
           "date": "2026-06-12",
           "dept": "공정경제과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 자전거 출·퇴근으로 탄소중립 실천…‘에너지·기부라이딩 시즌1’ 개막",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459565",
           "date": "2026-06-12",
           "dept": "서울에너지공사",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 청계천의 따뜻한 이웃, 故 노무라 모토유키 목사 1주기… 청계천박물관 추모전 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459560",
           "date": "2026-06-12",
           "dept": "서울역사박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 응원은 뜨겁게, 안전은 빈틈없이… 서울시, 월드컵 거리 응원 안전대책 가동",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459584",
           "date": "2026-06-11",
           "dept": "체육정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(보도참고자료) 오 시장, \"과도한 정치공방으로 GTX-A 개통 일정 지연·재정부담 안타까워\"",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459580",
           "date": "2026-06-11",
           "dept": "도시기반시설본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "한강버스 타고 떠나는 정원여행… 서울숲 선착장에 내리면 리버뷰가든, 서울국제정원박람회, 선형정원까지 한번에!",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459513",
           "date": "2026-06-11",
           "dept": "조경과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "DDP에서 만나는 기후테크의 현재와 미래…사전등록 19일까지, 밋업 상시 접수",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459511",
           "date": "2026-06-11",
           "dept": "기후환경정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "남산에서 즐기는 특별한 하루! 6월 27일 ‘남산 서머 페스티벌’",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459510",
           "date": "2026-06-11",
           "dept": "공원여가사업과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, '학습' 넘어 '경험'까지 지원…'서울런 동행멘토단' 7월  본격 가동",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459509",
           "date": "2026-06-11",
           "dept": "교육지원정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "''소액 피해도 포기하지 마세요''… 서울시, 소비자 '나홀로소송' 돕는다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459508",
           "date": "2026-06-11",
           "dept": "공정경제과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제9차 서울특별시 도시계획위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459507",
           "date": "2026-06-11",
           "dept": "도시계획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제10차 도시건축공동위원회 및 제4차 수권분과위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459506",
           "date": "2026-06-11",
           "dept": "도시관리과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 5월 다주택자 양도세 중과유예 종료 후 토허 신청 감소, 가격 상승",
@@ -158,7 +267,7 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/459504",
           "date": "2026-06-10",
           "dept": "교통정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 셀트리온·대원제약과 손잡고 '글로벌 바이오 스타트업' 키운다",
@@ -355,44 +464,9 @@
           "date": "2026-06-08",
           "dept": "관광산업과",
           "is_new": false
-        },
-        {
-          "title": "(석간) 서울시보건환경연구원, 기후위기 속 ‘오존’해법 찾는다… 「2026년 오존 심포지엄」 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/459224",
-          "date": "2026-06-08",
-          "dept": "보건환경연구원",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 기후동행카드 3만 원 페이백 개시…6.10부터 신청",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/459223",
-          "date": "2026-06-07",
-          "dept": "교통정책과",
-          "is_new": false
-        },
-        {
-          "title": "서울시, '찾아가는 식생활교육' 230곳 모집…영유아 6,500명 식습관 잡는다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/459222",
-          "date": "2026-06-07",
-          "dept": "친환경급식과",
-          "is_new": false
-        },
-        {
-          "title": "'11개국 프리미엄 관광 큰손' 서울로…5주년 맞은 관광 네트워크 행사 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/459221",
-          "date": "2026-06-07",
-          "dept": "관광산업과",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 여름철 풍수해 안전대비 불법 에어라이트 집중 단속에 나선다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/459220",
-          "date": "2026-06-07",
-          "dept": "도시경관담당관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-06-12"
+      "crawled_at": "2026-06-13"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -404,7 +478,7 @@
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=459578",
           "date": "2026-06-11",
           "dept": "도시계획상임기획과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시건축디자인혁신사업 사업설명회 자료(2026. 6.10.)",
@@ -505,7 +579,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-06-12"
+      "crawled_at": "2026-06-13"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -518,7 +592,7 @@
           "date": "2026-06-11",
           "gu": "강남구",
           "notice_no": "2026-109",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획[인사동 지구단위계획 변경(재정비)] 결정 및 지형도면 고시",
@@ -526,7 +600,7 @@
           "date": "2026-06-11",
           "gu": "서울특별시",
           "notice_no": "2026-314",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(도시계획시설:철도) 경미한 변경 결정 및 지형도면 고시",
@@ -534,7 +608,7 @@
           "date": "2026-06-11",
           "gu": "서대문구",
           "notice_no": "2026-64",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "신길재정비촉진지구 재정비촉진계획(신길5, 10구역) 결정(변경) 및 지형도면 고시",
@@ -583,6 +657,14 @@
           "gu": "서울특별시",
           "notice_no": "2026-52",
           "is_new": false
+        },
+        {
+          "title": "도시관리계획(용도지역) 결정(변경), 한강로1가 도시정비형 재개발사업 정비구역 지정 및 정비계획, 지구단위계획(변경) 결정 및 지형도면 고시",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11170NTC202606120003",
+          "date": "2026-05-28",
+          "gu": "서울특별시",
+          "notice_no": "2026-297",
+          "is_new": true
         },
         {
           "title": "거여마천재정비촉진지구재정비촉진계획(마천1구역) 변경 결정 및 지형도면 고시",
@@ -743,23 +825,15 @@
           "gu": "서울특별시",
           "notice_no": "2026-52",
           "is_new": false
-        },
-        {
-          "title": "거여마천재정비촉진지구 재정비촉진계획(마천4구역) 변경(경미한 변경) 결정 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202605270001",
-          "date": "2026-05-07",
-          "gu": "서울특별시",
-          "notice_no": "2026-250",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-06-12"
+      "crawled_at": "2026-06-13"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-06-12",
+      "crawled_at": "2026-06-13",
       "items": [
         {
           "title": "도시관리계획(강남구 삼성동 168-1번지 일대 역세권 활성화사업 및 국제교류복합지구 지구단위계획) 결정(변경)(안) 재열람공고",
@@ -775,7 +849,7 @@
           "date": "2026-06-11",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시계획시설(도로) (변경)결정(안) 열람공고",
@@ -783,7 +857,7 @@
           "date": "2026-06-11",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(용산전자상가지구 지구단위계획구역 및 계획 결정(변경), 나진10·11동 일대 지구단위계획구역 및 계획, 특별계획구역4 세부개발계획) 결정(안) 열람공고",
@@ -791,7 +865,7 @@
           "date": "2026-06-11",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "미아동 130번지 일대 주택정비형 재개발 정비계획 결정 및 정비구역 지정(안) 재공람공고",
@@ -1019,24 +1093,7 @@
         ],
         "11500": [],
         "11620": [],
-        "11215": [
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 58개 구역) 결정(변경)(안) 열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202605280002&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-05-28",
-            "end_date": "",
-            "gu": "광진구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 130개 구역) 결정(변경)(안) 열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202605280001&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-05-28",
-            "end_date": "",
-            "gu": "광진구",
-            "is_new": false
-          }
-        ],
+        "11215": [],
         "11530": [],
         "11545": [],
         "11350": [
@@ -1046,7 +1103,7 @@
             "date": "2026-06-11",
             "end_date": "",
             "gu": "노원구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "상계한신1차아파트 재건축사업  정비구역 지정 및 정비계획 수립(안) 공람 공고",
@@ -1108,7 +1165,7 @@
             "date": "2026-06-11",
             "end_date": "",
             "gu": "영등포구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "영등포 대선제분 일대 재개발2구역 정비구역 지정(변경) 및 정비계획 결정(변경)(안), 영등포지역 도심권 지구단위계획구역 및 지구단위계획(변경)(안) 공람 공고",
@@ -1134,7 +1191,7 @@
             "date": "2026-06-11",
             "end_date": "",
             "gu": "용산구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "도시관리계획(용산전자상가지구 지구단위계획구역 및 계획 결정(변경), 전자랜드 본관·별관 일대 지구단위계획구역 및 계획, 특별계획구역1 세부개발계획) 결정(안) 열람공고",
@@ -1231,7 +1288,7 @@
           "date": "2026-06-11",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시계획시설(도로) (변경)결정(안) 열람공고",
@@ -1239,7 +1296,7 @@
           "date": "2026-06-11",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(용산전자상가지구 지구단위계획구역 및 계획 결정(변경), 나진10·11동 일대 지구단위계획구역 및 계획, 특별계획구역4 세부개발계획) 결정(안) 열람공고",
@@ -1247,7 +1304,7 @@
           "date": "2026-06-11",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "미아동 130번지 일대 주택정비형 재개발 정비계획 결정 및 정비구역 지정(안) 재공람공고",
