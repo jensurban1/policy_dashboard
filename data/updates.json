@@ -1,40 +1,40 @@
 {
-  "updated_at": "2026-06-20T06:04:03.862542+09:00",
+  "updated_at": "2026-06-21T06:10:03.455868+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-06-20"
+      "crawled_at": "2026-06-21"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-06-20"
+      "crawled_at": "2026-06-21"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-06-20"
+      "crawled_at": "2026-06-21"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [],
-      "crawled_at": "2026-06-20"
+      "crawled_at": "2026-06-21"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
       "items": [],
-      "crawled_at": "2026-06-20"
+      "crawled_at": "2026-06-21"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -46,63 +46,63 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460113",
           "date": "2026-06-19",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시, 16시 기준 오존 주의보 해제",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460099",
           "date": "2026-06-19",
           "dept": "보건환경연구원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 19일(금) AI서울테크 연구지원사업 연구생 증서 수여",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460088",
           "date": "2026-06-19",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시, 19일 15시 기준 오존(O3) 주의보 발령",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460083",
           "date": "2026-06-19",
           "dept": "보건환경연구원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 보조배터리 보관 파우치 화재 적응성 실험…시민안전 강화에 나서",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460056",
           "date": "2026-06-19",
           "dept": "소방재난본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "폭염에 에어컨 수리 늦고, 휴가철 숙소 환불 분쟁 늘고… 서울시 소비자 피해주의보",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460043",
           "date": "2026-06-19",
           "dept": "공정경제과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "SF와 팬덤 문화로 만나는 새로운 세계…서울책보고·서울아트책보고 여름 기획전 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460042",
           "date": "2026-06-19",
           "dept": "서울도서관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "청년은 스스로를, 실무자는 청년을 찾는 교육 - 서울시복지재단, 가족돌봄청년 당사자 역량과 실무자 감각 동시에 키운다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460041",
           "date": "2026-06-19",
           "dept": "서울시복지재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제12차 정비사업 통합심의위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460040",
           "date": "2026-06-19",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울투자진흥재단, 유럽 최대 테크행사서 서울포워드 개최…서울 투자매력 알렸다",
@@ -392,7 +392,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-06-20"
+      "crawled_at": "2026-06-21"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -505,7 +505,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-06-20"
+      "crawled_at": "2026-06-21"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -526,7 +526,7 @@
           "date": "2026-06-18",
           "gu": "강북구",
           "notice_no": "2026-83",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(망우동 360-1번지 지구단위계획구역 지정 및 계획 결정, 특별계획구역 지정 및 세부개발계획) 결정 및 지형도면 고시",
@@ -614,7 +614,7 @@
           "date": "2026-05-28",
           "gu": "서초구",
           "notice_no": "2026-126",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "불광제5주택정비형 재개발사업 정비계획(경미한)변경 및 지형도면 고시",
@@ -710,7 +710,7 @@
           "date": "2026-05-21",
           "gu": "서초구",
           "notice_no": "2026-122",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시계획시설(공공청사) 결정(변경) 및 지형도면 고시",
@@ -753,13 +753,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-06-20"
+      "crawled_at": "2026-06-21"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-06-20",
+      "crawled_at": "2026-06-21",
       "items": [
         {
           "title": "구의.자양 재정비촉진지구 재정비촉진계획 (자양13존치관리 지구단위계획 및 자양13존치관리 특별계획구역 세부개발계획) 결정(변경)을 위한 공람공고",
