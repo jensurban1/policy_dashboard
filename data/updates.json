@@ -1,114 +1,40 @@
 {
-  "updated_at": "2026-06-27T06:15:02.519890+09:00",
+  "updated_at": "2026-06-28T05:54:54.628064+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-06-27"
+      "crawled_at": "2026-06-28"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-06-27"
+      "crawled_at": "2026-06-28"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-06-27"
+      "crawled_at": "2026-06-28"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [
-        {
-          "title": "입국장 면세품 인도장 설치의 입법영향분석",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49384",
-          "date": "2026-06-29",
-          "is_new": true
-        },
-        {
-          "title": "인공지능(AI) 시대의 법인지방소득세 안분 기준 개편 과제",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49380",
-          "date": "2026-06-25",
-          "is_new": false
-        },
-        {
-          "title": "전남광주통합특별시 출범, 성공을 위한 과제는 무엇인가",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49376",
-          "date": "2026-06-24",
-          "is_new": false
-        },
-        {
-          "title": "기후위기 대응을 위한 물관리 성과지표 체계 전환 과제",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49361",
-          "date": "2026-06-21",
-          "is_new": false
-        },
-        {
-          "title": "프랑스·벨기에 출장보고서",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49359",
-          "date": "2026-06-19",
-          "is_new": false
-        },
-        {
-          "title": "프랑스 핵전력 강화 정책과 한국 안보에 대한 시사점",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49363",
-          "date": "2026-06-18",
-          "is_new": false
-        }
-      ],
-      "crawled_at": "2026-06-27"
+      "items": [],
+      "crawled_at": "2026-06-28"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [
-        {
-          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
-          "date": "2025-12-23",
-          "is_new": false
-        },
-        {
-          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
-          "date": "2025-12-21",
-          "is_new": false
-        },
-        {
-          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
-          "date": "2025-12-03",
-          "is_new": false
-        },
-        {
-          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
-          "date": "2025-11-30",
-          "is_new": false
-        },
-        {
-          "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
-          "date": "2025-11-29",
-          "is_new": false
-        },
-        {
-          "title": "기후위기 대응 통합 물관리 지표체계 구축 및 적용성 검토",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48417",
-          "date": "2025-11-07",
-          "is_new": false
-        }
-      ],
-      "crawled_at": "2026-06-27"
+      "items": [],
+      "crawled_at": "2026-06-28"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -116,46 +42,60 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 27일(토) 노원구립 어드벤처 테마파크 ‘점프’ 개관식 참석",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460550",
+          "date": "2026-06-27",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 27일(토) 「2026 남산 서머 페스티벌」 참석",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460546",
+          "date": "2026-06-27",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 26일(금) 2026년 상반기 정년·명예퇴임식 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460472",
           "date": "2026-06-26",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) '더드림집+' 본격 드라이브… 서울시, 청년·대학생 공공주택 905세대 첫 공급",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460459",
           "date": "2026-06-26",
           "dept": "임대주택과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "월드컵 열기 속 로봇도 맞붙는다…서울퓨처랩 '미래기술 놀이터' 27일 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460454",
           "date": "2026-06-26",
           "dept": "경제정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "2026 서울사진축제 《컴백홈》, 8만 관객과 ‘모두의 사진축제’로 거듭나며 성황리 폐막",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460453",
           "date": "2026-06-26",
           "dept": "시립미술관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시설공단, 도시 인프라 AI 혁신 실험장으로 적극 개방 나선다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460451",
           "date": "2026-06-26",
           "dept": "서울시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "수색역 역세권, '어르신 안심주택' 696세대 공급 본격화…맞춤형 돌봄시설 완비",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460450",
           "date": "2026-06-26",
           "dept": "전략주택공급과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시, '더 아름다운 결혼식' 신규장소 첫 주인공에 연출비 최대 300만 원 지원",
@@ -450,23 +390,9 @@
           "date": "2026-06-22",
           "dept": "인사과",
           "is_new": false
-        },
-        {
-          "title": "생성형 AI 시대 개인정보 어떻게 지킬까…서울시 개인정보보호 포럼 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460170",
-          "date": "2026-06-22",
-          "dept": "정보보안과",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 헌신의 가치 되새기는 ‘호국보훈의 달 기념주간’ 운영",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460169",
-          "date": "2026-06-22",
-          "dept": "복지정책과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-06-27"
+      "crawled_at": "2026-06-28"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -579,7 +505,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-06-27"
+      "crawled_at": "2026-06-28"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -592,7 +518,7 @@
           "date": "2026-06-26",
           "gu": "강남구",
           "notice_no": "2026-300",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(반포아파트지구 지구단위계획구역·지구단위계획) 및 신반포4지구 재건축 정비계획 결정(경미한 변경) 고시",
@@ -827,13 +753,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-06-27"
+      "crawled_at": "2026-06-28"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-06-27",
+      "crawled_at": "2026-06-28",
       "items": [
         {
           "title": "도시관리계획(강남구 논현동 240-10번지 일원 역세권 활성화사업 지구단위계획구역 지정 및 계획) 결정(안) 열람공고",
@@ -905,7 +831,7 @@
           "date": "2026-06-26",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "상계한신1차아파트 재건축사업  정비구역 지정 및 정비계획 수립(안) 공람 공고",
@@ -972,7 +898,7 @@
             "date": "2026-06-26",
             "end_date": "",
             "gu": "강남구",
-            "is_new": true
+            "is_new": false
           }
         ],
         "11740": [],
@@ -1165,7 +1091,7 @@
           "date": "2026-06-26",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "상계한신1차아파트 재건축사업  정비구역 지정 및 정비계획 수립(안) 공람 공고",
