@@ -1,40 +1,40 @@
 {
-  "updated_at": "2026-06-28T05:54:54.628064+09:00",
+  "updated_at": "2026-06-29T05:56:14.128399+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-06-28"
+      "crawled_at": "2026-06-29"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-06-28"
+      "crawled_at": "2026-06-29"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-06-28"
+      "crawled_at": "2026-06-29"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [],
-      "crawled_at": "2026-06-28"
+      "crawled_at": "2026-06-29"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
       "items": [],
-      "crawled_at": "2026-06-28"
+      "crawled_at": "2026-06-29"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -42,18 +42,74 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 28일(일) 2026 서울국제도서전 서울도서관 부스 방문",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460562",
+          "date": "2026-06-28",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "제8차 도시계획위원회 신속통합기획 정비사업 등 수권분과위원회 개최결과",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460539",
+          "date": "2026-06-28",
+          "dept": "도시계획과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, '글로벌 TOP3·삶의 질 특별시' 향한 첫걸음…G3 서울 기획위원회 출범",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460524",
+          "date": "2026-06-28",
+          "dept": "기획담당관",
+          "is_new": true
+        },
+        {
+          "title": "장애인과 비장애인이 함께 탄다…서울시, 전국 첫 ‘유니버설디자인 택시’ 시범운영",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460523",
+          "date": "2026-06-28",
+          "dept": "택시정책과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, ‘신속통합기획 온라인 아카이브 ’본격 가동…대상지 정보부터 추진현황까지 한눈에",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460522",
+          "date": "2026-06-28",
+          "dept": "신속통합기획과",
+          "is_new": true
+        },
+        {
+          "title": "서울시-서울지방우정청, ‘고립은둔청년 발굴’부터 ‘청년 창업가 지원’까지 맞손",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460521",
+          "date": "2026-06-28",
+          "dept": "청년사업담당관",
+          "is_new": true
+        },
+        {
+          "title": "‘고유가 피해지원금’ 7월 3일 금요일, 18시까지 꼭 신청하세요",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460520",
+          "date": "2026-06-28",
+          "dept": "자치행정과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 독립유공자 4~6대 후손 120명에 장학증서 수여…역사 가치 계승까지 확대",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460519",
+          "date": "2026-06-28",
+          "dept": "서울미래인재재단",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 27일(토) 노원구립 어드벤처 테마파크 ‘점프’ 개관식 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460550",
           "date": "2026-06-27",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 27일(토) 「2026 남산 서머 페스티벌」 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460546",
           "date": "2026-06-27",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 26일(금) 2026년 상반기 정년·명예퇴임식 참석",
@@ -334,65 +390,9 @@
           "date": "2026-06-23",
           "dept": "서울아리수본부",
           "is_new": false
-        },
-        {
-          "title": "(석간) 서울시 119구급대 심정지 회복률 13.4% 역대 최고치 …“AI 기반 앱 활용, 심혈관계 응급환자 대응 더 빠르게”",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460200",
-          "date": "2026-06-23",
-          "dept": "재난대응과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시, 지방세입 체납관리단 292명 모집",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460199",
-          "date": "2026-06-23",
-          "dept": "38세금징수과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) ‘글로벌 톱3 문화도시’ 서울 도약 가속화…유럽 주요 도시와 문화외교 결실",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460198",
-          "date": "2026-06-23",
-          "dept": "서울문화재단",
-          "is_new": false
-        },
-        {
-          "title": "(석간) “재난구호 활동, 운동회로 즐겁게 배워요!” 서울시자원봉사센터 '재난 방재운동회' 성료",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460196",
-          "date": "2026-06-23",
-          "dept": "서울시자원봉사센터",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시, 전국 평생교육 협력 중심도시로 본격 행보…전국 시도진흥원협의회 연수 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460195",
-          "date": "2026-06-23",
-          "dept": "서울시평생교육진흥원",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시-대한노인회 서울시연합회, 어르신 교통정책 공청회 공동개최…사회적 논의 본격 추진",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460191",
-          "date": "2026-06-22",
-          "dept": "교통정책과",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) ''빈틈없이 살핀다''… 오세훈 시장, 관악구 침수취약지역 점검",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460189",
-          "date": "2026-06-22",
-          "dept": "치수안전과",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시, 국장급 승진인사 단행",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460177",
-          "date": "2026-06-22",
-          "dept": "인사과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-06-28"
+      "crawled_at": "2026-06-29"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -505,7 +505,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-06-28"
+      "crawled_at": "2026-06-29"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -753,13 +753,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-06-28"
+      "crawled_at": "2026-06-29"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-06-28",
+      "crawled_at": "2026-06-29",
       "items": [
         {
           "title": "도시관리계획(강남구 논현동 240-10번지 일원 역세권 활성화사업 지구단위계획구역 지정 및 계획) 결정(안) 열람공고",
