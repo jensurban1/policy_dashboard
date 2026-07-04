@@ -1,40 +1,114 @@
 {
-  "updated_at": "2026-07-04T05:57:45.489860+09:00",
+  "updated_at": "2026-07-05T05:48:37.562150+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-07-04"
+      "crawled_at": "2026-07-05"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-07-04"
+      "crawled_at": "2026-07-05"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-07-04"
+      "crawled_at": "2026-07-05"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [],
-      "crawled_at": "2026-07-04"
+      "items": [
+        {
+          "title": "남양주 스토킹 살인 사건이 드러낸 '위치추적 스토킹'의 법적 공백",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49397",
+          "date": "2026-06-30",
+          "is_new": true
+        },
+        {
+          "title": "농가 소득 문제와  관련 정책 개선과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49400",
+          "date": "2026-06-30",
+          "is_new": true
+        },
+        {
+          "title": "입국장 면세품 인도장 설치의 입법영향분석",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49384",
+          "date": "2026-06-29",
+          "is_new": true
+        },
+        {
+          "title": "인공지능(AI) 시대의 법인지방소득세 안분 기준 개편 과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49380",
+          "date": "2026-06-25",
+          "is_new": true
+        },
+        {
+          "title": "전남광주통합특별시 출범, 성공을 위한 과제는 무엇인가",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49376",
+          "date": "2026-06-24",
+          "is_new": true
+        },
+        {
+          "title": "기후위기 대응을 위한 물관리 성과지표 체계 전환 과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49361",
+          "date": "2026-06-21",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-07-05"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [],
-      "crawled_at": "2026-07-04"
+      "items": [
+        {
+          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
+          "date": "2025-12-23",
+          "is_new": true
+        },
+        {
+          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
+          "date": "2025-12-21",
+          "is_new": true
+        },
+        {
+          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
+          "date": "2025-12-03",
+          "is_new": true
+        },
+        {
+          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
+          "date": "2025-11-30",
+          "is_new": true
+        },
+        {
+          "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
+          "date": "2025-11-29",
+          "is_new": true
+        },
+        {
+          "title": "기후위기 대응 통합 물관리 지표체계 구축 및 적용성 검토",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48417",
+          "date": "2025-11-07",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-07-05"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -42,95 +116,102 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(보도참고자료) 일본 유력 일간지 요미우리신문, 사상 첫 5선 오세훈 서울시장 집중 조명",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460973",
+          "date": "2026-07-04",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 강북 주거 개선위한 초강력 인센티브… 11개 자치구 공공기여율 60→30%",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460957",
           "date": "2026-07-03",
           "dept": "공공개발담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시, 과장급 승진인사 단행",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460952",
           "date": "2026-07-03",
           "dept": "인사과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 오 시장, 민선 9기 첫 민생행보로 골목상권 방문… 삶의 질 특별시 서울 시동",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460935",
           "date": "2026-07-03",
           "dept": "소상공인정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시 소규모 재건축 사업성분석 지원사업 실시",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460896",
           "date": "2026-07-03",
           "dept": "공동주택과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울AI허브, 공군 AX 거점 구축…군·산·학 AI 협력 확대",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460895",
           "date": "2026-07-03",
           "dept": "첨단산업과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "〈서울거리예술축제2026〉 자원활동가 150명 모집",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460894",
           "date": "2026-07-03",
           "dept": "서울문화재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울AI재단-한국형사·법무정책연구원, 안전한 AI 사용문화 확산위해 맞손",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460893",
           "date": "2026-07-03",
           "dept": "서울AI재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "한성백제박물관 기획전시, 구로에서 다시 만난다… 구로문화재단과 특별교류전",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460892",
           "date": "2026-07-03",
           "dept": "한성백제박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제13차 정비사업 통합심의위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460883",
           "date": "2026-07-03",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시-㈜농심, 결혼식 스드메 비용 300만 원 지원한다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460863",
           "date": "2026-07-03",
           "dept": "가족담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시설공단, 장애인 이동권 넓힌다… ‘소형버스 운행지역·일수 확대’",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460862",
           "date": "2026-07-03",
           "dept": "서울시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 도시농업도 기후 위기 대응 중심으로… 서울시, 탄소중립 도시농업 정책 강화",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460861",
           "date": "2026-07-03",
           "dept": "농업기술센터",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) “불편했던 규제, 시민이 직접 해결한다”…서울시50플러스재단 규제혁신 공모전",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460860",
           "date": "2026-07-03",
           "dept": "서울시50플러스재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 2일(목) 「2026 서울국제관광포럼」 참석",
@@ -383,16 +464,9 @@
           "date": "2026-06-30",
           "dept": "청소년정책과",
           "is_new": false
-        },
-        {
-          "title": "서울공예박물관, 2년 걸친 공예문화유산 보존복원 성과 현장 공개",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460646",
-          "date": "2026-06-30",
-          "dept": "서울공예박물관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-07-04"
+      "crawled_at": "2026-07-05"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -505,7 +579,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-04"
+      "crawled_at": "2026-07-05"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -753,13 +827,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-04"
+      "crawled_at": "2026-07-05"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-07-04",
+      "crawled_at": "2026-07-05",
       "items": [
         {
           "title": "도시관리계획(도시계획시설:학교) 결정(변경) 및 세부시설조성계획 결정(변경)(안) 재열람공고 (국민대학교)",
@@ -815,7 +889,7 @@
           "date": "2026-07-03",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(강남구 논현동 240-10번지 일원 역세권 활성화사업 지구단위계획구역 지정 및 계획) 결정(안) 열람공고",
@@ -831,7 +905,7 @@
           "date": "2026-06-10",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "영등포 도심 역세권 도시정비형 재개발사업 정비구역 및 정비계획 결정(변경)(안), 영등포지역 도심권 지구단위계획구역 및 지구단위계획(변경)(안) 공람 공고",
@@ -926,7 +1000,7 @@
             "date": "2026-07-03",
             "end_date": "",
             "gu": "성북구",
-            "is_new": true
+            "is_new": false
           }
         ],
         "11710": [
@@ -955,7 +1029,7 @@
             "date": "2026-06-10",
             "end_date": "",
             "gu": "영등포구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "영등포 도심 역세권 도시정비형 재개발사업 정비구역 및 정비계획 결정(변경)(안), 영등포지역 도심권 지구단위계획구역 및 지구단위계획(변경)(안) 공람 공고",
@@ -1044,7 +1118,7 @@
           "date": "2026-07-03",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(강남구 논현동 240-10번지 일원 역세권 활성화사업 지구단위계획구역 지정 및 계획) 결정(안) 열람공고",
@@ -1060,7 +1134,7 @@
           "date": "2026-06-10",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "영등포 도심 역세권 도시정비형 재개발사업 정비구역 및 정비계획 결정(변경)(안), 영등포지역 도심권 지구단위계획구역 및 지구단위계획(변경)(안) 공람 공고",
