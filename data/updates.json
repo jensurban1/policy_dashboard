@@ -1,114 +1,40 @@
 {
-  "updated_at": "2026-07-05T05:48:37.562150+09:00",
+  "updated_at": "2026-07-06T05:51:57.886362+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-07-05"
+      "crawled_at": "2026-07-06"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-07-05"
+      "crawled_at": "2026-07-06"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-07-05"
+      "crawled_at": "2026-07-06"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [
-        {
-          "title": "남양주 스토킹 살인 사건이 드러낸 '위치추적 스토킹'의 법적 공백",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49397",
-          "date": "2026-06-30",
-          "is_new": true
-        },
-        {
-          "title": "농가 소득 문제와  관련 정책 개선과제",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49400",
-          "date": "2026-06-30",
-          "is_new": true
-        },
-        {
-          "title": "입국장 면세품 인도장 설치의 입법영향분석",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49384",
-          "date": "2026-06-29",
-          "is_new": true
-        },
-        {
-          "title": "인공지능(AI) 시대의 법인지방소득세 안분 기준 개편 과제",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49380",
-          "date": "2026-06-25",
-          "is_new": true
-        },
-        {
-          "title": "전남광주통합특별시 출범, 성공을 위한 과제는 무엇인가",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49376",
-          "date": "2026-06-24",
-          "is_new": true
-        },
-        {
-          "title": "기후위기 대응을 위한 물관리 성과지표 체계 전환 과제",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49361",
-          "date": "2026-06-21",
-          "is_new": true
-        }
-      ],
-      "crawled_at": "2026-07-05"
+      "items": [],
+      "crawled_at": "2026-07-06"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [
-        {
-          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
-          "date": "2025-12-23",
-          "is_new": true
-        },
-        {
-          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
-          "date": "2025-12-21",
-          "is_new": true
-        },
-        {
-          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
-          "date": "2025-12-03",
-          "is_new": true
-        },
-        {
-          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
-          "date": "2025-11-30",
-          "is_new": true
-        },
-        {
-          "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
-          "date": "2025-11-29",
-          "is_new": true
-        },
-        {
-          "title": "기후위기 대응 통합 물관리 지표체계 구축 및 적용성 검토",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48417",
-          "date": "2025-11-07",
-          "is_new": true
-        }
-      ],
-      "crawled_at": "2026-07-05"
+      "items": [],
+      "crawled_at": "2026-07-06"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -116,11 +42,53 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "올 여름방학엔 맛있는 점심먹고 신나게 놀아요…서울시, '서울아이 든든한끼' 첫선",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460947",
+          "date": "2026-07-05",
+          "dept": "아이돌봄담당관",
+          "is_new": true
+        },
+        {
+          "title": "서울 바이오 혁신 거점 '홍릉', 2년 연속 강소특구 최고 등급 선정",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460942",
+          "date": "2026-07-05",
+          "dept": "첨단산업과",
+          "is_new": true
+        },
+        {
+          "title": "세계 1만5천 AI 석학 서울 집결…서울시, 'ICML* 2026' 연계 ‘블레저 관광’ 가동",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460941",
+          "date": "2026-07-05",
+          "dept": "관광정책과",
+          "is_new": true
+        },
+        {
+          "title": "디자인 교육 플랫폼 '서울디자인런', 창업가 키우기 시동",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460940",
+          "date": "2026-07-05",
+          "dept": "서울디자인재단",
+          "is_new": true
+        },
+        {
+          "title": "내 작품이 스크린에…서울시, '한강 다리밑 영화관' 사진·영상 공모",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460939",
+          "date": "2026-07-05",
+          "dept": "미래한강본부",
+          "is_new": true
+        },
+        {
+          "title": "올여름 방학은 박물관으로 역사여행 가자! 서울역사박물관, 다양한 여름방학 특별 프로그램 마련",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/460938",
+          "date": "2026-07-05",
+          "dept": "서울역사박물관",
+          "is_new": true
+        },
+        {
           "title": "(보도참고자료) 일본 유력 일간지 요미우리신문, 사상 첫 5선 오세훈 서울시장 집중 조명",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/460973",
           "date": "2026-07-04",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 강북 주거 개선위한 초강력 인센티브… 11개 자치구 공공기여율 60→30%",
@@ -422,51 +390,9 @@
           "date": "2026-06-30",
           "dept": "언론담당관",
           "is_new": false
-        },
-        {
-          "title": "(자료제공) 오 시장, 서울 전역 폭염주의보에 \"취약계층 보호·폭염대응 총력\" 긴급 지시",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460657",
-          "date": "2026-06-30",
-          "dept": "재난안전예방과",
-          "is_new": false
-        },
-        {
-          "title": "오세훈 시장, ''민선9기, 청년주거 '더드림집+' 확대 최우선''… '30년 7만4천가구 공급",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460651",
-          "date": "2026-06-30",
-          "dept": "주택정책과",
-          "is_new": false
-        },
-        {
-          "title": "290만 건강 플랫폼 손목닥터9988…이번엔 혈당 관리 건강모델 선보여",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460650",
-          "date": "2026-06-30",
-          "dept": "스마트건강과",
-          "is_new": false
-        },
-        {
-          "title": "똑똑한 서울러들 주목! 서울살이 꿀팁 대방출, 「2026 하반기 달라지는 서울 생활」에서 확인하세요",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460649",
-          "date": "2026-06-30",
-          "dept": "기획담당관",
-          "is_new": false
-        },
-        {
-          "title": "잘되는 가게는 무엇이 다를까? 서울시, 상권분석부터 AI마케팅까지 성공 창업 특강",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460648",
-          "date": "2026-06-30",
-          "dept": "소상공인정책과",
-          "is_new": false
-        },
-        {
-          "title": "“여름방학 돌봄 걱정 끝”…서울시, 청소년 동행캠프 420명 선착순 모집",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/460647",
-          "date": "2026-06-30",
-          "dept": "청소년정책과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-07-05"
+      "crawled_at": "2026-07-06"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -579,7 +505,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-05"
+      "crawled_at": "2026-07-06"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -827,13 +753,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-05"
+      "crawled_at": "2026-07-06"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-07-05",
+      "crawled_at": "2026-07-06",
       "items": [
         {
           "title": "도시관리계획(도시계획시설:학교) 결정(변경) 및 세부시설조성계획 결정(변경)(안) 재열람공고 (국민대학교)",
