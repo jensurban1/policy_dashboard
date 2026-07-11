@@ -1,114 +1,40 @@
 {
-  "updated_at": "2026-07-11T06:01:49.345932+09:00",
+  "updated_at": "2026-07-12T05:41:08.430710+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-07-11"
+      "crawled_at": "2026-07-12"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-07-11"
+      "crawled_at": "2026-07-12"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-07-11"
+      "crawled_at": "2026-07-12"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [
-        {
-          "title": "구멍난 선거관리, 어떻게 할 것인가",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49432",
-          "date": "2026-07-12",
-          "is_new": true
-        },
-        {
-          "title": "재사용 유리병은 왜 1회용 용기로 대체되고 있는가?",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49429",
-          "date": "2026-07-09",
-          "is_new": true
-        },
-        {
-          "title": "디지털 산업을 위한 입법 품질 혁신: 입법 진단과 제도 개선 과제 세미나",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49424",
-          "date": "2026-07-08",
-          "is_new": true
-        },
-        {
-          "title": "재활용품 처리시설에서 발견된 인체 조직물: 조직물류폐기물 관리책임과 의료기관 안전관리의 입법적 검토",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49418",
-          "date": "2026-07-07",
-          "is_new": true
-        },
-        {
-          "title": "남양주 스토킹 살인 사건이 드러낸 '위치추적 스토킹'의 법적 공백",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49397",
-          "date": "2026-06-30",
-          "is_new": true
-        },
-        {
-          "title": "농가 소득 문제와  관련 정책 개선과제",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49400",
-          "date": "2026-06-30",
-          "is_new": true
-        }
-      ],
-      "crawled_at": "2026-07-11"
+      "items": [],
+      "crawled_at": "2026-07-12"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [
-        {
-          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
-          "date": "2025-12-23",
-          "is_new": true
-        },
-        {
-          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
-          "date": "2025-12-21",
-          "is_new": true
-        },
-        {
-          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
-          "date": "2025-12-03",
-          "is_new": true
-        },
-        {
-          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
-          "date": "2025-11-30",
-          "is_new": true
-        },
-        {
-          "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
-          "date": "2025-11-29",
-          "is_new": true
-        },
-        {
-          "title": "기후위기 대응 통합 물관리 지표체계 구축 및 적용성 검토",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48417",
-          "date": "2025-11-07",
-          "is_new": true
-        }
-      ],
-      "crawled_at": "2026-07-11"
+      "items": [],
+      "crawled_at": "2026-07-12"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -116,81 +42,102 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(보도참고자료) 서울시 폭염 일일상황 보고(2026.7.11. 기준)",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461511",
+          "date": "2026-07-11",
+          "dept": "재난안전예방과",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울 동남권·서남권에 올여름 첫 폭염경보… 서울시, 폭염 대응체계 강화",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461496",
+          "date": "2026-07-11",
+          "dept": "재난안전예방과",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 폭염주의보 서울 전역으로 확대 발효…서울시, 폭염 대응체계 강화 나서",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461494",
+          "date": "2026-07-11",
+          "dept": "재난안전예방과",
+          "is_new": true
+        },
+        {
           "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.7.10.  기준)",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461481",
           "date": "2026-07-10",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(엠바고18시)(자료제공) 서울시, 서소문로 11일 0시 전면 개통… 고가 신설 본격화 '29.3월 개통 목표",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461473",
           "date": "2026-07-10",
           "dept": "도시기반시설본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 오 시장, 상봉먹자골목서 청년 사장님과 현장소통… 야장으로 골목상권 활력 키운다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461467",
           "date": "2026-07-10",
           "dept": "상권활성화과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 10일(금) 성수대교 램프 단차 현장 점검",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461454",
           "date": "2026-07-10",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 10일(금) 「2026 서울청년정책박람회」 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461442",
           "date": "2026-07-10",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 호우특보 이후 다시 폭염특보… 11일 만에 서울 서남권에 폭염주의보 발효",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461408",
           "date": "2026-07-10",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "여름이 더 즐거운 서울의 공원! 물놀이터 10곳을 만나보세요",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461403",
           "date": "2026-07-10",
           "dept": "조경과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "조선 선비의 풍류부터 한강 라면까지…폴란드 바르샤바에 피어나는 ‘서울의 멋’",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461402",
           "date": "2026-07-10",
           "dept": "서울역사박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "“AI가 대체 못 하는 역량, 자원봉사에서 배운다”…서울시자원봉사센터, 기업 연계 진로 멘토링 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461401",
           "date": "2026-07-10",
           "dept": "서울시자원봉사센터",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울대공원 일본원숭이사, 자연형 방사장으로 전면 재탄생…7월 11일 시민 관람 재개",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461400",
           "date": "2026-07-10",
           "dept": "서울대공원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 상암DMC 마지막 핵심부지 다시 열린다…서울시, 랜드마크 용지 공급공고",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461384",
           "date": "2026-07-10",
           "dept": "도시활력담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시, 2031년까지 31만 호 주택공급 속도전… 지연 정비사업 부시장급 직접 관리",
@@ -443,30 +390,9 @@
           "date": "2026-07-08",
           "dept": "서울시평생교육진흥원",
           "is_new": false
-        },
-        {
-          "title": "(자료제공)  \"청년이 머무는 산업단지 만든다\"… 서울시, G밸리 10만㎡ 녹지 조성",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461156",
-          "date": "2026-07-07",
-          "dept": "조경과",
-          "is_new": false
-        },
-        {
-          "title": "서울은 청년을 품고, 청년은 미래를 이끌고…청년정책박람회 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461131",
-          "date": "2026-07-07",
-          "dept": "청년사업담당관",
-          "is_new": false
-        },
-        {
-          "title": "‘탈서울’ 고민 중인 무주택가구 주목…서울시, 출산 가구 대상 최대 720만원 주거비 지원",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461130",
-          "date": "2026-07-07",
-          "dept": "저출생담당관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-07-11"
+      "crawled_at": "2026-07-12"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -579,7 +505,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-11"
+      "crawled_at": "2026-07-12"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -827,13 +753,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-11"
+      "crawled_at": "2026-07-12"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-07-11",
+      "crawled_at": "2026-07-12",
       "items": [
         {
           "title": "서빙고아파트지구 지구단위계획구역 내 특별계획구역5(강촌APT) 세부개발계획 수립을 위한 열람 공고",
@@ -865,7 +791,7 @@
           "date": "2026-07-10",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "상계보람아파트 재건축사업 정비계획 결정 및 정비구역 지정(안) 재공람 공고",
@@ -1024,7 +950,7 @@
             "date": "2026-07-10",
             "end_date": "",
             "gu": "성북구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "도시관리계획(도시계획시설:학교) 결정(변경) 및 세부시설조성계획 결정(변경)(안) 재열람공고 (국민대학교)",
@@ -1135,7 +1061,7 @@
           "date": "2026-07-10",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "상계보람아파트 재건축사업 정비계획 결정 및 정비구역 지정(안) 재공람 공고",
