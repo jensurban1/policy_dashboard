@@ -1,40 +1,40 @@
 {
-  "updated_at": "2026-07-12T05:41:08.430710+09:00",
+  "updated_at": "2026-07-13T05:38:13.188748+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-07-12"
+      "crawled_at": "2026-07-13"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-07-12"
+      "crawled_at": "2026-07-13"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-07-12"
+      "crawled_at": "2026-07-13"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [],
-      "crawled_at": "2026-07-12"
+      "crawled_at": "2026-07-13"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
       "items": [],
-      "crawled_at": "2026-07-12"
+      "crawled_at": "2026-07-13"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -42,25 +42,81 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.7.12. 기준)",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461531",
+          "date": "2026-07-12",
+          "dept": "재난안전실",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 시민 만족도 90.4% 쉬엄쉬엄 모닝 정례화… 서울, 건강도시로 한 걸음 더",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461517",
+          "date": "2026-07-12",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "낮은 수수료·풍성한 할인, 통했다… 서울배달+땡겨요 상반기 매출 2.5배 껑충",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461456",
+          "date": "2026-07-12",
+          "dept": "소상공인정책과",
+          "is_new": true
+        },
+        {
+          "title": "\"서울 육아정책, 우리가 알릴게요!\"…「서울아이앰배서더」 4기 모집",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461455",
+          "date": "2026-07-12",
+          "dept": "저출생담당관",
+          "is_new": true
+        },
+        {
+          "title": "''잘된 옷은 다 이유가 있어요''…50년 명장의 손끝기술, 교실에서 이어지다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461451",
+          "date": "2026-07-12",
+          "dept": "뷰티패션산업과",
+          "is_new": true
+        },
+        {
+          "title": "UN에서 일하는 꿈, 꿈만 꾸라는 법 있나요…‘제19회 국제기구 진출설명회’ 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461450",
+          "date": "2026-07-12",
+          "dept": "글로벌도시정책관",
+          "is_new": true
+        },
+        {
+          "title": "AI 환각(할루시네이션 현상) 줄인다. 서울시, 공공데이터 최초 MCP 서비스 개시",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461449",
+          "date": "2026-07-12",
+          "dept": "데이터전략과",
+          "is_new": true
+        },
+        {
+          "title": "서울특별시 서북병원, 직원 건강 챙겨 환자안전까지 높인다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461448",
+          "date": "2026-07-12",
+          "dept": "서북병원",
+          "is_new": true
+        },
+        {
           "title": "(보도참고자료) 서울시 폭염 일일상황 보고(2026.7.11. 기준)",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461511",
           "date": "2026-07-11",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울 동남권·서남권에 올여름 첫 폭염경보… 서울시, 폭염 대응체계 강화",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461496",
           "date": "2026-07-11",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 폭염주의보 서울 전역으로 확대 발효…서울시, 폭염 대응체계 강화 나서",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461494",
           "date": "2026-07-11",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.7.10.  기준)",
@@ -334,65 +390,9 @@
           "date": "2026-07-08",
           "dept": "민생사법경찰국",
           "is_new": false
-        },
-        {
-          "title": "서울시 에너지다소비 건물, 병원부터 탄소중립",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461184",
-          "date": "2026-07-08",
-          "dept": "친환경건물과",
-          "is_new": false
-        },
-        {
-          "title": "북한이탈주민의 날 맞아 12일(일)부터 시민공감 문화행사",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461183",
-          "date": "2026-07-08",
-          "dept": "평화기반조성과",
-          "is_new": false
-        },
-        {
-          "title": "서울시여성가족재단, 우먼 AI 교육플랫폼 재직자 대상 ‘일 + 생활 AI 맞춤형 교육’ 운영",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461182",
-          "date": "2026-07-08",
-          "dept": "서울시 여성가족재단",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시 - 국민권익위 협업, 시민불편 1위 '불법 주정차' 문제 해결 나선다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461166",
-          "date": "2026-07-08",
-          "dept": "시민감사옴부즈만위원회",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 팝업스토어 '인기' 뒤 숨은 소비자 권익 침해… 개인정보 동의·환불규정 안내 미흡",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461165",
-          "date": "2026-07-08",
-          "dept": "공정경제과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 예술가의 작업실이 시민의 문화공간으로…서울시, 「한강 사각사각 아트플레이스」 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461164",
-          "date": "2026-07-08",
-          "dept": "미래한강본부",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시, 평생교육이용권 2,518명 추가 모집…소득 관계없이 19세 이상 누구나",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461163",
-          "date": "2026-07-08",
-          "dept": "평생교육과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시민대학, ‘4050 인생디자인학교’ 하반기 참여자 모집…인생 2막 설계 지원",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461162",
-          "date": "2026-07-08",
-          "dept": "서울시평생교육진흥원",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-07-12"
+      "crawled_at": "2026-07-13"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -505,7 +505,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-12"
+      "crawled_at": "2026-07-13"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -753,13 +753,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-12"
+      "crawled_at": "2026-07-13"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-07-12",
+      "crawled_at": "2026-07-13",
       "items": [
         {
           "title": "서빙고아파트지구 지구단위계획구역 내 특별계획구역5(강촌APT) 세부개발계획 수립을 위한 열람 공고",
