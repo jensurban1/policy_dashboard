@@ -1,40 +1,114 @@
 {
-  "updated_at": "2026-07-18T05:46:27.745948+09:00",
+  "updated_at": "2026-07-19T05:40:07.440643+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [],
-      "crawled_at": "2026-07-18"
+      "crawled_at": "2026-07-19"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103090000&pub_kind=WKP",
       "items": [],
-      "crawled_at": "2026-07-18"
+      "crawled_at": "2026-07-19"
     },
     "krihs_article": {
       "name": "월간국토 Article",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryArticle/articleList.es?mid=a10103010000&pub_kind=1",
       "items": [],
-      "crawled_at": "2026-07-18"
+      "crawled_at": "2026-07-19"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [],
-      "crawled_at": "2026-07-18"
+      "items": [
+        {
+          "title": "대한민국 헌법제정, 그 현재적 의미와 발전적 계승 -제헌절에 다시 돌아보는 대한민국 헌법의 제정",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49455",
+          "date": "2026-07-16",
+          "is_new": true
+        },
+        {
+          "title": "한국예술종합학교는 어떤 학교여야 하는가? 법적 지위 정비와 캠퍼스 이전·입지의 쟁점",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49449",
+          "date": "2026-07-15",
+          "is_new": true
+        },
+        {
+          "title": "학생 신체 활동·건강 실태 및 개선과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49447",
+          "date": "2026-07-15",
+          "is_new": true
+        },
+        {
+          "title": "미국 정부의 미토스(Mythos) 수출 통제가 남긴 것 고성능 AI 모델 전략자산화와 한국 소버린 AI의 과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49446",
+          "date": "2026-07-14",
+          "is_new": true
+        },
+        {
+          "title": "사생활 훔쳐보는 로봇청소기를 그대로 둘 것인가? 사물인터넷(IoT) 보안 강화를 위한 입법 및 정책 과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49443",
+          "date": "2026-07-14",
+          "is_new": true
+        },
+        {
+          "title": "장애인 노동의 가치는 어떻게 평가되어야 하는가 장애인 최저임금 적용 제외 제도의 재검토 필요성과 방향성",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49437",
+          "date": "2026-07-13",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-07-19"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [],
-      "crawled_at": "2026-07-18"
+      "items": [
+        {
+          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
+          "date": "2025-12-23",
+          "is_new": true
+        },
+        {
+          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
+          "date": "2025-12-21",
+          "is_new": true
+        },
+        {
+          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
+          "date": "2025-12-03",
+          "is_new": true
+        },
+        {
+          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
+          "date": "2025-11-30",
+          "is_new": true
+        },
+        {
+          "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
+          "date": "2025-11-29",
+          "is_new": true
+        },
+        {
+          "title": "기후위기 대응 통합 물관리 지표체계 구축 및 적용성 검토",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48417",
+          "date": "2025-11-07",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-07-19"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -42,39 +116,53 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 18일(토) 오전 우면산 일대 긴급 점검… 밤사이 기습폭우 대응",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461903",
+          "date": "2026-07-18",
+          "dept": "산지방재과",
+          "is_new": true
+        },
+        {
+          "title": "(보도참고자료) 강우 상황보고(26.7.18. 07시30분 기준)",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/461896",
+          "date": "2026-07-18",
+          "dept": "치수안전과",
+          "is_new": true
+        },
+        {
           "title": "(보도참고자료) 강우 상황보고(27.7.18. 04시30분 기준)",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461892",
           "date": "2026-07-18",
           "dept": "치수안전과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(보도참고자료) 강우 상황보고(26.7.17. 22시 기준)",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461888",
           "date": "2026-07-17",
           "dept": "치수안전과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 고혈압·당뇨 관리를 위한 제철농산물 이용 교육 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461835",
           "date": "2026-07-17",
           "dept": "농업기술센터",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시설공단, '단계별 이행업무 가이드' 배포… 소규모 시공사와 동행 나서",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461833",
           "date": "2026-07-17",
           "dept": "서울시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "국경을 넘어 종을 잇다…시베리아호랑이 ‘사랑’의 새로운 여정",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/461832",
           "date": "2026-07-17",
           "dept": "서울대공원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시, 17시 기준 오존 주의보 해제",
@@ -376,23 +464,9 @@
           "date": "2026-07-13",
           "dept": "재난안전예방과",
           "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 13일(월) 「서울 소상공인과 함께하는 성공 두드림 세미나」 참석",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461558",
-          "date": "2026-07-13",
-          "dept": "소상공인정책과",
-          "is_new": false
-        },
-        {
-          "title": "박물관부터 공원까지, 서울 전역이 여름방학 문화 피서지로",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461518",
-          "date": "2026-07-13",
-          "dept": "문화정책과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-07-18"
+      "crawled_at": "2026-07-19"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -505,7 +579,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-18"
+      "crawled_at": "2026-07-19"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -753,13 +827,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-18"
+      "crawled_at": "2026-07-19"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-07-18",
+      "crawled_at": "2026-07-19",
       "items": [
         {
           "title": "남영동 업무지구 제2구역 도시정비형 재개발사업 정비계획 결정(변경)(안)에 대한 재공람공고",
