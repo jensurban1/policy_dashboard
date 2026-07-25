@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-25T05:57:06.744734+09:00",
+  "updated_at": "2026-07-26T05:42:44.841643+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-25"
+      "crawled_at": "2026-07-26"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-25"
+      "crawled_at": "2026-07-26"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-25"
+      "crawled_at": "2026-07-26"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-25"
+      "crawled_at": "2026-07-26"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-25"
+      "crawled_at": "2026-07-26"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,60 +299,67 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.7.25. 기준)",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/462515",
+          "date": "2026-07-25",
+          "dept": "재난안전예방과",
+          "is_new": true
+        },
+        {
           "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.7.24. 기준)",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/462466",
           "date": "2026-07-24",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 오세훈 시장, 기획처장관 만나 '노후 기반시설 개선' 위한 국비 지원 확대 요청",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/462425",
           "date": "2026-07-24",
           "dept": "예산담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시설공단, 자동차전용도로 쓰레기 투기 단속…카톡 제보 캠페인",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/462417",
           "date": "2026-07-24",
           "dept": "서울시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "상담사 지키고 상담 품질 높인다 …120다산콜, 특이민원 대응 실전 지침서 발간",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/462416",
           "date": "2026-07-24",
           "dept": "서울시120다산콜재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시 서남권, 금천구 시흥3동 1003번지 일대 모아주택 통합심의 통과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/462415",
           "date": "2026-07-24",
           "dept": "모아주택과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제14차 정비사업 통합심의위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/462410",
           "date": "2026-07-24",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시 쪽방촌에 전해진 시원한 여름 선물 '달콤한 수박'",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/462366",
           "date": "2026-07-24",
           "dept": "자활지원과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시복지재단, 돌봄종사자 안전·권리보호 가이드북 제작·배포",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/462362",
           "date": "2026-07-24",
           "dept": "서울시복지재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.7.23. 기준)",
@@ -640,16 +647,9 @@
           "date": "2026-07-20",
           "dept": "보건의료정책과",
           "is_new": false
-        },
-        {
-          "title": "“이제 복지카드 안 챙겨도 된다” 서울온 하나로 공공시설 이용료 감면 받는다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/461931",
-          "date": "2026-07-20",
-          "dept": "디지털정책과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-07-25"
+      "crawled_at": "2026-07-26"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-25"
+      "crawled_at": "2026-07-26"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-07-25"
+      "crawled_at": "2026-07-26"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-07-25",
+      "crawled_at": "2026-07-26",
       "items": [
         {
           "title": "도시관리계획[원효로2가 41-1번지 일대 공동주택 건립에 따른 주택법 의제 지구단위계획 결정(안)] 열람공고",
