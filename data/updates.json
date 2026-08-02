@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T05:42:36.043993+09:00",
+  "updated_at": "2026-08-03T05:46:08.863847+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-02"
+      "crawled_at": "2026-08-03"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-02"
+      "crawled_at": "2026-08-03"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-02"
+      "crawled_at": "2026-08-03"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -214,40 +214,40 @@
           "title": "한국 국익 재정립의 필요성과 의회외교의 방향",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49496",
           "date": "2026-07-30",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "청년 자산형성 지원사업은 취약청년에게 어떤 의미인가?",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49491",
           "date": "2026-07-27",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "마약류 중독질환자의 치료중단과 건강보험 재정 부담 가중 현상",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49495",
           "date": "2026-07-27",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "511명의 무투표당선, 지방선거는 경쟁하고 있는가? - 3인 이상 선거구로 확산된 무투표당선과 지방선거 경쟁구조의 과제 -",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49474",
           "date": "2026-07-21",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "미래 의학교육과 연구·산업·지역혁신 생태계 진단 및 제도개선 방향 모색",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49473",
           "date": "2026-07-21",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "AI 챗봇의 위험에 노출된 아동·청소년 사전예방 중심 규제체제 도입의 필요성과 방향성",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49467",
           "date": "2026-07-20",
-          "is_new": true
+          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-02"
+      "crawled_at": "2026-08-03"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -258,40 +258,40 @@
           "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
           "date": "2025-12-23",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
           "date": "2025-12-21",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
           "date": "2025-12-03",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
           "date": "2025-11-30",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
           "date": "2025-11-29",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "기후위기 대응 통합 물관리 지표체계 구축 및 적용성 검토",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48417",
           "date": "2025-11-07",
-          "is_new": true
+          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-02"
+      "crawled_at": "2026-08-03"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,11 +299,67 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.8.2. 기준)",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/463176",
+          "date": "2026-08-02",
+          "dept": "재난안전예방과",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시장 사후동정 -오세훈 시장, 2일(일) 광진교에서 열린 ‘쉬엄쉬엄 모닝’ 참여",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/463162",
+          "date": "2026-08-02",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "K-푸드·뷰티에 이어 팝업·등산까지… 서울, '글로벌 MZ 최애도시' 5년 연속 1위",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/463108",
+          "date": "2026-08-02",
+          "dept": "관광정책과",
+          "is_new": true
+        },
+        {
+          "title": "한강 다리밑, 시원한 야외 영화관으로 변신… 서울시, 화제작 왕사남 등 상영",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/463107",
+          "date": "2026-08-02",
+          "dept": "미래한강본부",
+          "is_new": true
+        },
+        {
+          "title": "전국 최초 도입에 7.1대 1 몰렸다…  서영커 캠프 가을학기 모집",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/463106",
+          "date": "2026-08-02",
+          "dept": "청년정책담당관",
+          "is_new": true
+        },
+        {
+          "title": "서울 중장년, 지역자원 활용해 인생 2막 창업 나선다… 넥스트로컬 40+ 본격 추진",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/463105",
+          "date": "2026-08-02",
+          "dept": "대외협력과",
+          "is_new": true
+        },
+        {
+          "title": "410개 핀테크 기업 키운 서울핀테크랩… 성공기업 잇단 배출",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/463104",
+          "date": "2026-08-02",
+          "dept": "금융투자과",
+          "is_new": true
+        },
+        {
+          "title": "서울AI재단, 서울 초등학생 3천명 '교실에서 AI 만난다'",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/463103",
+          "date": "2026-08-02",
+          "dept": "서울AI재단",
+          "is_new": true
+        },
+        {
           "title": "폭염 일일상황보고(26.8.1. 기준)",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/463146",
           "date": "2026-08-01",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.7.30. 기준)",
@@ -591,65 +647,9 @@
           "date": "2026-07-29",
           "dept": "치수안전과",
           "is_new": false
-        },
-        {
-          "title": "(석간) 서울역사편찬원, <근현대 서울의 취업과 실업> 발간…근현대 서울 노동사 조명",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/462836",
-          "date": "2026-07-29",
-          "dept": "서울역사편찬원",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시 지역사회서비스 교육, 비대면 64% 확대",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/462835",
-          "date": "2026-07-29",
-          "dept": "서울시복지재단",
-          "is_new": false
-        },
-        {
-          "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.7.28. 기준)",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/462880",
-          "date": "2026-07-28",
-          "dept": "재난안전예방과",
-          "is_new": false
-        },
-        {
-          "title": "서울이 키운 K-패션, 세계로…'하이서울쇼룸' 10년 성과 홍콩 무대서 꽃핀다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/462806",
-          "date": "2026-07-28",
-          "dept": "뷰티패션산업과",
-          "is_new": false
-        },
-        {
-          "title": "서울시 비만율 전국 최대폭 감소…손목닥터9988·서울체력장으로 비만예방에 박차",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/462805",
-          "date": "2026-07-28",
-          "dept": "보건의료정책과",
-          "is_new": false
-        },
-        {
-          "title": "방학동 638, 641 일대 신속통합기획 확정…동북4산을 품은 숲세권 단지로",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/462804",
-          "date": "2026-07-28",
-          "dept": "신속통합기획과",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 폭염 식히는 '시원한 아리수' 도심 곳곳에…아리수 나눔 냉장고 본격 가동",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/462803",
-          "date": "2026-07-28",
-          "dept": "서울아리수본부",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 양성교육 통해 청각장애인 요양보호사 36명 배출",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/462802",
-          "date": "2026-07-28",
-          "dept": "장애인자립지원과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-02"
+      "crawled_at": "2026-08-03"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-02"
+      "crawled_at": "2026-08-03"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-02"
+      "crawled_at": "2026-08-03"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-08-02",
+      "crawled_at": "2026-08-03",
       "items": [
         {
           "title": "도시관리계획(용산전자상가지구 지구단위계획구역 및 계획 결정(변경), 나진10·11동 일대 지구단위계획구역 및 계획, 특별계획구역4 세부개발계획) 결정(안) 재열람공고",
