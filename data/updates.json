@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T05:19:52.782954+09:00",
+  "updated_at": "2026-08-21T05:21:11.813324+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-20"
+      "crawled_at": "2026-08-21"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-20"
+      "crawled_at": "2026-08-21"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-20"
+      "crawled_at": "2026-08-21"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -211,43 +211,43 @@
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [
         {
+          "title": "개정 「형사소송법」의 변화와 필요 조치들",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49537",
+          "date": "2026-08-20",
+          "is_new": true
+        },
+        {
+          "title": "「인공지능 및 데이터 기반 행정 활성화에 관한 법률」시행, 실효성 확보를 위해 무엇이 더 필요한가?",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49532",
+          "date": "2026-08-20",
+          "is_new": true
+        },
+        {
           "title": "영남권 대형산불 1년, 무엇이 바뀌었나? -2025년 대형산불 후속조치 점검 보고서 -",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49524",
           "date": "2026-08-18",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "단일종목 레버리지 ETF 도입 이후, 무엇을 보완해야 하는가?",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49525",
           "date": "2026-08-18",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "한국 민주주의, 지수로 읽는 성과와 한계 주요 민주주의 지수 비교를 통한 다차원적 진단",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49518",
           "date": "2026-08-11",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "늙음과 죽음은 왜 국가의 일이 되었는가:  국회입법조사처 연구보고서에 대한 질적 메타분석을 중심으로",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49521",
           "date": "2026-08-11",
-          "is_new": true
-        },
-        {
-          "title": "K-스틸법, 어떻게 작동시킬 것인가? 실효성 확보를 위한 후속 과제",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49511",
-          "date": "2026-08-06",
-          "is_new": true
-        },
-        {
-          "title": "글로벌 복합위기 시대 - 한반도 평화전략과 정책과제",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49509",
-          "date": "2026-08-05",
-          "is_new": true
+          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-20"
+      "crawled_at": "2026-08-21"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -258,40 +258,40 @@
           "title": "다차원적 불평등 지수  현행화 및 고도화 연구",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49515",
           "date": "2026-08-10",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
           "date": "2025-12-23",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
           "date": "2025-12-21",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
           "date": "2025-12-03",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
           "date": "2025-11-30",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
           "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
           "date": "2025-11-29",
-          "is_new": true
+          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-20"
+      "crawled_at": "2026-08-21"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,109 +299,214 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 20일(목) 민방위 훈련 연계 안보체험전 참관",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464298",
+          "date": "2026-08-20",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "신정4동 922 일대, 신속통합기획 확정, 국회대로 상부공원 품은 초품아 역세권 주거단지로 조성",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464287",
+          "date": "2026-08-20",
+          "dept": "신속통합기획과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 직주락 갖춘 생활거점에 '아파트형 미리내집' 496세대 모집",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464286",
+          "date": "2026-08-20",
+          "dept": "청년주거과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 국내 최초 '중장년 삶의 질' 지표 공개… 9월 정책포럼서 서울형 해법 논의",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464285",
+          "date": "2026-08-20",
+          "dept": "청년주거과",
+          "is_new": true
+        },
+        {
+          "title": "여행의 힐링이 가족이 되는 설렘으로, 서울시 구조 강아지 20마리 공개 입양",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464284",
+          "date": "2026-08-20",
+          "dept": "동물보호과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 어린이 3만명 눈건강 챙겼다…안경 20% 할인쿠폰, 25일 3차 신청 오픈",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464283",
+          "date": "2026-08-20",
+          "dept": "아동담당관",
+          "is_new": true
+        },
+        {
+          "title": "(엠바고11시) 서울시립 서서울미술관, 미디어 작가전 《김희천 두더지들》 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464282",
+          "date": "2026-08-20",
+          "dept": "시립미술관",
+          "is_new": true
+        },
+        {
+          "title": "(엠바고10시) 가을밤 한강 야경과 낭만 속으로… 서울시 한강야경투어 28일 시작",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464272",
+          "date": "2026-08-20",
+          "dept": "미래한강본부",
+          "is_new": true
+        },
+        {
+          "title": "(엠바고10시)(기자설명회) 더 많이 소비하는 밤 아닌, 더 잘 누리는 밤… '서울형 야간경제' 본격화",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464267",
+          "date": "2026-08-20",
+          "dept": "경제정책과",
+          "is_new": true
+        },
+        {
+          "title": "(엠바고10시)(석간) 제13차 서울시 도시계획위원회 개최결과",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464255",
+          "date": "2026-08-20",
+          "dept": "도시계획과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울 노인 교통복지 시민 논의 본격 시동... 8월 19일 위원회 발족",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464252",
+          "date": "2026-08-20",
+          "dept": "교통정책과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 뮤지션들의 라이브로 빛나는 미디어 아트...백남준·유영국·청구영언, DDP를 밝힌다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464251",
+          "date": "2026-08-20",
+          "dept": "서울디자인재단",
+          "is_new": true
+        },
+        {
+          "title": "(석간) AI가 바꾸는 ‘일의 미래’...서울시민대학, ‘서울 AI 인문담론 2’ 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464250",
+          "date": "2026-08-20",
+          "dept": "서울시평생교육진흥원",
+          "is_new": true
+        },
+        {
+          "title": "(석간) AI가 바꾸는 ‘일의 미래’...서울시민대학, ‘서울 AI 인문담론 2’ 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464249",
+          "date": "2026-08-20",
+          "dept": "서울시평생교육진흥원",
+          "is_new": true
+        },
+        {
+          "title": "(석간) AI가 바꾸는 ‘일의 미래’...서울시민대학, ‘서울 AI 인문담론 2’ 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464248",
+          "date": "2026-08-20",
+          "dept": "서울시평생교육진흥원",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 김진오 저고위 부위원장 면담",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464220",
           "date": "2026-08-19",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "'강남 심야 자율주행택시' 7대→19대로 확대… 심야 이동편의 높인다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464205",
           "date": "2026-08-19",
           "dept": "미래첨단교통과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 드론·AI 위협 직접 보고 만졌다…  을지연습 「시민참여 안보체험전」 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464204",
           "date": "2026-08-19",
           "dept": "민방위담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 6,077억 원 투입해 정수센터 재정비 본격 추진",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464203",
           "date": "2026-08-19",
           "dept": "서울아리수본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "광화문광장서 즐기는 청년 건축가들의 '학교'... 서울시, 'UAUS 파빌리온' 전시 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464202",
           "date": "2026-08-19",
           "dept": "한옥건축자산과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 발달장애인 '도전행동' AI로 자동 포착...전문가 맞춤 솔루션 제공",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464201",
           "date": "2026-08-19",
           "dept": "장애인복지과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "“움직여도, 소리 내도 괜찮아요”...서울역사박물관, 하반기 배리어프리영화관 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464200",
           "date": "2026-08-19",
           "dept": "서울역사박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 19일(수) 국민의힘 서울시당과 부동산 정책 해법 모색",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464198",
           "date": "2026-08-19",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시, 집중호우 피해 경남에 재해구호금 2억원 긴급 지원",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464191",
           "date": "2026-08-19",
           "dept": "대외협력과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(엠바고09시50분)(기자설명회) 그늘도 시민의 기본 권리… 서울시, '그늘보행권' 선언",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464190",
           "date": "2026-08-19",
           "dept": "도시공간전략과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 정비사업 '조합설립' 1년에서 4개월로 앞당긴다… 서울시, '공정촉진 개선안' 시행",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464180",
           "date": "2026-08-19",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울국제정원박람회 가을을 직접 기록할 시민의 정원 서포터즈 모집",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464178",
           "date": "2026-08-19",
           "dept": "정원도시정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 여름방학·휴가철 끝까지 서울시민 안전 빈틈없이 챙긴다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464177",
           "date": "2026-08-19",
           "dept": "자치경찰위원회",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 가족과 함께 떠나는 역사 탐방…서울역사편찬원, ‘교과서 역사기행’ 하반기 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464176",
           "date": "2026-08-19",
           "dept": "서울역사편찬원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시복지재단,「2026 돌봄SOS 질의응답집」 첫 발간",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464175",
           "date": "2026-08-19",
           "dept": "서울시복지재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.8.18. 기준)",
@@ -542,120 +647,22 @@
           "date": "2026-08-16",
           "dept": "조경과",
           "is_new": false
-        },
-        {
-          "title": "'한강'이 K-POP 무대로 도약... 여의도 한강공원서 빅뱅 20주년 기념 행사",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464078",
-          "date": "2026-08-16",
-          "dept": "미래한강본부",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 전기 이륜자동차 배터리 화재 분석...6천여 대 리콜 이끌어",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464077",
-          "date": "2026-08-16",
-          "dept": "소방재난본부",
-          "is_new": false
-        },
-        {
-          "title": "\"교통부터 AI까지 서울에 답이 있다...해외 도시 방문단의 'K-정책' 배우기 열풍”",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464076",
-          "date": "2026-08-16",
-          "dept": "도시외교담당관",
-          "is_new": false
-        },
-        {
-          "title": "서울시, '청년 맞춤형 부동산 교육'으로 가을 이사철 전세사기 예방",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464075",
-          "date": "2026-08-16",
-          "dept": "토지관리과",
-          "is_new": false
-        },
-        {
-          "title": "세계적인 디자인 작품 시장 열려... 페어 강화한 '디자인마이애미 서울' 오픈",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464074",
-          "date": "2026-08-16",
-          "dept": "서울디자인재단",
-          "is_new": false
-        },
-        {
-          "title": "호신술·위급 상황 대처까지 「자치경찰 시민대학」 함께해요!",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464073",
-          "date": "2026-08-16",
-          "dept": "자치경찰위원회",
-          "is_new": false
-        },
-        {
-          "title": "호신술·위급 상황 대처까지 「자치경찰 시민대학」 함께해요!",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464072",
-          "date": "2026-08-16",
-          "dept": "자치경찰위원회",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시장 사후동정 - 15일(토) '제81주년 광복절' 기념 타종행사 참석",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464027",
-          "date": "2026-08-15",
-          "dept": "언론담당관",
-          "is_new": false
-        },
-        {
-          "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.8.14. 기준)",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464009",
-          "date": "2026-08-14",
-          "dept": "재난안전예방과",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 한강버스 누적 탑승객 50만 명 돌파… 탑승객 97% 만족",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/463981",
-          "date": "2026-08-14",
-          "dept": "미래한강본부",
-          "is_new": false
-        },
-        {
-          "title": "서울시·고려당, 광복절 기념 8,150개 서울빵 쪽방촌 전달",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/463971",
-          "date": "2026-08-14",
-          "dept": "자활지원과",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 서울 가드닝 크루가 되어 공원의 정원관리를 함께하세요",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/463970",
-          "date": "2026-08-14",
-          "dept": "공원여가사업과",
-          "is_new": false
-        },
-        {
-          "title": "“산타가 한양으로 여름휴가를 왔다”…서울역사박물관 어린이박물관의 특별한 첫여름",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/463969",
-          "date": "2026-08-14",
-          "dept": "서울역사박물관",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고 10시50분)(석간) 서울인재, 지역에서 '새 일' 찾는다… 넥스트로컬, 청년 넘어 중장년 인생 2막까지",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/463968",
-          "date": "2026-08-14",
-          "dept": "대외협력과",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 폭염특보 해제 3일 만에 다시 무더위... 서울 동남권에 폭염주의보 발효",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/463965",
-          "date": "2026-08-14",
-          "dept": "재난안전예방과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-20"
+      "crawled_at": "2026-08-21"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU5020000001",
       "items": [
+        {
+          "title": "2040 서울시 공원녹지기본계획",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=464295",
+          "date": "2026-08-20",
+          "dept": "정원도시정책과",
+          "is_new": true
+        },
         {
           "title": "도시계획시설(도로) 입체적 결정 기준(&#39;26. 7.시행)",
           "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=462979",
@@ -753,22 +760,31 @@
           "date": "2026-05-08",
           "dept": "미래공간담당관",
           "is_new": false
-        },
-        {
-          "title": "역세권 활성화사업 운영기준(2026.04.30.)",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU5020600001?subTit=%EC%97%85%EB%AC%B4%EC%9E%90%EB%A3%8C&type=1&brdSeq=457476",
-          "date": "2026-05-06",
-          "dept": "도시공간전략과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-20"
+      "crawled_at": "2026-08-21"
     },
     "ntfc": {
       "name": "결정고시(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001",
       "items": [
+        {
+          "title": "도시관리계획(도시계획시설:학교) 결정(변경) 및 지형도면 고시",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202608190003",
+          "date": "2026-08-20",
+          "gu": "서울특별시",
+          "notice_no": "2026-474",
+          "is_new": true
+        },
+        {
+          "title": "도시관리계획(미아역 일대 지구단위계획구역 및 계획) 결정(경미한 변경) 및 지형도면 고시",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11305NTC202608110007",
+          "date": "2026-08-20",
+          "gu": "강북구",
+          "notice_no": "2026-109",
+          "is_new": true
+        },
         {
           "title": "도시관리계획(서초로 지구단위계획 및  특별계획구역⑤ 세부개발계획) 결정(변경) 및 지형도면 고시",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202607060003",
@@ -941,7 +957,7 @@
           "title": "개발행위허가 제한 변경 지형도면 고시",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11440NTC202608120013",
           "date": "2026-07-23",
-          "gu": "마포구",
+          "gu": "서울특별시",
           "notice_no": "2026-116",
           "is_new": false
         },
@@ -992,31 +1008,15 @@
           "gu": "서울특별시",
           "notice_no": "2026-409",
           "is_new": false
-        },
-        {
-          "title": "도시관리계획(용산 전자상가지구 지구단위계획, 용산전자상가 특별계획구역10 세부개발계획) 결정(경미한 변경) 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202608180011",
-          "date": "2026-07-16",
-          "gu": "서울특별시",
-          "notice_no": "2026-412",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획 [한양대역세권(성동구 행당동 31-11번지 일원) 장기전세주택 주택건설사업 지구단위계획 구역 지정 및 계획] 결정 및 지형도면 고시 - 한양대학교 주변지역 지구단위계획구역 및 계획(변경) -",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202607280009",
-          "date": "2026-07-16",
-          "gu": "서울특별시",
-          "notice_no": "2026-417",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-20"
+      "crawled_at": "2026-08-21"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-08-20",
+      "crawled_at": "2026-08-21",
       "items": [
         {
           "title": "도시관리계획[동작구 상도지구 지구단위계획구역 및 계획(재정비)] 결정(변경)(안) 열람공고",
@@ -1024,7 +1024,7 @@
           "date": "2026-08-19",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(용도지역) 결정(변경), 남영동 4-1구역 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정, 지구단위계획 결정(변경)(안)에 대한 재공람？공고",
@@ -1091,25 +1091,9 @@
           "is_new": false
         },
         {
-          "title": "도시관리계획(한남 지구단위계획 결정(변경) 및 특별계획구역④-1세부개발계획) 결정(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202608060001&projCode=11170PPL202607280001&searchGubun=ing",
-          "date": "2026-08-06",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "구의자양 재정비촉진지구 자양5재정비촉진구역 재정비촉진계획 결정(변경)(안) 공람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11215ANN202608100001&projCode=11215PPL202608100003&searchGubun=ing",
-          "date": "2026-08-10",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "이문휘경재정비촉지진지구(이문4구역) 재정비촉진계획 결정(변경) 공람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202608120002&projCode=11230PPL202608120014&searchGubun=ing",
-          "date": "2026-08-12",
+          "title": "불광미성아파트 주택재건축정비사업 정비계획 결정 및 정비구역 지정(안)에 대한 주민 재공람 공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11380ANN202608070001&projCode=11380PPL202608070004&searchGubun=ing",
+          "date": "2026-08-07",
           "end_date": "",
           "gu": "",
           "is_new": false
@@ -1134,62 +1118,6 @@
           "title": "정릉동 710-81번지 주택정비형 재개발사업 정비계획 결정 및 정비구역 지정(안) 공람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11290ANN202608120002&projCode=11290PPL202608120012&searchGubun=ing",
           "date": "2026-08-12",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "불광미성아파트 주택재건축정비사업 정비계획 결정 및 정비구역 지정(안)에 대한 주민 재공람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11380ANN202608070001&projCode=11380PPL202608070004&searchGubun=ing",
-          "date": "2026-08-07",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(도시계획시설: 철도, 녹지) 결정(변경)(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202608030001&projCode=11230PPL202607310001&searchGubun=ing",
-          "date": "2026-08-03",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-          "date": "2026-08-06",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(왕십리 광역중심 지구단위계획 및 성동구 행당동 295번지 일원 역세권 활성화사업 특별계획구역 세부개발계획) 결정(변경)(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11200ANN202608050001&projCode=11200PPL202608050001&searchGubun=ing",
-          "date": "2026-08-05",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-          "date": "2026-08-06",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(도시계획시설:공원,주차장) 결정(변경)(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11620ANN202608060001&projCode=11620PPL202608060001&searchGubun=ing",
-          "date": "2026-08-06",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-          "date": "2026-08-04",
           "end_date": "",
           "gu": "",
           "is_new": false
@@ -1228,42 +1156,8 @@
         }
       ],
       "by_gu": {
-        "11680": [
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "강남구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "강남구",
-            "is_new": false
-          }
-        ],
-        "11740": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "강동구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "강동구",
-            "is_new": false
-          }
-        ],
+        "11680": [],
+        "11740": [],
         "11305": [
           {
             "title": "사업시행계획(변경)인가를 위한 공람공고",
@@ -1272,143 +1166,12 @@
             "end_date": "",
             "gu": "강북구",
             "is_new": false
-          },
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "강북구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "강북구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "강북구",
-            "is_new": false
           }
         ],
-        "11500": [
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "강서구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "강서구",
-            "is_new": false
-          }
-        ],
-        "11620": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "관악구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(도시계획시설:공원,주차장) 결정(변경)(안) 열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11620ANN202608060001&projCode=11620PPL202608060001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "관악구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "관악구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "관악구",
-            "is_new": false
-          }
-        ],
-        "11215": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "광진구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "광진구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "광진구",
-            "is_new": false
-          },
-          {
-            "title": "구의자양 재정비촉진지구 자양5재정비촉진구역 재정비촉진계획 결정(변경)(안) 공람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11215ANN202608100001&projCode=11215PPL202608100003&searchGubun=ing",
-            "date": "2026-08-10",
-            "end_date": "",
-            "gu": "광진구",
-            "is_new": false
-          }
-        ],
+        "11500": [],
+        "11620": [],
+        "11215": [],
         "11530": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "구로구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "구로구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "구로구",
-            "is_new": false
-          },
           {
             "title": "한국수출(서울디지털) 국가산업단지(변경)계획(안) 열람 공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608120001&projCode=11000PPL202608120017&searchGubun=ing",
@@ -1428,30 +1191,6 @@
             "is_new": false
           },
           {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "금천구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "금천구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "금천구",
-            "is_new": false
-          },
-          {
             "title": "한국수출(서울디지털) 국가산업단지(변경)계획(안) 열람 공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608120001&projCode=11000PPL202608120017&searchGubun=ing",
             "date": "2026-08-12",
@@ -1460,113 +1199,14 @@
             "is_new": false
           }
         ],
-        "11350": [
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "노원구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "노원구",
-            "is_new": false
-          }
-        ],
-        "11320": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "도봉구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "도봉구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "도봉구",
-            "is_new": false
-          }
-        ],
-        "11230": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "동대문구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "동대문구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(도시계획시설: 철도, 녹지) 결정(변경)(안) 열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202608030001&projCode=11230PPL202607310001&searchGubun=ing",
-            "date": "2026-08-03",
-            "end_date": "",
-            "gu": "동대문구",
-            "is_new": false
-          },
-          {
-            "title": "이문휘경재정비촉지진지구(이문4구역) 재정비촉진계획 결정(변경) 공람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202608120002&projCode=11230PPL202608120014&searchGubun=ing",
-            "date": "2026-08-12",
-            "end_date": "",
-            "gu": "동대문구",
-            "is_new": false
-          }
-        ],
+        "11350": [],
+        "11320": [],
+        "11230": [],
         "11590": [
           {
             "title": "도시관리계획[동작구 상도지구 지구단위계획구역 및 계획(재정비)] 결정(변경)(안) 열람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11590ANN202608190001&projCode=11590PPL202608190003&searchGubun=ing",
             "date": "2026-08-19",
-            "end_date": "",
-            "gu": "동작구",
-            "is_new": true
-          },
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "동작구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "동작구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
             "end_date": "",
             "gu": "동작구",
             "is_new": false
@@ -1582,33 +1222,9 @@
             "is_new": false
           },
           {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "마포구",
-            "is_new": false
-          },
-          {
             "title": "광흥창역세권(신수동 301-1일원) 장기전세주택  도시정비형 재개발사업 정비계획 결정 및 정비구역 지정(안)에 대한 재공람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11440ANN202608030001&projCode=11440PPL202608030001&searchGubun=ing",
             "date": "2026-08-03",
-            "end_date": "",
-            "gu": "마포구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "마포구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
             "end_date": "",
             "gu": "마포구",
             "is_new": false
@@ -1622,32 +1238,7 @@
             "is_new": false
           }
         ],
-        "11410": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "서대문구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "서대문구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "서대문구",
-            "is_new": false
-          }
-        ],
+        "11410": [],
         "11650": [
           {
             "title": "도시관리계획(서울레미콘 부지 지구단위계획구역 및 계획, 특별계획구역 세부개발계획) 결정(안) 재열람공고",
@@ -1656,83 +1247,10 @@
             "end_date": "",
             "gu": "서초구",
             "is_new": false
-          },
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "서초구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "서초구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "서초구",
-            "is_new": false
           }
         ],
-        "11200": [
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "성동구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(왕십리 광역중심 지구단위계획 및 성동구 행당동 295번지 일원 역세권 활성화사업 특별계획구역 세부개발계획) 결정(변경)(안) 열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11200ANN202608050001&projCode=11200PPL202608050001&searchGubun=ing",
-            "date": "2026-08-05",
-            "end_date": "",
-            "gu": "성동구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "성동구",
-            "is_new": false
-          }
-        ],
+        "11200": [],
         "11290": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "성북구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "성북구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "성북구",
-            "is_new": false
-          },
           {
             "title": "정릉동 710-81번지 주택정비형 재개발사업 정비계획 결정 및 정비구역 지정(안) 공람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11290ANN202608120002&projCode=11290PPL202608120012&searchGubun=ing",
@@ -1744,22 +1262,6 @@
         ],
         "11710": [
           {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "송파구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "송파구",
-            "is_new": false
-          },
-          {
             "title": "장지동 842-1번지 공공지원민간임대주택 (역세권 청년주택) 공사 완료 공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11710ANN202608070001&projCode=11710PPL202608060003&searchGubun=ing",
             "date": "2026-08-07",
@@ -1768,50 +1270,8 @@
             "is_new": false
           }
         ],
-        "11470": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "양천구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "양천구",
-            "is_new": false
-          }
-        ],
-        "11560": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "영등포구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "영등포구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "영등포구",
-            "is_new": false
-          }
-        ],
+        "11470": [],
+        "11560": [],
         "11170": [
           {
             "title": "도시관리계획(용도지역) 결정(변경), 남영동 4-1구역 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정, 지구단위계획 결정(변경)(안)에 대한 재공람？공고",
@@ -1846,38 +1306,6 @@
             "is_new": false
           },
           {
-            "title": "도시관리계획(한남 지구단위계획 결정(변경) 및 특별계획구역④-1세부개발계획) 결정(안) 열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202608060001&projCode=11170PPL202607280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "용산구",
-            "is_new": false
-          },
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "용산구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "용산구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "용산구",
-            "is_new": false
-          },
-          {
             "title": "청파 제1 주택정비형 재개발사업 정비계획 결정(변경)(안), 지구단위계획 결정(변경)(안)에 대한 공람공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202608040001&projCode=11170PPL202608040006&searchGubun=ing",
             "date": "2026-08-04",
@@ -1896,30 +1324,6 @@
         ],
         "11380": [
           {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "은평구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "은평구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "은평구",
-            "is_new": false
-          },
-          {
             "title": "불광미성아파트 주택재건축정비사업 정비계획 결정 및 정비구역 지정(안)에 대한 주민 재공람 공고",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11380ANN202608070001&projCode=11380PPL202608070004&searchGubun=ing",
             "date": "2026-08-07",
@@ -1928,60 +1332,9 @@
             "is_new": false
           }
         ],
-        "11110": [
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "종로구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "종로구",
-            "is_new": false
-          }
-        ],
-        "11140": [
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "중구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "중구",
-            "is_new": false
-          }
-        ],
-        "11260": [
-          {
-            "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-            "date": "2026-08-04",
-            "end_date": "",
-            "gu": "중랑구",
-            "is_new": false
-          },
-          {
-            "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-            "date": "2026-08-06",
-            "end_date": "",
-            "gu": "중랑구",
-            "is_new": false
-          }
-        ]
+        "11110": [],
+        "11140": [],
+        "11260": []
       },
       "all": [
         {
@@ -1990,7 +1343,7 @@
           "date": "2026-08-19",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(용도지역) 결정(변경), 남영동 4-1구역 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정, 지구단위계획 결정(변경)(안)에 대한 재공람？공고",
@@ -2057,25 +1410,9 @@
           "is_new": false
         },
         {
-          "title": "도시관리계획(한남 지구단위계획 결정(변경) 및 특별계획구역④-1세부개발계획) 결정(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202608060001&projCode=11170PPL202607280001&searchGubun=ing",
-          "date": "2026-08-06",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "구의자양 재정비촉진지구 자양5재정비촉진구역 재정비촉진계획 결정(변경)(안) 공람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11215ANN202608100001&projCode=11215PPL202608100003&searchGubun=ing",
-          "date": "2026-08-10",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "이문휘경재정비촉지진지구(이문4구역) 재정비촉진계획 결정(변경) 공람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202608120002&projCode=11230PPL202608120014&searchGubun=ing",
-          "date": "2026-08-12",
+          "title": "불광미성아파트 주택재건축정비사업 정비계획 결정 및 정비구역 지정(안)에 대한 주민 재공람 공고",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11380ANN202608070001&projCode=11380PPL202608070004&searchGubun=ing",
+          "date": "2026-08-07",
           "end_date": "",
           "gu": "",
           "is_new": false
@@ -2100,62 +1437,6 @@
           "title": "정릉동 710-81번지 주택정비형 재개발사업 정비계획 결정 및 정비구역 지정(안) 공람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11290ANN202608120002&projCode=11290PPL202608120012&searchGubun=ing",
           "date": "2026-08-12",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "불광미성아파트 주택재건축정비사업 정비계획 결정 및 정비구역 지정(안)에 대한 주민 재공람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11380ANN202608070001&projCode=11380PPL202608070004&searchGubun=ing",
-          "date": "2026-08-07",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(도시계획시설: 철도, 녹지) 결정(변경)(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11230ANN202608030001&projCode=11230PPL202607310001&searchGubun=ing",
-          "date": "2026-08-03",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(회현 지구단위계획구역 등 61개 구역) 결정(변경)(안) 재열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060001&projCode=11000PPL202605280004&searchGubun=ing",
-          "date": "2026-08-06",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(왕십리 광역중심 지구단위계획 및 성동구 행당동 295번지 일원 역세권 활성화사업 특별계획구역 세부개발계획) 결정(변경)(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11200ANN202608050001&projCode=11200PPL202608050001&searchGubun=ing",
-          "date": "2026-08-05",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(상봉생활권중심 지구단위계획구역 등 156개 구역) 결정(변경)(안) 재열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608060002&projCode=11000PPL202605280001&searchGubun=ing",
-          "date": "2026-08-06",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "도시관리계획(도시계획시설:공원,주차장) 결정(변경)(안) 열람공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11620ANN202608060001&projCode=11620PPL202608060001&searchGubun=ing",
-          "date": "2026-08-06",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "토지거래허가구역 (재)지정, 조정, 해제 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11000ANN202608040001&projCode=11000PPL202608030004&searchGubun=ing",
-          "date": "2026-08-04",
           "end_date": "",
           "gu": "",
           "is_new": false
