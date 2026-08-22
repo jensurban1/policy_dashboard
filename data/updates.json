@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T05:18:20.472160+09:00",
+  "updated_at": "2026-08-23T05:15:16.791548+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-22"
+      "crawled_at": "2026-08-23"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-22"
+      "crawled_at": "2026-08-23"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,21 +203,21 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-22"
+      "crawled_at": "2026-08-23"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
       "items": [],
-      "crawled_at": "2026-08-22"
+      "crawled_at": "2026-08-23"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
       "items": [],
-      "crawled_at": "2026-08-22"
+      "crawled_at": "2026-08-23"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -229,70 +229,70 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464351",
           "date": "2026-08-21",
           "dept": "교통정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, '잘 쉬는 밤'을 굿즈로... 때타올·마스크팩 등 '서울 사우나 시리즈 7종' 출시",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464350",
           "date": "2026-08-21",
           "dept": "서울브랜드담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 독립유공자 발굴사업 성과 발표… 2년간 총 540명 발굴",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464349",
           "date": "2026-08-21",
           "dept": "복지정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시설공단, 추석맞이 장애인 가족 '성묘지원 버스' 운영",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464348",
           "date": "2026-08-21",
           "dept": "서울시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울 넘어 지역으로 가는 백제 이야기...한성백제박물관, ‘한원(翰苑)’ 특별전 순회전시 추진",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464347",
           "date": "2026-08-21",
           "dept": "한성백제박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 성수대교 진입램프 단차, 외부 전문가 검증 결과 \"구조안전 이상 없어\"... 서울시, 선제적 보강·관리 강화",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464341",
           "date": "2026-08-21",
           "dept": "교량안전과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 6월 아파트 매매 실거래가격 상승폭 확대... 5년 만에 최고치",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464340",
           "date": "2026-08-21",
           "dept": "부동산정책개발센터",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 대학·학생·상인 함께 대학가 활력 찾는다... G3 동행성장분과, 대학상권 현장방문",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464338",
           "date": "2026-08-21",
           "dept": "소상공인정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 제17차 서울시 정비사업 통합심의위원회 개최결과",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464335",
           "date": "2026-08-21",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울미래인재재단, 취준 청년 ‘말하기 자신감’ 지원...이금희 아나운서 초청 1:1 코칭",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464325",
           "date": "2026-08-21",
           "dept": "서울미래인재재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 20일(목) 민방위 훈련 연계 안보체험전 참관",
@@ -575,7 +575,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-22"
+      "crawled_at": "2026-08-23"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -688,7 +688,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-22"
+      "crawled_at": "2026-08-23"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -936,13 +936,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-22"
+      "crawled_at": "2026-08-23"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-08-22",
+      "crawled_at": "2026-08-23",
       "items": [
         {
           "title": "도시관리계획[동작구 상도지구 지구단위계획구역 및 계획(재정비)] 결정(변경)(안) 열람공고",
