@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29T11:38:26.931063+09:00",
+  "updated_at": "2026-08-30T07:10:40.503996+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-29"
+      "crawled_at": "2026-08-30"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-29"
+      "crawled_at": "2026-08-30"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,21 +203,95 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-29"
+      "crawled_at": "2026-08-30"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [],
-      "crawled_at": "2026-08-29"
+      "items": [
+        {
+          "title": "2026 국정감사 이슈 분석 Ⅳ (사회ㆍ문화 분야)",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49558",
+          "date": "2026-08-27",
+          "is_new": true
+        },
+        {
+          "title": "2026 국정감사 이슈 분석 Ⅲ (경제ㆍ산업 분야)",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49557",
+          "date": "2026-08-27",
+          "is_new": true
+        },
+        {
+          "title": "2026 국정감사 이슈 분석 Ⅱ (정치ㆍ행정 분야)",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49556",
+          "date": "2026-08-27",
+          "is_new": true
+        },
+        {
+          "title": "2026 국정감사 이슈 분석 Ⅰ (56개의 결정적 질문)",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49555",
+          "date": "2026-08-27",
+          "is_new": true
+        },
+        {
+          "title": "해외 의사조력사 제도 유형과 국내 입법의 방향성 검토",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49551",
+          "date": "2026-08-26",
+          "is_new": true
+        },
+        {
+          "title": "「지방의회법안」의 주요 쟁점과 고려사항",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49546",
+          "date": "2026-08-25",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-08-30"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [],
-      "crawled_at": "2026-08-29"
+      "items": [
+        {
+          "title": "다차원적 불평등 지수  현행화 및 고도화 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49515",
+          "date": "2026-08-10",
+          "is_new": true
+        },
+        {
+          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
+          "date": "2025-12-23",
+          "is_new": true
+        },
+        {
+          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
+          "date": "2025-12-21",
+          "is_new": true
+        },
+        {
+          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
+          "date": "2025-12-03",
+          "is_new": true
+        },
+        {
+          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
+          "date": "2025-11-30",
+          "is_new": true
+        },
+        {
+          "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
+          "date": "2025-11-29",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-08-30"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -225,11 +299,25 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.8.29. 기준)",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464903",
+          "date": "2026-08-29",
+          "dept": "재난안전예방과",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 29일(토) 「서울조각페스티벌」 개막식 참석",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464902",
+          "date": "2026-08-29",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
           "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.8.28. 기준)",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464887",
           "date": "2026-08-28",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 9월 중장년 채용박람회…“160여 개 기업이 중장년 3천 명 뽑는다”",
@@ -559,23 +647,9 @@
           "date": "2026-08-25",
           "dept": "시민협력과",
           "is_new": false
-        },
-        {
-          "title": "낮부터 밤까지 서울은 ‘지붕 없는 미술관’…제3회 서울조각페스티벌",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464565",
-          "date": "2026-08-25",
-          "dept": "박물관과",
-          "is_new": false
-        },
-        {
-          "title": "홀로 맞서지 않도록…서울시, 법조계와 \"자립준비청년 법률 울타리\" 함께 만든다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464564",
-          "date": "2026-08-25",
-          "dept": "아동담당관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-29"
+      "crawled_at": "2026-08-30"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -688,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-29"
+      "crawled_at": "2026-08-30"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -936,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-29"
+      "crawled_at": "2026-08-30"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-08-29",
+      "crawled_at": "2026-08-30",
       "items": [
         {
           "title": "창신1구역3지구 도시정비형 재개발사업 정비계획 결정(변경)(안) 공람공고",
