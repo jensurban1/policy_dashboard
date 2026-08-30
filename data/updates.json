@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T07:10:40.503996+09:00",
+  "updated_at": "2026-08-31T07:17:55.118628+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-30"
+      "crawled_at": "2026-08-31"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-30"
+      "crawled_at": "2026-08-31"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,95 +203,21 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-30"
+      "crawled_at": "2026-08-31"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [
-        {
-          "title": "2026 국정감사 이슈 분석 Ⅳ (사회ㆍ문화 분야)",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49558",
-          "date": "2026-08-27",
-          "is_new": true
-        },
-        {
-          "title": "2026 국정감사 이슈 분석 Ⅲ (경제ㆍ산업 분야)",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49557",
-          "date": "2026-08-27",
-          "is_new": true
-        },
-        {
-          "title": "2026 국정감사 이슈 분석 Ⅱ (정치ㆍ행정 분야)",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49556",
-          "date": "2026-08-27",
-          "is_new": true
-        },
-        {
-          "title": "2026 국정감사 이슈 분석 Ⅰ (56개의 결정적 질문)",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49555",
-          "date": "2026-08-27",
-          "is_new": true
-        },
-        {
-          "title": "해외 의사조력사 제도 유형과 국내 입법의 방향성 검토",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49551",
-          "date": "2026-08-26",
-          "is_new": true
-        },
-        {
-          "title": "「지방의회법안」의 주요 쟁점과 고려사항",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49546",
-          "date": "2026-08-25",
-          "is_new": true
-        }
-      ],
-      "crawled_at": "2026-08-30"
+      "items": [],
+      "crawled_at": "2026-08-31"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [
-        {
-          "title": "다차원적 불평등 지수  현행화 및 고도화 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49515",
-          "date": "2026-08-10",
-          "is_new": true
-        },
-        {
-          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
-          "date": "2025-12-23",
-          "is_new": true
-        },
-        {
-          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
-          "date": "2025-12-21",
-          "is_new": true
-        },
-        {
-          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
-          "date": "2025-12-03",
-          "is_new": true
-        },
-        {
-          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
-          "date": "2025-11-30",
-          "is_new": true
-        },
-        {
-          "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
-          "date": "2025-11-29",
-          "is_new": true
-        }
-      ],
-      "crawled_at": "2026-08-30"
+      "items": [],
+      "crawled_at": "2026-08-31"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,18 +225,116 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(석간) 서울시, 중소 건설사 공사비 산정 지원... 전국 최초 공사 절차서 및 해설서 개발 보급",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464935",
+          "date": "2026-08-31",
+          "dept": "계약심사과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 가을밤 어디서 즐길까…서울시, 가을축제 한눈에 보는 <서울축제지도> 발간",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464934",
+          "date": "2026-08-31",
+          "dept": "문화예술과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 50대까지 확대…경력복귀 통합지원 _서울커리업 구직지원금_ 추가 모집",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464933",
+          "date": "2026-08-31",
+          "dept": "양성평등담당관",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울시-도쿄도, AI·디지털 행정 실무 협력 본격화",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464932",
+          "date": "2026-08-31",
+          "dept": "디지털정책과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울시여성가족재단, 양성평등주간 맞아  ‘AI 시대의 양성평등, 서울의 미래가 되다’개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464931",
+          "date": "2026-08-31",
+          "dept": "서울시 여성가족재단",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울역사박물관·한성백제박물관이 함께 잇는 2천 년 시간여행",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464930",
+          "date": "2026-08-31",
+          "dept": "서울역사박물관",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 콘텐츠 경계 허물고 미래산업 잇는다…'엔터테크·GES 서울 2026' 통합 개막",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464929",
+          "date": "2026-08-30",
+          "dept": "K컬처전략과",
+          "is_new": true
+        },
+        {
+          "title": "살던 곳에서 진료부터 돌봄까지…서울시, 방문진료 부담금 80% 지원",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464928",
+          "date": "2026-08-30",
+          "dept": "보건의료정책과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 전세사기피해주택 '집 내부'까지 고쳐준다… 1인 최대 500만원 추가 지원",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464927",
+          "date": "2026-08-30",
+          "dept": "주거복지과",
+          "is_new": true
+        },
+        {
+          "title": "세종문화회관 공연을 도심 전광판에서 실시간으로…G3 글로벌매력분과 현장방문",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464926",
+          "date": "2026-08-30",
+          "dept": "문화정책과",
+          "is_new": true
+        },
+        {
+          "title": "서울 도심 8곳이 하나의 거대한 미디어아트 전시장으로… 서울시, 광화문 자유표시구역서 키아프 협력 미디어아트 특별전 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464925",
+          "date": "2026-08-30",
+          "dept": "도시경관담당관",
+          "is_new": true
+        },
+        {
+          "title": "청계광장에 새로운 실크로드 열린다… 서울-아·중동 잇는 ‘살람서울 페스티벌’",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464924",
+          "date": "2026-08-30",
+          "dept": "관광산업과",
+          "is_new": true
+        },
+        {
+          "title": "서울런, ‘읽는 힘’부터 ‘쓰는 힘’까지…독서·논술 1:1 맞춤 멘토링 참가자 모집",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464923",
+          "date": "2026-08-30",
+          "dept": "교육지원정책과",
+          "is_new": true
+        },
+        {
+          "title": "도시계획위원회 제10차 신속통합수권위원회 및 제1차 재정비촉진분과위원회 개최결과",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/464922",
+          "date": "2026-08-30",
+          "dept": "도시계획과",
+          "is_new": true
+        },
+        {
           "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.8.29. 기준)",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464903",
           "date": "2026-08-29",
           "dept": "재난안전예방과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 29일(토) 「서울조각페스티벌」 개막식 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/464902",
           "date": "2026-08-29",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.8.28. 기준)",
@@ -549,107 +573,9 @@
           "date": "2026-08-26",
           "dept": "관광산업과",
           "is_new": false
-        },
-        {
-          "title": "서울식물원, 식물자원 확보 속도낸다… 2027년까지 8,000종으로 확대",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464622",
-          "date": "2026-08-26",
-          "dept": "서울식물원",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 9월 '수도요금 체납 집중정리'…장기·고액 체납액 55억 징수 나선다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464620",
-          "date": "2026-08-26",
-          "dept": "서울아리수본부",
-          "is_new": false
-        },
-        {
-          "title": "대치동 업무 시설·코엑스 리모델링, 글로벌 MICE 허브로 재탄생",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464619",
-          "date": "2026-08-26",
-          "dept": "건축기획과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시, 올해 정비사업 3만 호 착공 총력… 한남3구역서 현장 공정점검",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464618",
-          "date": "2026-08-26",
-          "dept": "주거정비과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 한강 안전 지키는 새 거점, 한강경찰대 난지센터 조성",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464617",
-          "date": "2026-08-26",
-          "dept": "미래공간담당관",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울브랜드굿즈 공모…'서울굿즈' 중소상공인 210곳 키운다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464616",
-          "date": "2026-08-26",
-          "dept": "서울디자인재단",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 올가을, 가족과 함께 ‘서커스 피크닉’ 떠나보자!",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464615",
-          "date": "2026-08-26",
-          "dept": "서울문화재단",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울복지교육센터, 「복지리더 연찬회」 성황리에 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464614",
-          "date": "2026-08-26",
-          "dept": "서울시복지재단",
-          "is_new": false
-        },
-        {
-          "title": "(보도참고자료) 서울시 폭염 일일상황보고(26.8.25. 기준)",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464602",
-          "date": "2026-08-25",
-          "dept": "재난안전예방과",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 현장에서 재건축 물꼬 튼다… 서울시, '찾아가는 재건축 신통자문' 첫 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464600",
-          "date": "2026-08-25",
-          "dept": "공동주택과",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고15시) G3 균형발전특별분과, 남산 곤돌라 현장점검…＂곤돌라 차질 없이 완수＂",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464581",
-          "date": "2026-08-25",
-          "dept": "도시정비과",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 25일(화) 도쿄도의회 자민당 의원단 만나 서울-도쿄 우호협력 논의",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464580",
-          "date": "2026-08-25",
-          "dept": "언론담당관",
-          "is_new": false
-        },
-        {
-          "title": "누적 관광객 647만 명 '잠수교 뚜벅뚜벅 축제'… 올가을 8주간 매주 다른 축제",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464567",
-          "date": "2026-08-25",
-          "dept": "미래한강본부",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 거제 수해현장에 '바로봉사단' 긴급 파견… 지역 넘어 복구에 힘 보탠다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/464566",
-          "date": "2026-08-25",
-          "dept": "시민협력과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-08-30"
+      "crawled_at": "2026-08-31"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +688,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-30"
+      "crawled_at": "2026-08-31"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +936,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-08-30"
+      "crawled_at": "2026-08-31"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-08-30",
+      "crawled_at": "2026-08-31",
       "items": [
         {
           "title": "창신1구역3지구 도시정비형 재개발사업 정비계획 결정(변경)(안) 공람공고",
