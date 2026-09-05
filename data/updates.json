@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T07:00:37.139659+09:00",
+  "updated_at": "2026-09-06T06:50:31.003361+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-05"
+      "crawled_at": "2026-09-06"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-05"
+      "crawled_at": "2026-09-06"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,95 +203,21 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-05"
+      "crawled_at": "2026-09-06"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [
-        {
-          "title": "'학생 1인당 교부금'만 늘면, 교육현안 해결할 수 있나? 지방교육재정교부금 개편안의 학생 수 기반 교육비 논리에 관한 검토",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49570",
-          "date": "2026-09-02",
-          "is_new": false
-        },
-        {
-          "title": "미래를 위한 헌법, 그 진단과 해법",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49571",
-          "date": "2026-09-02",
-          "is_new": false
-        },
-        {
-          "title": "2026 국정감사 이슈 분석 Ⅳ (사회ㆍ문화 분야)",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49558",
-          "date": "2026-08-27",
-          "is_new": false
-        },
-        {
-          "title": "2026 국정감사 이슈 분석 Ⅲ (경제ㆍ산업 분야)",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49557",
-          "date": "2026-08-27",
-          "is_new": false
-        },
-        {
-          "title": "2026 국정감사 이슈 분석 Ⅱ (정치ㆍ행정 분야)",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49556",
-          "date": "2026-08-27",
-          "is_new": false
-        },
-        {
-          "title": "2026 국정감사 이슈 분석 Ⅰ (56개의 결정적 질문)",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49555",
-          "date": "2026-08-27",
-          "is_new": false
-        }
-      ],
-      "crawled_at": "2026-09-05"
+      "items": [],
+      "crawled_at": "2026-09-06"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [
-        {
-          "title": "다차원적 불평등 지수  현행화 및 고도화 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=49515",
-          "date": "2026-08-10",
-          "is_new": false
-        },
-        {
-          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
-          "date": "2025-12-23",
-          "is_new": false
-        },
-        {
-          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
-          "date": "2025-12-21",
-          "is_new": false
-        },
-        {
-          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
-          "date": "2025-12-03",
-          "is_new": false
-        },
-        {
-          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
-          "date": "2025-11-30",
-          "is_new": false
-        },
-        {
-          "title": "연구회 운영체계의 주요 이슈와 입법과제- 과학기술분야를 중심으로 -",
-          "url": "https://www.nars.go.kr/report/view.do?nttId=48506",
-          "date": "2025-11-29",
-          "is_new": false
-        }
-      ],
-      "crawled_at": "2026-09-05"
+      "items": [],
+      "crawled_at": "2026-09-06"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -303,28 +229,28 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/465356",
           "date": "2026-09-04",
           "dept": "관광산업과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "북서울꿈의숲, 한옥의 정취와 특별한 가을 음악회를 즐겨보세요",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/465355",
           "date": "2026-09-04",
           "dept": "북부공원여가센터",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "버릴게 없네! 버려진 그림책·몽당크레용이 새롭게 태어난다…'지구재생 프로젝트' 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/465353",
           "date": "2026-09-04",
           "dept": "서울물재생시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시설공단, 추석 연휴 성묘객 편의 제공·귀성길 안전 관리 총력",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/465352",
           "date": "2026-09-04",
           "dept": "서울시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 쓰레기 주워 수달 구출, 자전거로 솜사탕… 서울시, 환경 축제 'GREEN 한강'",
@@ -352,7 +278,7 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/465348",
           "date": "2026-09-04",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 서울세계불꽃축제 앞두고 3일(목) 현장 안전점검",
@@ -649,7 +575,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-05"
+      "crawled_at": "2026-09-06"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +688,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-05"
+      "crawled_at": "2026-09-06"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +936,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-05"
+      "crawled_at": "2026-09-06"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-09-05",
+      "crawled_at": "2026-09-06",
       "items": [
         {
           "title": "도시관리계획(특별계획구역) (변경)결정 및 정류장부지 동측 도시정비형 재개발 정비구역 지정 및 정비계획 결정(안)에 대한 공람공고",
