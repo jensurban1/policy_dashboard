@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T06:53:41.007165+09:00",
+  "updated_at": "2026-09-14T07:00:30.109751+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-13"
+      "crawled_at": "2026-09-14"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-13"
+      "crawled_at": "2026-09-14"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,27 +203,185 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-13"
+      "crawled_at": "2026-09-14"
     },
     "nars_report": {
       "name": "연구보고서",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0043",
-      "items": [],
-      "crawled_at": "2026-09-13"
+      "items": [
+        {
+          "title": "반복되는 낙동강 가뭄, 어떻게 대응할 것인가?: 기후위기 시대 유역 물관리 개선과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49604",
+          "date": "2026-09-10",
+          "is_new": true
+        },
+        {
+          "title": "국민연금 추후납부제도의 바람직한 개선방안: 편법적 수급권 확보 수단으로 악용되는 것을 어떻게 막을 것인가",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49600",
+          "date": "2026-09-10",
+          "is_new": true
+        },
+        {
+          "title": "축제의 즐거움이쓰레기로 남지 않도록 -문화예술 축제·행사의 자원순환 관리체계 구축 과제",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49593",
+          "date": "2026-09-08",
+          "is_new": true
+        },
+        {
+          "title": "산업안전보건체계의 패러다임 전환  :사회적 대화에 기반한 영국의 위험관리형 규제방식 도입을 중심으로",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49591",
+          "date": "2026-09-08",
+          "is_new": true
+        },
+        {
+          "title": "'학생 1인당 교부금'만 늘면, 교육현안 해결할 수 있나? 지방교육재정교부금 개편안의 학생 수 기반 교육비 논리에 관한 검토",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49570",
+          "date": "2026-09-02",
+          "is_new": true
+        },
+        {
+          "title": "미래를 위한 헌법, 그 진단과 해법",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49571",
+          "date": "2026-09-02",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-09-14"
     },
     "nars_research": {
       "name": "정책연구용역",
       "org": "국회입법조사처",
       "list_url": "https://www.nars.go.kr/report/list.do?cmsCode=CM0010",
-      "items": [],
-      "crawled_at": "2026-09-13"
+      "items": [
+        {
+          "title": "AI로 인한 새로운 보안 위험과 대응에 관한 국내외 입법ㆍ정책 비교 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49603",
+          "date": "2026-09-05",
+          "is_new": true
+        },
+        {
+          "title": "다차원적 불평등 지수  현행화 및 고도화 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=49515",
+          "date": "2026-08-10",
+          "is_new": true
+        },
+        {
+          "title": "국가 현안 분석·해결을 위한 과학적 연구 역량 강화 사업 한국의 다차원적 불평등 현황 분석 및 관련 지수 개발",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48630",
+          "date": "2025-12-23",
+          "is_new": true
+        },
+        {
+          "title": "정당정치 발전을 위한 정당법 개선 방안 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48617",
+          "date": "2025-12-21",
+          "is_new": true
+        },
+        {
+          "title": "한국정치의 양극화와 팬덤정치(Fandom  Politics)의 한국적 특수성에 관한 연구",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48528",
+          "date": "2025-12-03",
+          "is_new": true
+        },
+        {
+          "title": "인문사회 분야 학술연구  지원사업 평가와 개혁방안 연구: 한국연구재단을 중심으로",
+          "url": "https://www.nars.go.kr/report/view.do?nttId=48505",
+          "date": "2025-11-30",
+          "is_new": true
+        }
+      ],
+      "crawled_at": "2026-09-14"
     },
     "seoul_press": {
       "name": "보도자료",
       "org": "서울특별시",
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
+        {
+          "title": "서울시, 짧은 추석연휴 시민 불편없게… 안전·민생·생활 종합대책 가동",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466247",
+          "date": "2026-09-13",
+          "dept": "기획담당관",
+          "is_new": true
+        },
+        {
+          "title": "서울-지역을 잇는 추석맞이 서로장터. 전국 농산물이 서울광장에",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466246",
+          "date": "2026-09-13",
+          "dept": "대외협력과",
+          "is_new": true
+        },
+        {
+          "title": "“서울갤러리”로 놀러 가자! “Pokemon GO”와 함께 즐기는 특별한 가을 소풍",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466245",
+          "date": "2026-09-13",
+          "dept": "홍보담당관",
+          "is_new": true
+        },
+        {
+          "title": "DDP가 거대한 K-콘텐츠 놀이터로…'엔터테크·GES 서울 2026' 17일 개막",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466244",
+          "date": "2026-09-13",
+          "dept": "K컬처전략과",
+          "is_new": true
+        },
+        {
+          "title": "차 없는 서울, 누구나 함께 걷는다…'2026년 서울 걷자 페스티벌' 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466243",
+          "date": "2026-09-13",
+          "dept": "생활교통안전과",
+          "is_new": true
+        },
+        {
+          "title": "서울시 '글로벌 바로봉사단' 출범…국적 넘어 나눔가치 실현, 공동체 의식↑",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466242",
+          "date": "2026-09-13",
+          "dept": "시민협력과",
+          "is_new": true
+        },
+        {
+          "title": "폐 치안센터가 동네 도서관으로…서울시 펀활력소’도곡에 2호 추진",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466241",
+          "date": "2026-09-13",
+          "dept": "미래공간담당관",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 외국인 환자 치료 전후까지 챙긴다…‘서울의료친화 숙박시설’첫 선정",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466240",
+          "date": "2026-09-13",
+          "dept": "관광산업과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 착한가격업소에서 서울사랑상품권 결제하면 5% 페이백… 총 10% 혜택",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466239",
+          "date": "2026-09-13",
+          "dept": "공정경제과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 청소년시설 7곳서 가을 축제 릴레이…청소년이 기획·창작·공연 주도",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466238",
+          "date": "2026-09-13",
+          "dept": "청소년정책과",
+          "is_new": true
+        },
+        {
+          "title": "추석 명절 쓰레기 줄이기…서울시, 분리배출 캠페인·과대포장 집중점검 병행",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466237",
+          "date": "2026-09-13",
+          "dept": "자원순환과",
+          "is_new": true
+        },
+        {
+          "title": "서울식물원, 서울 지역 첫 서식지외보전기관 지정으로 식물연구 쾌거",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466236",
+          "date": "2026-09-13",
+          "dept": "서울식물원",
+          "is_new": true
+        },
         {
           "title": "(엠바고14시) \"나를 찾고, 다음을 꿈꾸다\"…서울시 청년인생설계학교 수료생 100명 다시 만난다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466175",
@@ -489,93 +647,9 @@
           "date": "2026-09-09",
           "dept": "서울아리수본부",
           "is_new": false
-        },
-        {
-          "title": "(석간) 서울시, 청계광장에서 시민 120여 명과‘줍깅’캠페인 펼친다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465992",
-          "date": "2026-09-09",
-          "dept": "생활환경과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 도심 속 K-BBQ 미식 축제! ‘서울 바비큐 페스티벌’ 10월 난지캠핑장서 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465991",
-          "date": "2026-09-09",
-          "dept": "관광정책과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울우리소리박물관, 발달장애인 맞춤형 교구 <톡톡 우리소리> 제작... 158개 기관에 배포",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465990",
-          "date": "2026-09-09",
-          "dept": "서울역사박물관",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고14시) 128년 전 여권통문의 외침, '동행서울'로 이어지다…「2026 서울여성대회」 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465892",
-          "date": "2026-09-08",
-          "dept": "양성평등담당관",
-          "is_new": false
-        },
-        {
-          "title": "추석 장보기, 전통시장에서 알뜰하게… 서울 61곳 최대 30% 할인",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465889",
-          "date": "2026-09-08",
-          "dept": "상권활성화과",
-          "is_new": false
-        },
-        {
-          "title": "서울시, 청소년 출입·고용금지업소‘홀덤펍’합동단속 17개소 적발",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465887",
-          "date": "2026-09-08",
-          "dept": "경제수사과",
-          "is_new": false
-        },
-        {
-          "title": "서울시평생학습포털, 회원 200만 돌파…초등 무료 영어 ‘서울런 키즈영어’ 선봬",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465886",
-          "date": "2026-09-08",
-          "dept": "중장년지원과",
-          "is_new": false
-        },
-        {
-          "title": "‘정원도시 서울’빛낸 주인공들…남산 하늘숲길 등 수상",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465884",
-          "date": "2026-09-08",
-          "dept": "정원도시정책과",
-          "is_new": false
-        },
-        {
-          "title": "청년성장특별시 서울, 2026년 서울특별시 청년상 수상자 12명 탄생",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465879",
-          "date": "2026-09-08",
-          "dept": "청년정책담당관",
-          "is_new": false
-        },
-        {
-          "title": "“우유팩 씻고 말려 모았어요”…서울시, 자원순환 우수 어린이집 시상",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465878",
-          "date": "2026-09-08",
-          "dept": "자원순환과",
-          "is_new": false
-        },
-        {
-          "title": "아리수도 가을축제 간다…동행음수대·와우카 서울 곳곳 출동",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465877",
-          "date": "2026-09-08",
-          "dept": "서울아리수본부",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고10시30분)(석간) 오세훈 시장, 장기전세주택 입주민과 '희망토크'… 내 집 마련 잇는 '주거사다리' 성과 공유",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/465876",
-          "date": "2026-09-08",
-          "dept": "주택정책과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-09-13"
+      "crawled_at": "2026-09-14"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -688,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-13"
+      "crawled_at": "2026-09-14"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -936,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-13"
+      "crawled_at": "2026-09-14"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-09-13",
+      "crawled_at": "2026-09-14",
       "items": [
         {
           "title": "도시관리계획(중화생활권중심 지구단위계획구역 및 계획) 결정(변경)(안) 및  전략환경영향평가서(초안) 열람공고",
