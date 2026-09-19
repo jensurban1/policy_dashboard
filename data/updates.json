@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T07:09:44.295630+09:00",
+  "updated_at": "2026-09-20T07:02:02.498423+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-19"
+      "crawled_at": "2026-09-20"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-19"
+      "crawled_at": "2026-09-20"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-19"
+      "crawled_at": "2026-09-20"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -214,13 +214,13 @@
           "title": "학교 안 혐오·차별 대응의 ‘빈틈’ - 교육부 가이드북의 ‘성소수자’ 관련 내용 삭제에 대한 검토와 개선방안",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49632",
           "date": "2026-09-18",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "미프진 허용의 쟁점과 과제 - 임신중지 제도화 위한 입법 방안",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49631",
           "date": "2026-09-18",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "특별자치 20년, 선도모델 제주의 성과와 향후 과제",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-19"
+      "crawled_at": "2026-09-20"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-19"
+      "crawled_at": "2026-09-20"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,102 +299,116 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 오세훈 시장, 19일(토) 「2026년 서울청년주간 - 청년의 날 기념식」 참석… 청년 성장 이야기 청취 및 응원",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466837",
+          "date": "2026-09-19",
+          "dept": "",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 19일(토) 제76주년 서울수복 기념행사 참석",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/466831",
+          "date": "2026-09-19",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 18일(금) 서울어텀페스타 개막행사 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466826",
           "date": "2026-09-18",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 18일(금) '엔터테크·GES 서울 2026' 개막식 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466809",
           "date": "2026-09-18",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시-고려당, 한가위 온정 나눈다…시설생활아동에 '서울빵' 2,000개 전달",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466733",
           "date": "2026-09-18",
           "dept": "아동담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "제16대 한강 종이비행기 챔피언은 누구? 서울시, 참가자 700명 선착순 모집",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466732",
           "date": "2026-09-18",
           "dept": "미래한강본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 음식물 조리 화재 9·10월 가장 많아…주의 당부",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466731",
           "date": "2026-09-18",
           "dept": "소방재난본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "장기입원 어린이 곁으로 찾아간 역사수업…한성백제박물관 ‘올해의 박물관·미술관상’",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466730",
           "date": "2026-09-18",
           "dept": "한성백제박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "K-컬처 향한 뜨거운 관심 폴란드서 이탈리아로… 서울역사박물관 로마서 《서울의 멋-풍류》 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466729",
           "date": "2026-09-18",
           "dept": "서울역사박물관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(엠바고10시20분)(석간) 출퇴근길 지하철역이 운동공간으로…문정역에 '펀 스테이션'",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466728",
           "date": "2026-09-18",
           "dept": "도시활력담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울 아파트 매매 실거래가격 상승 지속...1년 새 14.56% 상승",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466727",
           "date": "2026-09-18",
           "dept": "부동산정책개발센터",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시-동반위-신용카드재단, 소상공인 소비 활성화 맞손… 상품권 50억 원 지원",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466726",
           "date": "2026-09-18",
           "dept": "소상공인정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시, 제4회 이산가족의 날 기념 시민참여 문화행사 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466725",
           "date": "2026-09-18",
           "dept": "대외협력과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시, 제2회 장애인돌봄종사자의 날 개최…돌봄가치를 말하다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466724",
           "date": "2026-09-18",
           "dept": "장애인자립지원과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 서울시농수산식품공사,  '2026년 추석 차례상 차림 비용' 조사 결과 발표 가락몰 22만 8천 원…대형마트보다 21.6%, 전통시장보다 7.0% 낮아",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466723",
           "date": "2026-09-18",
           "dept": "서울시 농수산식품공사",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 조선 후기 형사사건부터 서울 공간의 변화까지…서울역사편찬원, 역사서 2종 발간",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/466722",
           "date": "2026-09-18",
           "dept": "서울역사편찬원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 17일(목) 서울안전한마당 안전다짐식 참석",
@@ -633,23 +647,9 @@
           "date": "2026-09-16",
           "dept": "버스정책과",
           "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시민, 시내버스 파업 81.3% 반대…출퇴근·통학 등 일상 불편 우려",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466471",
-          "date": "2026-09-15",
-          "dept": "교통정책과",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 15일(화) 추석맞이 서로장터 개막식 참여",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466426",
-          "date": "2026-09-15",
-          "dept": "언론담당관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-09-19"
+      "crawled_at": "2026-09-20"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-19"
+      "crawled_at": "2026-09-20"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -775,7 +775,7 @@
           "date": "2026-09-17",
           "gu": "서울특별시",
           "notice_no": "2026-521",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(건대입구역지구 지구단위계획 및 4-3지구 특별계획구역 세부개발계획) 결정(경미한 변경) 및 지형도면 고시",
@@ -823,7 +823,7 @@
           "date": "2026-09-09",
           "gu": "광진구",
           "notice_no": "2026-73",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울 목4동 강서고 인근 도심 공공주택 복합지구의 지정 및 지형도면등의 고시",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-19"
+      "crawled_at": "2026-09-20"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-09-19",
+      "crawled_at": "2026-09-20",
       "items": [
         {
           "title": "남산대림아파트 재건축정비사업 정비계획 결정 및 정비구역 지정(안) 주민공람",
