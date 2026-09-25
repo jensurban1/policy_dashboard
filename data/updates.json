@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T07:55:36.608666+09:00",
+  "updated_at": "2026-09-26T08:00:23.039849+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-25"
+      "crawled_at": "2026-09-26"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-25"
+      "crawled_at": "2026-09-26"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-25"
+      "crawled_at": "2026-09-26"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-25"
+      "crawled_at": "2026-09-26"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-25"
+      "crawled_at": "2026-09-26"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,11 +299,32 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(엠바고09시)(자료제공) 서울시, 추석에도 '복지안전망 정상 가동'… 취약 어르신 4만명·고립위험 7만가구 안부 확인",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467117",
+          "date": "2026-09-25",
+          "dept": "복지정책과",
+          "is_new": true
+        },
+        {
+          "title": "(엠바고09시)(자료제공) 여름철 노로바이러스 전년보다 70배 급증… 서울시, “추석 식중독 주의”",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467116",
+          "date": "2026-09-24",
+          "dept": "보건환경연구원",
+          "is_new": true
+        },
+        {
+          "title": "(엠바고09시)(자료제공) \"이번 추석, 고민 말고 한강으로 오세요\"…한강서 즐기는 풍성한 한가위",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467115",
+          "date": "2026-09-24",
+          "dept": "미래한강본부",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 -오세훈 시장, 24일(목) 한부모가족 복지시설 ‘애란원’ 방문",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467110",
           "date": "2026-09-24",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 23일(수) 추석 연휴 앞두고 민생 현장 점검",
@@ -626,30 +647,9 @@
           "date": "2026-09-21",
           "dept": "체육진흥과",
           "is_new": false
-        },
-        {
-          "title": "(석간) 추석 밥상 수산물, 미리 점검…안전성부터 어종 진위까지 확인",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466874",
-          "date": "2026-09-21",
-          "dept": "보건환경연구원",
-          "is_new": false
-        },
-        {
-          "title": "(석간) “무늬에서 사물로, 다시 공간으로” 서울공예박물관, 장응복의 공예 세계 소개하는 《에퀴녹스 추분_춘분》전",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466873",
-          "date": "2026-09-21",
-          "dept": "서울공예박물관",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 英 FT 서울은 유학생에게 새로운 파리… 세계 청년이 찾는 글로벌 유학도시로",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466868",
-          "date": "2026-09-21",
-          "dept": "언론담당관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-09-25"
+      "crawled_at": "2026-09-26"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-25"
+      "crawled_at": "2026-09-26"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-25"
+      "crawled_at": "2026-09-26"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-09-25",
+      "crawled_at": "2026-09-26",
       "items": [
         {
           "title": "도시관리계획(종로45가 지구단위계획) 결정(변경)(안) 재열람공고",
