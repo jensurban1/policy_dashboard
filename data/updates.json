@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T07:18:08.570294+09:00",
+  "updated_at": "2026-09-28T07:45:11.479010+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-27"
+      "crawled_at": "2026-09-28"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-27"
+      "crawled_at": "2026-09-28"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-27"
+      "crawled_at": "2026-09-28"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-27"
+      "crawled_at": "2026-09-28"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-27"
+      "crawled_at": "2026-09-28"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,11 +299,88 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(석간) 한강버스 요금 체계 개편…서울시, 각계각층 의견 수렴 공청회 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467132",
+          "date": "2026-09-28",
+          "dept": "미래한강본부",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울시-한국부동산분석학회,  부동산공시가격 검증지원센터 역할 강화 방안 논의",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467130",
+          "date": "2026-09-28",
+          "dept": "토지관리과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) “바람 한 줄, 단풍 한 장, 골목마다 가을이 시가 된다” 서울시, 가을 정취 담은 서울꿈새김판 새단장",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467129",
+          "date": "2026-09-28",
+          "dept": "홍보담당관",
+          "is_new": true
+        },
+        {
+          "title": "어두웠던 교량 아래가 밤이 되면 빛의 명소로… '서울 라이트업' 본격 추진",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467128",
+          "date": "2026-09-27",
+          "dept": "도로시설과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 125개소 프로포폴 관리실태 들여다보니…26개소 위반",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467127",
+          "date": "2026-09-27",
+          "dept": "보건의료정책과",
+          "is_new": true
+        },
+        {
+          "title": "이름 바꾼 '동행안심벨', 그립톡형 등으로 더 편리해진다…9.28.부터 사전신청",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467126",
+          "date": "2026-09-27",
+          "dept": "양성평등담당관",
+          "is_new": true
+        },
+        {
+          "title": "글로벌 인재와 기업을 한 자리에…서울시, 외국인 채용 우수기업 모집",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467125",
+          "date": "2026-09-27",
+          "dept": "외국인이민담당관",
+          "is_new": true
+        },
+        {
+          "title": "보관부터 소분·포장까지 한곳에서… 서울시, 강서시장 상품화 시설 건립",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467124",
+          "date": "2026-09-27",
+          "dept": "농수산유통과",
+          "is_new": true
+        },
+        {
+          "title": "남산에서 만나는 다채로운 K-콘텐츠… 「2026 서울관광 ON 페스타」 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467123",
+          "date": "2026-09-27",
+          "dept": "관광산업과",
+          "is_new": true
+        },
+        {
+          "title": "“중장년의 경험을 사회공헌으로”…서울시 2026 가치동행한마당 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467122",
+          "date": "2026-09-27",
+          "dept": "중장년지원과",
+          "is_new": true
+        },
+        {
+          "title": "제16차 서울특별시 도시·건축공동위원회 개최결과",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467121",
+          "date": "2026-09-27",
+          "dept": "도시관리과",
+          "is_new": true
+        },
+        {
           "title": "(엠바고09시)(자료제공) 서울 곳곳에 한가위 즐거움 가득… 외국인 관광객·시민 함께 명절 즐긴다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467120",
           "date": "2026-09-26",
           "dept": "관광정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(엠바고09시)(자료제공) 서울시, 추석에도 '복지안전망 정상 가동'… 취약 어르신 4만명·고립위험 7만가구 안부 확인",
@@ -570,86 +647,9 @@
           "date": "2026-09-21",
           "dept": "신속통합기획과",
           "is_new": false
-        },
-        {
-          "title": "(엠바고14시) 서울시, 도시 간 평화협력 논의하는 「서울 글로벌 도시외교·평화포럼」개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466899",
-          "date": "2026-09-21",
-          "dept": "대외협력과",
-          "is_new": false
-        },
-        {
-          "title": "골목·경사로에 '5분 그늘쉼터'… 서울시, 그늘보행권 첫 실행",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466898",
-          "date": "2026-09-21",
-          "dept": "도시계획과",
-          "is_new": false
-        },
-        {
-          "title": "노들섬이 빛의 예술섬으로… '2026 서울라이트 한강 빛섬축제' 10월 2일 개막",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466896",
-          "date": "2026-09-21",
-          "dept": "도시경관담당관",
-          "is_new": false
-        },
-        {
-          "title": "AI·로봇 등 핵심산업 분야 이공계 장학생 28명, 서울의 미래 이끈다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466895",
-          "date": "2026-09-21",
-          "dept": "외국인이민담당관",
-          "is_new": false
-        },
-        {
-          "title": "올 추석엔‘서울달’아래서 소원 빌어요… 여의도서 즐기는 특별한 한가위",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466894",
-          "date": "2026-09-21",
-          "dept": "관광정책과",
-          "is_new": false
-        },
-        {
-          "title": "'핀테크 세계 7위' 서울, 차세대 핀테크 기업 키운다…예비창업자까지 지원 확대",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466893",
-          "date": "2026-09-21",
-          "dept": "금융투자과",
-          "is_new": false
-        },
-        {
-          "title": "주민 정보격차 해소 '모아주택 쾌속추진'… 서울시, 권역별 '우리조합 첫걸음 설명회' 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466892",
-          "date": "2026-09-21",
-          "dept": "모아주택과",
-          "is_new": false
-        },
-        {
-          "title": "“이번 주말 뭐하지?”… 서울 공공서비스, 한 곳에서 찾고 예약한다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466891",
-          "date": "2026-09-21",
-          "dept": "정보시스템과",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고10시)(기자설명회) 주택정책 성과 숫자로 답한 오세훈 시장 \"신통기획 214곳 구역지정·모아주택 168곳 조합설립\"",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466887",
-          "date": "2026-09-21",
-          "dept": "주택실",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시가 더 촘촘히 준비합니다!…추석 연휴 ‘청소종합대책’ 가동",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466877",
-          "date": "2026-09-21",
-          "dept": "생활환경과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시, 장안동 지하창고에서 위조상품 7천여 점 적발… 정품가 약 89억원",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/466876",
-          "date": "2026-09-21",
-          "dept": "경제수사과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-09-27"
+      "crawled_at": "2026-09-28"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-27"
+      "crawled_at": "2026-09-28"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-09-27"
+      "crawled_at": "2026-09-28"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-09-27",
+      "crawled_at": "2026-09-28",
       "items": [
         {
           "title": "도시관리계획(종로45가 지구단위계획) 결정(변경)(안) 재열람공고",
