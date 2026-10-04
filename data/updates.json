@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T07:36:15.164355+09:00",
+  "updated_at": "2026-10-05T07:39:45.176705+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-04"
+      "crawled_at": "2026-10-05"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-04"
+      "crawled_at": "2026-10-05"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-04"
+      "crawled_at": "2026-10-05"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-04"
+      "crawled_at": "2026-10-05"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-04"
+      "crawled_at": "2026-10-05"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,11 +299,60 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 4일(일) 북촌 공공한옥 방문",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467635",
+          "date": "2026-10-04",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "서울 전월세시장 어디로 가나… 전문가·시민과 해법 찾는 '서울주거포럼' 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467573",
+          "date": "2026-10-04",
+          "dept": "부동산정책개발센터",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 어르신에게 할인해 주는 '시니어 동행상점' 운영",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467572",
+          "date": "2026-10-04",
+          "dept": "고령사회대응과",
+          "is_new": true
+        },
+        {
+          "title": "현장에서 만나는 노들섬의 미래…서울시, 노들 글로벌 예술섬 원데이 건축 아카데미 운영",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467571",
+          "date": "2026-10-04",
+          "dept": "미래공간담당관",
+          "is_new": true
+        },
+        {
+          "title": "“올해 독감 유행 빨라지고 기간 길어져”…서울시, 예방접종 당부",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467570",
+          "date": "2026-10-04",
+          "dept": "보건환경연구원",
+          "is_new": true
+        },
+        {
+          "title": "서울연구원, 퀘벡·플랑드르와 AI·로봇 도시기술 협력의 장을 마련하다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467569",
+          "date": "2026-10-04",
+          "dept": "서울연구원",
+          "is_new": true
+        },
+        {
+          "title": "아이의 눈으로 다시 그리는 박물관 지도…서울공예박물관 ‘마이 리틀 아티스트’",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467568",
+          "date": "2026-10-04",
+          "dept": "서울공예박물관",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 3일(토) 2026 강남페스티벌 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467627",
           "date": "2026-10-03",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 2일(금) 2026 서울라이트 한강 빛섬축제 참석",
@@ -598,58 +647,9 @@
           "date": "2026-09-30",
           "dept": "서울AI재단",
           "is_new": false
-        },
-        {
-          "title": "(석간) 흑백TV·가훈·옛 달력이 미니어처로… 서울생활사박물관 「가족 생활사 공작소」 운영",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467320",
-          "date": "2026-09-30",
-          "dept": "서울역사박물관",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고13시) 서울시, 충주와 교육 잇고 농업으로 상생…서울런 협약·청년농업인 간담회",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467246",
-          "date": "2026-09-29",
-          "dept": "교육지원정책과",
-          "is_new": false
-        },
-        {
-          "title": "서울 전통시장의 맛있는 가을밤… 23곳서 야간 미식·문화축제 열린다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467243",
-          "date": "2026-09-29",
-          "dept": "상권활성화과",
-          "is_new": false
-        },
-        {
-          "title": "일본인 관광객 서울 짧게·자주 찾는다…'서울 탄환여행' 주목",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467242",
-          "date": "2026-09-29",
-          "dept": "관광정책과",
-          "is_new": false
-        },
-        {
-          "title": "가을밤 달빛 아래 설레는 첫 만남…'서울팅' 이번엔 불금, 야장 핫플에서 열린다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467241",
-          "date": "2026-09-29",
-          "dept": "저출생담당관",
-          "is_new": false
-        },
-        {
-          "title": "가족돌봄청소년·청년 자기돌봄비 지원…생애 1회 200만원",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467240",
-          "date": "2026-09-29",
-          "dept": "복지정책과",
-          "is_new": false
-        },
-        {
-          "title": "'딸깍' 누르면 스트레스 없는 서울의 밤이 켜진다 …서울시, LED키캡키링 출시",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467239",
-          "date": "2026-09-29",
-          "dept": "서울브랜드담당관",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-10-04"
+      "crawled_at": "2026-10-05"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-04"
+      "crawled_at": "2026-10-05"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -784,6 +784,14 @@
           "gu": "중구",
           "notice_no": "2026-557",
           "is_new": false
+        },
+        {
+          "title": "도시관리계획(영등포구 대림동 993-15번지 역세권 활성화사업 지구단위계획) 결정(경미한 변경) 및 지형도면 고시",
+          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11560NTC202610040001",
+          "date": "2026-10-01",
+          "gu": "영등포구",
+          "notice_no": "2026-159",
+          "is_new": true
         },
         {
           "title": "창동 522-19번지 일원 가로주택정비사업 조합설립인가 및 지형도면 고시",
@@ -1000,23 +1008,15 @@
           "gu": "서울특별시",
           "notice_no": "2026-92",
           "is_new": false
-        },
-        {
-          "title": "자양동 637번지 일대 가로주택정비사업 조합설립인가 및 지형도면 고시",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11215NTC202609170015",
-          "date": "2026-09-01",
-          "gu": "서울특별시",
-          "notice_no": "2026-63",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-10-04"
+      "crawled_at": "2026-10-05"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-10-04",
+      "crawled_at": "2026-10-05",
       "items": [
         {
           "title": "미아역세권 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안) 주민공람 공고",
@@ -1206,14 +1206,6 @@
           "title": "강동역세권1구역 장기전세주택 도시정비형 재개발사업 정비계획 결정 및 정비구역 지정(안)에 대한 공람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11740ANN202609170001&projCode=11740PPL202609170008&searchGubun=ing",
           "date": "2026-09-17",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "한강맨션아파트 주택재건축정비사업 정비구역 및 정비계획 변경(안)에 대한 공람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202609290001&projCode=11170PPL202609290027&searchGubun=ing",
-          "date": "2026-09-29",
           "end_date": "",
           "gu": "",
           "is_new": false
@@ -1434,14 +1426,6 @@
             "title": "남산대림아파트 재건축정비사업 정비계획 결정 및 정비구역 지정(안) 주민공람",
             "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202609170001&projCode=11170PPL202609170017&searchGubun=ing",
             "date": "2026-09-17",
-            "end_date": "",
-            "gu": "용산구",
-            "is_new": false
-          },
-          {
-            "title": "한강맨션아파트 주택재건축정비사업 정비구역 및 정비계획 변경(안)에 대한 공람 공고",
-            "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202609290001&projCode=11170PPL202609290027&searchGubun=ing",
-            "date": "2026-09-29",
             "end_date": "",
             "gu": "용산구",
             "is_new": false
@@ -1683,14 +1667,6 @@
           "title": "강동역세권1구역 장기전세주택 도시정비형 재개발사업 정비계획 결정 및 정비구역 지정(안)에 대한 공람공고",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11740ANN202609170001&projCode=11740PPL202609170008&searchGubun=ing",
           "date": "2026-09-17",
-          "end_date": "",
-          "gu": "",
-          "is_new": false
-        },
-        {
-          "title": "한강맨션아파트 주택재건축정비사업 정비구역 및 정비계획 변경(안)에 대한 공람 공고",
-          "url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?announceCode=11170ANN202609290001&projCode=11170PPL202609290027&searchGubun=ing",
-          "date": "2026-09-29",
           "end_date": "",
           "gu": "",
           "is_new": false
