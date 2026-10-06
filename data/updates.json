@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-10-06T10:04:18.221687+09:00",
+  "updated_at": "2026-10-07T08:30:20.457724+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
       "org": "국토연구원",
       "list_url": "https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1",
       "items": [
+        {
+          "title": "[국토정책Brief 제1083호] 도시재생사업 10년의 성과와 향후 과제",
+          "url": "https://www.krihs.re.kr/gallery.es?mid=a10103050000&bid=0022&act=view&list_no=7825066",
+          "date": "2026-10-06",
+          "is_new": true
+        },
         {
           "title": "[국토정책Brief 제1082호] 국가균형성장을 위한 거점 중소도시 육성방향",
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103050000&bid=0022&act=view&list_no=7822694",
@@ -59,15 +65,9 @@
           "url": "https://www.krihs.re.kr/gallery.es?mid=a10103050000&bid=0022&act=view&list_no=7804271",
           "date": "2026-08-03",
           "is_new": false
-        },
-        {
-          "title": "[국토정책Brief 제1073호] 지역 내의 소멸 격차 해소를 위한 AI 기반 인구과소지역 정밀진단과 정책 추진 방안",
-          "url": "https://www.krihs.re.kr/gallery.es?mid=a10103050000&bid=0022&act=view&list_no=7803229",
-          "date": "2026-07-27",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-10-06"
+      "crawled_at": "2026-10-07"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-06"
+      "crawled_at": "2026-10-07"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-06"
+      "crawled_at": "2026-10-07"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -214,7 +214,7 @@
           "title": "농지 전수조사, 서두른 만큼 놓친 것들 : 속도전과 정쟁의 과열을 넘어 지금 해야 할 이야기에 관하여",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49711",
           "date": "2026-10-06",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "학교용지 토양오염 관리의 개선과제-기존 학교부지 증축·개축 단계의 토양오염 확인-비용부담-기록을 중심으로",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-06"
+      "crawled_at": "2026-10-07"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-06"
+      "crawled_at": "2026-10-07"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,74 +299,158 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(엠바고07시30분)(석간) 베테랑공무원이 그린 10년 후 서울…미래서울 아침특강 새 단장",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467736",
+          "date": "2026-10-07",
+          "dept": "인력개발과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) “서울의 거리를 바꿀 아이디어 처방전!”시민 해법 찾는다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467735",
+          "date": "2026-10-07",
+          "dept": "기후환경정책과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 가락몰 하늘공원에서 즐기는 가을밤 맥주 축제...‘제3회 가락 옥토버페스트’ 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467734",
+          "date": "2026-10-07",
+          "dept": "서울시 농수산식품공사",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 가을꽃 흩날리고 희귀식물은 새롭게… 서울식물원, 다채로운 가을 정원 선보여",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467733",
+          "date": "2026-10-07",
+          "dept": "서울식물원",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울 1인 가구, 나이 같아도 주택보유 따라 대출 이용률 18%p 차이",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467732",
+          "date": "2026-10-07",
+          "dept": "서울시복지재단",
+          "is_new": true
+        },
+        {
+          "title": "생계 걱정 덜고 아플 때 쉰다… '서울형 입원 생활비' 지급 약 20% 늘었다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467595",
+          "date": "2026-10-06",
+          "dept": "노동정책과",
+          "is_new": true
+        },
+        {
+          "title": "10월 축제로 물드는 한강…운동부터 맛·음악·예술까지 취향 따라 즐긴다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467594",
+          "date": "2026-10-06",
+          "dept": "미래한강본부",
+          "is_new": true
+        },
+        {
+          "title": "\"서울갤러리 가을 소풍\"… 한글날 연휴 맞이 9일 특별 문화 행사 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467593",
+          "date": "2026-10-06",
+          "dept": "홍보담당관",
+          "is_new": true
+        },
+        {
+          "title": "만남이 협업으로, 재능이 지역사회로…서울 동아리ON 사회기여 활동 활발",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467592",
+          "date": "2026-10-06",
+          "dept": "청년정책담당관",
+          "is_new": true
+        },
+        {
+          "title": "‘맛’으로 떠나는 서울 여행…‘2026 서울미식 100선’ 발표",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467591",
+          "date": "2026-10-06",
+          "dept": "관광산업과",
+          "is_new": true
+        },
+        {
+          "title": "“건강과 문화로 하나되는 글로벌 축제”… 제2회 서울 다함께 어울림 한마당 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467589",
+          "date": "2026-10-06",
+          "dept": "다문화담당관",
+          "is_new": true
+        },
+        {
+          "title": "(엠바고10시20분)(석간) 서울시, 스마트라이프위크 2026 출발…AI로 그리는 미래도시 엿본다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/467588",
+          "date": "2026-10-06",
+          "dept": "디지털정책과",
+          "is_new": true
+        },
+        {
           "title": "(석간) 1~8월 서울방문 외국인 관광객 21.6% 늘 때 카드소비는 59.9% 증가",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467587",
           "date": "2026-10-06",
           "dept": "관광정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(엠바고08시)(석간) 서울시, 서울건강총괄관에 김현철 교수 위촉…시정 전반에 '시민 건강' 더한다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467586",
           "date": "2026-10-06",
           "dept": "보건의료정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 임산부의 날 앞두고 가족 독서 한마당…서울시 ‘엄마 북(Book) 돋움’ 특별행사",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467585",
           "date": "2026-10-06",
           "dept": "서울도서관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) “탈곡부터 떡메 치기 까지”용산가족공원 가을걷이 한마당 개최!",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467584",
           "date": "2026-10-06",
           "dept": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시청 선수단, 역대 아시안게임 최다 메달… '스포츠 도시 서울' 저력 입증",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467631",
           "date": "2026-10-05",
           "dept": "체육정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "“밤에도 북적이는 골목상권 만든다” 달빛야장 소상공인에 687.5억 원 공급",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467581",
           "date": "2026-10-05",
           "dept": "서울신용보증재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울런, 아이들 일상 속으로…지역아동센터로 ‘서울런쌤’ 직접 찾아간다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467578",
           "date": "2026-10-05",
           "dept": "교육지원정책과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "사랑하는 반려동물을 보낸 슬픔, 서울시와 함께 치유하세요",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467577",
           "date": "2026-10-05",
           "dept": "동물보호과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "건당 200원 벌려다 형사처벌 위기 … 청년들 울린 신종 부동산 불법광고 적발",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467576",
           "date": "2026-10-05",
           "dept": "경제수사과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "세계 물 전문가 모인 영국서 서울시 상수도 정책·기술 선보인다",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/467575",
           "date": "2026-10-05",
           "dept": "서울아리수본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 4일(일) 북촌 공공한옥 방문",
@@ -563,93 +647,9 @@
           "date": "2026-10-01",
           "dept": "문화유산과",
           "is_new": false
-        },
-        {
-          "title": "책·음악·놀이·체험 온 가족의 취향을 한자리에…서울시, '한강 패밀리 페스티벌'",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467445",
-          "date": "2026-10-01",
-          "dept": "미래한강본부",
-          "is_new": false
-        },
-        {
-          "title": "5개 권역 150개 서울 '디자인로드' 연결… 서울디자인위크 개막",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467444",
-          "date": "2026-10-01",
-          "dept": "서울디자인재단",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시, 신임 대변인에 호준석 前 YTN 앵커팀 부국장 임명",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467440",
-          "date": "2026-10-01",
-          "dept": "인사과",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고10시30분)(석간) 서울시, 20년간 나눔 실천 어르신 등 노인복지 유공자·단체 50명 표창",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467420",
-          "date": "2026-10-01",
-          "dept": "고령사회대응과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 사전검증·전문감리·무인점검까지… 서울시, 노후교량·고가차도 해체공사 안전관리 전면 강화",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467419",
-          "date": "2026-10-01",
-          "dept": "기술심사담당관",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 저렴해서 가입했는데 이용 중단… 서울시, 유튜브 계정공유 피해 주의",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467413",
-          "date": "2026-10-01",
-          "dept": "공정경제과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울특별시 자치법규 제·개정 공포",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467411",
-          "date": "2026-10-01",
-          "dept": "법무담당관",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 잠수교 400m가 치킨으로 채워진다…서울시, '잠수교 치킨데이' 참가사 모집",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467409",
-          "date": "2026-10-01",
-          "dept": "미래한강본부",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 한옥에 쌓인 시간, 흙에 담긴 시간…서울공예박물관《시간이 쌓이는 집》전시 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467408",
-          "date": "2026-10-01",
-          "dept": "서울공예박물관",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 한강 한가운데 새로 열린 노들섬…개방 10일 만에 10만 명 찾았다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467359",
-          "date": "2026-09-30",
-          "dept": "미래공간담당관",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고14시) '2530 장애인 일상활력프로젝트'가 바꾼 일상, '서울장애인정책박람회'서 만난다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467332",
-          "date": "2026-09-30",
-          "dept": "장애인복지과",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고11시) 오세훈 시장, \"부상 장병 예우, 제대 후 삶까지\"… 청년부상제대군인과 간담회",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/467331",
-          "date": "2026-09-30",
-          "dept": "복지정책과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-10-06"
+      "crawled_at": "2026-10-07"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-06"
+      "crawled_at": "2026-10-07"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -909,7 +909,7 @@
           "title": "중화동 299-8번지 일대 소규모주택정비 관리계획(모아타운 관리계획) 승인 및 지형도면 고시",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11260NTC202609300020",
           "date": "2026-09-10",
-          "gu": "중랑구",
+          "gu": "서울특별시",
           "notice_no": "2026-509",
           "is_new": false
         },
@@ -933,7 +933,7 @@
           "title": "대모산근린공원(개포지구) 조성계획 결정(변경) 및 지형도면 고시",
           "url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202609300016",
           "date": "2026-09-03",
-          "gu": "강남구",
+          "gu": "서울특별시",
           "notice_no": "2026-496",
           "is_new": false
         },
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-06"
+      "crawled_at": "2026-10-07"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-10-06",
+      "crawled_at": "2026-10-07",
       "items": [
         {
           "title": "미아역세권 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정(안) 주민공람 공고",
