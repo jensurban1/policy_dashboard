@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T07:10:54.327614+09:00",
+  "updated_at": "2026-10-26T07:13:36.383445+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-25"
+      "crawled_at": "2026-10-26"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-25"
+      "crawled_at": "2026-10-26"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-25"
+      "crawled_at": "2026-10-26"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-25"
+      "crawled_at": "2026-10-26"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-25"
+      "crawled_at": "2026-10-26"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,25 +299,137 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(석간) 서울시, '국회대로' 차량 중심에서 녹지·문화공간으로 … 11만㎡ 상부공원 조성 본격화",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468821",
+          "date": "2026-10-26",
+          "dept": "도시기반시설본부",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 댕냥이의 입양부터 펫로스까지, 문화비축기지에서 만나는 반려의 하루",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468820",
+          "date": "2026-10-26",
+          "dept": "동물보호과",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울시, 한강 자전거도로 위협하는 '안전요건 위반 자전거' 근절 나섰다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468819",
+          "date": "2026-10-26",
+          "dept": "미래한강본부",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울시, 「2026 우리는 한가족! 함께家」 축제 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468817",
+          "date": "2026-10-26",
+          "dept": "가족담당관",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 10월의 마지막 날, 서울생활사박물관에서 열리는 낭만의‘가을 음악회’",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468816",
+          "date": "2026-10-26",
+          "dept": "서울역사박물관",
+          "is_new": true
+        },
+        {
+          "title": "(석간) 서울문화재단, 장애예술 전시로 관람 문턱 낮추고 감상의 폭 넓힌다",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468815",
+          "date": "2026-10-26",
+          "dept": "",
+          "is_new": true
+        },
+        {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 25일(일) 잠수교 보행전용교 전환 앞두고 현장 점검",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468838",
+          "date": "2026-10-25",
+          "dept": "언론담당관",
+          "is_new": true
+        },
+        {
+          "title": "AI 금융의 미래부터 스타트업 투자유치까지…'서울 핀테크 위크 2026' 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468792",
+          "date": "2026-10-25",
+          "dept": "금융투자과",
+          "is_new": true
+        },
+        {
+          "title": "가을 밤, 한강이 마블 테마로 물든다…2,000대 활용해 올해 마지막 '드론 라이트쇼' 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468791",
+          "date": "2026-10-25",
+          "dept": "관광정책과",
+          "is_new": true
+        },
+        {
+          "title": "일상에 온기를 더하고 마음을 잇다…민간과 함께 만드는 ‘외로움 없는 서울’",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468790",
+          "date": "2026-10-25",
+          "dept": "고독대응과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 주요 소나무림 집중 점검으로 소나무재선충병 총력 대응",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468789",
+          "date": "2026-10-25",
+          "dept": "자연생태과",
+          "is_new": true
+        },
+        {
+          "title": "상조·여행 납입금 '사금고화' 막는다… 서울시, 법 위반업체 8곳 적발",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468788",
+          "date": "2026-10-25",
+          "dept": "공정경제과",
+          "is_new": true
+        },
+        {
+          "title": "시민이 그린 100년 뒤 서울, 미래공간 아이디어 20점 전시",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468783",
+          "date": "2026-10-25",
+          "dept": "미래공간담당관",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 열원시설부터 비상복구체계까지 점검 - 겨울철 안정적 난방 공급 준비 -",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468781",
+          "date": "2026-10-25",
+          "dept": "녹색에너지과",
+          "is_new": true
+        },
+        {
+          "title": "서울 25개 자치구 문화 한자리에…‘서울 문화원 엑스포’ 28일 광화문광장서 개최",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468780",
+          "date": "2026-10-25",
+          "dept": "문화정책과",
+          "is_new": true
+        },
+        {
+          "title": "서울시, 6개국 철도 관계자 초청 연수…K-철도 해외수출 마중물 역할 톡톡",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/468779",
+          "date": "2026-10-25",
+          "dept": "도시기반시설본부",
+          "is_new": true
+        },
+        {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 24일(토) ‘10.29 이태원 참사 4주기 시민추모대회’ 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/468818",
           "date": "2026-10-24",
           "dept": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 드론 레이싱은 짜릿하게. 체험은 다채롭게…서울 국제 드론 레이싱 월드컵 성료",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/468813",
           "date": "2026-10-24",
           "dept": "공간정보과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 24일(토) 진관사 국행수륙재 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/468805",
           "date": "2026-10-24",
           "dept": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 오세훈 시장, 이태원 참사 4주기 앞두고 핼러윈 인파안전관리 철저 지시",
@@ -535,121 +647,9 @@
           "date": "2026-10-21",
           "dept": "광화문광장사업과",
           "is_new": false
-        },
-        {
-          "title": "''아이브 컴백 영상, DDP에 뜬다''…서울시, K-POP과 서울 명소 잇는 도시마케팅 확대",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468572",
-          "date": "2026-10-21",
-          "dept": "K컬처전략과",
-          "is_new": false
-        },
-        {
-          "title": "서울의 쉼·맛·멋을 여행하다…‘2026 서울 웰니스 트래블 위크’개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468571",
-          "date": "2026-10-21",
-          "dept": "관광산업과",
-          "is_new": false
-        },
-        {
-          "title": "서울시 아동급식카드, 배달앱에서도 쓴다…11.16.부터 집에서 주문·결제",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468570",
-          "date": "2026-10-21",
-          "dept": "아동담당관",
-          "is_new": false
-        },
-        {
-          "title": "K-건축 보고 배우고 직접 경험했다…'제18회 서울건축문화제' 4만명 참여 성료",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468554",
-          "date": "2026-10-21",
-          "dept": "한옥건축자산과",
-          "is_new": false
-        },
-        {
-          "title": "서울 도심 태양광, ‘겹쳐서 더 높인다’…차세대 탠덤 태양광 실증",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468553",
-          "date": "2026-10-21",
-          "dept": "녹색에너지과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 재해 취약 주거지에서 상도권역 생활 중심지로…상도동 201 일대 신속통합기획 확정",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468529",
-          "date": "2026-10-21",
-          "dept": "신속통합기획과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시 수도 요금 감면, 증빙 서류 없이 누리집에서 신청",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468528",
-          "date": "2026-10-21",
-          "dept": "서울아리수본부",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 공사비 갈등, 상담부터 중재·사후관리까지 한곳에서… 서울시, '공사비120센터' 문 열어",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468524",
-          "date": "2026-10-21",
-          "dept": "주거정비과",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울 도심에서 떠나는 5개국 미식 여행,「2026 광희로드 페스타」 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468523",
-          "date": "2026-10-21",
-          "dept": "서울신용보증재단",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 서울시, '2026년 소방안전모범대상' 12개소 선정…우수 안전관리 사례 확산",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468522",
-          "date": "2026-10-21",
-          "dept": "소방재난본부",
-          "is_new": false
-        },
-        {
-          "title": "(석간) 청소년이 도전하는 AI 미션… 서울AI재단, 미래도시 체험행사 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468521",
-          "date": "2026-10-21",
-          "dept": "서울AI재단",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 20일(화) ‘야(夜)호! 어르신 별빛 활력 한마당 축제’ 참석",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468537",
-          "date": "2026-10-20",
-          "dept": "언론담당관",
-          "is_new": false
-        },
-        {
-          "title": "(자료제공) 걷다가 언제든 쉬어가는 서울… 오세훈 시장, 벤치 확충·공간 맞춤형 디자인 주문",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468493",
-          "date": "2026-10-20",
-          "dept": "도시계획과",
-          "is_new": false
-        },
-        {
-          "title": "(엠바고12시) 오세훈 서울시장, 홍익대 찾아 청년 고민 나누고 서울생활 꿀팁 공유",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468478",
-          "date": "2026-10-20",
-          "dept": "청년정책담당관",
-          "is_new": false
-        },
-        {
-          "title": "\"나의 밤이 더 의미 있어지는 곳\"… 서울시, ‘서울별빛명소’ 만든다",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468463",
-          "date": "2026-10-20",
-          "dept": "경제정책과",
-          "is_new": false
-        },
-        {
-          "title": "청계천의 밤, 자율주행으로 잇는다…'청계 A01' 22일부터 야간운행",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/468460",
-          "date": "2026-10-20",
-          "dept": "미래첨단교통과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-10-25"
+      "crawled_at": "2026-10-26"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-25"
+      "crawled_at": "2026-10-26"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-10-25"
+      "crawled_at": "2026-10-26"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-10-25",
+      "crawled_at": "2026-10-26",
       "items": [
         {
           "title": "원효아파트지구 지구단위계획 결정(변경), 산호아파트 재건축 정비구역 지정(변경) 및 정비계획 결정(변경)(안) 공람공고",
