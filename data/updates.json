@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T08:54:50.707758+09:00",
+  "updated_at": "2026-11-08T08:18:49.454336+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-07"
+      "crawled_at": "2026-11-08"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-07"
+      "crawled_at": "2026-11-08"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-07"
+      "crawled_at": "2026-11-08"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -214,7 +214,7 @@
           "title": "가상자산에 대한 과세 이대로 시행할 것인가?  - 과세체계의 문제점을 중심으로 -",
           "url": "https://www.nars.go.kr/report/view.do?nttId=49832",
           "date": "2026-11-05",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "남인순 국회부의장·김정재 성평등가족위원장·(사)한국여성의정·국회입법조사처 공동주최-민간기업·공기업 여성임원 확대",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-07"
+      "crawled_at": "2026-11-08"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-07"
+      "crawled_at": "2026-11-08"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -303,49 +303,49 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/469841",
           "date": "2026-11-06",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 6일(화) 국민의힘-서울시 예산정책협의회 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/469785",
           "date": "2026-11-06",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 오세훈 '일타시장 5탄'… '교도소' 같다던 노들섬, 시민 모두의 '예술섬'으로",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/469767",
           "date": "2026-11-06",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울대공원, 가을축제 ‘예술로 물드는 숲’개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/469712",
           "date": "2026-11-06",
           "dept": "서울대공원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 배우 김미경과 함께하는 '한부모가족 나눔 바자회' 개최",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/469711",
           "date": "2026-11-06",
           "dept": "가족담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울형 가격탄력제 시행 6개월, 이용자·제공인력 만족도 모두 올라",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/469710",
           "date": "2026-11-06",
           "dept": "서울시복지재단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "구급차에서 태어난 31주 신생아… 119구급대 응급처치와 의료진의 치료로 건강히 퇴원",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/469709",
           "date": "2026-11-06",
           "dept": "소방재난본부",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 자전거 타다 쉬고, 한강버스로 이동하고… 서울시, '잠실 한강 자전거장' 14일 개장",
@@ -373,7 +373,7 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/469704",
           "date": "2026-11-06",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 5일(목) 손목닥터9988 가입자 300만 돌파 기념 '걷다보니 운동회' 참석",
@@ -649,7 +649,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-07"
+      "crawled_at": "2026-11-08"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-07"
+      "crawled_at": "2026-11-08"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -775,7 +775,7 @@
           "date": "2026-11-05",
           "gu": "광진구",
           "notice_no": "2026-606",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "구의3동 587-58번지 일대 소규모주택정비 관리계획(모아타운 관리계획) 수립 승인 및 지형도면 고시",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-07"
+      "crawled_at": "2026-11-08"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-11-07",
+      "crawled_at": "2026-11-08",
       "items": [
         {
           "title": "도시관리계획(공항로 지구단위계획구역 및 계획) 결정(변경)(안) 재열람공고",
@@ -1072,7 +1072,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "새절2역세권(신사동) 장기전세주택 도시정비형 재개발사업 정비계획 결정 및 정비구역 지정(안)에 대한 공람 공고(재)",
@@ -1080,7 +1080,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "사당동 223-1 일대 행위제한(안) 주민 열람 공고",
@@ -1120,7 +1120,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도화우성아파트 재건축사업 정비계획 결정 및 정비구역 지정(안)에 대한 재공람공고",
@@ -1144,7 +1144,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "신촌지역 마포3구역 3지구 도시정비형 재개발사업 사업시행계획(변경)인가를 위한 공람공고",
@@ -1224,7 +1224,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "상일동 빌라단지 통합재건축정비사업 도시관리계획(용도지역) 변경정비계획 결정 및 정비구역 지정(안) 재공람공고",
@@ -1416,7 +1416,7 @@
             "date": "2026-11-06",
             "end_date": "",
             "gu": "마포구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "도화우성아파트 재건축사업 정비계획 결정 및 정비구역 지정(안)에 대한 재공람공고",
@@ -1494,7 +1494,7 @@
             "date": "2026-11-06",
             "end_date": "",
             "gu": "용산구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "도시관리계획(용산전자상가지구 지구단위계획구역 및 계획(변경), 나진1718동 일대 지구단위계획구역 및 계획, 특별계획구역8 세부개발계획) 결정(안) 열람공고",
@@ -1520,7 +1520,7 @@
             "date": "2026-11-06",
             "end_date": "",
             "gu": "은평구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "새절2역세권(신사동) 장기전세주택 도시정비형 재개발사업 정비계획 결정 및 정비구역 지정(안)에 대한 공람 공고(재)",
@@ -1528,7 +1528,7 @@
             "date": "2026-11-06",
             "end_date": "",
             "gu": "은평구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "신사동237번지 일대 주택정비형 재개발사업 정비계획 결정(변경)(안) 공람공고",
@@ -1536,7 +1536,7 @@
             "date": "2026-11-06",
             "end_date": "",
             "gu": "은평구",
-            "is_new": true
+            "is_new": false
           }
         ],
         "11110": [
@@ -1640,7 +1640,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "새절2역세권(신사동) 장기전세주택 도시정비형 재개발사업 정비계획 결정 및 정비구역 지정(안)에 대한 공람 공고(재)",
@@ -1648,7 +1648,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "사당동 223-1 일대 행위제한(안) 주민 열람 공고",
@@ -1688,7 +1688,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도화우성아파트 재건축사업 정비계획 결정 및 정비구역 지정(안)에 대한 재공람공고",
@@ -1712,7 +1712,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "신촌지역 마포3구역 3지구 도시정비형 재개발사업 사업시행계획(변경)인가를 위한 공람공고",
@@ -1792,7 +1792,7 @@
           "date": "2026-11-06",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "상일동 빌라단지 통합재건축정비사업 도시관리계획(용도지역) 변경정비계획 결정 및 정비구역 지정(안) 재공람공고",
