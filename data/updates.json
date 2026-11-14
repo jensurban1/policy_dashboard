@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T09:35:50.226847+09:00",
+  "updated_at": "2026-11-15T08:34:15.017326+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-14"
+      "crawled_at": "2026-11-15"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-14"
+      "crawled_at": "2026-11-15"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-14"
+      "crawled_at": "2026-11-15"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-14"
+      "crawled_at": "2026-11-15"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-14"
+      "crawled_at": "2026-11-15"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -299,39 +299,46 @@
       "list_url": "https://www.seoul.go.kr/news/news_report.do",
       "items": [
         {
+          "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 14일(토) 서울 달빛미식회 행사 참석",
+          "url": "https://www.seoul.go.kr/news/news_report.do#view/470367",
+          "date": "2026-11-14",
+          "dept": "대변인",
+          "is_new": true
+        },
+        {
           "title": "(엠바고08시)(자료제공) 세계 최강 LoL 팀, 서울아레나에서 격돌한다…2027 롤드컵 결승전 서울 개최 확정",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/470360",
           "date": "2026-11-14",
           "dept": "K컬처전략과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "겨울에도 꽃은 핀다… 서울식물원에서 만나는 특별한 겨울 정원",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/470320",
           "date": "2026-11-13",
           "dept": "서울식물원",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "\"시험 당일 이동 걱정 덜어요\" 서울시설공단,  수능 장애인 수험생에 '장애인콜택시 우선 배차'",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/470319",
           "date": "2026-11-13",
           "dept": "서울시설공단",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, '재개발 신통기획' 후보지 6개구 6곳 추가 선정…주거환경 개선 속도",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/470318",
           "date": "2026-11-13",
           "dept": "주거정비과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "서울시, 양천·중랑 '모아주택' 6곳 2,741세대 공급 속도… 2028년 착공",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/470317",
           "date": "2026-11-13",
           "dept": "모아주택과",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) 10월 서울 토허 신청 2개월 연속 증가… 외곽지역·한강벨트 상승세 지속",
@@ -640,16 +647,9 @@
           "date": "2026-11-10",
           "dept": "저출생담당관",
           "is_new": false
-        },
-        {
-          "title": "(석간) 서울시, ‘한양의 수도성곽’ 세계유산 등재 주민 의견 듣는다…12일 설명회 개최",
-          "url": "https://www.seoul.go.kr/news/news_report.do#view/469952",
-          "date": "2026-11-10",
-          "dept": "문화유산과",
-          "is_new": false
         }
       ],
-      "crawled_at": "2026-11-14"
+      "crawled_at": "2026-11-15"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-14"
+      "crawled_at": "2026-11-15"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-14"
+      "crawled_at": "2026-11-15"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-11-14",
+      "crawled_at": "2026-11-15",
       "items": [
         {
           "title": "개발행위허가 제한 주민 열람공고",
@@ -1040,7 +1040,7 @@
           "date": "2026-11-13",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획 결정(변경)(안) 열람공고",
@@ -1064,7 +1064,7 @@
           "date": "2026-11-13",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(공항로 지구단위계획구역 및 계획) 결정(변경)(안) 재열람공고",
@@ -1313,7 +1313,7 @@
             "date": "2026-11-13",
             "end_date": "",
             "gu": "서초구",
-            "is_new": true
+            "is_new": false
           }
         ],
         "11200": [],
@@ -1362,7 +1362,7 @@
             "date": "2026-11-13",
             "end_date": "",
             "gu": "영등포구",
-            "is_new": true
+            "is_new": false
           },
           {
             "title": "도시관리계획 결정(변경)(안) 열람공고",
@@ -1453,7 +1453,7 @@
           "date": "2026-11-13",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획 결정(변경)(안) 열람공고",
@@ -1477,7 +1477,7 @@
           "date": "2026-11-13",
           "end_date": "",
           "gu": "",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "도시관리계획(공항로 지구단위계획구역 및 계획) 결정(변경)(안) 재열람공고",
