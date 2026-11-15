@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T08:34:15.017326+09:00",
+  "updated_at": "2026-11-16T08:41:03.561591+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-15"
+      "crawled_at": "2026-11-16"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-15"
+      "crawled_at": "2026-11-16"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-15"
+      "crawled_at": "2026-11-16"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-15"
+      "crawled_at": "2026-11-16"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-15"
+      "crawled_at": "2026-11-16"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -303,7 +303,7 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/470367",
           "date": "2026-11-14",
           "dept": "대변인",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(엠바고08시)(자료제공) 세계 최강 LoL 팀, 서울아레나에서 격돌한다…2027 롤드컵 결승전 서울 개최 확정",
@@ -649,7 +649,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-15"
+      "crawled_at": "2026-11-16"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-15"
+      "crawled_at": "2026-11-16"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-15"
+      "crawled_at": "2026-11-16"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-11-15",
+      "crawled_at": "2026-11-16",
       "items": [
         {
           "title": "개발행위허가 제한 주민 열람공고",
