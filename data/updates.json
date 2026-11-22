@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21T10:00:56.055552+09:00",
+  "updated_at": "2026-11-22T09:01:35.475804+09:00",
   "sources": {
     "krihs_brief": {
       "name": "국토정책 Brief",
@@ -67,7 +67,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-21"
+      "crawled_at": "2026-11-22"
     },
     "krihs_working": {
       "name": "워킹페이퍼",
@@ -135,7 +135,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-21"
+      "crawled_at": "2026-11-22"
     },
     "krihs_article": {
       "name": "월간국토 Article",
@@ -203,7 +203,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-21"
+      "crawled_at": "2026-11-22"
     },
     "nars_report": {
       "name": "연구보고서",
@@ -247,7 +247,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-21"
+      "crawled_at": "2026-11-22"
     },
     "nars_research": {
       "name": "정책연구용역",
@@ -291,7 +291,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-21"
+      "crawled_at": "2026-11-22"
     },
     "seoul_press": {
       "name": "보도자료",
@@ -303,21 +303,21 @@
           "url": "https://www.seoul.go.kr/news/news_report.do#view/470803",
           "date": "2026-11-20",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장 20일(금) 오후, ‘사랑의 희망박스 박싱데이’ 참석",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/470795",
           "date": "2026-11-20",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(자료제공) 서울시장 사후동정 - 오세훈 시장, 20일(금) 민선9기 시정고문 13명 위촉… 첫 오찬 간담회",
           "url": "https://www.seoul.go.kr/news/news_report.do#view/470781",
           "date": "2026-11-20",
           "dept": "언론담당관",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "(석간) DDP·한강이 웹툰 속 배경으로…서울시, '서울 명소 3D 배경' 13종 무료 배포",
@@ -649,7 +649,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-21"
+      "crawled_at": "2026-11-22"
     },
     "upmu": {
       "name": "업무자료 (법정계획/운영지침)",
@@ -762,7 +762,7 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-21"
+      "crawled_at": "2026-11-22"
     },
     "ntfc": {
       "name": "결정고시(안)",
@@ -1010,13 +1010,13 @@
           "is_new": false
         }
       ],
-      "crawled_at": "2026-11-21"
+      "crawled_at": "2026-11-22"
     },
     "wrtanc": {
       "name": "열람공고(안)",
       "org": "서울 도시계획포털",
       "list_url": "https://urban.seoul.go.kr/view/html/PMNU4010100001?searchGubun=ing",
-      "crawled_at": "2026-11-21",
+      "crawled_at": "2026-11-22",
       "items": [
         {
           "title": "신대방동 364-127 일대 행위제한(안) 주민 열람공고",
